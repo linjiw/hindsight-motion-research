@@ -20,7 +20,7 @@ Open http://localhost:8765. The build requires only Python's standard library;
 the JavaScript smoke check requires Node. No native experiments are launched.
 
 `scripts/build_site.py` copies an explicit allowlist of static sources, public
-result summaries, and one approved aggregate figure into `_site/`. It validates
+result summaries, and approved aggregate figures into `_site/`. It validates
 local asset/section links and repository file links, writes SHA-256 provenance,
 and guards the dated narrative against changed headline evidence. It never reads
 `runs/`, licensed data, codebooks, teacher weights or embedded motion viewers.

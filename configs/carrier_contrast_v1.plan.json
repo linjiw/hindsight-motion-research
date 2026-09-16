@@ -1,0 +1,45 @@
+{
+  "status": "registered_before_reference_construction_and_native_execution",
+  "registered_unix_s": 1789578741.1200297,
+  "parent_registration": "configs/carrier_scene_v1.plan.json",
+  "trigger": {
+    "geometry_summary": "runs/carrier_scene_proposals_20260916_v1/geometry_summary.json",
+    "sha256": "4d98324460f187ad412d17a31a186d8d429a2bf5c8cbcd988be22f9ddaf87753",
+    "result": "0/145 original-versus-tuck portals admitted; no native main launched"
+  },
+  "question": "Does a predefined wide-arm alternative expose a teacher-executable, robust scene-relevant contrast on CMU/107?",
+  "source_group": "CMU/107",
+  "source_reference": "runs/carrier_screen_20260915_v1_construction/references/carrier00_original.npz",
+  "edit": "Existing critical.edit_motion wide and tuck presets; preserve original root, waist and legs, first/last 0.6 s, 0.6 s quintic transitions. No fitting or amplitude search.",
+  "positive_variant": "tuck",
+  "negative_variant": "wide",
+  "preflight_budget": {
+    "maximum_episodes": 6,
+    "maximum_launches": 1,
+    "allocation": "Both fixed continuations x three existing lateral perturbations"
+  },
+  "qualification": "Both continuations pass all three unchanged native removed-scene scores; 200 valid rows; matched actual entries <=1e-5. No fallback edit or replacement.",
+  "main_budget": {
+    "prior_attempts": 312,
+    "global_ceiling": 480,
+    "stage_maximum_episodes": 24,
+    "stage_maximum_launches": 1
+  },
+  "geometry": "Same 145-grid, worst-of-three and >=3cm positive/control clearance / >=1cm analytic-arm inner overlap as carrier_scene_v1; no grid enlargement or post-physics geometry update.",
+  "native_main": "Only if preflight and geometry qualify: four fixed conditions x two continuations x three paired offsets.",
+  "resource_gate": {
+    "free_gpu_mib": 12000,
+    "available_host_mib": 16384,
+    "consecutive_checks": 2,
+    "check_spacing_s": 20,
+    "maximum_wait_s": 600,
+    "serial": true
+  },
+  "no_automatic_retry": true,
+  "no_success_based_replacement": true,
+  "split": "development",
+  "student_trained": false,
+  "positive_student_training_authorized": false,
+  "interpretation": "A successful engineered contrast is a constructed behavior choice, not the intent of the human motion or held-out generalization. A qualification failure locates teacher coverage limits; preserve it.",
+  "remaining_direction": "Collect source-grouped executed decisions; then compare proposers under equal geometry/native budgets and a fixed learner after a separately registered ancestry-aware split."
+}

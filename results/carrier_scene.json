@@ -1,0 +1,65 @@
+{
+  "evidence_date": "2026-09-16",
+  "scope": "Development-only; selected CMU/107 carrier",
+  "original_tuck_geometry": {
+    "candidates": 145,
+    "admitted": 0,
+    "target_clearance_passes": 49,
+    "original_overlap_passes": 27,
+    "control_clearance_passes": 143,
+    "both_critical_gates_pass": 0,
+    "best_critical_slack_m": -0.0311061101892203,
+    "best_candidate": {
+      "frame": 130,
+      "gap_m": 0.58,
+      "worst_target_clearance_m": -0.0011061101892202996,
+      "worst_original_inner_distance_m": 0.017055174047031822
+    },
+    "registered_native_main_episodes": 24,
+    "launched_native_main_episodes": 0,
+    "interpretation": "No robust original/tuck portal admitted in the fixed grid; not proof that no scene exists."
+  },
+  "fixed_wide_tuck_followup": {
+    "status": "deferred_resources",
+    "registered_preflight_maximum": 6,
+    "scheduled_preflight_slots": 0,
+    "recorded_preflight_episodes": 0,
+    "qualification": null,
+    "resource_checks": 30,
+    "last_resource_sample": {
+      "unix_s": 1789579399.9289587,
+      "free_gpu_mib": 9086,
+      "available_host_mib": 19089.5,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    }
+  },
+  "new_main": null,
+  "cumulative_recorded_preflight_episodes": 440,
+  "cumulative_scheduled_preflight_slots": 584,
+  "cumulative_main_attempts": 312,
+  "main_remaining_budget": 168,
+  "canonical_scene_pairs": 5,
+  "canonical_scene_source_groups": 3,
+  "split": "development",
+  "held_out_generalization": false,
+  "student_trained": false,
+  "provenance": [
+    {
+      "path": "runs/carrier_scene_proposals_20260916_v1/registration.json",
+      "sha256": "8c5631e9e4d6d6dd5b6bcfdec950ac128886842f4ed5cb98091d4153c0212f81"
+    },
+    {
+      "path": "runs/carrier_scene_proposals_20260916_v1/geometry_summary.json",
+      "sha256": "4d98324460f187ad412d17a31a186d8d429a2bf5c8cbcd988be22f9ddaf87753"
+    },
+    {
+      "path": "runs/carrier_scene_proposals_20260916_v1/proposals.json",
+      "sha256": "6f601715adb8afe41443cc2eabd11489c962fb0adc2bc8fe3357bc683aef5f55"
+    },
+    {
+      "path": "configs/carrier_contrast_v1.plan.json",
+      "sha256": "fa26bb0ca4b5592bd16b000008a50d54efd757fde3ca085d5874cd5fe0bb809c"
+    }
+  ]
+}

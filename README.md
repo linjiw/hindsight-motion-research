@@ -6,6 +6,14 @@ Whole-body motion representations and hindsight scene proposals for humanoid tra
 
 ## Research status
 
+The latest acquisition check found **0/145** admissible portals for the qualified
+CMU/107 original/tuck pair under the fixed three-perturbation geometry gate.
+No new obstacle episode was launched from that comparison. A separate fixed
+wide/tuck contrast is registered and prepared for six preflights, deferred after
+the ten-minute resource gate expired without a launch; see the
+[acquisition report](docs/CARRIER_SCENE_RESULTS_zh.md) and
+[current execution status](results/carrier_scene.json).
+
 The latest completed study separates temporal smoothing from leg-reconstruction accuracy:
 
 - RVQ + anatomy residuals: **0/18** qualified preflights; smoothing alone: **0/18**.
@@ -22,6 +30,7 @@ The latest completed study separates temporal smoothing from leg-reconstruction 
 - [Research plan (中文)](docs/RESEARCH_PLAN_zh.md)
 - [Critical scenes → BFM → text-to-navigation roadmap](docs/ROADMAP_SCENE_BFM_TEXT2NAV.md)
 - [Latest mechanism results (中文)](docs/TOKEN_MECHANISM_RESULTS_zh.md) and [protocol](docs/TOKEN_MECHANISM_PROTOCOL.md)
+- [Carrier-to-scene acquisition (中文)](docs/CARRIER_SCENE_RESULTS_zh.md) and [protocol](docs/CARRIER_SCENE_PROTOCOL.md)
 - [Decoded-motion execution study](docs/DECODER_EXECUTION_zh.md)
 - [Second traversal family and token comparison](docs/SECOND_FAMILY_AND_TOKENS_zh.md)
 - [Public machine-readable result summaries](results/)

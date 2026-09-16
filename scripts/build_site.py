@@ -17,8 +17,9 @@ SOURCES = ["site/index.html", "site/style.css", "site/app.js", "site/favicon.svg
 RESULTS = [
     "token_mechanism", "decoder_execution", "mechanism_geometry",
     "foot_reconstruction", "critical_dataset", "mechanism_effects",
+    "carrier_scene",
 ]
-FIGURES = ["token_mechanism.png"]
+FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png"]
 
 
 class PageLinks(HTMLParser):
@@ -72,7 +73,8 @@ def main():
         provenance.append({"source": source, "published": target,
                            "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
     (OUTPUT / "data/provenance.json").write_text(json.dumps({
-        "evidence_date": "2026-09-15", "page_date": "2026-09-16",
+        "evidence_date": "2026-09-16", "mechanism_evidence_date": "2026-09-15",
+        "page_date": "2026-09-16",
         "scope": "Development-only aggregate evidence; no raw motion or controller assets.",
         "files": provenance,
     }, indent=2) + "\n")

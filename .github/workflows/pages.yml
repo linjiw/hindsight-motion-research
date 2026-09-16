@@ -9,6 +9,7 @@ on:
       - 'scripts/check_site.mjs'
       - 'results/**'
       - 'artifacts/token_mechanism.png'
+      - 'artifacts/carrier_scene_geometry.png'
       - '.github/workflows/pages.yml'
   pull_request:
     paths:

@@ -85,9 +85,12 @@ for(const button of document.querySelectorAll('[data-condition]'))button.addEven
 for(const button of document.querySelectorAll('[data-interface]'))button.addEventListener('click',()=>renderInterface(button.dataset.interface));
 async function loadEvidence(){
  try{
-  const names={mechanism:'token_mechanism',geometry:'mechanism_geometry',foot:'foot_reconstruction',decoder:'decoder_execution'};
+  const names={mechanism:'token_mechanism',geometry:'mechanism_geometry',foot:'foot_reconstruction',decoder:'decoder_execution',acquisition:'carrier_scene'};
   const entries=await Promise.all(Object.entries(names).map(async([key,file])=>{const r=await fetch(`data/${file}.json`);if(!r.ok)throw Error(`${file}: ${r.status}`);return [key,await r.json()];}));
   evidence=Object.fromEntries(entries);renderLab();renderComparison();renderScene();
+  const followup=evidence.acquisition.fixed_wide_tuck_followup;
+  const statusText={prepared_waiting_resources:'The six fixed wide/tuck preflights are prepared and waiting for the registered resource gate.',deferred_resources:'The six fixed wide/tuck preflights are prepared. The registered resource wait expired without a launch; no additional episodes were consumed.',running:'The fixed wide/tuck preflight has launched; qualification is not yet established.',completed_pending_audit:'The fixed wide/tuck preflight completed; qualification is awaiting audit.',infrastructure_failure:'The fixed wide/tuck launch failed. Scheduled attempts are retained; no automatic retry is authorized.',qualified:'The fixed wide/tuck pair passed all six preflights. Obstacle qualification remains a separate gate.',qualification_failed:'The fixed wide/tuck pair did not pass every preflight. It is not admitted to obstacle acquisition.'};
+  $('#acquisition-status').textContent=statusText[followup.status]||'Consult the recorded follow-up status.';
  }catch(error){$('#comparison').innerHTML='<p class="data-error">Result data could not load. Reload this page or use the linked source reports.</p>';$('#scene-scores').textContent='Recorded outcomes unavailable; consult the source report.';console.error('Evidence load failed:',error);}
 }
 loadEvidence();

@@ -13,6 +13,7 @@ artifacts/*
 !artifacts/decoder_execution.png
 !artifacts/token_mechanism.png
 !artifacts/token_mechanism_offline.png
+!artifacts/carrier_scene_geometry.png
 .env
 .env.*
 !.env.example
