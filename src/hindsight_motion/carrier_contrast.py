@@ -104,6 +104,8 @@ def propose(output):
                 eligible_pair="cmu107_arm_wide", output_pair_id="cmu107_arm_wide", negative_variant="wide",
                 parent_registration=str(PLAN),
                 question="Does the frozen fixed-wide/tuck contrast support robust scenes?",
+                hypothesis="Tuck passes critical passage while the fixed wide edit makes arm contact; both pass all controls.",
+                preflight_reuse="The fixed wide and tuck references must each pass all three new paired preflights.",
                 source_registration_sha256=sha256(PLAN))
     scene_plan = preflight / "scene_registration.json"
     with scene_plan.open("x") as f:
