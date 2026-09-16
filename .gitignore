@@ -28,3 +28,4 @@ artifacts/*
 *.log
 build/
 dist/
+_site/

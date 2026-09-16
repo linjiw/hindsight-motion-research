@@ -18,6 +18,7 @@ The latest completed study separates temporal smoothing from leg-reconstruction 
 
 ## Read the research
 
+- [Interactive research atlas](https://linjiw.github.io/hindsight-motion-research/): tokenizer, measured results, intervention explorer, and the path to BFM/navigation. [Website maintenance](site/README.md).
 - [Research plan (中文)](docs/RESEARCH_PLAN_zh.md)
 - [Critical scenes → BFM → text-to-navigation roadmap](docs/ROADMAP_SCENE_BFM_TEXT2NAV.md)
 - [Latest mechanism results (中文)](docs/TOKEN_MECHANISM_RESULTS_zh.md) and [protocol](docs/TOKEN_MECHANISM_PROTOCOL.md)

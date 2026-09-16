@@ -1,0 +1,100 @@
+"""Build the public GitHub Pages artifact from an explicit release allowlist.
+
+No native runtime, motion bank, raw run, or Python research dependency is needed.
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+from html.parser import HTMLParser
+from pathlib import Path
+import shutil
+from urllib.parse import unquote, urlsplit
+
+ROOT = Path(__file__).resolve().parents[1]
+OUTPUT = ROOT / "_site"
+SOURCES = ["site/index.html", "site/style.css", "site/app.js", "site/favicon.svg"]
+RESULTS = [
+    "token_mechanism", "decoder_execution", "mechanism_geometry",
+    "foot_reconstruction", "critical_dataset", "mechanism_effects",
+]
+FIGURES = ["token_mechanism.png"]
+
+
+class PageLinks(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.ids = set()
+        self.links = []
+
+    def handle_starttag(self, tag, attributes):
+        attrs = dict(attributes)
+        if "id" in attrs:
+            if attrs["id"] in self.ids:
+                raise ValueError(f"Duplicate HTML id: {attrs['id']}")
+            self.ids.add(attrs["id"])
+        for key in ("href", "src"):
+            if key in attrs:
+                self.links.append(attrs[key])
+
+
+def main():
+    mechanism = json.loads((ROOT / "results/token_mechanism.json").read_text())
+    # The prose is an explicitly dated snapshot. Fail if it needs editorial review.
+    expected = {
+        "cumulative_recorded_preflight_episodes": 440,
+        "cumulative_main_attempts": 312,
+        "canonical_scene_pairs": 5,
+        "canonical_scene_source_groups": 3,
+        "new_failed_preflight_scheduled_slots": 144,
+        "main_budget_remaining": 168,
+        "student_trained": False,
+    }
+    for key, value in expected.items():
+        if mechanism[key] != value:
+            raise ValueError(f"Evidence snapshot changed: review page prose for {key}")
+    if OUTPUT.is_symlink():
+        raise ValueError("Refusing a symlinked build directory")
+    if OUTPUT.exists():
+        shutil.rmtree(OUTPUT)
+    OUTPUT.mkdir()
+    (OUTPUT / "data").mkdir()
+    (OUTPUT / "assets").mkdir()
+    files = [(source, Path(source).name) for source in SOURCES]
+    files += [(f"results/{name}.json", f"data/{name}.json") for name in RESULTS]
+    files += [(f"artifacts/{name}", f"assets/{name}") for name in FIGURES]
+    provenance = []
+    for source, target in files:
+        path = ROOT / source
+        if path.is_symlink():
+            raise ValueError(f"Public assets must be regular files: {source}")
+        shutil.copyfile(path, OUTPUT / target)
+        provenance.append({"source": source, "published": target,
+                           "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
+    (OUTPUT / "data/provenance.json").write_text(json.dumps({
+        "evidence_date": "2026-09-15", "page_date": "2026-09-16",
+        "scope": "Development-only aggregate evidence; no raw motion or controller assets.",
+        "files": provenance,
+    }, indent=2) + "\n")
+    (OUTPUT / ".nojekyll").touch()
+    page = PageLinks()
+    page.feed((OUTPUT / "index.html").read_text())
+    for link in page.links:
+        parsed = urlsplit(link)
+        if parsed.scheme:
+            prefix = "https://github.com/linjiw/hindsight-motion-research/"
+            if link.startswith(prefix):
+                parts = unquote(parsed.path).split("/")
+                if len(parts) > 5 and parts[3] in ("blob", "tree"):
+                    if not (ROOT / "/".join(parts[5:])).exists():
+                        raise ValueError(f"Broken repository link: {link}")
+            continue
+        if parsed.path and not (OUTPUT / unquote(parsed.path)).is_file():
+            raise ValueError(f"Missing public asset: {link}")
+        if not parsed.path and parsed.fragment and parsed.fragment not in page.ids:
+            raise ValueError(f"Broken section anchor: {link}")
+    print(f"Built {len(files) + 2} public files; validated {len(page.links)} links in _site/")
+
+
+if __name__ == "__main__":
+    main()

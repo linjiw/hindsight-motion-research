@@ -2,6 +2,13 @@
 
 This repository publishes project-authored research code, tests, protocols, reports, summary statistics and selected aggregate scientific figures.
 
+The [GitHub Pages research atlas](https://linjiw.github.io/hindsight-motion-research/)
+publishes only an explicit subset of these public summaries and figures. Its
+interactive motion traces and obstacle envelopes are synthetic explanatory
+diagrams, not licensed trajectories or recorded simulation replays. Future BFM,
+navigation, language and scene-model interfaces are labeled as proposals. See
+[website maintenance](../site/README.md) for its allowlisted build and provenance.
+
 ## Local-only materials
 
 The following stay outside Git and are not part of this release:
