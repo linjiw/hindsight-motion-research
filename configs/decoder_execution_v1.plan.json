@@ -1,0 +1,78 @@
+{
+  "status": "executed_and_audited",
+  "registered_unix_s": 1789503768.5289357,
+  "objective": "Test decode-then-track execution on frozen arm and beam scenes and acquire additional source-group beam candidates",
+  "prior_preflight_episodes": 134,
+  "prior_main_episodes": 120,
+  "new_preflight_budget": {
+    "maximum_episodes": 144,
+    "maximum_launches": 2,
+    "decoder_allocation": 90,
+    "source_expansion_allocation": 54
+  },
+  "main_budget": {
+    "global_ceiling": 480,
+    "prior_attempts": 120,
+    "decoder_maximum": 240,
+    "new_source_maximum": 48
+  },
+  "methods": [
+    "continuous",
+    "RVQ",
+    "RVQ_body9",
+    "RVQ_PCA9",
+    "linear29"
+  ],
+  "decoder_preflight_cases": [
+    "arm03",
+    "arm02",
+    "hybrid205"
+  ],
+  "decoder_main_cases": [
+    "arm03",
+    "hybrid205"
+  ],
+  "perturbations_m": [
+    0.0,
+    -0.015,
+    0.015
+  ],
+  "execution_adapter": "Project decoded joint angles into native limits, then retain original first 0.6 s and quintic blend to decoded angles by 1.2 s; root uncompressed. Thereafter use decoded joint reference through the end.",
+  "adapter_caveat": "Teacher-assisted common-entry scaffold; not standalone full-clip codec execution or a student motor-token interface. Record projection and transition corrections.",
+  "qualification": "Both continuations pass every empty-scene perturbation under existing task/tracking criteria; additionally compare measured tracking to original continuous reference using unchanged 10 cm body / 25 cm root limits",
+  "frozen_scene_rule": "Reuse existing critical/relaxed/removed/displaced geometry unchanged across methods, including geometry-predicted failures; no scene adaptation to decoded motion",
+  "source_selection": "Up to six new source groups ranked by kinematic similarity to qualified walk carriers; original tuck, 4 cm drop plus waist pitch 0.35, and pure waist pitch 0.50; all construction failures retained",
+  "source_main_selection": "At most two source groups with all-perturbation qualified alternatives and ensemble-admitted beam geometry",
+  "split": "development",
+  "held_out_claim": false,
+  "student_training": false,
+  "no_replacements_after_physics": true,
+  "no_automatic_retries": true,
+  "completed_unix_s": 1789505015.2592263,
+  "execution_results": {
+    "preflight_episodes": 114,
+    "preflight_launches": 2,
+    "decoder_main_episodes": 96,
+    "source_main_episodes": 0,
+    "new_source_pairs": 0,
+    "decoder_preflight_passes": {
+      "continuous": 18,
+      "RVQ": 0,
+      "RVQ_body9": 0,
+      "RVQ_PCA9": 0,
+      "linear29": 17
+    },
+    "decoder_preflight_denominator_per_method": 18,
+    "representation_panels_verified": 12,
+    "representation_panels_total": 12,
+    "representation_base_pairs": 2,
+    "representation_source_groups": 1,
+    "new_source_preflight_passes": 0,
+    "new_source_preflight_episodes": 24,
+    "cumulative_main_episodes": 216,
+    "cumulative_preflight_episodes": 248,
+    "report": "/home/linjiw/hindsight-motion-research/docs/DECODER_EXECUTION_zh.md",
+    "no_retries": true,
+    "independent_acquisition_coverage_unchanged": true
+  }
+}

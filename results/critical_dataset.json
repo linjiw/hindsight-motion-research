@@ -1,0 +1,160 @@
+{
+  "episodes": 120,
+  "scene_passes": 91,
+  "control_rows": 24000,
+  "positive_motor_rows": 18200,
+  "motion_pairs": 5,
+  "source_groups": 3,
+  "tested_families": [
+    "arm_tuck",
+    "duck"
+  ],
+  "verified_families": [
+    "arm_tuck",
+    "duck"
+  ],
+  "verified_panels": 10,
+  "total_panels": 15,
+  "pairs_verified_all_three_panels": 3,
+  "pairs": [
+    {
+      "pair_id": "arm03",
+      "source_group": "KIT/205",
+      "family": "arm_tuck",
+      "positive": "tuck",
+      "negative": "wide",
+      "outcomes": {
+        "critical": {
+          "tuck": 3,
+          "wide": 0
+        },
+        "relaxed": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "removed": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "displaced": {
+          "tuck": 3,
+          "wide": 3
+        }
+      },
+      "verified_panels": 3
+    },
+    {
+      "pair_id": "arm02",
+      "source_group": "KIT/9",
+      "family": "arm_tuck",
+      "positive": "tuck",
+      "negative": "wide",
+      "outcomes": {
+        "critical": {
+          "tuck": 3,
+          "wide": 0
+        },
+        "relaxed": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "removed": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "displaced": {
+          "tuck": 3,
+          "wide": 3
+        }
+      },
+      "verified_panels": 3
+    },
+    {
+      "pair_id": "arm07",
+      "source_group": "KIT/317",
+      "family": "arm_tuck",
+      "positive": "tuck",
+      "negative": "wide",
+      "outcomes": {
+        "critical": {
+          "tuck": 2,
+          "wide": 0
+        },
+        "relaxed": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "removed": {
+          "tuck": 3,
+          "wide": 2
+        },
+        "displaced": {
+          "tuck": 3,
+          "wide": 1
+        }
+      },
+      "verified_panels": 1
+    },
+    {
+      "pair_id": "duck02",
+      "source_group": "KIT/9",
+      "family": "duck",
+      "positive": "duck",
+      "negative": "upright",
+      "outcomes": {
+        "critical": {
+          "duck": 1,
+          "upright": 0
+        },
+        "relaxed": {
+          "duck": 0,
+          "upright": 3
+        },
+        "removed": {
+          "duck": 1,
+          "upright": 3
+        },
+        "displaced": {
+          "duck": 0,
+          "upright": 3
+        }
+      },
+      "verified_panels": 0
+    },
+    {
+      "pair_id": "hybrid205",
+      "source_group": "KIT/205",
+      "family": "duck",
+      "positive": "duck",
+      "negative": "upright",
+      "outcomes": {
+        "critical": {
+          "duck": 3,
+          "upright": 0
+        },
+        "relaxed": {
+          "duck": 3,
+          "upright": 3
+        },
+        "removed": {
+          "duck": 3,
+          "upright": 3
+        },
+        "displaced": {
+          "duck": 3,
+          "upright": 3
+        }
+      },
+      "verified_panels": 3
+    }
+  ],
+  "main_study_attempts": 120,
+  "main_study_ceiling": 480,
+  "preflight_attempts": 134,
+  "new_preflight_attempts": 36,
+  "new_main_attempts": 24,
+  "split": "development",
+  "student_trained": false,
+  "counting": "Eight batch-equivalence episodes count only as preflight; not duplicated in dataset",
+  "independence": "Paired perturbations and scenes descended from one mocap source are correlated"
+}

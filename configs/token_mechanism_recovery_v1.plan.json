@@ -1,0 +1,17 @@
+{
+  "status": "registered_before_recovery",
+  "registered_unix_s": 1789505694.1180952,
+  "parent": "/home/linjiw/hindsight-motion-research/configs/token_mechanism_v1.plan.json",
+  "failed_run": "/home/linjiw/hindsight-motion-research/runs/token_mechanism_preflight_20260915_v1",
+  "failed_exit_sha256": "8eaddf3ff7ebfb42c78f82d4edbcc22a6d9e0f312dbedaaf309c4e57f423feda",
+  "reason": "Concurrent GPU allocation changed after headroom check; CUBLAS_STATUS_ALLOC_FAILED before episode collection",
+  "failed_scheduled_episodes_retained": 144,
+  "failed_recorded_episodes": 0,
+  "recovery_maximum_launches": 1,
+  "recovery_maximum_scheduled_episodes": 144,
+  "effective_stage_preflight_maximum_scheduled_episodes": 336,
+  "effective_stage_preflight_maximum_launches": 3,
+  "recovery_rule": "Replay all same frozen 144 tasks once in new directory, no motion/method/threshold changes or success-dependent replacements",
+  "resource_rule": "Wait for at least 12,000 MiB free GPU and 16 GiB available host RAM on two checks at least 20 seconds apart; no unrelated jobs interrupted",
+  "no_further_recovery": true
+}

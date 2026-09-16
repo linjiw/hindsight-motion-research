@@ -1,0 +1,511 @@
+{
+  "new_preflight_episodes": 114,
+  "new_preflight_launches": 2,
+  "new_representation_main_episodes": 96,
+  "new_acquisition_main_episodes": 0,
+  "cumulative_preflight_episodes": 248,
+  "cumulative_main_episodes": 216,
+  "cumulative_native_episodes": 464,
+  "main_remaining_budget": 264,
+  "canonical_acquisition_motion_pairs": 5,
+  "canonical_acquisition_source_groups": 3,
+  "fully_verified_canonical_pairs": 3,
+  "canonical_verified_panels": 10,
+  "canonical_total_panels": 15,
+  "representation_cells": 4,
+  "representation_base_pairs": 2,
+  "representation_source_groups": 1,
+  "representation_verified_panels": 12,
+  "representation_total_panels": 12,
+  "representation_control_rows": 19200,
+  "representation_supported_motor_rows": 16800,
+  "decoder_preflight": [
+    {
+      "source_pair_id": "arm03",
+      "method": "continuous",
+      "pair_id": "dec_arm03_continuous",
+      "successes": {
+        "wide": 3,
+        "tuck": 3
+      },
+      "native_passes": 6,
+      "fidelity_passes": 6,
+      "qualified": true
+    },
+    {
+      "source_pair_id": "arm03",
+      "method": "RVQ",
+      "pair_id": "dec_arm03_RVQ",
+      "successes": {
+        "wide": 0,
+        "tuck": 0
+      },
+      "native_passes": 0,
+      "fidelity_passes": 0,
+      "qualified": false
+    },
+    {
+      "source_pair_id": "arm03",
+      "method": "RVQ_body9",
+      "pair_id": "dec_arm03_RVQ_body9",
+      "successes": {
+        "wide": 0,
+        "tuck": 0
+      },
+      "native_passes": 0,
+      "fidelity_passes": 0,
+      "qualified": false
+    },
+    {
+      "source_pair_id": "arm03",
+      "method": "RVQ_PCA9",
+      "pair_id": "dec_arm03_RVQ_PCA9",
+      "successes": {
+        "wide": 0,
+        "tuck": 0
+      },
+      "native_passes": 0,
+      "fidelity_passes": 0,
+      "qualified": false
+    },
+    {
+      "source_pair_id": "arm03",
+      "method": "linear29",
+      "pair_id": "dec_arm03_linear29",
+      "successes": {
+        "wide": 3,
+        "tuck": 3
+      },
+      "native_passes": 6,
+      "fidelity_passes": 6,
+      "qualified": true
+    },
+    {
+      "source_pair_id": "arm02",
+      "method": "continuous",
+      "pair_id": "dec_arm02_continuous",
+      "successes": {
+        "wide": 3,
+        "tuck": 3
+      },
+      "native_passes": 6,
+      "fidelity_passes": 6,
+      "qualified": true
+    },
+    {
+      "source_pair_id": "arm02",
+      "method": "RVQ",
+      "pair_id": "dec_arm02_RVQ",
+      "successes": {
+        "wide": 0,
+        "tuck": 0
+      },
+      "native_passes": 0,
+      "fidelity_passes": 0,
+      "qualified": false
+    },
+    {
+      "source_pair_id": "arm02",
+      "method": "RVQ_body9",
+      "pair_id": "dec_arm02_RVQ_body9",
+      "successes": {
+        "wide": 0,
+        "tuck": 0
+      },
+      "native_passes": 0,
+      "fidelity_passes": 0,
+      "qualified": false
+    },
+    {
+      "source_pair_id": "arm02",
+      "method": "RVQ_PCA9",
+      "pair_id": "dec_arm02_RVQ_PCA9",
+      "successes": {
+        "wide": 0,
+        "tuck": 0
+      },
+      "native_passes": 0,
+      "fidelity_passes": 0,
+      "qualified": false
+    },
+    {
+      "source_pair_id": "arm02",
+      "method": "linear29",
+      "pair_id": "dec_arm02_linear29",
+      "successes": {
+        "wide": 2,
+        "tuck": 3
+      },
+      "native_passes": 5,
+      "fidelity_passes": 5,
+      "qualified": false
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "method": "continuous",
+      "pair_id": "dec_hybrid205_continuous",
+      "successes": {
+        "upright": 3,
+        "duck": 3
+      },
+      "native_passes": 6,
+      "fidelity_passes": 6,
+      "qualified": true
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "method": "RVQ",
+      "pair_id": "dec_hybrid205_RVQ",
+      "successes": {
+        "upright": 0,
+        "duck": 0
+      },
+      "native_passes": 0,
+      "fidelity_passes": 0,
+      "qualified": false
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "method": "RVQ_body9",
+      "pair_id": "dec_hybrid205_RVQ_body9",
+      "successes": {
+        "upright": 0,
+        "duck": 0
+      },
+      "native_passes": 0,
+      "fidelity_passes": 0,
+      "qualified": false
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "method": "RVQ_PCA9",
+      "pair_id": "dec_hybrid205_RVQ_PCA9",
+      "successes": {
+        "upright": 0,
+        "duck": 0
+      },
+      "native_passes": 0,
+      "fidelity_passes": 0,
+      "qualified": false
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "method": "linear29",
+      "pair_id": "dec_hybrid205_linear29",
+      "successes": {
+        "upright": 3,
+        "duck": 3
+      },
+      "native_passes": 6,
+      "fidelity_passes": 6,
+      "qualified": true
+    }
+  ],
+  "representation_cells_results": [
+    {
+      "pair_id": "dec_arm03_continuous",
+      "canonical_source_pair_id": "arm03",
+      "method": "continuous",
+      "outcomes": {
+        "critical": {
+          "tuck": 3,
+          "wide": 0
+        },
+        "relaxed": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "removed": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "displaced": {
+          "tuck": 3,
+          "wide": 3
+        }
+      },
+      "verified_panels": 3
+    },
+    {
+      "pair_id": "dec_arm03_linear29",
+      "canonical_source_pair_id": "arm03",
+      "method": "linear29",
+      "outcomes": {
+        "critical": {
+          "tuck": 3,
+          "wide": 0
+        },
+        "relaxed": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "removed": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "displaced": {
+          "tuck": 3,
+          "wide": 3
+        }
+      },
+      "verified_panels": 3
+    },
+    {
+      "pair_id": "dec_hybrid205_continuous",
+      "canonical_source_pair_id": "hybrid205",
+      "method": "continuous",
+      "outcomes": {
+        "critical": {
+          "duck": 3,
+          "upright": 0
+        },
+        "relaxed": {
+          "duck": 3,
+          "upright": 3
+        },
+        "removed": {
+          "duck": 3,
+          "upright": 3
+        },
+        "displaced": {
+          "duck": 3,
+          "upright": 3
+        }
+      },
+      "verified_panels": 3
+    },
+    {
+      "pair_id": "dec_hybrid205_linear29",
+      "canonical_source_pair_id": "hybrid205",
+      "method": "linear29",
+      "outcomes": {
+        "critical": {
+          "duck": 3,
+          "upright": 0
+        },
+        "relaxed": {
+          "duck": 3,
+          "upright": 3
+        },
+        "removed": {
+          "duck": 3,
+          "upright": 3
+        },
+        "displaced": {
+          "duck": 3,
+          "upright": 3
+        }
+      },
+      "verified_panels": 3
+    }
+  ],
+  "decoder_failures": [
+    {
+      "group": "RVQ",
+      "episodes": 18,
+      "passes": 0,
+      "failures_by_check": {
+        "tracking": 18,
+        "obstacle_contact_free": 0,
+        "nonfoot_floor_contact_free": 0,
+        "moving_goal_reached": 18,
+        "portal_exit_reached": 16
+      },
+      "terminated": 0,
+      "body_error_range_m": [
+        0.28179869055747986,
+        0.506360650062561
+      ],
+      "root_error_range_m": [
+        0.554133951663971,
+        1.0834850072860718
+      ]
+    },
+    {
+      "group": "RVQ_PCA9",
+      "episodes": 18,
+      "passes": 0,
+      "failures_by_check": {
+        "tracking": 18,
+        "obstacle_contact_free": 0,
+        "nonfoot_floor_contact_free": 0,
+        "moving_goal_reached": 18,
+        "portal_exit_reached": 12
+      },
+      "terminated": 0,
+      "body_error_range_m": [
+        0.2075035721063614,
+        0.39360684156417847
+      ],
+      "root_error_range_m": [
+        0.40705257654190063,
+        0.8128501772880554
+      ]
+    },
+    {
+      "group": "RVQ_body9",
+      "episodes": 18,
+      "passes": 0,
+      "failures_by_check": {
+        "tracking": 18,
+        "obstacle_contact_free": 0,
+        "nonfoot_floor_contact_free": 0,
+        "moving_goal_reached": 18,
+        "portal_exit_reached": 15
+      },
+      "terminated": 0,
+      "body_error_range_m": [
+        0.2717225253582001,
+        0.48085418343544006
+      ],
+      "root_error_range_m": [
+        0.5434094667434692,
+        1.0249460935592651
+      ]
+    },
+    {
+      "group": "continuous",
+      "episodes": 18,
+      "passes": 18,
+      "failures_by_check": {
+        "tracking": 0,
+        "obstacle_contact_free": 0,
+        "nonfoot_floor_contact_free": 0,
+        "moving_goal_reached": 0,
+        "portal_exit_reached": 0
+      },
+      "terminated": 0,
+      "body_error_range_m": [
+        0.045831117779016495,
+        0.09553009271621704
+      ],
+      "root_error_range_m": [
+        0.058146022260189056,
+        0.23188939690589905
+      ]
+    },
+    {
+      "group": "linear29",
+      "episodes": 18,
+      "passes": 17,
+      "failures_by_check": {
+        "tracking": 1,
+        "obstacle_contact_free": 0,
+        "nonfoot_floor_contact_free": 0,
+        "moving_goal_reached": 1,
+        "portal_exit_reached": 0
+      },
+      "terminated": 0,
+      "body_error_range_m": [
+        0.04755919426679611,
+        0.09897252917289734
+      ],
+      "root_error_range_m": [
+        0.05109940096735954,
+        0.2537522614002228
+      ]
+    }
+  ],
+  "source_qualification": [
+    {
+      "pair_id": "source00",
+      "source_group": "KIT/675",
+      "successes": {
+        "bend": 0,
+        "upright": 0,
+        "hybrid": 0
+      },
+      "entry_max_error": 9.5367431640625e-07,
+      "qualified_variants": []
+    },
+    {
+      "pair_id": "source01",
+      "source_group": "Eyes_Japan_Dataset/kaiwa",
+      "successes": {
+        "bend": 0,
+        "upright": 0,
+        "hybrid": 0
+      },
+      "entry_max_error": 4.76837158203125e-07,
+      "qualified_variants": []
+    },
+    {
+      "pair_id": "source02",
+      "source_group": "Eyes_Japan_Dataset/aita",
+      "successes": {
+        "bend": 0,
+        "upright": 0
+      },
+      "entry_max_error": 9.5367431640625e-07,
+      "qualified_variants": []
+    }
+  ],
+  "source_failures": [
+    {
+      "group": "Eyes_Japan_Dataset/aita",
+      "episodes": 6,
+      "passes": 0,
+      "failures_by_check": {
+        "tracking": 6,
+        "obstacle_contact_free": 0,
+        "nonfoot_floor_contact_free": 0,
+        "moving_goal_reached": 6,
+        "portal_exit_reached": 0
+      },
+      "terminated": 0,
+      "body_error_range_m": [
+        0.2478424459695816,
+        0.27542465925216675
+      ],
+      "root_error_range_m": [
+        0.34966838359832764,
+        0.41441091895103455
+      ]
+    },
+    {
+      "group": "Eyes_Japan_Dataset/kaiwa",
+      "episodes": 9,
+      "passes": 0,
+      "failures_by_check": {
+        "tracking": 9,
+        "obstacle_contact_free": 0,
+        "nonfoot_floor_contact_free": 0,
+        "moving_goal_reached": 7,
+        "portal_exit_reached": 0
+      },
+      "terminated": 0,
+      "body_error_range_m": [
+        0.1163424551486969,
+        0.16419103741645813
+      ],
+      "root_error_range_m": [
+        0.22918617725372314,
+        0.30250200629234314
+      ]
+    },
+    {
+      "group": "KIT/675",
+      "episodes": 9,
+      "passes": 0,
+      "failures_by_check": {
+        "tracking": 9,
+        "obstacle_contact_free": 0,
+        "nonfoot_floor_contact_free": 0,
+        "moving_goal_reached": 9,
+        "portal_exit_reached": 0
+      },
+      "terminated": 0,
+      "body_error_range_m": [
+        0.1183377280831337,
+        0.151266947388649
+      ],
+      "root_error_range_m": [
+        0.2523650527000427,
+        0.3180878162384033
+      ]
+    }
+  ],
+  "split": "development",
+  "held_out_generalization": false,
+  "student_trained": false
+}

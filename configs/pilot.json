@@ -1,0 +1,16 @@
+{
+  "seed": 20260915,
+  "bank": "/home/linjiw/dataset/amass-licensed/phase-g-bank-rebuilt-fmt8",
+  "provenance": "/home/linjiw/dataset/amass-licensed/provenance/phase_g_fleaven_sources.tsv",
+  "robot_xml": "/home/linjiw/lucid/GR00T-WholeBodyControl/gear_sonic_deploy/g1/g1_29dof.xml",
+  "window_seconds": 4.0,
+  "patch_frames": 5,
+  "codebook_size": 128,
+  "kmeans_iterations": 25,
+  "max_training_patches": 20000,
+  "probe_boxes_per_motion": 48,
+  "scene_candidates_per_motion": 64,
+  "max_scenes_per_motion": 3,
+  "clearance_margin_m": 0.03,
+  "minimum_translation_m": 0.6
+}

@@ -1,0 +1,66 @@
+# Hindsight Motion Research
+
+Whole-body motion representations and hindsight scene proposals for humanoid traversal: place obstacles where a measured body adjustment becomes useful, then validate that relationship through matched simulation interventions.
+
+**Local research workspace:** `/home/linjiw/hindsight-motion-research`.
+
+## Research status
+
+The latest completed study separates temporal smoothing from leg-reconstruction accuracy:
+
+- RVQ + anatomy residuals: **0/18** qualified preflights; smoothing alone: **0/18**.
+- Adding 10 Hz leg reconstruction: **15/18**, with all six selected arm/beam intervention panels preserved. Fresh continuous controls also preserve all six.
+- Eight new carrier groups screened; one passes every original + arm-tuck qualification. It still needs obstacle-scene validation.
+- Cumulative: **440 recorded preflights + 312 main episodes**. One additional infrastructure failure consumed 144 scheduled preflight slots but recorded no episodes.
+- Core scene acquisition remains **five edited pairs across three source groups**. Representation repeats do not add independent pairs. All development; no navigation student trained.
+
+![Token mechanism results](artifacts/token_mechanism.png)
+
+## Read the research
+
+- [Research plan (中文)](docs/RESEARCH_PLAN_zh.md)
+- [Critical scenes → BFM → text-to-navigation roadmap](docs/ROADMAP_SCENE_BFM_TEXT2NAV.md)
+- [Latest mechanism results (中文)](docs/TOKEN_MECHANISM_RESULTS_zh.md) and [protocol](docs/TOKEN_MECHANISM_PROTOCOL.md)
+- [Decoded-motion execution study](docs/DECODER_EXECUTION_zh.md)
+- [Second traversal family and token comparison](docs/SECOND_FAMILY_AND_TOKENS_zh.md)
+- [Public machine-readable result summaries](results/)
+- [Public release scope and reproduction limits](docs/PUBLIC_RELEASE.md)
+- [Local workspace guide and historical artifact links](docs/LOCAL_WORKSPACE.md)
+
+## Repository layout
+
+| Folder | Contents |
+| --- | --- |
+| `src/hindsight_motion/` | Motion coding, constrained edits, scene proposals, native execution adapters and audits |
+| `tests/` | Geometry, edit, representation and evidence-contract regressions |
+| `configs/` | Historical experiment registrations and local pilot configuration |
+| `docs/` | Research plans, protocols, findings and evidence boundaries |
+| `results/` | Selected public summary statistics |
+| `artifacts/` | Selected aggregate scientific figures; embedded trajectory viewers remain local |
+
+`runs/`, licensed motion data, checkpoints and raw rollout archives remain local and are ignored by Git.
+
+## Setup and tests
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e '.[dev]'
+python -m pytest -q
+```
+
+One integration test needs a local licensed reference and the native G1 URDF; it skips when those are unavailable. Native SONIC/IsaacLab execution is not bundled and is not covered by the lightweight installation above.
+
+For an authorized local native setup:
+
+```bash
+export HINDSIGHT_RUNTIME=/path/to/compatible/sonic-runtime
+export HINDSIGHT_TEACHER=/path/to/checkpoint.pt
+export PYTHONPATH="$PWD/src:$HINDSIGHT_RUNTIME"
+```
+
+Configure dataset/provenance/robot paths in a copy of `configs/pilot.json` before new offline runs. Follow each experiment protocol for native reproduction; historical commands depend on their recorded run lineage. Use new output directories and retain failed attempts.
+
+## Data and claims
+
+This is a public code-and-results research repository, not a redistribution of AMASS or teacher training assets. Historical reports link to local-only evidence files; see [release scope](docs/PUBLIC_RELEASE.md). Geometry validation, teacher trackability, intervention evidence and downstream student utility are separate claims. Future reference information is kept out of student actor observations.

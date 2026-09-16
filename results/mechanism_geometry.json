@@ -1,0 +1,819 @@
+{
+  "summary": [
+    {
+      "method": "continuous",
+      "macro_clearance_mae_m": 0.0,
+      "candidates": 643,
+      "reference_admitted": 111,
+      "method_admitted": 111,
+      "false_admissions": 0,
+      "missed_admissions": 0
+    },
+    {
+      "method": "linear29",
+      "macro_clearance_mae_m": 0.0005647394462968006,
+      "candidates": 643,
+      "reference_admitted": 111,
+      "method_admitted": 112,
+      "false_admissions": 2,
+      "missed_admissions": 1
+    },
+    {
+      "method": "body9_raw",
+      "macro_clearance_mae_m": 0.010947807459555616,
+      "candidates": 643,
+      "reference_admitted": 111,
+      "method_admitted": 69,
+      "false_admissions": 7,
+      "missed_admissions": 49
+    },
+    {
+      "method": "body9_smooth",
+      "macro_clearance_mae_m": 0.00759530327120159,
+      "candidates": 643,
+      "reference_admitted": 111,
+      "method_admitted": 80,
+      "false_admissions": 7,
+      "missed_admissions": 38
+    },
+    {
+      "method": "body9_legoracle",
+      "macro_clearance_mae_m": 0.010947807459555616,
+      "candidates": 643,
+      "reference_admitted": 111,
+      "method_admitted": 69,
+      "false_admissions": 7,
+      "missed_admissions": 49
+    },
+    {
+      "method": "body9_smooth_legoracle",
+      "macro_clearance_mae_m": 0.00759530327120159,
+      "candidates": 643,
+      "reference_admitted": 111,
+      "method_admitted": 80,
+      "false_admissions": 7,
+      "missed_admissions": 38
+    },
+    {
+      "method": "body9_leg12",
+      "macro_clearance_mae_m": 0.010947807459555616,
+      "candidates": 643,
+      "reference_admitted": 111,
+      "method_admitted": 69,
+      "false_admissions": 7,
+      "missed_admissions": 49
+    },
+    {
+      "method": "body9_smooth_leg12",
+      "macro_clearance_mae_m": 0.00759530327120159,
+      "candidates": 643,
+      "reference_admitted": 111,
+      "method_admitted": 80,
+      "false_admissions": 7,
+      "missed_admissions": 38
+    }
+  ],
+  "motion_rows": [
+    {
+      "pair_id": "arm03",
+      "variant": "tuck",
+      "method": "continuous",
+      "candidates": 145,
+      "clearance_mae_m": 0.0
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "tuck",
+      "method": "linear29",
+      "candidates": 145,
+      "clearance_mae_m": 0.0005779978164701226
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_raw",
+      "candidates": 145,
+      "clearance_mae_m": 0.012704450165732557
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_smooth",
+      "candidates": 145,
+      "clearance_mae_m": 0.009715885905606202
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.012704450165732557
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_smooth_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.009715885905606202
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.012704450165732557
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_smooth_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.009715885905606202
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "wide",
+      "method": "continuous",
+      "candidates": 145,
+      "clearance_mae_m": 0.0
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "wide",
+      "method": "linear29",
+      "candidates": 145,
+      "clearance_mae_m": 0.000653237598894441
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_raw",
+      "candidates": 145,
+      "clearance_mae_m": 0.014721367685149676
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_smooth",
+      "candidates": 145,
+      "clearance_mae_m": 0.011137903161248535
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.014721367685149676
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_smooth_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.011137903161248535
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.014721367685149676
+    },
+    {
+      "pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_smooth_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.011137903161248535
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "tuck",
+      "method": "continuous",
+      "candidates": 145,
+      "clearance_mae_m": 0.0
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "tuck",
+      "method": "linear29",
+      "candidates": 145,
+      "clearance_mae_m": 0.0004559406927268789
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_raw",
+      "candidates": 145,
+      "clearance_mae_m": 0.013926530445268967
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_smooth",
+      "candidates": 145,
+      "clearance_mae_m": 0.007970281415462646
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.013926530445268967
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_smooth_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.007970281415462646
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.013926530445268967
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_smooth_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.007970281415462646
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "wide",
+      "method": "continuous",
+      "candidates": 145,
+      "clearance_mae_m": 0.0
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "wide",
+      "method": "linear29",
+      "candidates": 145,
+      "clearance_mae_m": 0.0007107696406532454
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_raw",
+      "candidates": 145,
+      "clearance_mae_m": 0.01155038545906905
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_smooth",
+      "candidates": 145,
+      "clearance_mae_m": 0.00569565970113352
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.01155038545906905
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_smooth_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.00569565970113352
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.01155038545906905
+    },
+    {
+      "pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_smooth_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.00569565970113352
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "tuck",
+      "method": "continuous",
+      "candidates": 145,
+      "clearance_mae_m": 0.0
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "tuck",
+      "method": "linear29",
+      "candidates": 145,
+      "clearance_mae_m": 0.0008715354868371805
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "tuck",
+      "method": "body9_raw",
+      "candidates": 145,
+      "clearance_mae_m": 0.018823110486922878
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "tuck",
+      "method": "body9_smooth",
+      "candidates": 145,
+      "clearance_mae_m": 0.012900186960219485
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "tuck",
+      "method": "body9_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.018823110486922878
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "tuck",
+      "method": "body9_smooth_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.012900186960219485
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "tuck",
+      "method": "body9_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.018823110486922878
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "tuck",
+      "method": "body9_smooth_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.012900186960219485
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "wide",
+      "method": "continuous",
+      "candidates": 145,
+      "clearance_mae_m": 0.0
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "wide",
+      "method": "linear29",
+      "candidates": 145,
+      "clearance_mae_m": 0.0010570047321816327
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "wide",
+      "method": "body9_raw",
+      "candidates": 145,
+      "clearance_mae_m": 0.00972397168059761
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "wide",
+      "method": "body9_smooth",
+      "candidates": 145,
+      "clearance_mae_m": 0.009409517507891589
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "wide",
+      "method": "body9_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.00972397168059761
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "wide",
+      "method": "body9_smooth_legoracle",
+      "candidates": 145,
+      "clearance_mae_m": 0.009409517507891589
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "wide",
+      "method": "body9_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.00972397168059761
+    },
+    {
+      "pair_id": "arm07",
+      "variant": "wide",
+      "method": "body9_smooth_leg12",
+      "candidates": 145,
+      "clearance_mae_m": 0.009409517507891589
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "duck",
+      "method": "continuous",
+      "candidates": 208,
+      "clearance_mae_m": 0.0
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "duck",
+      "method": "linear29",
+      "candidates": 208,
+      "clearance_mae_m": 0.00010941602339455063
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "duck",
+      "method": "body9_raw",
+      "candidates": 208,
+      "clearance_mae_m": 0.0033896475031046534
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "duck",
+      "method": "body9_smooth",
+      "candidates": 208,
+      "clearance_mae_m": 0.002497270395827073
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "duck",
+      "method": "body9_legoracle",
+      "candidates": 208,
+      "clearance_mae_m": 0.0033896475031046534
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "duck",
+      "method": "body9_smooth_legoracle",
+      "candidates": 208,
+      "clearance_mae_m": 0.002497270395827073
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "duck",
+      "method": "body9_leg12",
+      "candidates": 208,
+      "clearance_mae_m": 0.0033896475031046534
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "duck",
+      "method": "body9_smooth_leg12",
+      "candidates": 208,
+      "clearance_mae_m": 0.002497270395827073
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "upright",
+      "method": "continuous",
+      "candidates": 208,
+      "clearance_mae_m": 0.0
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "upright",
+      "method": "linear29",
+      "candidates": 208,
+      "clearance_mae_m": 8.201357921635306e-05
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "upright",
+      "method": "body9_raw",
+      "candidates": 208,
+      "clearance_mae_m": 0.0027429962505995387
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "upright",
+      "method": "body9_smooth",
+      "candidates": 208,
+      "clearance_mae_m": 0.0014357211222236718
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "upright",
+      "method": "body9_legoracle",
+      "candidates": 208,
+      "clearance_mae_m": 0.0027429962505995387
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "upright",
+      "method": "body9_smooth_legoracle",
+      "candidates": 208,
+      "clearance_mae_m": 0.0014357211222236718
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "upright",
+      "method": "body9_leg12",
+      "candidates": 208,
+      "clearance_mae_m": 0.0027429962505995387
+    },
+    {
+      "pair_id": "duck02",
+      "variant": "upright",
+      "method": "body9_smooth_leg12",
+      "candidates": 208,
+      "clearance_mae_m": 0.0014357211222236718
+    }
+  ],
+  "pair_rows": [
+    {
+      "pair_id": "arm03",
+      "method": "continuous",
+      "candidates": 145,
+      "reference_admitted": 26,
+      "method_admitted": 26,
+      "false_admissions": 0,
+      "missed_admissions": 0
+    },
+    {
+      "pair_id": "arm03",
+      "method": "linear29",
+      "candidates": 145,
+      "reference_admitted": 26,
+      "method_admitted": 26,
+      "false_admissions": 0,
+      "missed_admissions": 0
+    },
+    {
+      "pair_id": "arm03",
+      "method": "body9_raw",
+      "candidates": 145,
+      "reference_admitted": 26,
+      "method_admitted": 19,
+      "false_admissions": 1,
+      "missed_admissions": 8
+    },
+    {
+      "pair_id": "arm03",
+      "method": "body9_smooth",
+      "candidates": 145,
+      "reference_admitted": 26,
+      "method_admitted": 22,
+      "false_admissions": 2,
+      "missed_admissions": 6
+    },
+    {
+      "pair_id": "arm03",
+      "method": "body9_legoracle",
+      "candidates": 145,
+      "reference_admitted": 26,
+      "method_admitted": 19,
+      "false_admissions": 1,
+      "missed_admissions": 8
+    },
+    {
+      "pair_id": "arm03",
+      "method": "body9_smooth_legoracle",
+      "candidates": 145,
+      "reference_admitted": 26,
+      "method_admitted": 22,
+      "false_admissions": 2,
+      "missed_admissions": 6
+    },
+    {
+      "pair_id": "arm03",
+      "method": "body9_leg12",
+      "candidates": 145,
+      "reference_admitted": 26,
+      "method_admitted": 19,
+      "false_admissions": 1,
+      "missed_admissions": 8
+    },
+    {
+      "pair_id": "arm03",
+      "method": "body9_smooth_leg12",
+      "candidates": 145,
+      "reference_admitted": 26,
+      "method_admitted": 22,
+      "false_admissions": 2,
+      "missed_admissions": 6
+    },
+    {
+      "pair_id": "arm02",
+      "method": "continuous",
+      "candidates": 145,
+      "reference_admitted": 24,
+      "method_admitted": 24,
+      "false_admissions": 0,
+      "missed_admissions": 0
+    },
+    {
+      "pair_id": "arm02",
+      "method": "linear29",
+      "candidates": 145,
+      "reference_admitted": 24,
+      "method_admitted": 24,
+      "false_admissions": 0,
+      "missed_admissions": 0
+    },
+    {
+      "pair_id": "arm02",
+      "method": "body9_raw",
+      "candidates": 145,
+      "reference_admitted": 24,
+      "method_admitted": 22,
+      "false_admissions": 6,
+      "missed_admissions": 8
+    },
+    {
+      "pair_id": "arm02",
+      "method": "body9_smooth",
+      "candidates": 145,
+      "reference_admitted": 24,
+      "method_admitted": 27,
+      "false_admissions": 5,
+      "missed_admissions": 2
+    },
+    {
+      "pair_id": "arm02",
+      "method": "body9_legoracle",
+      "candidates": 145,
+      "reference_admitted": 24,
+      "method_admitted": 22,
+      "false_admissions": 6,
+      "missed_admissions": 8
+    },
+    {
+      "pair_id": "arm02",
+      "method": "body9_smooth_legoracle",
+      "candidates": 145,
+      "reference_admitted": 24,
+      "method_admitted": 27,
+      "false_admissions": 5,
+      "missed_admissions": 2
+    },
+    {
+      "pair_id": "arm02",
+      "method": "body9_leg12",
+      "candidates": 145,
+      "reference_admitted": 24,
+      "method_admitted": 22,
+      "false_admissions": 6,
+      "missed_admissions": 8
+    },
+    {
+      "pair_id": "arm02",
+      "method": "body9_smooth_leg12",
+      "candidates": 145,
+      "reference_admitted": 24,
+      "method_admitted": 27,
+      "false_admissions": 5,
+      "missed_admissions": 2
+    },
+    {
+      "pair_id": "arm07",
+      "method": "continuous",
+      "candidates": 145,
+      "reference_admitted": 38,
+      "method_admitted": 38,
+      "false_admissions": 0,
+      "missed_admissions": 0
+    },
+    {
+      "pair_id": "arm07",
+      "method": "linear29",
+      "candidates": 145,
+      "reference_admitted": 38,
+      "method_admitted": 38,
+      "false_admissions": 1,
+      "missed_admissions": 1
+    },
+    {
+      "pair_id": "arm07",
+      "method": "body9_raw",
+      "candidates": 145,
+      "reference_admitted": 38,
+      "method_admitted": 28,
+      "false_admissions": 0,
+      "missed_admissions": 10
+    },
+    {
+      "pair_id": "arm07",
+      "method": "body9_smooth",
+      "candidates": 145,
+      "reference_admitted": 38,
+      "method_admitted": 31,
+      "false_admissions": 0,
+      "missed_admissions": 7
+    },
+    {
+      "pair_id": "arm07",
+      "method": "body9_legoracle",
+      "candidates": 145,
+      "reference_admitted": 38,
+      "method_admitted": 28,
+      "false_admissions": 0,
+      "missed_admissions": 10
+    },
+    {
+      "pair_id": "arm07",
+      "method": "body9_smooth_legoracle",
+      "candidates": 145,
+      "reference_admitted": 38,
+      "method_admitted": 31,
+      "false_admissions": 0,
+      "missed_admissions": 7
+    },
+    {
+      "pair_id": "arm07",
+      "method": "body9_leg12",
+      "candidates": 145,
+      "reference_admitted": 38,
+      "method_admitted": 28,
+      "false_admissions": 0,
+      "missed_admissions": 10
+    },
+    {
+      "pair_id": "arm07",
+      "method": "body9_smooth_leg12",
+      "candidates": 145,
+      "reference_admitted": 38,
+      "method_admitted": 31,
+      "false_admissions": 0,
+      "missed_admissions": 7
+    },
+    {
+      "pair_id": "duck02",
+      "method": "continuous",
+      "candidates": 208,
+      "reference_admitted": 23,
+      "method_admitted": 23,
+      "false_admissions": 0,
+      "missed_admissions": 0
+    },
+    {
+      "pair_id": "duck02",
+      "method": "linear29",
+      "candidates": 208,
+      "reference_admitted": 23,
+      "method_admitted": 24,
+      "false_admissions": 1,
+      "missed_admissions": 0
+    },
+    {
+      "pair_id": "duck02",
+      "method": "body9_raw",
+      "candidates": 208,
+      "reference_admitted": 23,
+      "method_admitted": 0,
+      "false_admissions": 0,
+      "missed_admissions": 23
+    },
+    {
+      "pair_id": "duck02",
+      "method": "body9_smooth",
+      "candidates": 208,
+      "reference_admitted": 23,
+      "method_admitted": 0,
+      "false_admissions": 0,
+      "missed_admissions": 23
+    },
+    {
+      "pair_id": "duck02",
+      "method": "body9_legoracle",
+      "candidates": 208,
+      "reference_admitted": 23,
+      "method_admitted": 0,
+      "false_admissions": 0,
+      "missed_admissions": 23
+    },
+    {
+      "pair_id": "duck02",
+      "method": "body9_smooth_legoracle",
+      "candidates": 208,
+      "reference_admitted": 23,
+      "method_admitted": 0,
+      "false_admissions": 0,
+      "missed_admissions": 23
+    },
+    {
+      "pair_id": "duck02",
+      "method": "body9_leg12",
+      "candidates": 208,
+      "reference_admitted": 23,
+      "method_admitted": 0,
+      "false_admissions": 0,
+      "missed_admissions": 23
+    },
+    {
+      "pair_id": "duck02",
+      "method": "body9_smooth_leg12",
+      "candidates": 208,
+      "reference_admitted": 23,
+      "method_admitted": 0,
+      "false_admissions": 0,
+      "missed_admissions": 23
+    }
+  ],
+  "frozen_model_sha256": "423435dac1111cadcc4590a206e677a3409dabb8c96f5bfcf02d3c2c8a5a1517",
+  "urdf_sha256": "6e107391d015ab27438026bb953b21ef8fa6a02305e65393985908941d7fd98d",
+  "physics_verified": false
+}

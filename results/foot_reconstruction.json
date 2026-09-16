@@ -1,0 +1,442 @@
+{
+  "exploratory": true,
+  "offline_only": true,
+  "physics_verified": false,
+  "scope": "Executed-reference FK after 1.2 s; ankle-link position/orientation, no contact or slip labels",
+  "rows": [
+    {
+      "source_pair_id": "arm03",
+      "variant": "tuck",
+      "method": "continuous",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "tuck",
+      "method": "linear29",
+      "foot_position_rmse_m": 0.0041714271008927665,
+      "foot_velocity_rmse_mps": 0.132294624674045,
+      "foot_orientation_rms_rad": 0.018831728880302167
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_raw",
+      "foot_position_rmse_m": 0.10754116615468173,
+      "foot_velocity_rmse_mps": 1.8186745300350569,
+      "foot_orientation_rms_rad": 0.23000292506665873
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_smooth",
+      "foot_position_rmse_m": 0.10430670928680273,
+      "foot_velocity_rmse_mps": 0.9855562069396735,
+      "foot_orientation_rms_rad": 0.2137509880359718
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_smooth_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_leg12",
+      "foot_position_rmse_m": 0.0041714271008927665,
+      "foot_velocity_rmse_mps": 0.132294624674045,
+      "foot_orientation_rms_rad": 0.018831728880302167
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "tuck",
+      "method": "body9_smooth_leg12",
+      "foot_position_rmse_m": 0.0041714271008927665,
+      "foot_velocity_rmse_mps": 0.132294624674045,
+      "foot_orientation_rms_rad": 0.018831728880302167
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "wide",
+      "method": "continuous",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "wide",
+      "method": "linear29",
+      "foot_position_rmse_m": 0.0041714271008927665,
+      "foot_velocity_rmse_mps": 0.132294624674045,
+      "foot_orientation_rms_rad": 0.018831728880302167
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_raw",
+      "foot_position_rmse_m": 0.1267236616241678,
+      "foot_velocity_rmse_mps": 1.4919790370045343,
+      "foot_orientation_rms_rad": 0.2492981416365001
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_smooth",
+      "foot_position_rmse_m": 0.12508107640681296,
+      "foot_velocity_rmse_mps": 0.8476531656328447,
+      "foot_orientation_rms_rad": 0.24515070273005685
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_smooth_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_leg12",
+      "foot_position_rmse_m": 0.0041714271008927665,
+      "foot_velocity_rmse_mps": 0.132294624674045,
+      "foot_orientation_rms_rad": 0.018831728880302167
+    },
+    {
+      "source_pair_id": "arm03",
+      "variant": "wide",
+      "method": "body9_smooth_leg12",
+      "foot_position_rmse_m": 0.0041714271008927665,
+      "foot_velocity_rmse_mps": 0.132294624674045,
+      "foot_orientation_rms_rad": 0.018831728880302167
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "tuck",
+      "method": "continuous",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "tuck",
+      "method": "linear29",
+      "foot_position_rmse_m": 0.002728039149499645,
+      "foot_velocity_rmse_mps": 0.08734196108806737,
+      "foot_orientation_rms_rad": 0.012511943055292244
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_raw",
+      "foot_position_rmse_m": 0.12064923251945107,
+      "foot_velocity_rmse_mps": 1.5030064850845155,
+      "foot_orientation_rms_rad": 0.2392207120102118
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_smooth",
+      "foot_position_rmse_m": 0.118680011267891,
+      "foot_velocity_rmse_mps": 0.7915134882027459,
+      "foot_orientation_rms_rad": 0.22592623956422475
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_smooth_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_leg12",
+      "foot_position_rmse_m": 0.002728039149499645,
+      "foot_velocity_rmse_mps": 0.08734196108806737,
+      "foot_orientation_rms_rad": 0.012511943055292244
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "tuck",
+      "method": "body9_smooth_leg12",
+      "foot_position_rmse_m": 0.002728039149499645,
+      "foot_velocity_rmse_mps": 0.08734196108806737,
+      "foot_orientation_rms_rad": 0.012511943055292244
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "wide",
+      "method": "continuous",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "wide",
+      "method": "linear29",
+      "foot_position_rmse_m": 0.002728039149499645,
+      "foot_velocity_rmse_mps": 0.08734196108806737,
+      "foot_orientation_rms_rad": 0.012511943055292244
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_raw",
+      "foot_position_rmse_m": 0.11438031651365914,
+      "foot_velocity_rmse_mps": 1.2075886090968393,
+      "foot_orientation_rms_rad": 0.23225210892031667
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_smooth",
+      "foot_position_rmse_m": 0.11321088803686892,
+      "foot_velocity_rmse_mps": 0.6623840808277529,
+      "foot_orientation_rms_rad": 0.2291877135071566
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_smooth_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_leg12",
+      "foot_position_rmse_m": 0.002728039149499645,
+      "foot_velocity_rmse_mps": 0.08734196108806737,
+      "foot_orientation_rms_rad": 0.012511943055292244
+    },
+    {
+      "source_pair_id": "arm02",
+      "variant": "wide",
+      "method": "body9_smooth_leg12",
+      "foot_position_rmse_m": 0.002728039149499645,
+      "foot_velocity_rmse_mps": 0.08734196108806737,
+      "foot_orientation_rms_rad": 0.012511943055292244
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "duck",
+      "method": "continuous",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "duck",
+      "method": "linear29",
+      "foot_position_rmse_m": 0.004170608764149311,
+      "foot_velocity_rmse_mps": 0.13246474339173928,
+      "foot_orientation_rms_rad": 0.01876467435214072
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "duck",
+      "method": "body9_raw",
+      "foot_position_rmse_m": 0.09459811274682117,
+      "foot_velocity_rmse_mps": 1.8334517640006667,
+      "foot_orientation_rms_rad": 0.24849866482351665
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "duck",
+      "method": "body9_smooth",
+      "foot_position_rmse_m": 0.09090970431524764,
+      "foot_velocity_rmse_mps": 0.9688214449641808,
+      "foot_orientation_rms_rad": 0.23528362967785377
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "duck",
+      "method": "body9_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "duck",
+      "method": "body9_smooth_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "duck",
+      "method": "body9_leg12",
+      "foot_position_rmse_m": 0.004170608764149311,
+      "foot_velocity_rmse_mps": 0.13246474339173928,
+      "foot_orientation_rms_rad": 0.01876467435214072
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "duck",
+      "method": "body9_smooth_leg12",
+      "foot_position_rmse_m": 0.004170608764149311,
+      "foot_velocity_rmse_mps": 0.13246474339173928,
+      "foot_orientation_rms_rad": 0.01876467435214072
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "upright",
+      "method": "continuous",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "upright",
+      "method": "linear29",
+      "foot_position_rmse_m": 0.0041714271008927665,
+      "foot_velocity_rmse_mps": 0.132294624674045,
+      "foot_orientation_rms_rad": 0.018831728880302167
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "upright",
+      "method": "body9_raw",
+      "foot_position_rmse_m": 0.10754116615468173,
+      "foot_velocity_rmse_mps": 1.8186745300350569,
+      "foot_orientation_rms_rad": 0.23000292506665873
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "upright",
+      "method": "body9_smooth",
+      "foot_position_rmse_m": 0.10430670928680273,
+      "foot_velocity_rmse_mps": 0.9855562069396735,
+      "foot_orientation_rms_rad": 0.2137509880359718
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "upright",
+      "method": "body9_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "upright",
+      "method": "body9_smooth_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "upright",
+      "method": "body9_leg12",
+      "foot_position_rmse_m": 0.0041714271008927665,
+      "foot_velocity_rmse_mps": 0.132294624674045,
+      "foot_orientation_rms_rad": 0.018831728880302167
+    },
+    {
+      "source_pair_id": "hybrid205",
+      "variant": "upright",
+      "method": "body9_smooth_leg12",
+      "foot_position_rmse_m": 0.0041714271008927665,
+      "foot_velocity_rmse_mps": 0.132294624674045,
+      "foot_orientation_rms_rad": 0.018831728880302167
+    }
+  ],
+  "summary": [
+    {
+      "method": "continuous",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "method": "linear29",
+      "foot_position_rmse_m": 0.0036901613943044836,
+      "foot_velocity_rmse_mps": 0.11733875659833486,
+      "foot_orientation_rms_rad": 0.016713957850605286
+    },
+    {
+      "method": "body9_raw",
+      "foot_position_rmse_m": 0.11190560928557709,
+      "foot_velocity_rmse_mps": 1.6122291592094449,
+      "foot_orientation_rms_rad": 0.23821257958731043
+    },
+    {
+      "method": "body9_smooth",
+      "foot_position_rmse_m": 0.10941584976673767,
+      "foot_velocity_rmse_mps": 0.8735807655844785,
+      "foot_orientation_rms_rad": 0.2271750435918726
+    },
+    {
+      "method": "body9_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "method": "body9_smooth_legoracle",
+      "foot_position_rmse_m": 0.0,
+      "foot_velocity_rmse_mps": 0.0,
+      "foot_orientation_rms_rad": 0.0
+    },
+    {
+      "method": "body9_leg12",
+      "foot_position_rmse_m": 0.0036901613943044836,
+      "foot_velocity_rmse_mps": 0.11733875659833486,
+      "foot_orientation_rms_rad": 0.016713957850605286
+    },
+    {
+      "method": "body9_smooth_leg12",
+      "foot_position_rmse_m": 0.0036901613943044836,
+      "foot_velocity_rmse_mps": 0.11733875659833486,
+      "foot_orientation_rms_rad": 0.016713957850605286
+    }
+  ]
+}

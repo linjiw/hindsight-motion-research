@@ -1,0 +1,145 @@
+{
+  "schema": "hindsight_research_execution_plan_v1",
+  "status": "partially_executed",
+  "name": "critical_decisions_v1",
+  "objective": "Build intervention-labeled motion-scene decisions with executable alternatives and a BFM-compatible evidence contract.",
+  "teacher": {
+    "checkpoint": "/home/linjiw/research-data/m2s-sonic-qualification-20260912/release/checkpoint.pt",
+    "sha256": "e6bdab3f64a39336b3d41877d4f497d05f58af275f288ec0e6746c283ded8909",
+    "selection_rule": "Audit an available tracking teacher on the selected motion families and freeze the compatible robot, action, history and decoder contracts before qualification."
+  },
+  "sources": {
+    "g1_bank": "/home/linjiw/dataset/amass-licensed/phase-g-bank-rebuilt-fmt8",
+    "g1_provenance": "/home/linjiw/dataset/amass-licensed/provenance/phase_g_fleaven_sources.tsv",
+    "bones_g1_subset": "/home/linjiw/lucid/GR00T-WholeBodyControl/data/motion_lib_bones_seed/robot_filtered",
+    "ancestry_split_requirement": "Original performance, actor/session when identifiable, mirror, resample, retarget and scene descendants remain grouped. Existing pilot test groups are development-only for this follow-up until a fresh evaluation split is frozen."
+  },
+  "selection": {
+    "candidate_families": [
+      "arm_tuck",
+      "side_facing_passage",
+      "duck",
+      "step_over"
+    ],
+    "initial_family_count": 2,
+    "family_selection_rule": "Use two families with demonstrated teacher execution support; do not claim coverage of the others.",
+    "target_motion_pair_count": 20,
+    "motions_per_pair": 2,
+    "common_entry_state_required": true,
+    "alternative_empty_scene_execution_required": true
+  },
+  "interventions": [
+    "critical",
+    "relaxed",
+    "removed",
+    "displaced"
+  ],
+  "execution_budget": {
+    "paired_perturbation_seeds": [
+      0,
+      1,
+      2
+    ],
+    "maximum_registered_rollout_attempts": 480,
+    "calculation": "20 pairs * 2 continuations * 4 scene conditions * 3 perturbations",
+    "unqualified_pair_behavior": "Retain failed attempts and do not promote the pair; do not silently replace failures to fill a success quota.",
+    "preflight_scope": "Any runtime preflight outside the 480-attempt study must be separately bounded and logged before launch."
+  },
+  "required_outcomes": [
+    "original_and_alternative_empty_scene_execution",
+    "achieved_motion_and_root_tracking",
+    "pair_resolved_environment_contacts",
+    "goal_reached_and_terminal_requirements",
+    "falls_timeouts_and_interventions",
+    "critical_vs_removed_behavior_costs",
+    "critical_body_part_and_interval",
+    "parameter_interval_and_perturbation_robustness"
+  ],
+  "input_views": {
+    "actor": [
+      "causal_robot_history",
+      "available_scene_observation",
+      "goal_and_terminal_requirements",
+      "optional_controls_and_availability_masks"
+    ],
+    "teacher_only": [
+      "privileged_simulator_state",
+      "qualified_reference_continuation",
+      "teacher_state_and_reference_alignment"
+    ],
+    "targets_only": [
+      "teacher_action_or_compatible_motor_token",
+      "future_motion",
+      "critical_relation_labels",
+      "outcomes_and_support_masks"
+    ],
+    "provenance_only": [
+      "motion_id",
+      "source_group",
+      "teacher_hash",
+      "scene_hash",
+      "reference_phase",
+      "construction_event_id"
+    ]
+  },
+  "representation_contract": {
+    "motion_codes": "Temporal motion representation; not native motor tokens.",
+    "scene_tokens": "Metric 3D object/set tokens with frames, visibility, padding and unknown-space semantics.",
+    "relation_labels": "Verified motion-scene body-part/time/behavior relations; future-derived values are training-only.",
+    "motor_tokens": "Native controller representation pinned to teacher decoder and action conventions.",
+    "adapter": "Required and separately validated whenever a motion representation drives a different motor-token space."
+  },
+  "outputs": [
+    "teacher_and_runtime_contract.json",
+    "motion_pair_manifest.jsonl",
+    "scene_intervention_tasks.jsonl",
+    "all_attempts_and_outcomes.csv",
+    "canonical_episodes_with_separate_views",
+    "per_target_training_support_masks",
+    "critical_parameter_intervals.jsonl",
+    "claim_and_evidence_report.md"
+  ],
+  "downstream_sequence": [
+    "criticality_aware_proposer",
+    "motion_scene_representation_ablation",
+    "known_map_goal_conditioned_bfm_distillation",
+    "same_state_teacher_acquisition",
+    "independent_scene_first_utility_test",
+    "grounded_language_and_text2nav"
+  ],
+  "execution_progress": {
+    "completed_stage": "decoded_reference_execution_and_new_source_qualification",
+    "preflight_attempts": 248,
+    "main_study_attempts": 216,
+    "completed_motion_pairs": 5,
+    "completed_families": [
+      "arm_tuck",
+      "duck"
+    ],
+    "verified_matched_perturbation_panels": 10,
+    "goal_profile": "moving_arrival",
+    "report": "/home/linjiw/hindsight-motion-research/docs/DECODER_EXECUTION_zh.md",
+    "remaining": "Isolate token-boundary discontinuity versus leg reconstruction; establish more teacher-supported independent carriers; replicate overhead traversal across sources; evaluate learned proposer and downstream scene-first student utility.",
+    "fully_verified_motion_pairs": 3,
+    "tested_families": [
+      "arm_tuck",
+      "duck"
+    ],
+    "total_matched_perturbation_panels": 15,
+    "acquisition_main_episodes": 120,
+    "representation_main_episodes": 96,
+    "representation_verified_panels": 12,
+    "representation_total_panels": 12,
+    "representation_base_pairs": 2,
+    "representation_source_groups": 1,
+    "independent_coverage_unchanged": true
+  },
+  "pending_stage": {
+    "name": "token_mechanism_v1",
+    "status_source": "/home/linjiw/hindsight-motion-research/runs/token_mechanism_validation_20260915_v1/stage_status.json",
+    "scientific_plan": "/home/linjiw/hindsight-motion-research/configs/token_mechanism_v1.plan.json",
+    "infrastructure_recovery_plan": "/home/linjiw/hindsight-motion-research/configs/token_mechanism_recovery_v1.plan.json",
+    "new_scheduled_but_unrecorded_preflight_slots": 144,
+    "completed_stage_counts_above_are_historical": true
+  }
+}

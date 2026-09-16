@@ -1,0 +1,27 @@
+{
+  "status": "executed",
+  "objective": "Acquire repeatable second-family alternatives before further main-scene labels",
+  "evidence": "/home/linjiw/hindsight-motion-research/docs/EXPANSION_RESULTS_zh.md",
+  "remaining_expansion_preflight_episodes": 10,
+  "remaining_expansion_preflight_launches": 0,
+  "proposed_next_preflight_max_episodes": 42,
+  "allocation": "Up to 7 pairs x 2 continuations x 3 explicit initial perturbations; fewer if construction lacks support",
+  "source_preference": "Natural duck/lean references with matched-foot transitions; preserve all construction rejections",
+  "unchanged_success_thresholds": {
+    "mean_body_error_m": 0.1,
+    "max_root_xy_error_m": 0.25
+  },
+  "qualification": "Both continuations pass every paired perturbation in the empty scene before main-scene acquisition",
+  "teacher": "Existing frozen teacher first; any checkpoint change needs a separate recorded teacher/robot/decoder contract",
+  "main_study_attempts_used": 120,
+  "main_study_remaining": 360,
+  "next_representation_test": "Root vs continuous whole-body vs RVQ vs RVQ plus continuous critical-body residuals, on the same frozen scene candidates",
+  "student_gate": "Freeze source-group split after expanding source coverage; multimodal supported continuations, no actor future-reference leakage",
+  "text2nav_gate": "Establish goal/known-map student traversal utility on independent authored scenes first",
+  "actual_preflight_episodes": 36,
+  "construction_rejected_pairs": 1,
+  "qualified_pairs": 5,
+  "actual_new_main_episodes": 24,
+  "new_verified_second_family_panels": 3,
+  "result": "/home/linjiw/hindsight-motion-research/docs/SECOND_FAMILY_AND_TOKENS_zh.md"
+}

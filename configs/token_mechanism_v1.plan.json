@@ -1,0 +1,524 @@
+{
+  "status": "executed_and_audited",
+  "registered_unix_s": 1789505338.9784734,
+  "objective": "Separate temporal smoothing and leg reconstruction effects in RVQ+body9 and screen unedited/new carriers",
+  "prior_preflight_episodes": 248,
+  "prior_main_episodes": 216,
+  "preflight_budget": {
+    "maximum_episodes": 192,
+    "maximum_launches": 2,
+    "mechanism": 144,
+    "new_carriers": 48
+  },
+  "main_budget": {
+    "global_ceiling": 480,
+    "this_stage_maximum": 96
+  },
+  "methods": [
+    "continuous",
+    "linear29",
+    "body9_raw",
+    "body9_smooth",
+    "body9_legoracle",
+    "body9_smooth_legoracle",
+    "body9_leg12",
+    "body9_smooth_leg12"
+  ],
+  "mechanism_cases": [
+    "arm03",
+    "arm02",
+    "hybrid205"
+  ],
+  "interventions": {
+    "base": "Frozen RVQ plus nine anatomy residual channels from prior study",
+    "smoothing": "Symmetric 5-frame binomial FIR [1,4,6,4,1]/16 over all decoded joints, edge replication; no learned parameters",
+    "legoracle": "Replace twelve leg joints AFTER optional smoothing with original 50 Hz angles; privileged diagnostic, 19,200 bit/s logical extra payload",
+    "leg12": "Replace twelve leg joints AFTER optional smoothing with frozen Linear29 10 Hz 12-bit reconstructions; 1,440 bit/s extra",
+    "factorial_interpretation": "Within tested references: smoothing package versus original-leg replacement; smoothing also changes within-patch trajectory, not a pure seam-only intervention"
+  },
+  "execution_adapter": "Same original prefix through 0.6 s, quintic blend until 1.2 s; original full-rate root; native joint limits and correction audit",
+  "qualification": "Both continuations pass all three nominal perturbations and original continuous-reference fidelity: 10 cm mean body, 25 cm maximum root XY, all 200 rows; existing task and contact criteria unchanged",
+  "perturbations_m": [
+    0,
+    -0.015,
+    0.015
+  ],
+  "main_cases": [
+    "arm03",
+    "hybrid205"
+  ],
+  "main_selection": "For each main case, select first fully qualified practical method in fixed order body9_raw, body9_smooth, body9_leg12, body9_smooth_leg12; run it and fresh continuous control on all four frozen interventions. No oracle main scenes. If no practical method qualifies, no main scenes for that case.",
+  "carrier_selection": "Scan all 900 bank clips without filename gate; exclude all previously physically examined source groups. Same 4 s kinematic eligibility as previous source stage. Rank descriptor distance to KIT/205 and KIT/9 anchor with eligible-pool scaling; one best clip/group, at most eight groups. Compare unedited carrier and smooth arm tuck, each at three offsets. No retiming or bend edits in this stage.",
+  "carrier_qualification": "Record unedited and tuck passes separately; acquisition-ready only if both pass all three. No obstacle generation from unsupported carriers.",
+  "split": "development",
+  "held_out_generalization": false,
+  "student_trained": false,
+  "no_replacements_after_physics": true,
+  "no_automatic_retries": true,
+  "gpu_execution": "One project native batch at a time; check available memory before launch; do not interrupt unrelated jobs",
+  "recovery_amendment": "/home/linjiw/hindsight-motion-research/configs/token_mechanism_recovery_v1.plan.json",
+  "live_status": "/home/linjiw/hindsight-motion-research/runs/token_mechanism_validation_20260915_v1/stage_status.json",
+  "completed_unix_s": 1789508402.2131286,
+  "execution_results": {
+    "methods": [
+      {
+        "method": "continuous",
+        "joint_passes": 18,
+        "native_passes": 18,
+        "fidelity_passes": 18,
+        "fully_qualified_pairs": 3
+      },
+      {
+        "method": "linear29",
+        "joint_passes": 16,
+        "native_passes": 16,
+        "fidelity_passes": 17,
+        "fully_qualified_pairs": 2
+      },
+      {
+        "method": "body9_raw",
+        "joint_passes": 0,
+        "native_passes": 0,
+        "fidelity_passes": 0,
+        "fully_qualified_pairs": 0
+      },
+      {
+        "method": "body9_smooth",
+        "joint_passes": 0,
+        "native_passes": 0,
+        "fidelity_passes": 0,
+        "fully_qualified_pairs": 0
+      },
+      {
+        "method": "body9_legoracle",
+        "joint_passes": 15,
+        "native_passes": 15,
+        "fidelity_passes": 15,
+        "fully_qualified_pairs": 2
+      },
+      {
+        "method": "body9_smooth_legoracle",
+        "joint_passes": 17,
+        "native_passes": 17,
+        "fidelity_passes": 17,
+        "fully_qualified_pairs": 2
+      },
+      {
+        "method": "body9_leg12",
+        "joint_passes": 15,
+        "native_passes": 15,
+        "fidelity_passes": 15,
+        "fully_qualified_pairs": 2
+      },
+      {
+        "method": "body9_smooth_leg12",
+        "joint_passes": 15,
+        "native_passes": 15,
+        "fidelity_passes": 15,
+        "fully_qualified_pairs": 2
+      }
+    ],
+    "qualification": [
+      {
+        "source_pair_id": "arm03",
+        "method": "continuous",
+        "pair_id": "mech_arm03_continuous",
+        "successes": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "arm03",
+        "method": "linear29",
+        "pair_id": "mech_arm03_linear29",
+        "successes": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "arm03",
+        "method": "body9_raw",
+        "pair_id": "mech_arm03_body9_raw",
+        "successes": {
+          "tuck": 0,
+          "wide": 0
+        },
+        "native_passes": 0,
+        "fidelity_passes": 0,
+        "qualified": false
+      },
+      {
+        "source_pair_id": "arm03",
+        "method": "body9_smooth",
+        "pair_id": "mech_arm03_body9_smooth",
+        "successes": {
+          "tuck": 0,
+          "wide": 0
+        },
+        "native_passes": 0,
+        "fidelity_passes": 0,
+        "qualified": false
+      },
+      {
+        "source_pair_id": "arm03",
+        "method": "body9_legoracle",
+        "pair_id": "mech_arm03_body9_legoracle",
+        "successes": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "arm03",
+        "method": "body9_smooth_legoracle",
+        "pair_id": "mech_arm03_body9_smooth_legoracle",
+        "successes": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "arm03",
+        "method": "body9_leg12",
+        "pair_id": "mech_arm03_body9_leg12",
+        "successes": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "arm03",
+        "method": "body9_smooth_leg12",
+        "pair_id": "mech_arm03_body9_smooth_leg12",
+        "successes": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "arm02",
+        "method": "continuous",
+        "pair_id": "mech_arm02_continuous",
+        "successes": {
+          "tuck": 3,
+          "wide": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "arm02",
+        "method": "linear29",
+        "pair_id": "mech_arm02_linear29",
+        "successes": {
+          "tuck": 3,
+          "wide": 1
+        },
+        "native_passes": 4,
+        "fidelity_passes": 5,
+        "qualified": false
+      },
+      {
+        "source_pair_id": "arm02",
+        "method": "body9_raw",
+        "pair_id": "mech_arm02_body9_raw",
+        "successes": {
+          "tuck": 0,
+          "wide": 0
+        },
+        "native_passes": 0,
+        "fidelity_passes": 0,
+        "qualified": false
+      },
+      {
+        "source_pair_id": "arm02",
+        "method": "body9_smooth",
+        "pair_id": "mech_arm02_body9_smooth",
+        "successes": {
+          "tuck": 0,
+          "wide": 0
+        },
+        "native_passes": 0,
+        "fidelity_passes": 0,
+        "qualified": false
+      },
+      {
+        "source_pair_id": "arm02",
+        "method": "body9_legoracle",
+        "pair_id": "mech_arm02_body9_legoracle",
+        "successes": {
+          "tuck": 3,
+          "wide": 0
+        },
+        "native_passes": 3,
+        "fidelity_passes": 3,
+        "qualified": false
+      },
+      {
+        "source_pair_id": "arm02",
+        "method": "body9_smooth_legoracle",
+        "pair_id": "mech_arm02_body9_smooth_legoracle",
+        "successes": {
+          "tuck": 3,
+          "wide": 2
+        },
+        "native_passes": 5,
+        "fidelity_passes": 5,
+        "qualified": false
+      },
+      {
+        "source_pair_id": "arm02",
+        "method": "body9_leg12",
+        "pair_id": "mech_arm02_body9_leg12",
+        "successes": {
+          "tuck": 3,
+          "wide": 0
+        },
+        "native_passes": 3,
+        "fidelity_passes": 3,
+        "qualified": false
+      },
+      {
+        "source_pair_id": "arm02",
+        "method": "body9_smooth_leg12",
+        "pair_id": "mech_arm02_body9_smooth_leg12",
+        "successes": {
+          "tuck": 3,
+          "wide": 0
+        },
+        "native_passes": 3,
+        "fidelity_passes": 3,
+        "qualified": false
+      },
+      {
+        "source_pair_id": "hybrid205",
+        "method": "continuous",
+        "pair_id": "mech_hybrid205_continuous",
+        "successes": {
+          "duck": 3,
+          "upright": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "hybrid205",
+        "method": "linear29",
+        "pair_id": "mech_hybrid205_linear29",
+        "successes": {
+          "duck": 3,
+          "upright": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "hybrid205",
+        "method": "body9_raw",
+        "pair_id": "mech_hybrid205_body9_raw",
+        "successes": {
+          "duck": 0,
+          "upright": 0
+        },
+        "native_passes": 0,
+        "fidelity_passes": 0,
+        "qualified": false
+      },
+      {
+        "source_pair_id": "hybrid205",
+        "method": "body9_smooth",
+        "pair_id": "mech_hybrid205_body9_smooth",
+        "successes": {
+          "duck": 0,
+          "upright": 0
+        },
+        "native_passes": 0,
+        "fidelity_passes": 0,
+        "qualified": false
+      },
+      {
+        "source_pair_id": "hybrid205",
+        "method": "body9_legoracle",
+        "pair_id": "mech_hybrid205_body9_legoracle",
+        "successes": {
+          "duck": 3,
+          "upright": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "hybrid205",
+        "method": "body9_smooth_legoracle",
+        "pair_id": "mech_hybrid205_body9_smooth_legoracle",
+        "successes": {
+          "duck": 3,
+          "upright": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "hybrid205",
+        "method": "body9_leg12",
+        "pair_id": "mech_hybrid205_body9_leg12",
+        "successes": {
+          "duck": 3,
+          "upright": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      },
+      {
+        "source_pair_id": "hybrid205",
+        "method": "body9_smooth_leg12",
+        "pair_id": "mech_hybrid205_body9_smooth_leg12",
+        "successes": {
+          "duck": 3,
+          "upright": 3
+        },
+        "native_passes": 6,
+        "fidelity_passes": 6,
+        "qualified": true
+      }
+    ],
+    "new_recorded_preflight_episodes": 192,
+    "new_failed_preflight_scheduled_slots": 144,
+    "new_preflight_scheduled_attempts": 336,
+    "new_main_episodes": 96,
+    "cumulative_preflight_scheduled_attempts": 584,
+    "cumulative_recorded_preflight_episodes": 440,
+    "cumulative_main_attempts": 312,
+    "cumulative_recorded_native_episodes": 752,
+    "main_budget_remaining": 168,
+    "representation_panels": 12,
+    "verified_representation_panels": 12,
+    "representation_control_rows": 19200,
+    "representation_supported_motor_rows": 16800,
+    "carrier_qualification": [
+      {
+        "pair_id": "carrier00",
+        "source_group": "CMU/107",
+        "successes": {
+          "original": 3,
+          "tuck": 3
+        },
+        "entry_max_error": 4.76837158203125e-07,
+        "original_supported": true,
+        "acquisition_ready": true
+      },
+      {
+        "pair_id": "carrier01",
+        "source_group": "KIT/421",
+        "successes": {
+          "original": 0,
+          "tuck": 0
+        },
+        "entry_max_error": 4.76837158203125e-07,
+        "original_supported": false,
+        "acquisition_ready": false
+      },
+      {
+        "pair_id": "carrier02",
+        "source_group": "KIT/12",
+        "successes": {
+          "original": 3,
+          "tuck": 0
+        },
+        "entry_max_error": 4.76837158203125e-07,
+        "original_supported": true,
+        "acquisition_ready": false
+      },
+      {
+        "pair_id": "carrier03",
+        "source_group": "KIT/4",
+        "successes": {
+          "original": 0,
+          "tuck": 0
+        },
+        "entry_max_error": 9.5367431640625e-07,
+        "original_supported": false,
+        "acquisition_ready": false
+      },
+      {
+        "pair_id": "carrier04",
+        "source_group": "KIT/442",
+        "successes": {
+          "original": 0,
+          "tuck": 0
+        },
+        "entry_max_error": 4.76837158203125e-07,
+        "original_supported": false,
+        "acquisition_ready": false
+      },
+      {
+        "pair_id": "carrier05",
+        "source_group": "KIT/6",
+        "successes": {
+          "original": 0,
+          "tuck": 0
+        },
+        "entry_max_error": 4.76837158203125e-07,
+        "original_supported": false,
+        "acquisition_ready": false
+      },
+      {
+        "pair_id": "carrier06",
+        "source_group": "CMU/132",
+        "successes": {
+          "original": 0,
+          "tuck": 0
+        },
+        "entry_max_error": 9.5367431640625e-07,
+        "original_supported": false,
+        "acquisition_ready": false
+      },
+      {
+        "pair_id": "carrier07",
+        "source_group": "KIT/7",
+        "successes": {
+          "original": 0,
+          "tuck": 0
+        },
+        "entry_max_error": 0.0,
+        "original_supported": false,
+        "acquisition_ready": false
+      }
+    ],
+    "screened_carrier_groups": 8,
+    "original_supported_carriers": 2,
+    "acquisition_ready_carriers": 1,
+    "canonical_scene_pairs": 5,
+    "canonical_scene_source_groups": 3,
+    "new_obstacle_qualified_source_pairs": 0,
+    "split": "development",
+    "held_out_generalization": false,
+    "student_trained": false
+  }
+}
