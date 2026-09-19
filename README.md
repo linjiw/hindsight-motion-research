@@ -19,14 +19,19 @@ attempts, 4,136 control steps, zero training. This tests supplied, same-phase
 continuations on two development clips. The September 19 [selected-reference pilot](docs/SELECTION_CODEC_RESULTS_zh.md)
 now passes **2/2 per method from reset**, using the same measured-state selector
 and continuous planning bank. Four new attempts / 1,451 control steps, one familiar
-ancestry, known map and zero training. The new [scene-variation comparison](docs/SELECTION_BOUNDARY_RESULTS_zh.md)
-passes the 20 cm earlier beam with both methods (7.18 / 7.20 s): **2 of 6 scheduled
-cases completed, 4 unrun after resource deferral**. All 719 new references/scores
-audit exactly. On those same histories, extending the goal by 60 cm changes no
-reference under either method; this is an offline diagnostic, not farther-goal
-execution. First finish the four pending codec comparisons under a separate
-admission, then qualify [distance-responsive exit/stop composition](docs/DISTANCE_RESPONSE_GATE_zh.md).
-Generalization and cross-family composition remain untested.
+ancestry, known map and zero training. The [six-case scene screen is now complete](docs/SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md):
+**1/3 per method**—both pass the shifted beam, contact the lower beam, and time out
+at the farther goal. Admission 02 adds four runs / 1,148 control steps; the original
+two runs are reused, for six total / 1,867 steps, with exact control and reference
+audits. The earlier partial packet remains unchanged.
+
+The sibling project now has a separately qualified distance-responsive exit
+controller. Our [new offline codec preflight](docs/DISTANCE_CODEC_PREFLIGHT_zh.md)
+replays all 1,528 public-history references exactly, while exposing a one-tick
+change in Linear29's goal-response timing and a blend velocity-convention gap.
+Next compare continuous and Linear29 on that frozen original/farther-beam
+controller after a new registration. Its Linear29 execution is not yet measured;
+generalization, cross-family robustness and downstream learning remain open.
 The earlier zero-launch resource deferral remains a separate immutable record.
 
 The latest acquisition check found **0/145** admissible portals for the qualified
@@ -57,7 +62,8 @@ The historical mechanism study separates temporal smoothing from leg-reconstruct
 - [Complete-task reference pilot: continuous 4/4, Linear29 4/4](docs/COMPLETE_TASK_RESULTS_zh.md) — [protocol](docs/COMPLETE_TASK_PROTOCOL.md)
 - [Matched-state continuation: continuous 8/8, Linear29 8/8](docs/CONTINUATION_ADMISSION02_RESULTS_zh.md) — [protocol](docs/CONTINUATION_PROTOCOL.md) · [admission](docs/CONTINUATION_ADMISSION_02.md)
 - [Selected-reference controller: continuous 2/2, Linear29 2/2](docs/SELECTION_CODEC_RESULTS_zh.md) — [protocol](docs/SELECTION_CODEC_PROTOCOL.md)
-- [Scene variation: shifted beam passes, four cases resource-deferred](docs/SELECTION_BOUNDARY_RESULTS_zh.md) — [protocol](docs/SELECTION_BOUNDARY_PROTOCOL.md) · [next distance-response gate](docs/DISTANCE_RESPONSE_GATE_zh.md)
+- [Completed scene screen: same pass/contact/deadline outcomes](docs/SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md) — [admission 02](docs/SELECTION_BOUNDARY_ADMISSION_02.md) · [original partial receipt](docs/SELECTION_BOUNDARY_RESULTS_zh.md)
+- [New distance-exit controller: offline codec preflight](docs/DISTANCE_CODEC_PREFLIGHT_zh.md) — [next gate](docs/DISTANCE_RESPONSE_GATE_zh.md)
 - [Earlier composer interface sync](docs/COMPOSER_SYNC_20260918.md)
 - [Adopted research guidance (中文)](docs/RESEARCH_GUIDANCE_20260918_zh.md)
 - [Small-LLM interface protocol](docs/LLM_INTERFACE_PROTOCOL_zh.md) and [first CPU probe results](docs/LLM_INTERFACE_RESULTS_zh.md)

@@ -15,6 +15,7 @@ on:
       - 'artifacts/continuation_admission02.png'
       - 'artifacts/selection_codec.png'
       - 'artifacts/selection_boundary.png'
+      - 'artifacts/selection_boundary_admission02.png'
       - '.github/workflows/pages.yml'
   pull_request:
     paths:

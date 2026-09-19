@@ -1,0 +1,14 @@
+{
+  "schema": "hindsight_distance_codec_offline_preflight_v1",
+  "scope": "Offline compatibility diagnosis for the newly qualified sibling exit composer; no new physics or motor-action query",
+  "parent_packet": "/home/linjiw/research-data/m2s-duck-distance-exit-20260919-v2",
+  "output": "runs/distance_codec_preflight_20260919_v1",
+  "candidates": ["local_duck/short", "local_duck/loop", "nominal/short", "nominal/loop"],
+  "public_contexts": ["original-beam", "original-clear", "farther-beam", "farther-clear"],
+  "codec": "Unchanged decode_candidate, frozen named 12-bit scales, stride 5 offset 2, two reset anchors, native forward-difference velocity",
+  "checks": ["Exact continuous reference/index replay on all four recorded public histories", "Provided velocity versus finite difference of uncompressed q", "Short/loop prefix equality and first decoded q/qdot divergence", "Goal-only reference response on the two original recorded histories under both representations", "Preserve synthetic bridge support invalidity"],
+  "interpretation": "Shadow Linear29 references on continuous histories do not prove physical success or free-running choice retention. Any mismatch in velocity convention or boundary timing must be disclosed before a new native comparison.",
+  "native_attempts": 0,
+  "teacher_action_queries": 0,
+  "training_steps": 0
+}

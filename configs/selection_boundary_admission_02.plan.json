@@ -1,0 +1,22 @@
+{
+  "schema": "hindsight_selection_boundary_admission_v1",
+  "authorization": "User requested continuing the saved research plan after the previous resource deferral",
+  "parent_packet": "runs/selection_boundary_20260919_v1",
+  "successor_packet": "runs/selection_boundary_20260919_admission02",
+  "scientific_registration": "configs/selection_boundary_v1.plan.json",
+  "parent_registration_sha256": "abba499829b35c4f0930827ac3a55127d41f5b75a04431d4153e71f8a1e150f0",
+  "parent_aggregate_sha256": "82d8a2dab04cefb7e3aeca86b6c2ae0d2e46f372ae6f806d40df6b44017febf6",
+  "require_parent_native_attempts": 2,
+  "require_parent_execution_state": "resource_deferred",
+  "case_ids": ["lower100-beam_continuous", "lower100-beam_linear29", "farther600-beam_continuous", "farther600-beam_linear29"],
+  "maximum_new_native_attempts": 4,
+  "maximum_native_attempts_across_admissions": 6,
+  "maximum_new_control_steps": 2000,
+  "maximum_new_physics_samples": 8000,
+  "maximum_wall_seconds_per_attempt": 600,
+  "resource_wait_seconds_per_attempt": 300,
+  "retries": 0,
+  "training_steps": 0,
+  "change": "One new resource admission for the four never-launched cases only; all scientific controls and native execution code unchanged",
+  "stopping": "Reuse the frozen runner and exact parent/pair qualification, including valid behavioral failures; stop on resource timeout, infrastructure failure or mismatch. No renewal within this admission."
+}

@@ -19,6 +19,7 @@ artifacts/*
 !artifacts/continuation_admission02.png
 !artifacts/selection_codec.png
 !artifacts/selection_boundary.png
+!artifacts/selection_boundary_admission02.png
 .env
 .env.*
 !.env.example

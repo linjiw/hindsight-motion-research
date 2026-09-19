@@ -2,7 +2,13 @@
 
 2026-09-19。沿[主计划](RESEARCH_PLAN_zh.md)的 complete-task 优先级推进。这是下一阶段设计，**不是已完成的 composer，也不自动启动新 native sweep 或训练**。本轮六格表示诊断另见[登记协议](SELECTION_BOUNDARY_PROTOCOL.md)。
 
-## 当前缺口与问题
+## 同日进展更新：已有窄连续支持，接下来测表示
+
+原先四个未运行 codec case 已在[admission 02](SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md)补齐，两表示均保留低梁接触与远 goal 超时。相邻 `8b90ccaa` 也已独立实现一次 blended exit：raw seams 0/4,961 合格，另构造 0.40 s bridge 并以八次新 execution 资格验证，public/support 各 4/4。它替换了 retiming，使用 fixed composed clock 与一次距离选择；不是本仓库的新实现，也不是通用距离控制。
+
+因此不用重做下列 A/B 的初步实现。本仓库已完成[离线 codec 接口预检](DISTANCE_CODEC_PREFLIGHT_zh.md)，下一拟议 native 为新 controller 的 original/farther beam × continuous/Linear29 四格。先登记 qdot convention、forecast 边界与五帧 commitment，绑定新 continuous controls 和相同 scene。范围、更深 duck、nominal-loop 资格与自由 goal 更新仍未建立；下列条目继续作为更强能力的检查约束。
+
+## 原始缺口与问题（旧 selector）
 
 相邻项目 `5184085c` 的冻结动作库 screen 发现：两种已有控制方式均能通过测试中的 ±20 cm 梁位移及 ±15° 路线转角；10 cm 更低的梁造成接触；60 cm 更远的 beam goal 在穿越及恢复后仍超时。后一个任务的 nominal clear 对照成功，不能据此断言 duck 动作也具备响应距离的能力。
 

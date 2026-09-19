@@ -20,8 +20,9 @@ RESULTS = [
     "carrier_scene", "llm_interface", "complete_task", "continuation", "continuation_admission02",
     "selection_codec", "selection_codec_replay",
     "selection_boundary", "selection_boundary_goal",
+    "selection_boundary_admission02", "distance_codec_preflight",
 ]
-FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png", "selection_boundary.png"]
+FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png", "selection_boundary.png", "selection_boundary_admission02.png"]
 
 
 class PageLinks(HTMLParser):
@@ -112,6 +113,21 @@ def main():
             or any(r["changed_candidate_rows"] or r["changed_index_rows"]
                    or any(r["changed_reference_rows"].values()) for r in goal["rows"])):
         raise ValueError("Boundary evidence changed: review completed/unrun/offline distinctions")
+    finished = json.loads((ROOT / "results/selection_boundary_admission02.json").read_text())
+    preflight = json.loads((ROOT / "results/distance_codec_preflight.json").read_text())
+    if (finished["execution_state"] != "complete" or finished["native_attempts"] != 6
+            or finished["new_native_attempts"] != 4 or finished["reused_native_attempts"] != 2
+            or finished["unrun"] != 0 or finished["control_steps"] != 1867
+            or finished["new_control_steps"] != 1148 or finished["physics_samples"] != 7468
+            or sum(r.get("success", False) for r in finished["rows"]) != 2
+            or sum(r["states"] for r in finished["reference_replay"]) != 1867
+            or not all(r["independent_score_exact"] for r in finished["rows"])):
+        raise ValueError("Completed boundary screen changed: review paired failures and cumulative costs")
+    if (preflight["native_attempts"] != 0
+            or sum(r["states"] for r in preflight["recorded_history_replay"]) != 1528
+            or preflight["goal_response"][0]["first_changed_reference_tick"] != {"continuous": 127, "linear29": 126}
+            or not all(r["committed_prefix_q_exact"] and r["committed_prefix_qdot_exact"] for r in preflight["prefix_audit"])):
+        raise ValueError("Distance-codec preflight changed: preserve offline/physical distinction")
     if OUTPUT.is_symlink():
         raise ValueError("Refusing a symlinked build directory")
     if OUTPUT.exists():
@@ -136,6 +152,9 @@ def main():
         "selection_codec_evidence_date": "2026-09-19", "selection_codec_native_attempts": 4,
         "selection_boundary_evidence_date": "2026-09-19",
         "selection_boundary_native_attempts": 2, "selection_boundary_unrun": 4,
+        "selection_boundary_admission02_date": "2026-09-19", "selection_boundary_cumulative_attempts": 6,
+        "selection_boundary_admission02_new_attempts": 4, "selection_boundary_cumulative_unrun": 0,
+        "distance_codec_preflight_native_attempts": 0,
         "continuation_registration_date": "2026-09-18", "continuation_native_attempts": 16,
         "continuation_evidence_date": "2026-09-18", "continuation_admission": "02",
         "continuation_original_deferred_attempts": 0, "continuation_qualified_pairs": 8,

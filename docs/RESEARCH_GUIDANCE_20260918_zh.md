@@ -29,7 +29,7 @@
 | --- | --- | --- | --- |
 | 正确完整参考，从 reset 执行 | 后续 pilot 4/4 | 同任务配对 4/4；两帧 reset anchor | 任务本身是否受支持，codec 是否损害执行 |
 | 相同真实来态/历史，提供合格后续 chunk | 同相位、无扰动子面板 8/8 | 同真实 prefix 配对 8/8 | 当前只资格验证同相位 continuation；新选择与恢复待测 |
-| reset 开始，因果 composer 选择并重规划 | 熟悉 known-map selector 2/2；新 shift 1/1 | 同 continuous planner bank：熟悉 2/2；新 shift 1/1 | 新六格只完成两格，四格资源延期；跨族拼接待测 |
+| reset 开始，因果 composer 选择并重规划 | 熟悉 known-map selector 2/2；新 scene screen 1/3 | 同 continuous planner bank：熟悉 2/2；新 screen 1/3 | 新六格完成：两者均 shift 成功、低梁接触、远 goal 超时；跨族稳健性待测 |
 
 后续执行见[完整任务报告](COMPLETE_TASK_RESULTS_zh.md)：既有 goal050 profile、两 clip/clear+beam、有完整参考辅助。原始用户指导逐字副本未改动。
 
@@ -49,7 +49,7 @@ Native 先单独通过同参考、同完整 proprio history 的 encoder→decode
 
 ## 方法选择与停止条件
 
-最新[场景变化报告](SELECTION_BOUNDARY_RESULTS_zh.md)保留两格成功与四格 unrun，不用相邻失败替代未测 codec outcome。719 个新共同历史 state 的 goal-only replay 在两种表示下均没有距离响应；这是离线诊断。先以独立 admission 完成剩余四格，再按[exit/stop 门槛](DISTANCE_RESPONSE_GATE_zh.md)补完整控制支持，暂不把这项缺口交给更大 tokenizer 或 LLM。
+最新[六格结果](SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md)已补齐四格，两表示保留相同成功/失败类型。旧 controller 的 719-state 无 goal response 诊断保持其范围；相邻新 distance-exit controller 已有连续支持。本仓库[新离线预检](DISTANCE_CODEC_PREFLIGHT_zh.md)测得 Linear29 的预测分支边界与 velocity 语义差异，但尚无该 controller 的 Linear29 物理结果。下一步注册其 original/farther beam 表示比较，暂不扩大 tokenizer 或 LLM。
 
 若确认表示瓶颈，首个学习候选为**全身联合、来态条件化的连续 temporal latent**。所有方法共享坐标变换、姿态锚定、速度推导和 committed-prefix 规则；同架构普通重建与执行相关训练对照。再与等总预算的自适应 scalar/spline 比较，允许简单方法胜出。量化放在连续学习表示获得实际收益之后。
 

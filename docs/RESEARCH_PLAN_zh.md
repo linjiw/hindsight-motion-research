@@ -84,9 +84,11 @@ LLM / VLM：目标、对象指代、约束、终止要求
 
 **第三行熟悉 known-map selector 子面板也已完成：continuous 2/2，Linear29 2/2。** 相邻项目已提供 nominal/duck 两候选库和 public-state selector，本轮复用它们，固定 continuous planner bank，只改变发给 motor 的 q/qdot。新 continuous controls 与相邻原结果完全一致，两对 reset/history/dynamics/RNG 完全一致；全部物理 scorer 与 1,451 个实测状态上的 reference/index replay 审计通过。四次 native attempts、1,451 control steps、5,804 physics frames，零训练。见[9 月 19 日结果与同步](SELECTION_CODEC_RESULTS_zh.md)。
 
-**场景变化已经推进，但只完成六格中的两格。** 相邻项目 `5184085c` 的新 screen 已证实中等位移/转角可执行，而低梁与加远 goal 失败；据此在新 outcome 前把原拟 ±5 cm/shared-clear 六格改为 earlier200/lower100/farther600 × 两种表示。[新登记结果](SELECTION_BOUNDARY_RESULTS_zh.md)：前移 20 cm 的 beam，两表示均成功，359 / 360 control steps、零禁止接触；第三格 300 s 资源等待到期，另外四格未执行，queue 已关闭。全部 719 新状态的 reference/index 与两次物理 scorer 精确复现。不能把相邻的失败复制为本轮 Linear29 结果。
+**场景变化六格已全部完成：两表示各 1/3。** 相邻 `5184085c` 的 screen 曾促使我们在新结果前将暂拟 ±5 cm/shared-clear 改为 earlier200/lower100/farther600 × 两种表示。原两次 shifted-beam 成功后发生资源延期；本次独立 admission 02 只补四个未运行格：低梁两者均接触，远 goal 两者均完成通过/恢复但在 0.595 / 0.657 m 处超时。新增 1,148 control steps；累计六次、1,867 steps、7,468 physics samples，全部 scorer/reference/配对审计通过。[完整结果](SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md)保留失败及旧部分快照。成功子集的 Linear29 保留 1/1，不是统计等价。
 
-**下一优先项仍是补齐 continuous-versus-Linear29：另存 admission，继承四个未运行格，不重跑已完成格。** 同时按[距离响应门槛](DISTANCE_RESPONSE_GATE_zh.md)准备 exit/stop segment 与接缝支持，暂不扩大 tokenizer。事后离线诊断在这 719 个共同历史 state 上，把 goal 加远 60 cm 后两种表示都没有任何 reference、候选或 source-index 改变；这定位了当前接口的距离响应缺口，未完成 farther-goal 物理验证。更低梁需要新 motion coverage/替代路线及单独的 blocked-state 资格。
+**下一主比较转到已具备距离响应的冻结 controller，而不是重新造 composer 或扩大 tokenizer。** 相邻 `8b90ccaa` 已通过一次 blended exit/stop 的 continuous 支持：controls/public 各 4/4，但它是 fixed composed clock + 一次距离选择的新 package，不能与本轮旧 selector 跨场景归因。我们的[离线预检](DISTANCE_CODEC_PREFLIGHT_zh.md)精确复现其全部 1,528 public-history state；Linear29 shadow 的 goal-response 首次差异由 tick 127 移至 126，五帧承诺仍一致，analytic blend qdot 与 position FD 最大差 0.09324 rad/s。新 controller 的 Linear29 物理结果尚未测得。
+
+下一拟议为 original/farther beam × continuous/Linear29 四格，共用新场景字节、冻结决策与 motor。先登记原始 codec 的 velocity/forecast 处理和预算，精确复现新 continuous controls，再看各自轨迹上的 measured-clear gate、选择与完整任务。完整连续 bank、synthetic mask、时基和附加信息计费；必要的边界或 velocity 控制另版本化，不静默修 baseline。[距离响应门槛](DISTANCE_RESPONSE_GATE_zh.md)更新了已完成和待完成部分。更低梁的 coverage/替代路线与 blocked-state 资格继续独立。
 
 第三行不再给 selector 正确 clip/phase/在线 teacher future，但仍只有一个熟悉 ancestry 与示范初始化；它选择完整候选并重定时，不是在线跨动作族拼接。完整 continuous planner bank 的成本保留，不能把成功说成系统压缩收益。后续来态/速度、梁尺寸、扰动和感知继续分轴；当前选择过的 screen 只属 development，不升格 held-out。
 

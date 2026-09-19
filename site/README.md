@@ -82,3 +82,11 @@ completed, four unrun after resource deferral, 719 control steps. The goal-only
 reference diagnostic is offline and uses those completed histories; it must not
 be displayed as farther-goal execution. New raw motion and simulation records
 remain excluded from the publication allowlist.
+
+Admission 02 adds `selection_boundary_admission02.json` and its new figure,
+without overwriting the two-attempt partial receipt. Four new executions plus
+two reused records complete six cells / 1,867 control steps. Keep all contact
+and deadline failures visible. `distance_codec_preflight.json` is a separate
+zero-native audit of a newer controller; never render its Linear29 shadows as
+physical successes. The new section explicitly names forecast and velocity
+semantics and preserves the original controller's earlier goal-response scope.

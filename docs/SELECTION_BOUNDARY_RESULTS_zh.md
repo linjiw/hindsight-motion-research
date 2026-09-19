@@ -1,5 +1,7 @@
 # 梁前移 20 cm：两种表示通过；另外四格资源延期
 
+**后续状态：** 本报告保留首次 admission 的部分结果。随后独立 admission 02 已完成原四个未运行格；六格累计结果见[完成报告](SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md)。
+
 2026-09-19。继续[主计划](RESEARCH_PLAN_zh.md)的 continuous-versus-Linear29 完整任务比较。本轮固定三场景、两种表示共六格；**已执行两格：continuous 1/1、Linear29 1/1；其余四格未运行。** 第三个 case 的 300 s 资源门槛到期，queue 已关闭。不能把六格写成全部完成、把未运行算作失败，或用相邻项目的 continuous 结果代替我们尚未执行的配对。
 
 ## 为什么更改原先的下一步

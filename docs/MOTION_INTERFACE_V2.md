@@ -125,12 +125,18 @@ mislabel the current committed frame. The planner still stores full continuous
 motions, root, collision and support metadata, and the motor receives decoded
 float references. This is no measured system-memory or wire-rate reduction.
 
-The [scene-variation follow-up](SELECTION_BOUNDARY_RESULTS_zh.md) adds one successful
-20 cm shifted-beam pair, with four other registered cases unrun after resource
-deferral. On its 719 actual states, changing only requested goal distance by
-60 cm leaves both continuous and Linear29 references unchanged. That offline
-result makes distance response an explicit interface obligation: a farther
-request must produce a coherent supported continuation when needed, and actual
-completion must be measured against that request. A valid ID or intact sidecar
-does not supply missing exit/stop behavior. The [next gate](DISTANCE_RESPONSE_GATE_zh.md)
-separates reference responsiveness, transition support and complete execution.
+The [completed scene screen](SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md) now
+contains six executed cells: both methods pass the shift, contact the lower beam,
+and time out outside the farther goal. Its earlier 719-state no-response diagnosis
+remains scoped to that old selector. The sibling's new one-decision exit composer
+has continuous support; our [offline codec preflight](DISTANCE_CODEC_PREFLIGHT_zh.md)
+replays all 1,528 public-history states but does not qualify Linear29 execution.
+
+Treat commitments and forecasts separately. The raw codec preserves the five
+committed frames between short/loop options, while interpolation shifts branch
+changes into earlier forecast samples and the first goal-dependent output from
+tick 127 to 126. The analytic blend velocity also differs from position finite
+differences. Declare these semantics before a new native comparison; charge any
+boundary anchors or velocity sidecars in separately versioned adapters. Keep
+composed indices, donor ancestry and synthetic support masks distinct. A valid
+ID or intact language sidecar does not establish free-running goal response.

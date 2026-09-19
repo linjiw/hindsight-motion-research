@@ -1,0 +1,190 @@
+{
+  "schema": "hindsight_distance_codec_offline_preflight_v1",
+  "date": "2026-09-19",
+  "native_attempts": 0,
+  "teacher_action_queries": 0,
+  "training_steps": 0,
+  "scope": "Offline compatibility diagnosis for the newly qualified sibling exit composer; no new physics or motor-action query",
+  "candidates": [
+    {
+      "family": "local_duck",
+      "route": "short",
+      "frames": 499,
+      "knots": 100,
+      "clipped_symbols": 400,
+      "symbols": 2900,
+      "joint_payload_bits": 34800,
+      "reset_anchor_bits": 1856,
+      "q_rmse_rad": 0.029720161110162735,
+      "q_max_rad": 0.4197772145271301,
+      "provided_velocity_fd_max_difference_rad_s": 0.0,
+      "provided_velocity_fd_changed_rows": 0,
+      "first_velocity_convention_difference": null,
+      "synthetic_rows": 0,
+      "synthetic_observed_support_valid": false
+    },
+    {
+      "family": "local_duck",
+      "route": "loop",
+      "frames": 557,
+      "knots": 111,
+      "clipped_symbols": 444,
+      "symbols": 3219,
+      "joint_payload_bits": 38628,
+      "reset_anchor_bits": 1856,
+      "q_rmse_rad": 0.02876364067196846,
+      "q_max_rad": 0.4197772145271301,
+      "provided_velocity_fd_max_difference_rad_s": 0.09324252605438232,
+      "provided_velocity_fd_changed_rows": 20,
+      "first_velocity_convention_difference": 171,
+      "synthetic_rows": 19,
+      "synthetic_observed_support_valid": false
+    },
+    {
+      "family": "nominal",
+      "route": "short",
+      "frames": 499,
+      "knots": 100,
+      "clipped_symbols": 400,
+      "symbols": 2900,
+      "joint_payload_bits": 34800,
+      "reset_anchor_bits": 1856,
+      "q_rmse_rad": 0.029718652367591858,
+      "q_max_rad": 0.4197772145271301,
+      "provided_velocity_fd_max_difference_rad_s": 0.0,
+      "provided_velocity_fd_changed_rows": 0,
+      "first_velocity_convention_difference": null,
+      "synthetic_rows": 0,
+      "synthetic_observed_support_valid": false
+    },
+    {
+      "family": "nominal",
+      "route": "loop",
+      "frames": 557,
+      "knots": 111,
+      "clipped_symbols": 444,
+      "symbols": 3219,
+      "joint_payload_bits": 38628,
+      "reset_anchor_bits": 1856,
+      "q_rmse_rad": 0.028765033930540085,
+      "q_max_rad": 0.4197772145271301,
+      "provided_velocity_fd_max_difference_rad_s": 0.09324252605438232,
+      "provided_velocity_fd_changed_rows": 20,
+      "first_velocity_convention_difference": 171,
+      "synthetic_rows": 19,
+      "synthetic_observed_support_valid": false
+    }
+  ],
+  "prefix_audit": [
+    {
+      "family": "local_duck",
+      "continuous_q_first_difference": 172,
+      "continuous_qdot_first_difference": 172,
+      "linear_q_first_difference": 168,
+      "linear_qdot_first_difference": 167,
+      "last_predecision_visible_index": 170,
+      "visible_prefix_joint_max_difference_rad": 0.001705169677734375,
+      "visible_prefix_velocity_max_difference_rad_s": 0.02842545509338379,
+      "committed_prefix_q_exact": true,
+      "committed_prefix_qdot_exact": true
+    },
+    {
+      "family": "nominal",
+      "continuous_q_first_difference": 172,
+      "continuous_qdot_first_difference": 172,
+      "linear_q_first_difference": 168,
+      "linear_qdot_first_difference": 167,
+      "last_predecision_visible_index": 170,
+      "visible_prefix_joint_max_difference_rad": 0.0010350346565246582,
+      "visible_prefix_velocity_max_difference_rad_s": 0.017252564430236816,
+      "committed_prefix_q_exact": true,
+      "committed_prefix_qdot_exact": true
+    }
+  ],
+  "recorded_history_replay": [
+    {
+      "context": "original-beam",
+      "states": 368,
+      "continuous_reference_indices_choice_exact": true,
+      "shadow_linear_changed_reference_rows": 368,
+      "loop_choice": 0
+    },
+    {
+      "context": "original-clear",
+      "states": 368,
+      "continuous_reference_indices_choice_exact": true,
+      "shadow_linear_changed_reference_rows": 368,
+      "loop_choice": 0
+    },
+    {
+      "context": "farther-beam",
+      "states": 424,
+      "continuous_reference_indices_choice_exact": true,
+      "shadow_linear_changed_reference_rows": 424,
+      "loop_choice": 1
+    },
+    {
+      "context": "farther-clear",
+      "states": 368,
+      "continuous_reference_indices_choice_exact": true,
+      "shadow_linear_changed_reference_rows": 368,
+      "loop_choice": 0
+    }
+  ],
+  "goal_response": [
+    {
+      "context": "original-beam",
+      "common_history_states": 368,
+      "first_changed_reference_tick": {
+        "continuous": 127,
+        "linear29": 126
+      },
+      "changed_reference_rows": {
+        "continuous": 241,
+        "linear29": 242
+      },
+      "choices": [
+        0,
+        1
+      ],
+      "decision_tick": 126
+    },
+    {
+      "context": "original-clear",
+      "common_history_states": 368,
+      "first_changed_reference_tick": {
+        "continuous": null,
+        "linear29": null
+      },
+      "changed_reference_rows": {
+        "continuous": 0,
+        "linear29": 0
+      },
+      "choices": [
+        0,
+        0
+      ],
+      "decision_tick": 126
+    }
+  ],
+  "support_masks_modified": false,
+  "limitations": "Linear29 references are shadow outputs on continuous histories; no codec motor-action or physical result. Nominal loop remains physically unqualified.",
+  "provenance": [
+    {
+      "path": "configs/distance_codec_preflight_v1.plan.json",
+      "sha256": "8478d3cb6f6fb6145e218a4c880531255ce2db12e47d1dd5279b29f64f6d9089"
+    },
+    {
+      "path": "scripts/audit_distance_codec_preflight.py",
+      "sha256": "ef47ec9270fa78393a3fb0c16fc3a54f3f1eace0fb1b542dc89d78a6e67abde5"
+    },
+    {
+      "path": "runs/distance_codec_preflight_20260919_v1/registration.json",
+      "sha256": "8478d3cb6f6fb6145e218a4c880531255ce2db12e47d1dd5279b29f64f6d9089"
+    },
+    {
+      "path": "runs/distance_codec_preflight_20260919_v1/bindings.json",
+      "sha256": "52a598c4c2868ea724c1fcbc3bc35aae3fc95e7f38745debe63690c3e2c2c254"
+    }
+  ]
+}

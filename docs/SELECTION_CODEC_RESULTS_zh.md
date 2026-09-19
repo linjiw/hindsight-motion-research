@@ -1,5 +1,7 @@
 # 已知地图下自主选择动作：continuous 与 Linear29 各 2/2
 
+**后续状态：** 最新六格 scene screen 已完成；两种表示均保留 shifted 成功、低梁接触和远 goal 超时，见[完成报告](SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md)。
+
 2026-09-19。沿[主计划](RESEARCH_PLAN_zh.md)推进 2×3 矩阵第三行的首个熟悉场景子面板：固定 public-state selector，自 reset 选择 nominal/duck 并按实测状态重定时，仅改变发给 motor 的 q/qdot 表示。**四次 native 执行全部完成；continuous 2/2、Linear29 2/2。** 这次不再向 selector 提供正确 clip、phase、在线 teacher future 或 teacher action。
 
 这是已知地图、模拟器零延迟定位、一个熟悉 source ancestry 的非学习控制器结果。库内全动作已有示范，reset 仍继承旧场景的 motion 初始化；不是独立动作族拼接、任意新场景、视觉导航或鲁棒性证明。两种方法都保留完整 continuous planner bank；本实验隔离 motor-reference 表示，不隔离“压缩整个规划器”的效果。
