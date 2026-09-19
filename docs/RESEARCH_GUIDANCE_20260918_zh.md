@@ -62,3 +62,8 @@ Native 先单独通过同参考、同完整 proprio history 的 encoder→decode
 [ActionPiece v1](https://arxiv.org/html/2609.18487v1) 已用解码动作的物理距离排序保持评价 tokenizer，并控制策略训练条件比较下游表现；不能把“超越 MSE、保持动作关系、测下游”单独当新颖性。我们的待证问题是同一状态/场景中可执行选择的保持；距离排序保持并不必然保留临界间隙。应加入几何关系保持基线，而非仅在文字中区分。
 
 [OAT v2](https://arxiv.org/html/2602.04215v2) 研究压缩、总可解码性及有序前缀。借鉴前缀/成本测试，但可解码不等于能从当前人形支撑状态执行。[PASSAGE v1](https://arxiv.org/html/2609.18732v1) 的连续性与任务训练已有直接重叠；加 loss 或停止 scorer 本身不足以构成贡献。接下来优先做区分实验，暂不扩展泛泛模型清单。
+
+
+### 9 月 19 日继续：保持任务优先，明确资源与预测边界
+
+[距离响应四格比较](DISTANCE_CODEC_RESULTS_zh.md)已注册、实现 adapter、复现 792 个既有 beam state 与原 decoded arrays；300 s 资源门槛超时、零 launch、四格全未运行。继续保持 continuous/Linear29 complete-task 为主优先级，先取得新 admission 与实际闭环结果，不把离线检查当作成功。相邻新距离 envelope 的 9/10 对 5/10 与一个 switching regression 另见[同步](DISTANCE_ENVELOPE_SYNC_20260919_zh.md)：停止预测的误差也是 downstream 问题，字段保真或更复杂 tokenizer 不会自动消除它。

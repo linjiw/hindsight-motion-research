@@ -90,3 +90,12 @@ and deadline failures visible. `distance_codec_preflight.json` is a separate
 zero-native audit of a newer controller; never render its Linear29 shadows as
 physical successes. The new section explicitly names forecast and velocity
 semantics and preserves the original controller's earlier goal-response scope.
+
+
+The September 19 distance-codec registration adds `distance_codec.json`,
+`distance_followup.json` and `distance_codec.png`. The first is the closed
+zero-launch experiment receipt with a 792-state historical replay; the second
+separately attributes resource samples and the sibling's 9/10 versus 5/10
+continuous-controller result. All four codec cases remain unrun. The figure
+shows resource admission, not task outcomes. Build guards preserve these
+boundaries and retain the prior six-case and offline-preflight records.

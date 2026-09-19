@@ -140,3 +140,15 @@ differences. Declare these semantics before a new native comparison; charge any
 boundary anchors or velocity sidecars in separately versioned adapters. Keep
 composed indices, donor ancestry and synthetic support masks distinct. A valid
 ID or intact language sidecar does not establish free-running goal response.
+
+
+The [distance-codec native comparison](DISTANCE_CODEC_PROTOCOL.md) now implements
+that declared adapter and exact 792-state beam replay. Its [resource admission
+expired with zero launches](DISTANCE_CODEC_RESULTS_zh.md); four unrun cases are not
+physical qualification. Preserve this receipt before a new admission.
+
+The sibling's [distance-envelope evidence](DISTANCE_ENVELOPE_SYNC_20260919_zh.md)
+now includes a matched farther-goal gain and a nearby switching regression.
+Endpoint estimates must declare the reference/controller and execution provenance
+they describe. Reusing continuous stopping calibration after decoding is a
+compatibility hypothesis, even with intact fields and valid motion IDs.

@@ -88,7 +88,9 @@ LLM / VLM：目标、对象指代、约束、终止要求
 
 **下一主比较转到已具备距离响应的冻结 controller，而不是重新造 composer 或扩大 tokenizer。** 相邻 `8b90ccaa` 已通过一次 blended exit/stop 的 continuous 支持：controls/public 各 4/4，但它是 fixed composed clock + 一次距离选择的新 package，不能与本轮旧 selector 跨场景归因。我们的[离线预检](DISTANCE_CODEC_PREFLIGHT_zh.md)精确复现其全部 1,528 public-history state；Linear29 shadow 的 goal-response 首次差异由 tick 127 移至 126，五帧承诺仍一致，analytic blend qdot 与 position FD 最大差 0.09324 rad/s。新 controller 的 Linear29 物理结果尚未测得。
 
-下一拟议为 original/farther beam × continuous/Linear29 四格，共用新场景字节、冻结决策与 motor。先登记原始 codec 的 velocity/forecast 处理和预算，精确复现新 continuous controls，再看各自轨迹上的 measured-clear gate、选择与完整任务。完整连续 bank、synthetic mask、时基和附加信息计费；必要的边界或 velocity 控制另版本化，不静默修 baseline。[距离响应门槛](DISTANCE_RESPONSE_GATE_zh.md)更新了已完成和待完成部分。更低梁的 coverage/替代路线与 blocked-state 资格继续独立。
+**四格已另登记并完成预检，但资源延期、零 launch。** [本轮状态](DISTANCE_CODEC_RESULTS_zh.md)记录 original/farther beam × continuous/Linear29、251 项绑定、792 个既有 state 的精确 reference/index/decision replay 和四项 decoded arrays 的逐项复现。300 s 内十五次资源采样无一次同时满足 GPU/host 门槛，四格全 unrun，不能报告新的任务保持。下一动作是为这四个 never-launched case 单独 admission，保留原延期 receipt 和总四次 ceiling；不重启原 packet 或调低 gate。
+
+[相邻最新 `7b416f76` 同步](DISTANCE_ENVELOPE_SYNC_20260919_zh.md)补齐了新同场景 +0.60 m short-only baseline，nominal-loop 也已资格验证。其 public 9/10 对 short-only 5/10，有五个 gains、一个 +0.45 m beam regression；停止预测/选择错误不能归给 codec。其 executed-loop endpoint 校准只是事后离线假设，我们不把它混入已登记表示比较。两种问题分开：先测固定 controller 的实际 codec gate/choice/全任务，再按新的支持和停止余量检查表示与 endpoint-model 的兼容性。完整 continuous bank、synthetic masks、时基与附加信息保留计费；codec-only failure 才触发另版本化的 velocity/boundary 对照。更低梁、blocked-state 资格、来态多样性与感知继续独立，暂不训练更大 tokenizer。
 
 第三行不再给 selector 正确 clip/phase/在线 teacher future，但仍只有一个熟悉 ancestry 与示范初始化；它选择完整候选并重定时，不是在线跨动作族拼接。完整 continuous planner bank 的成本保留，不能把成功说成系统压缩收益。后续来态/速度、梁尺寸、扰动和感知继续分轴；当前选择过的 screen 只属 development，不升格 held-out。
 

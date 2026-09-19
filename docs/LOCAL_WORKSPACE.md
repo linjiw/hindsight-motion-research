@@ -14,7 +14,7 @@ An executed local-data pilot for whole-body motion tokens and hindsight obstacle
 
 **Expansion completed:** [Results and limitations](EXPANSION_RESULTS_zh.md) · [Four-pair measured replay](../artifacts/expansion_viewer.html) · [96-episode result figure](../artifacts/expansion_interventions.png) · [BFM data index](../runs/critical_dataset_20260915_v2/development_episodes.jsonl). Arm criticality now replicates fully in two source groups. The ducking contact contrast did not pass the complete control-panel gate. Cumulative: 98 preflight episodes, 96 main episodes, 19,200 control rows and 14,000 supported motor targets; all development-only.
 
-**Roadmap:** [Critical scenes → BFM → text-to-navigation](ROADMAP_SCENE_BFM_TEXT2NAV.md), with a [bounded execution plan](configs/critical_decisions_v1.plan.json). Five motion pairs across three source groups have been tested; two arm pairs and one crouch-plus-bend pair pass every panel. Expanding to 20 pairs, replicating the second family across sources, learning a criticality proposer, and evaluating student policies remain open.
+**Roadmap:** [Critical scenes → BFM → text-to-navigation](ROADMAP_SCENE_BFM_TEXT2NAV.md), with a [bounded execution plan](../configs/critical_decisions_v1.plan.json). Five motion pairs across three source groups have been tested; two arm pairs and one crouch-plus-bend pair pass every panel. Expanding to 20 pairs, replicating the second family across sources, learning a criticality proposer, and evaluating student policies remain open.
 
 ## First native result
 

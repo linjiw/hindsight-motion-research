@@ -1,5 +1,7 @@
 # 距离响应 composer 与 Linear29：离线接口预检
 
+后续更新：四格 native 比较已[登记和准备，但资源延期、零 launch](DISTANCE_CODEC_RESULTS_zh.md)。相邻更晚的[距离 envelope](DISTANCE_ENVELOPE_SYNC_20260919_zh.md)已补齐本文当时缺失的 matched short-only baseline 与 nominal-loop 资格。以下保留本预检时的证据范围。
+
 2026-09-19。完成旧 selector 的[六格 screen](SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md)期间，同步相邻 `8b90ccaa`，并按[离线注册](../configs/distance_codec_preflight_v1.plan.json)检查新 exit composer。**本预检没有新 native attempt、motor-action query 或训练；不能报告 Linear29 已完成新 farther-goal 任务。**
 
 ## 新的连续支持来自哪里

@@ -20,9 +20,9 @@ RESULTS = [
     "carrier_scene", "llm_interface", "complete_task", "continuation", "continuation_admission02",
     "selection_codec", "selection_codec_replay",
     "selection_boundary", "selection_boundary_goal",
-    "selection_boundary_admission02", "distance_codec_preflight",
+    "selection_boundary_admission02", "distance_codec_preflight", "distance_codec", "distance_followup",
 ]
-FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png", "selection_boundary.png", "selection_boundary_admission02.png"]
+FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png", "selection_boundary.png", "selection_boundary_admission02.png", "distance_codec.png"]
 
 
 class PageLinks(HTMLParser):
@@ -128,6 +128,17 @@ def main():
             or preflight["goal_response"][0]["first_changed_reference_tick"] != {"continuous": 127, "linear29": 126}
             or not all(r["committed_prefix_q_exact"] and r["committed_prefix_qdot_exact"] for r in preflight["prefix_audit"])):
         raise ValueError("Distance-codec preflight changed: preserve offline/physical distinction")
+    distance = json.loads((ROOT / "results/distance_codec.json").read_text())
+    followup = json.loads((ROOT / "results/distance_followup.json").read_text())
+    if (distance["execution_state"] != "resource_deferred" or distance["native_attempts"] != 0
+            or distance["unrun"] != 4 or distance["control_steps"] != 0
+            or sum(r["states"] for r in distance["offline_audit"]["rows"]) != 792
+            or len(followup["native_admission"]["samples"]) != 15
+            or any(r["ready"] for r in followup["native_admission"]["samples"])
+            or followup["sibling_envelope"]["summary"] != {
+                "short_successes": 5, "public_successes": 9, "requests": 10,
+                "gains": 5, "regressions": 1, "nominal_loop_support_success": True}):
+        raise ValueError("Distance comparison status changed: review unrun/offline/sibling distinctions")
     if OUTPUT.is_symlink():
         raise ValueError("Refusing a symlinked build directory")
     if OUTPUT.exists():
@@ -155,6 +166,8 @@ def main():
         "selection_boundary_admission02_date": "2026-09-19", "selection_boundary_cumulative_attempts": 6,
         "selection_boundary_admission02_new_attempts": 4, "selection_boundary_cumulative_unrun": 0,
         "distance_codec_preflight_native_attempts": 0,
+        "distance_codec_execution_state": "resource_deferred", "distance_codec_native_attempts": 0,
+        "distance_codec_unrun": 4, "distance_codec_registration_date": "2026-09-19",
         "continuation_registration_date": "2026-09-18", "continuation_native_attempts": 16,
         "continuation_evidence_date": "2026-09-18", "continuation_admission": "02",
         "continuation_original_deferred_attempts": 0, "continuation_qualified_pairs": 8,

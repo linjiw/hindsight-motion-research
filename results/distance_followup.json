@@ -1,0 +1,694 @@
+{
+  "schema": "hindsight_distance_followup_v1",
+  "date": "2026-09-19",
+  "native_admission": {
+    "native_attempts": 0,
+    "unrun": 4,
+    "wait_limit_seconds": 300,
+    "required_gpu_mib": 12000,
+    "required_host_mib": 16384,
+    "required_consecutive_ready_samples": 2,
+    "sample_interval_seconds": 20,
+    "samples": [
+      {
+        "elapsed_seconds": 0.0,
+        "free_gpu_mib": 11636,
+        "available_host_mib": 19581.40625,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 20.01320195198059,
+        "free_gpu_mib": 8688,
+        "available_host_mib": 13105.3984375,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 40.03077459335327,
+        "free_gpu_mib": 7968,
+        "available_host_mib": 11297.609375,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 60.044187784194946,
+        "free_gpu_mib": 8154,
+        "available_host_mib": 11896.33203125,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 80.05638432502747,
+        "free_gpu_mib": 8556,
+        "available_host_mib": 12139.54296875,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 100.0696370601654,
+        "free_gpu_mib": 11447,
+        "available_host_mib": 15547.8125,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 120.08299493789673,
+        "free_gpu_mib": 7904,
+        "available_host_mib": 11410.5859375,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 140.09586453437805,
+        "free_gpu_mib": 8556,
+        "available_host_mib": 12356.51171875,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 160.10838055610657,
+        "free_gpu_mib": 8680,
+        "available_host_mib": 13525.9765625,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 180.1210424900055,
+        "free_gpu_mib": 12295,
+        "available_host_mib": 16316.625,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 200.1340639591217,
+        "free_gpu_mib": 9106,
+        "available_host_mib": 14843.87890625,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 220.14742159843445,
+        "free_gpu_mib": 7735,
+        "available_host_mib": 11269.05078125,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 240.1594614982605,
+        "free_gpu_mib": 8193,
+        "available_host_mib": 11467.45703125,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 260.1726908683777,
+        "free_gpu_mib": 8842,
+        "available_host_mib": 14148.65625,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      },
+      {
+        "elapsed_seconds": 280.1852476596832,
+        "free_gpu_mib": 7437,
+        "available_host_mib": 10481.23046875,
+        "ready": false,
+        "consecutive_ready_samples": 0
+      }
+    ]
+  },
+  "sibling_envelope": {
+    "local_commit": "7b416f76",
+    "scope": "Separate sibling continuous-controller experiment; not our codec results",
+    "summary": {
+      "short_successes": 5,
+      "public_successes": 9,
+      "requests": 10,
+      "gains": 5,
+      "regressions": 1,
+      "nominal_loop_support_success": true
+    },
+    "costs": {
+      "new_native_attempts": 14,
+      "new_control_steps": 6224,
+      "reused_conditions": 7,
+      "reused_control_steps": 2632,
+      "new_contact_frames": 24896,
+      "native_wall_seconds": 385.5373805859708,
+      "process_failures": 0,
+      "total_native_rows_audited": 8856,
+      "distinct_recorded_action_histories": 7,
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "learning_rows_admitted": 0
+    },
+    "rows": [
+      {
+        "case": "goal0000-beam-source_clock",
+        "context": "goal0000-beam",
+        "role": "comparison",
+        "arm": "source_clock",
+        "scene": "beam",
+        "goal_offset_mm": 0,
+        "reused": true,
+        "success": true,
+        "steps": 368,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.029952871973491387,
+        "final_forward_error_m": -0.0276420038610215,
+        "goal_radius_margin_m": 0.4700471280265086,
+        "deadline_censored": false,
+        "family": "local_duck"
+      },
+      {
+        "case": "goal0000-beam-public_selection",
+        "context": "goal0000-beam",
+        "role": "comparison",
+        "arm": "public_selection",
+        "scene": "beam",
+        "goal_offset_mm": 0,
+        "reused": true,
+        "success": true,
+        "steps": 368,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.029952871973491387,
+        "final_forward_error_m": -0.0276420038610215,
+        "goal_radius_margin_m": 0.4700471280265086,
+        "deadline_censored": false,
+        "family": "local_duck"
+      },
+      {
+        "case": "goal0000-clear-source_clock",
+        "context": "goal0000-clear",
+        "role": "comparison",
+        "arm": "source_clock",
+        "scene": "clear",
+        "goal_offset_mm": 0,
+        "reused": true,
+        "success": true,
+        "steps": 368,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.21456343535907493,
+        "final_forward_error_m": 0.21370888417605968,
+        "goal_radius_margin_m": 0.28543656464092504,
+        "deadline_censored": false,
+        "family": "nominal"
+      },
+      {
+        "case": "goal0000-clear-public_selection",
+        "context": "goal0000-clear",
+        "role": "comparison",
+        "arm": "public_selection",
+        "scene": "clear",
+        "goal_offset_mm": 0,
+        "reused": true,
+        "success": true,
+        "steps": 368,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.21456343535907493,
+        "final_forward_error_m": 0.21370888417605968,
+        "goal_radius_margin_m": 0.28543656464092504,
+        "deadline_censored": false,
+        "family": "nominal"
+      },
+      {
+        "case": "goal0450-beam-source_clock",
+        "context": "goal0450-beam",
+        "role": "comparison",
+        "arm": "source_clock",
+        "scene": "beam",
+        "goal_offset_mm": 450,
+        "reused": false,
+        "success": true,
+        "steps": 368,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.4777813077281067,
+        "final_forward_error_m": -0.47764200386102157,
+        "goal_radius_margin_m": 0.022218692271893326,
+        "deadline_censored": false,
+        "family": "local_duck"
+      },
+      {
+        "case": "goal0450-beam-public_selection",
+        "context": "goal0450-beam",
+        "role": "comparison",
+        "arm": "public_selection",
+        "scene": "beam",
+        "goal_offset_mm": 450,
+        "reused": false,
+        "success": false,
+        "steps": 500,
+        "reason": "deadline",
+        "final_goal_distance_m": 0.542451849694228,
+        "final_forward_error_m": 0.538451013557508,
+        "goal_radius_margin_m": -0.042451849694227994,
+        "deadline_censored": true,
+        "family": "local_duck"
+      },
+      {
+        "case": "goal0450-clear-source_clock",
+        "context": "goal0450-clear",
+        "role": "comparison",
+        "arm": "source_clock",
+        "scene": "clear",
+        "goal_offset_mm": 450,
+        "reused": false,
+        "success": true,
+        "steps": 368,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.23706427827623933,
+        "final_forward_error_m": -0.23629111582394038,
+        "goal_radius_margin_m": 0.2629357217237607,
+        "deadline_censored": false,
+        "family": "nominal"
+      },
+      {
+        "case": "goal0450-clear-public_selection",
+        "context": "goal0450-clear",
+        "role": "comparison",
+        "arm": "public_selection",
+        "scene": "clear",
+        "goal_offset_mm": 450,
+        "reused": false,
+        "success": true,
+        "steps": 368,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.23706427827623933,
+        "final_forward_error_m": -0.23629111582394038,
+        "goal_radius_margin_m": 0.2629357217237607,
+        "deadline_censored": false,
+        "family": "nominal"
+      },
+      {
+        "case": "goal0600-beam-source_clock",
+        "context": "goal0600-beam",
+        "role": "comparison",
+        "arm": "source_clock",
+        "scene": "beam",
+        "goal_offset_mm": 600,
+        "reused": false,
+        "success": false,
+        "steps": 500,
+        "reason": "deadline",
+        "final_goal_distance_m": 0.6070143093860306,
+        "final_forward_error_m": -0.606923684604155,
+        "goal_radius_margin_m": -0.10701430938603063,
+        "deadline_censored": true,
+        "family": "local_duck"
+      },
+      {
+        "case": "goal0600-beam-public_selection",
+        "context": "goal0600-beam",
+        "role": "comparison",
+        "arm": "public_selection",
+        "scene": "beam",
+        "goal_offset_mm": 600,
+        "reused": true,
+        "success": true,
+        "steps": 424,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.38486645207882625,
+        "final_forward_error_m": 0.37786199571780654,
+        "goal_radius_margin_m": 0.11513354792117375,
+        "deadline_censored": false,
+        "family": "local_duck"
+      },
+      {
+        "case": "goal0600-clear-source_clock",
+        "context": "goal0600-clear",
+        "role": "comparison",
+        "arm": "source_clock",
+        "scene": "clear",
+        "goal_offset_mm": 600,
+        "reused": true,
+        "success": true,
+        "steps": 368,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.38676453661344956,
+        "final_forward_error_m": -0.3862911158239404,
+        "goal_radius_margin_m": 0.11323546338655044,
+        "deadline_censored": false,
+        "family": "nominal"
+      },
+      {
+        "case": "goal0600-clear-public_selection",
+        "context": "goal0600-clear",
+        "role": "comparison",
+        "arm": "public_selection",
+        "scene": "clear",
+        "goal_offset_mm": 600,
+        "reused": true,
+        "success": true,
+        "steps": 368,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.38676453661344956,
+        "final_forward_error_m": -0.3862911158239404,
+        "goal_radius_margin_m": 0.11323546338655044,
+        "deadline_censored": false,
+        "family": "nominal"
+      },
+      {
+        "case": "goal0900-beam-source_clock",
+        "context": "goal0900-beam",
+        "role": "comparison",
+        "arm": "source_clock",
+        "scene": "beam",
+        "goal_offset_mm": 900,
+        "reused": false,
+        "success": false,
+        "steps": 500,
+        "reason": "deadline",
+        "final_goal_distance_m": 0.9069843342428208,
+        "final_forward_error_m": -0.9069236846041552,
+        "goal_radius_margin_m": -0.40698433424282077,
+        "deadline_censored": true,
+        "family": "local_duck"
+      },
+      {
+        "case": "goal0900-beam-public_selection",
+        "context": "goal0900-beam",
+        "role": "comparison",
+        "arm": "public_selection",
+        "scene": "beam",
+        "goal_offset_mm": 900,
+        "reused": false,
+        "success": true,
+        "steps": 424,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.10679414078056672,
+        "final_forward_error_m": 0.07786199571780653,
+        "goal_radius_margin_m": 0.3932058592194333,
+        "deadline_censored": false,
+        "family": "local_duck"
+      },
+      {
+        "case": "goal0900-clear-source_clock",
+        "context": "goal0900-clear",
+        "role": "comparison",
+        "arm": "source_clock",
+        "scene": "clear",
+        "goal_offset_mm": 900,
+        "reused": false,
+        "success": false,
+        "steps": 500,
+        "reason": "deadline",
+        "final_goal_distance_m": 0.6697431468436809,
+        "final_forward_error_m": -0.6693447806130514,
+        "goal_radius_margin_m": -0.16974314684368086,
+        "deadline_censored": true,
+        "family": "nominal"
+      },
+      {
+        "case": "goal0900-clear-public_selection",
+        "context": "goal0900-clear",
+        "role": "comparison",
+        "arm": "public_selection",
+        "scene": "clear",
+        "goal_offset_mm": 900,
+        "reused": false,
+        "success": true,
+        "steps": 424,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.29753951220888797,
+        "final_forward_error_m": 0.28371243483638436,
+        "goal_radius_margin_m": 0.20246048779111203,
+        "deadline_censored": false,
+        "family": "nominal"
+      },
+      {
+        "case": "goal1200-beam-source_clock",
+        "context": "goal1200-beam",
+        "role": "comparison",
+        "arm": "source_clock",
+        "scene": "beam",
+        "goal_offset_mm": 1200,
+        "reused": false,
+        "success": false,
+        "steps": 500,
+        "reason": "deadline",
+        "final_goal_distance_m": 1.2069692594777988,
+        "final_forward_error_m": -1.2069236846041551,
+        "goal_radius_margin_m": -0.7069692594777988,
+        "deadline_censored": true,
+        "family": "local_duck"
+      },
+      {
+        "case": "goal1200-beam-public_selection",
+        "context": "goal1200-beam",
+        "role": "comparison",
+        "arm": "public_selection",
+        "scene": "beam",
+        "goal_offset_mm": 1200,
+        "reused": false,
+        "success": true,
+        "steps": 424,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.23385420901573611,
+        "final_forward_error_m": -0.22213800428219352,
+        "goal_radius_margin_m": 0.2661457909842639,
+        "deadline_censored": false,
+        "family": "local_duck"
+      },
+      {
+        "case": "goal1200-clear-source_clock",
+        "context": "goal1200-clear",
+        "role": "comparison",
+        "arm": "source_clock",
+        "scene": "clear",
+        "goal_offset_mm": 1200,
+        "reused": false,
+        "success": false,
+        "steps": 500,
+        "reason": "deadline",
+        "final_goal_distance_m": 0.9696199003279106,
+        "final_forward_error_m": -0.9693447806130514,
+        "goal_radius_margin_m": -0.46961990032791057,
+        "deadline_censored": true,
+        "family": "nominal"
+      },
+      {
+        "case": "goal1200-clear-public_selection",
+        "context": "goal1200-clear",
+        "role": "comparison",
+        "arm": "public_selection",
+        "scene": "clear",
+        "goal_offset_mm": 1200,
+        "reused": false,
+        "success": true,
+        "steps": 424,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.09111696013186768,
+        "final_forward_error_m": -0.016287565163615663,
+        "goal_radius_margin_m": 0.40888303986813235,
+        "deadline_censored": false,
+        "family": "nominal"
+      },
+      {
+        "case": "nominal-loop-support",
+        "context": "goal0900-clear",
+        "role": "support",
+        "arm": "source_clock",
+        "scene": "clear",
+        "goal_offset_mm": 900,
+        "reused": false,
+        "success": true,
+        "steps": 424,
+        "reason": "goal_hold",
+        "final_goal_distance_m": 0.29753951220888797,
+        "final_forward_error_m": 0.28371243483638436,
+        "goal_radius_margin_m": 0.20246048779111203,
+        "deadline_censored": false,
+        "family": "nominal"
+      }
+    ],
+    "pairs": [
+      {
+        "context": "goal0000-beam",
+        "scene": "beam",
+        "goal_offset_mm": 0,
+        "short_success": true,
+        "public_success": true,
+        "gain": false,
+        "regression": false,
+        "first_difference_ticks": {
+          "reference": null,
+          "tokens": null,
+          "actions": null,
+          "measured_root": null
+        }
+      },
+      {
+        "context": "goal0000-clear",
+        "scene": "clear",
+        "goal_offset_mm": 0,
+        "short_success": true,
+        "public_success": true,
+        "gain": false,
+        "regression": false,
+        "first_difference_ticks": {
+          "reference": null,
+          "tokens": null,
+          "actions": null,
+          "measured_root": null
+        }
+      },
+      {
+        "context": "goal0450-beam",
+        "scene": "beam",
+        "goal_offset_mm": 450,
+        "short_success": true,
+        "public_success": false,
+        "gain": false,
+        "regression": true,
+        "first_difference_ticks": {
+          "reference": 127,
+          "tokens": 127,
+          "actions": 127,
+          "measured_root": 128
+        }
+      },
+      {
+        "context": "goal0450-clear",
+        "scene": "clear",
+        "goal_offset_mm": 450,
+        "short_success": true,
+        "public_success": true,
+        "gain": false,
+        "regression": false,
+        "first_difference_ticks": {
+          "reference": null,
+          "tokens": null,
+          "actions": null,
+          "measured_root": null
+        }
+      },
+      {
+        "context": "goal0600-beam",
+        "scene": "beam",
+        "goal_offset_mm": 600,
+        "short_success": false,
+        "public_success": true,
+        "gain": true,
+        "regression": false,
+        "first_difference_ticks": {
+          "reference": 127,
+          "tokens": 127,
+          "actions": 127,
+          "measured_root": 128
+        }
+      },
+      {
+        "context": "goal0600-clear",
+        "scene": "clear",
+        "goal_offset_mm": 600,
+        "short_success": true,
+        "public_success": true,
+        "gain": false,
+        "regression": false,
+        "first_difference_ticks": {
+          "reference": null,
+          "tokens": null,
+          "actions": null,
+          "measured_root": null
+        }
+      },
+      {
+        "context": "goal0900-beam",
+        "scene": "beam",
+        "goal_offset_mm": 900,
+        "short_success": false,
+        "public_success": true,
+        "gain": true,
+        "regression": false,
+        "first_difference_ticks": {
+          "reference": 127,
+          "tokens": 127,
+          "actions": 127,
+          "measured_root": 128
+        }
+      },
+      {
+        "context": "goal0900-clear",
+        "scene": "clear",
+        "goal_offset_mm": 900,
+        "short_success": false,
+        "public_success": true,
+        "gain": true,
+        "regression": false,
+        "first_difference_ticks": {
+          "reference": 127,
+          "tokens": 128,
+          "actions": 128,
+          "measured_root": 129
+        }
+      },
+      {
+        "context": "goal1200-beam",
+        "scene": "beam",
+        "goal_offset_mm": 1200,
+        "short_success": false,
+        "public_success": true,
+        "gain": true,
+        "regression": false,
+        "first_difference_ticks": {
+          "reference": 127,
+          "tokens": 127,
+          "actions": 127,
+          "measured_root": 128
+        }
+      },
+      {
+        "context": "goal1200-clear",
+        "scene": "clear",
+        "goal_offset_mm": 1200,
+        "short_success": false,
+        "public_success": true,
+        "gain": true,
+        "regression": false,
+        "first_difference_ticks": {
+          "reference": 127,
+          "tokens": 128,
+          "actions": 128,
+          "measured_root": 129
+        }
+      }
+    ],
+    "endpoint_calibration_status": "Post-result offline hypothesis only; no calibrated-controller execution claimed"
+  },
+  "provenance": [
+    {
+      "path": "/home/linjiw/hindsight-motion-research/scripts/summarize_distance_followup.py",
+      "sha256": "55aaddaa02decec2c8d517deaa3c9e1821771fa2721e2b8b2bc8d3ea19fc369b"
+    },
+    {
+      "path": "/home/linjiw/hindsight-motion-research/runs/distance_codec_20260919_v1/sibling-sync.json",
+      "sha256": "90272581bcc963ed5938fc884987003de023226ba929f597b26f953bf97525eb"
+    },
+    {
+      "path": "/home/linjiw/hindsight-motion-research/runs/distance_codec_20260919_v1/episodes/original-beam_continuous/resource_wait.jsonl",
+      "sha256": "106d93aec5d2363181053f5b411cd4aaded2079398edeb9274cb855cc0926901"
+    },
+    {
+      "path": "/home/linjiw/hindsight-motion-research/runs/distance_codec_20260919_v1/episodes/original-beam_continuous/resource_deferred.json",
+      "sha256": "f761f2ef140db79eafe88501e9355c0c9ea616bae6002d27927916d606bb9323"
+    },
+    {
+      "path": "/home/linjiw/hindsight-motion-research/results/distance_codec.json",
+      "sha256": "854bb1c849f1f310915b7361003cd5eb2e2f65057622a059124ced88782272df"
+    }
+  ],
+  "sibling_sources": [
+    {
+      "path": "/home/linjiw/groot-wbc-sonic-sim-trackb/docs/motion2scene/DUCK_EXIT_ENVELOPE_20260919.md",
+      "sha256": "258c297f2e43e2a03bb05dc7bdb9f98f038f39f7056022225e5efb53da0f7f4b"
+    },
+    {
+      "path": "/home/linjiw/groot-wbc-sonic-sim-trackb/docs/motion2scene/evidence/duck-exit-envelope-20260919/analysis.json",
+      "sha256": "10f3d3959040d7c7124f904235acfb03e6a25b589ace1753a3d26a57d73b7446"
+    },
+    {
+      "path": "/home/linjiw/groot-wbc-sonic-sim-trackb/docs/motion2scene/evidence/duck-exit-envelope-20260919/endpoint-diagnosis.json",
+      "sha256": "f06c3848deb1ef928067e25a748be5a52297246b28622b3f547496163d40abd7"
+    }
+  ]
+}

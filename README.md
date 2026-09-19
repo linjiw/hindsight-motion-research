@@ -29,10 +29,17 @@ The sibling project now has a separately qualified distance-responsive exit
 controller. Our [new offline codec preflight](docs/DISTANCE_CODEC_PREFLIGHT_zh.md)
 replays all 1,528 public-history references exactly, while exposing a one-tick
 change in Linear29's goal-response timing and a blend velocity-convention gap.
-Next compare continuous and Linear29 on that frozen original/farther-beam
-controller after a new registration. Its Linear29 execution is not yet measured;
-generalization, cross-family robustness and downstream learning remain open.
-The earlier zero-launch resource deferral remains a separate immutable record.
+The [four-case experiment is now registered and prepared](docs/DISTANCE_CODEC_RESULTS_zh.md):
+792 historical beam states replay exactly, with all decoded arrays unchanged.
+Its 300-second resource gate expired with **zero launches and four unrun cases**;
+Linear29 execution on this controller remains unmeasured. A new admission must
+preserve that receipt and the four-attempt ceiling.
+
+The [latest sibling sync](docs/DISTANCE_ENVELOPE_SYNC_20260919_zh.md) finds public
+exit selection 9/10 versus short-only 5/10, with five gains and one switching-boundary
+regression. Its matched farther-beam baseline and nominal-loop qualification are
+now complete. Endpoint calibration is still an offline hypothesis; these separate
+controller results are not our codec evidence. Generalization and learning remain open.
 
 The latest acquisition check found **0/145** admissible portals for the qualified
 CMU/107 original/tuck pair under the fixed three-perturbation geometry gate.
@@ -63,6 +70,7 @@ The historical mechanism study separates temporal smoothing from leg-reconstruct
 - [Matched-state continuation: continuous 8/8, Linear29 8/8](docs/CONTINUATION_ADMISSION02_RESULTS_zh.md) — [protocol](docs/CONTINUATION_PROTOCOL.md) · [admission](docs/CONTINUATION_ADMISSION_02.md)
 - [Selected-reference controller: continuous 2/2, Linear29 2/2](docs/SELECTION_CODEC_RESULTS_zh.md) — [protocol](docs/SELECTION_CODEC_PROTOCOL.md)
 - [Completed scene screen: same pass/contact/deadline outcomes](docs/SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md) — [admission 02](docs/SELECTION_BOUNDARY_ADMISSION_02.md) · [original partial receipt](docs/SELECTION_BOUNDARY_RESULTS_zh.md)
+- [Registered distance-codec comparison: zero launches, four unrun](docs/DISTANCE_CODEC_RESULTS_zh.md) — [protocol](docs/DISTANCE_CODEC_PROTOCOL.md) · [sibling envelope sync](docs/DISTANCE_ENVELOPE_SYNC_20260919_zh.md)
 - [New distance-exit controller: offline codec preflight](docs/DISTANCE_CODEC_PREFLIGHT_zh.md) — [next gate](docs/DISTANCE_RESPONSE_GATE_zh.md)
 - [Earlier composer interface sync](docs/COMPOSER_SYNC_20260918.md)
 - [Adopted research guidance (中文)](docs/RESEARCH_GUIDANCE_20260918_zh.md)

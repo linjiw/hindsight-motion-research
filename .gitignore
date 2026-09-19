@@ -36,3 +36,5 @@ artifacts/*
 build/
 dist/
 _site/
+
+!artifacts/distance_codec.png

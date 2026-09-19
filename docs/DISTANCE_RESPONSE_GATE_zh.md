@@ -6,7 +6,9 @@
 
 原先四个未运行 codec case 已在[admission 02](SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md)补齐，两表示均保留低梁接触与远 goal 超时。相邻 `8b90ccaa` 也已独立实现一次 blended exit：raw seams 0/4,961 合格，另构造 0.40 s bridge 并以八次新 execution 资格验证，public/support 各 4/4。它替换了 retiming，使用 fixed composed clock 与一次距离选择；不是本仓库的新实现，也不是通用距离控制。
 
-因此不用重做下列 A/B 的初步实现。本仓库已完成[离线 codec 接口预检](DISTANCE_CODEC_PREFLIGHT_zh.md)，下一拟议 native 为新 controller 的 original/farther beam × continuous/Linear29 四格。先登记 qdot convention、forecast 边界与五帧 commitment，绑定新 continuous controls 和相同 scene。范围、更深 duck、nominal-loop 资格与自由 goal 更新仍未建立；下列条目继续作为更强能力的检查约束。
+本仓库已完成[离线 codec 预检](DISTANCE_CODEC_PREFLIGHT_zh.md)，继而[登记并准备四格 native 比较](DISTANCE_CODEC_RESULTS_zh.md)。新 792-state beam replay 和 decoded commitment 检查通过；但 300 s 资源等待结束、零 launch、四格未运行。下一步只为这四格新 admission，保留延期记录和总预算；物理表示保持仍未知。
+
+相邻随后 `7b416f76` 的[距离 envelope](DISTANCE_ENVELOPE_SYNC_20260919_zh.md)已有 9/10 public 对 5/10 short-only、五 gains 和一个 +0.45 m regression，补齐 matched farther-beam baseline 与 nominal-loop 资格。更广范围仍有 endpoint prediction boundary；其新 calibration 尚为离线假设。我们保持本四格 frozen predictor，不把 controller 修复与 codec loss 混在一起。更低梁、来态覆盖与自由 goal 更新仍未建立；下列 A/B 是原始设计及更强能力约束。
 
 ## 原始缺口与问题（旧 selector）
 
