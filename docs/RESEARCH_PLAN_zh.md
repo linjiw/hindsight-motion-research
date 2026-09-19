@@ -1,6 +1,6 @@
 # 面向可泛化人形穿越的动作表示：重新确定研究问题
 
-修订：2026-09-18。依据全部阶段结果报告、公开汇总与关键 run 汇总、相关本地 traversal 项目及本次[文献复核](LITERATURE_REASSESSMENT_20260918_zh.md)。这是新研究方向，**没有执行新仿真、训练或改变既有 native 注册**。本次补入[用户指导采用记录](RESEARCH_GUIDANCE_20260918_zh.md)及[小 LLM 离线协议](LLM_INTERFACE_PROTOCOL_zh.md)；合成接口推理单独登记，不属于物理证据。[旧计划](https://github.com/linjiw/hindsight-motion-research/blob/fc85b01082c703fa31b3c7776152677adbee7c3b/docs/RESEARCH_PLAN_zh.md)保留历史语境。
+修订：2026-09-18。依据全部阶段结果报告、公开汇总与关键 run 汇总、相关本地 traversal 项目及本次[文献复核](LITERATURE_REASSESSMENT_20260918_zh.md)。初次重审没有执行新仿真或训练。后续用户明确要求推进后，已单独登记并完成 [continuous/Linear29 完整参考任务 pilot](COMPLETE_TASK_RESULTS_zh.md)：各 4/4；没有改变旧 native 注册或启动训练。本次补入[用户指导采用记录](RESEARCH_GUIDANCE_20260918_zh.md)及[小 LLM 离线协议](LLM_INTERFACE_PROTOCOL_zh.md)；合成接口推理单独登记，不属于物理证据。[旧计划](https://github.com/linjiw/hindsight-motion-research/blob/fc85b01082c703fa31b3c7776152677adbee7c3b/docs/RESEARCH_PLAN_zh.md)保留历史语境。
 
 ## 1. 判断：目标保留，研究重心需要移动
 
@@ -77,6 +77,8 @@ LLM / VLM：目标、对象指代、约束、终止要求
 整理人物/表演、镜像、重定向、切窗和编辑祖先。900 动作是候选库存，不是 900 可执行任务。输出 capability/interface matrix：哪些命令在什么状态、频率和观测下实际通过。
 
 ### P1：完整任务的可执行基线
+
+**已完成第一行 pilot：continuous 4/4，Linear29+两帧 reset anchor 4/4，四个配对初态/历史/动力学完全匹配。** 使用两个既有 clip、clear/beam、冻结 goal050/recovery/stop profile；有完整未来参考和 root 辅助，不是自主任务。详细范围、wrist clipping、成本与下一步见[结果](COMPLETE_TASK_RESULTS_zh.md)及[协议](COMPLETE_TASK_PROTOCOL.md)。当前主优先级移到第二行的实际来态 continuation/switching，暂不启动新 codec 训练。
 
 对齐相邻项目的 task-aware composer：按当前位姿和场景选取并衔接 approach/duck/exit/stop。先用 continuous 与 Linear29 做[两种表示×三种执行条件](RESEARCH_GUIDANCE_20260918_zh.md)矩阵：完整正确参考、真实相同来态的合格后续 chunk、因果 composer 从 reset 闭环。Native 先做同参考/同历史接口 parity，后作独立路线对照。
 

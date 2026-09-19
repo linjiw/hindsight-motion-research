@@ -11,8 +11,9 @@ The September 18 research revision puts a complete traversal task and competing
 motion interfaces first. The decision explorer separates current evidence from
 proposed tests; the roadmap and typed-interface document are design proposals.
 The literature section points to 20 primary papers with explicit reading scope.
-Physical evidence remains dated September 15–16, with no new episodes from this
-review. A separate September 18 CPU-only Qwen3-0.6B probe has 24 synthetic
+Historical mechanism evidence remains dated September 15–16. The subsequent
+September 18 complete-task pilot adds a separate physical ledger, described below.
+A separate September 18 CPU-only Qwen3-0.6B probe has 24 synthetic
 interface responses, 0/12 relay and 2/12 sidecar successes. Its two-route
 explorer and JSON summary are explicitly separate from physical evidence. Keep the review date separate from the evidence date in provenance.
 
@@ -51,3 +52,10 @@ matching pushes to `main` or manual dispatch. GitHub repository Pages settings
 must use GitHub Actions. Only `_site/` is uploaded. The page uses relative asset
 URLs so it works under the repository's Pages path. Web fonts are optional, with
 system fallbacks. No client data is stored and no analytics are included.
+
+A separate September 18 complete-reference native pilot adds eight episodes,
+2,079 control steps and 8,316 physics contact frames. Both continuous and Linear29
+with reset anchors pass 4/4 under the existing goal050/recovery/stop profile.
+The new task matrix/table and aggregate figure are separate from the historical
+440-preflight / 312-main ledger and from the synthetic LLM probe. The remaining
+matched-state and causal-composer matrix rows stay proposed.

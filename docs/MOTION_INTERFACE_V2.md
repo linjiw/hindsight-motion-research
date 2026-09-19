@@ -101,3 +101,7 @@ Required feedback for future agents is functional: goal progress, blocked route,
 ## Small-LLM validation attachment
 
 The separately versioned [L0 probe](LLM_INTERFACE_PROTOCOL_zh.md) implements a synthetic subset of these semantics. It does not implement this runtime API or qualify robot trajectories. Compare full record relay with ID selection plus immutable sidecar. Bind IDs to the current observation/catalog and reject invented IDs or altered frames, clocks, support and terminal fields. Sidecar integrity and semantic choice are separate gates. Null means a declared unsupported/unknown request, not a physically qualified emergency stop. See the [measured CPU probe](LLM_INTERFACE_RESULTS_zh.md).
+
+## Complete-reference support attachment
+
+The [registered reference pilot](COMPLETE_TASK_PROTOCOL.md) implements a narrow adapter comparison under the existing goal050 complete-task profile. [Both routes pass 4/4](COMPLETE_TASK_RESULTS_zh.md) with exact matched reset/history/dynamics; Linear29 includes two charged reset-anchor frames and the original root. This establishes no general v2 API, arbitrary-state switching or causal-composer qualification.

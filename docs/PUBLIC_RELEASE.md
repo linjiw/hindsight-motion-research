@@ -35,3 +35,8 @@ code and aggregate/per-case interface scores in `results/llm_interface.json`.
 Its invented coordinate samples are not licensed motions or qualified robot
 trajectories. Raw model responses, downloaded weights and the verbatim user
 guidance remain local. This probe is not a language-controlled robot result.
+
+The complete-task pilot additionally publishes aggregate counts, paired initial-state
+differences and task durations, plus `artifacts/complete_task.png`. The figure
+contains no motion trajectory. All eight native raw runs and source descendants
+remain local; they are not additional canonical source pairs or student training.

@@ -1,6 +1,6 @@
 # Research roadmap: motion interfaces for complete humanoid traversal
 
-Revised September 18, 2026. This replaces the ordering of proposed work in the [earlier roadmap](https://github.com/linjiw/hindsight-motion-research/blob/fc85b01082c703fa31b3c7776152677adbee7c3b/docs/ROADMAP_SCENE_BFM_TEXT2NAV.md). Completed protocols, thresholds and receipts are unchanged. This review launched no training or native experiments. The follow-up adds a separately registered, synthetic CPU-only LLM interface probe; its outcomes are not physical evidence.
+Revised September 18, 2026. This replaces the ordering of proposed work in the [earlier roadmap](https://github.com/linjiw/hindsight-motion-research/blob/fc85b01082c703fa31b3c7776152677adbee7c3b/docs/ROADMAP_SCENE_BFM_TEXT2NAV.md). Completed protocols, thresholds and receipts are unchanged. The initial review launched no training or native experiments. Following the user’s explicit continuation request, the separately registered [complete-reference pilot](COMPLETE_TASK_RESULTS_zh.md) ran eight native episodes: continuous 4/4 and Linear29 with a two-frame reset anchor 4/4. No training or historical-budget change. The follow-up adds a separately registered, synthetic CPU-only LLM interface probe; its outcomes are not physical evidence.
 
 [Research plan (中文)](RESEARCH_PLAN_zh.md) · [Literature reassessment](LITERATURE_REASSESSMENT_20260918_zh.md) · [Proposed interface](MOTION_INTERFACE_V2.md) · [Repository/evidence sync](REVIEW_SYNC_20260918.md) · [Interactive atlas](https://linjiw.github.io/hindsight-motion-research/)
 
@@ -66,14 +66,14 @@ The fixed-wide CMU follow-up remains a bounded, separately registered acquisitio
 | Package | Deliverable and minimal comparison | Decision gate |
 | --- | --- | --- |
 | P0 — interface audit | Inventory existing root/reference/motor contracts, ancestry and actual supported commands; distinguish codec bits from decoder floats | Lossless serialization/frame/history parity before physical adapter qualification; no assumed checkpoint portability |
-| P1 — complete task baseline | Continuous × Linear29 across full-reference reset, matched-state suffix, and causal-composer reset conditions; native parity separately | Freeze beam position/height/length/speed distribution and full-body exit/recovery/stop scoring; all new physical cells unrun |
+| P1 — complete task baseline | Continuous × Linear29 across full-reference reset, matched-state suffix, and causal-composer reset conditions; native parity separately | First row measured on two prior development clips × clear/beam: 4/4 per method, exact matched entries; state-continuation and causal-composer rows remain unrun |
 | P0-L — small LLM probe | Local Qwen3-0.6B vs deterministic rules; full-record relay vs ID plus lossless sidecar | Synthetic interface tests only; semantic selection and exact retention scored separately; 1.7B comparison proposed |
 | P2 — representation test | Incoming-state-conditioned joint whole-body continuous latent first; equal-budget adaptive scalar/spline and same-architecture reconstruction controls; quantize only after useful gains | Preserve execution, switching and decision outcomes at disclosed total information and latency cost |
 | P3 — fixed learner utility | Compare the two strongest output representations with the same learner/data/backend; separately compare acquisition methods | Held-out scene gains, retained clear-task behavior and uncertainty across scene groups and training seeds |
 | P4 — sensed context | Replace known map with causal depth/LiDAR and memory while retaining action semantics | Sensor-only complete rollouts, including ceiling occlusion, latency and localization error |
 | P5 — language, routes, contact | Ground language into the same goal/constraint API; route/subgoal memory; later intentional support contacts | New instruction/layout combinations, blocked-route response and separately qualified contact capabilities |
 
-No new native budget is granted here. The historical ceiling has 168/480 main attempts remaining. Reusing any of it requires an applicable registration and serial resource gate; a new training campaign requires a new budget. Do not turn a remaining ceiling into a target sample count.
+The separately registered eight-attempt reference pilot is complete (2,079 control steps / 8,316 physics frames). Its budget is exhausted; the next incoming-state experiment requires a new registration. The historical ceiling still has 168/480 main attempts remaining. Reusing any of it requires an applicable registration and serial resource gate; a new training campaign requires a new budget. Do not turn a remaining ceiling into a target sample count.
 
 ## Representation experiment contract
 
@@ -112,3 +112,7 @@ The practical next result should connect a representation choice to a complete, 
 ## Small-model compatibility without changing the main question
 
 The [LLM protocol](LLM_INTERFACE_PROTOCOL_zh.md) separates L0 synthetic contract handling, L1 real-motion information retention, and L2 matched-state physical utility. The [first result](LLM_INTERFACE_RESULTS_zh.md) is an interface failure diagnostic, not a tokenizer/control validation. A lossless sidecar can protect numbers while the model still chooses the wrong action. Keep non-language baselines and charge prompt/output tokens, all side channels and latency. Future motion-token learning needs actual alignment and free-running evaluation; zero-shot arbitrary IDs do not provide it.
+
+## Current next step after the reference pilot
+
+Both simple routes complete the selected known references. This supports proceeding to actual-state continuation rather than training a larger tokenizer. Use reachable lowering/entry/exit/braking states, restore complete physical and controller history, first qualify unperturbed parity, then register deviations. The first pilot used the existing goal050 profile; do not silently relabel it goal025. Frozen Linear29 ranges clipped four wrist channels, so later failures need calibration-versus-temporal-loss controls. See the [complete-task report](COMPLETE_TASK_RESULTS_zh.md).

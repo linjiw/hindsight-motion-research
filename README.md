@@ -39,6 +39,7 @@ The latest completed study separates temporal smoothing from leg-reconstruction 
 - [Literature reassessment (中文)](docs/LITERATURE_REASSESSMENT_20260918_zh.md)
 - [Proposed motion / BFM / VLA / agent interface](docs/MOTION_INTERFACE_V2.md)
 - [Critical scenes → BFM → text-to-navigation roadmap](docs/ROADMAP_SCENE_BFM_TEXT2NAV.md)
+- [Complete-task reference pilot: continuous 4/4, Linear29 4/4](docs/COMPLETE_TASK_RESULTS_zh.md) — [protocol](docs/COMPLETE_TASK_PROTOCOL.md)
 - [Adopted research guidance (中文)](docs/RESEARCH_GUIDANCE_20260918_zh.md)
 - [Small-LLM interface protocol](docs/LLM_INTERFACE_PROTOCOL_zh.md) and [first CPU probe results](docs/LLM_INTERFACE_RESULTS_zh.md)
 - [Latest mechanism results (中文)](docs/TOKEN_MECHANISM_RESULTS_zh.md) and [protocol](docs/TOKEN_MECHANISM_PROTOCOL.md)

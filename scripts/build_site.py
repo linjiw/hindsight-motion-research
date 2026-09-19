@@ -17,9 +17,9 @@ SOURCES = ["site/index.html", "site/style.css", "site/app.js", "site/favicon.svg
 RESULTS = [
     "token_mechanism", "decoder_execution", "mechanism_geometry",
     "foot_reconstruction", "critical_dataset", "mechanism_effects",
-    "carrier_scene", "llm_interface",
+    "carrier_scene", "llm_interface", "complete_task",
 ]
-FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png"]
+FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png"]
 
 
 class PageLinks(HTMLParser):
@@ -65,6 +65,12 @@ def main():
             or llm["model_summary"]["relay"]["interface_success"] != 0
             or llm["model_summary"]["sidecar"]["interface_success"] != 2):
         raise ValueError("LLM probe changed: review its separate synthetic evidence narrative")
+    complete = json.loads((ROOT / "results/complete_task.json").read_text())
+    if (complete["native_attempts"] != 8 or complete["control_steps"] != 2079
+            or complete["physics_samples"] != 8316
+            or sum(r.get("success", False) for r in complete["rows"]) != 8
+            or not all(p["entry"]["matched"] for p in complete["pairs"])):
+        raise ValueError("Complete-task pilot changed: review the scoped page narrative")
     if OUTPUT.is_symlink():
         raise ValueError("Refusing a symlinked build directory")
     if OUTPUT.exists():
@@ -85,7 +91,7 @@ def main():
                            "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
     (OUTPUT / "data/provenance.json").write_text(json.dumps({
         "evidence_date": "2026-09-16", "mechanism_evidence_date": "2026-09-15",
-        "llm_interface_evidence_date": "2026-09-18", "page_date": "2026-09-18", "research_review_date": "2026-09-18",
+        "complete_task_evidence_date": "2026-09-18", "llm_interface_evidence_date": "2026-09-18", "page_date": "2026-09-18", "research_review_date": "2026-09-18",
         "scope": "Development-only aggregate evidence; no raw motion or controller assets.",
         "files": provenance,
     }, indent=2) + "\n")

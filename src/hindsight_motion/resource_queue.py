@@ -24,7 +24,7 @@ def resources():
     return dict(unix_s=time.time(), free_gpu_mib=free, available_host_mib=available)
 
 
-def run(paths, timeout_s=3600):
+def run(paths, timeout_s=3600, *, launcher=launch):
     for path in paths:
         path = Path(path).resolve()
         if (path / "launch.json").exists():
@@ -44,7 +44,7 @@ def run(paths, timeout_s=3600):
             if stable >= 2:
                 dump(path / "resource_admission.json", sample)
                 print(json.dumps(dict(admitted=str(path), **sample)), flush=True)
-                launch(path)
+                launcher(path)
                 status = json.loads((path / "exit.json").read_text())
                 if status["exit_code"] != 0:
                     raise RuntimeError(
