@@ -1,5 +1,7 @@
 # 距离覆盖的新证据：表示比较继续，停止预测问题独立
 
+> 后续更新（2026-09-19）：[新 admission 已完成四格](DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md)，continuous 2/2、Linear29 1/2。相邻 endpoint calibration 也已独立物理执行，12/12 对 11/12。本文保留当时的延期/同步快照，不作为最新状态。goal 距离维度见[文字更正](DISTANCE_METRIC_CORRECTION_20260919.md)。
+
 2026-09-19。本轮按主计划继续前，fetch 确认本仓库 `cca3fc2` 与远端一致；相邻工作区已有本地提交 `7b416f76`，上游无新增提交待合并。相邻 dirty tree 只读，没有 pull 覆盖、修改或提交其工作。读取其 `DUCK_EXIT_ENVELOPE_20260919.md`、公开 analysis / endpoint-diagnosis 及已有 distance-exit runtime；新提交没有改变我们拟复用的 composer、bank 或 checkpoints。
 
 ## 已完成的相邻实验

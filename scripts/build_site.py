@@ -21,8 +21,9 @@ RESULTS = [
     "selection_codec", "selection_codec_replay",
     "selection_boundary", "selection_boundary_goal",
     "selection_boundary_admission02", "distance_codec_preflight", "distance_codec", "distance_followup",
+    "distance_codec_admission02", "endpoint_codec_transfer", "endpoint_controller_sync", "reset_controller_sync",
 ]
-FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png", "selection_boundary.png", "selection_boundary_admission02.png", "distance_codec.png"]
+FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png", "selection_boundary.png", "selection_boundary_admission02.png", "distance_codec.png", "distance_codec_admission02.png"]
 
 
 class PageLinks(HTMLParser):
@@ -139,6 +140,46 @@ def main():
                 "short_successes": 5, "public_successes": 9, "requests": 10,
                 "gains": 5, "regressions": 1, "nominal_loop_support_success": True}):
         raise ValueError("Distance comparison status changed: review unrun/offline/sibling distinctions")
+    distance_done = json.loads((ROOT / "results/distance_codec_admission02.json").read_text())
+    endpoint = json.loads((ROOT / "results/endpoint_codec_transfer.json").read_text())
+    sync = json.loads((ROOT / "results/endpoint_controller_sync.json").read_text())
+    if (distance_done["execution_state"] != "complete" or distance_done["native_attempts"] != 4
+            or distance_done["unrun"] != 0 or distance_done["infrastructure_failures"] != 0
+            or distance_done["control_steps"] != 1660 or distance_done["physics_samples"] != 6640
+            or sum(r["success"] for r in distance_done["rows"]) != 3
+            or sum(p["task_regression"] for p in distance_done["pairs"]) != 1
+            or sum(r["states"] for r in distance_done["reference_replay"]) != 1660
+            or not all(r["issued_reference_exact"] and r["composed_indices_exact"]
+                       and r["family_choice_decision_exact"] for r in distance_done["reference_replay"])
+            or not all(r["independent_score_exact"] and not r["fell"]
+                       and r["max_obstacle_force_n"] == r["max_nonfoot_floor_force_n"] == 0
+                       for r in distance_done["rows"])):
+        raise ValueError("Distance admission 02 changed: review completed outcomes and audits")
+    far = next(r for r in distance_done["rows"] if r["case_id"] == "farther-beam_linear29")
+    gates = [r for r in endpoint["measured_gate_audit"] if r["method"] == "linear29"]
+    shadows = [r for r in endpoint["calibrated_choice_shadows"] if r["method"] == "linear29"]
+    if (far["success"] or far["decision"]["requested"] != 1 or far["decision"]["chosen"] != 0
+            or far["decision"]["measured_clear"] or far["stop_reason"] != "deadline"
+            or not endpoint["exploratory"] or endpoint["new_native_attempts"] != 0
+            or len(gates) != 2 or len(shadows) != 6
+            or any(r["first_measured_gate_open_tick"] != 134
+                   or abs(r["decision"]["clearance_gate_margin_m"] + .0010692763277444055) > 1e-12
+                   for r in gates)
+            or any(r["chosen"] != 0 or r["measured_clear"] for r in shadows)):
+        raise ValueError("Clearance diagnosis changed: review request/gate and shadow scope")
+    if (sync["summary"]["calibrated_successes"] != 12 or sync["summary"]["incumbent_successes"] != 11
+            or sync["summary"]["requests"] != 12 or sync["summary"]["gains"] != 1
+            or sync["summary"]["regressions"] != 0 or sync["costs"]["new_native_attempts"] != 16
+            or sync["costs"]["reused_conditions"] != 8):
+        raise ValueError("Sibling calibration changed: review its separate controller ledger")
+    reset_sync = json.loads((ROOT / "results/reset_controller_sync.json").read_text())
+    if (reset_sync["summary"]["beam_successes"] != 5 or reset_sync["summary"]["clear_successes"] != 6
+            or reset_sync["summary"]["contexts_per_scene"] != 6
+            or reset_sync["summary"]["fragile_primary_successes"] != 2
+            or reset_sync["costs"]["new_native_attempts"] != 14
+            or reset_sync["costs"]["new_control_steps"] != 5619
+            or reset_sync["failure_gate"]["first_measured_pre_action_clear_tick"] != 138):
+        raise ValueError("Sibling reset screen changed: review separate outcomes and timing diagnosis")
     if OUTPUT.is_symlink():
         raise ValueError("Refusing a symlinked build directory")
     if OUTPUT.exists():
@@ -168,6 +209,12 @@ def main():
         "distance_codec_preflight_native_attempts": 0,
         "distance_codec_execution_state": "resource_deferred", "distance_codec_native_attempts": 0,
         "distance_codec_unrun": 4, "distance_codec_registration_date": "2026-09-19",
+        "distance_codec_admission02_date": "2026-09-19",
+        "distance_codec_admission02_execution_state": "complete",
+        "distance_codec_cumulative_attempts": 4, "distance_codec_cumulative_unrun": 0,
+        "distance_codec_continuous_successes": 2, "distance_codec_linear29_successes": 1,
+        "endpoint_transfer_audit_native_attempts": 0,
+        "endpoint_controller_sync_scope": "Separate sibling continuous-controller calibration",
         "continuation_registration_date": "2026-09-18", "continuation_native_attempts": 16,
         "continuation_evidence_date": "2026-09-18", "continuation_admission": "02",
         "continuation_original_deferred_attempts": 0, "continuation_qualified_pairs": 8,

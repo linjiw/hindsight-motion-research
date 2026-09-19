@@ -1,0 +1,1136 @@
+{
+  "schema": "hindsight_endpoint_codec_transfer_audit_v1",
+  "date": "2026-09-19",
+  "exploratory": true,
+  "scope": "Post-result endpoint-model compatibility and imposed-history choice audit; not calibrated Linear29 execution",
+  "new_native_attempts": 0,
+  "teacher_action_queries": 0,
+  "motor_action_queries": 0,
+  "training_steps": 0,
+  "fitted_endpoint_vectors": 0,
+  "actual_history_endpoint_audit": [
+    {
+      "case_id": "original-beam_continuous",
+      "method": "continuous",
+      "condition": "original-beam",
+      "chosen_exit": 0,
+      "complete_task_success": true,
+      "endpoint_window": "mean of final 50 post-action root frames",
+      "final_window_is_successful_hold": true,
+      "calibrated_model_residual_xy_m": 1.6909095894512247e-08,
+      "signed_prediction_minus_actual_route_m": -1.0615955012610318e-09,
+      "original_predictor_goal_errors_xy_m": [
+        0.021931742720536954,
+        0.9003619937117538
+      ],
+      "final_goal_margin_xy_m": 0.47039167371815077
+    },
+    {
+      "case_id": "original-beam_linear29",
+      "method": "linear29",
+      "condition": "original-beam",
+      "chosen_exit": 0,
+      "complete_task_success": true,
+      "endpoint_window": "mean of final 50 post-action root frames",
+      "final_window_is_successful_hold": true,
+      "calibrated_model_residual_xy_m": 0.04486485370397856,
+      "signed_prediction_minus_actual_route_m": 0.04256731503923176,
+      "original_predictor_goal_errors_xy_m": [
+        0.048623351275781795,
+        0.8769336971818378
+      ],
+      "final_goal_margin_xy_m": 0.4098396965528165
+    },
+    {
+      "case_id": "farther-beam_continuous",
+      "method": "continuous",
+      "condition": "farther-beam",
+      "chosen_exit": 1,
+      "complete_task_success": true,
+      "endpoint_window": "mean of final 50 post-action root frames",
+      "final_window_is_successful_hold": true,
+      "calibrated_model_residual_xy_m": 0.0,
+      "signed_prediction_minus_actual_route_m": 0.0,
+      "original_predictor_goal_errors_xy_m": [
+        0.6165807536204283,
+        0.30066790198762927
+      ],
+      "final_goal_margin_xy_m": 0.1151848161002263
+    },
+    {
+      "case_id": "farther-beam_linear29",
+      "method": "linear29",
+      "condition": "farther-beam",
+      "chosen_exit": 0,
+      "complete_task_success": false,
+      "endpoint_window": "mean of final 50 post-action root frames",
+      "final_window_is_successful_hold": false,
+      "calibrated_model_residual_xy_m": 0.04597991523530635,
+      "signed_prediction_minus_actual_route_m": 0.043623718439965875,
+      "original_predictor_goal_errors_xy_m": [
+        0.6407639461481678,
+        0.27800280001423383
+      ],
+      "final_goal_margin_xy_m": -0.17436452224394483
+    }
+  ],
+  "measured_gate_audit": [
+    {
+      "case_id": "original-beam_continuous",
+      "method": "continuous",
+      "condition": "original-beam",
+      "decision": {
+        "tick": 126,
+        "clearance_gate_margin_m": 0.035015092531489225,
+        "limiting_body": "left_ankle_roll_link"
+      },
+      "first_measured_gate_open_tick": 119,
+      "fixed_decision_tick": 126,
+      "gate_margin_curve": [
+        {
+          "tick": 110,
+          "clearance_gate_margin_m": -0.27188796152987926,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 111,
+          "clearance_gate_margin_m": -0.24132448228445627,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 112,
+          "clearance_gate_margin_m": -0.20930535424380556,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 113,
+          "clearance_gate_margin_m": -0.1766439588368686,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 114,
+          "clearance_gate_margin_m": -0.14419273973311594,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 115,
+          "clearance_gate_margin_m": -0.11266658027322977,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 116,
+          "clearance_gate_margin_m": -0.08130299872241308,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 117,
+          "clearance_gate_margin_m": -0.04955984556196401,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 118,
+          "clearance_gate_margin_m": -0.01633238172542557,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 119,
+          "clearance_gate_margin_m": 0.0073657092105162865,
+          "limiting_body": "torso_link"
+        },
+        {
+          "tick": 120,
+          "clearance_gate_margin_m": 0.019305334799188657,
+          "limiting_body": "torso_link"
+        },
+        {
+          "tick": 121,
+          "clearance_gate_margin_m": 0.032086620924375156,
+          "limiting_body": "torso_link"
+        },
+        {
+          "tick": 122,
+          "clearance_gate_margin_m": 0.0350280618556245,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 123,
+          "clearance_gate_margin_m": 0.035026543174479466,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 124,
+          "clearance_gate_margin_m": 0.03501992684520493,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 125,
+          "clearance_gate_margin_m": 0.035017880009397415,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 126,
+          "clearance_gate_margin_m": 0.035015092531489225,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 127,
+          "clearance_gate_margin_m": 0.035023544372409274,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 128,
+          "clearance_gate_margin_m": 0.03503191553139466,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 129,
+          "clearance_gate_margin_m": 0.03503584071145853,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 130,
+          "clearance_gate_margin_m": 0.03504271909145305,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 131,
+          "clearance_gate_margin_m": 0.0350457499332812,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 132,
+          "clearance_gate_margin_m": 0.03524966712316681,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 133,
+          "clearance_gate_margin_m": 0.03610755854127455,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 134,
+          "clearance_gate_margin_m": 0.038234547414542366,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 135,
+          "clearance_gate_margin_m": 0.042923057293568836,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 136,
+          "clearance_gate_margin_m": 0.05235747896645622,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 137,
+          "clearance_gate_margin_m": 0.06791570970141438,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 138,
+          "clearance_gate_margin_m": 0.09007274229392927,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 139,
+          "clearance_gate_margin_m": 0.11651921122053678,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 140,
+          "clearance_gate_margin_m": 0.1455684774558443,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 141,
+          "clearance_gate_margin_m": 0.1764036082920041,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 142,
+          "clearance_gate_margin_m": 0.2079173285811645,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 143,
+          "clearance_gate_margin_m": 0.23888966830998284,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 144,
+          "clearance_gate_margin_m": 0.26882286942566075,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 145,
+          "clearance_gate_margin_m": 0.2981381594536757,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 146,
+          "clearance_gate_margin_m": 0.3271323007383096,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 147,
+          "clearance_gate_margin_m": 0.3570861857653707,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 148,
+          "clearance_gate_margin_m": 0.38959720407935544,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 149,
+          "clearance_gate_margin_m": 0.42611285021117057,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 150,
+          "clearance_gate_margin_m": 0.4672336549569313,
+          "limiting_body": "left_ankle_roll_link"
+        }
+      ],
+      "scope": "Measured-state FK gate audit; later opening is not an executed retry or qualified transition"
+    },
+    {
+      "case_id": "original-beam_linear29",
+      "method": "linear29",
+      "condition": "original-beam",
+      "decision": {
+        "tick": 126,
+        "clearance_gate_margin_m": -0.0010692763277444055,
+        "limiting_body": "left_ankle_roll_link"
+      },
+      "first_measured_gate_open_tick": 134,
+      "fixed_decision_tick": 126,
+      "gate_margin_curve": [
+        {
+          "tick": 110,
+          "clearance_gate_margin_m": -0.302942416084677,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 111,
+          "clearance_gate_margin_m": -0.27266941693620445,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 112,
+          "clearance_gate_margin_m": -0.24192848996482716,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 113,
+          "clearance_gate_margin_m": -0.2109865666509894,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 114,
+          "clearance_gate_margin_m": -0.17971172607195865,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 115,
+          "clearance_gate_margin_m": -0.14842532126166477,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 116,
+          "clearance_gate_margin_m": -0.11748154954116309,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 117,
+          "clearance_gate_margin_m": -0.08659343665103478,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 118,
+          "clearance_gate_margin_m": -0.05428161746335054,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 119,
+          "clearance_gate_margin_m": -0.01881605155217801,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 120,
+          "clearance_gate_margin_m": -0.004751126796309745,
+          "limiting_body": "torso_link"
+        },
+        {
+          "tick": 121,
+          "clearance_gate_margin_m": -0.0010705367161158268,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 122,
+          "clearance_gate_margin_m": -0.0010687921758918521,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 123,
+          "clearance_gate_margin_m": -0.0010689306491338361,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 124,
+          "clearance_gate_margin_m": -0.0010733082825076894,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 125,
+          "clearance_gate_margin_m": -0.0010714736963134512,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 126,
+          "clearance_gate_margin_m": -0.0010692763277444055,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 127,
+          "clearance_gate_margin_m": -0.0010660972104514048,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 128,
+          "clearance_gate_margin_m": -0.0010640560128695846,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 129,
+          "clearance_gate_margin_m": -0.0010646053427772854,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 130,
+          "clearance_gate_margin_m": -0.0010616538662772228,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 131,
+          "clearance_gate_margin_m": -0.001027995107748935,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 132,
+          "clearance_gate_margin_m": -0.0008743570153464768,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 133,
+          "clearance_gate_margin_m": -0.0001308501881469408,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 134,
+          "clearance_gate_margin_m": 0.002272184249644333,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 135,
+          "clearance_gate_margin_m": 0.00796346479837139,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 136,
+          "clearance_gate_margin_m": 0.01845826856453305,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 137,
+          "clearance_gate_margin_m": 0.034676313012627094,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 138,
+          "clearance_gate_margin_m": 0.0567962779159399,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 139,
+          "clearance_gate_margin_m": 0.08281565803284609,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 140,
+          "clearance_gate_margin_m": 0.11111205123835212,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 141,
+          "clearance_gate_margin_m": 0.14086111970454676,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 142,
+          "clearance_gate_margin_m": 0.17104640216252445,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 143,
+          "clearance_gate_margin_m": 0.20072011571890067,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 144,
+          "clearance_gate_margin_m": 0.23008890757981984,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 145,
+          "clearance_gate_margin_m": 0.25901479876166383,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 146,
+          "clearance_gate_margin_m": 0.28765316444516636,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 147,
+          "clearance_gate_margin_m": 0.31717052452196043,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 148,
+          "clearance_gate_margin_m": 0.34910521787453125,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 149,
+          "clearance_gate_margin_m": 0.3851897393330567,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 150,
+          "clearance_gate_margin_m": 0.4256368059653162,
+          "limiting_body": "left_ankle_roll_link"
+        }
+      ],
+      "scope": "Measured-state FK gate audit; later opening is not an executed retry or qualified transition"
+    },
+    {
+      "case_id": "farther-beam_continuous",
+      "method": "continuous",
+      "condition": "farther-beam",
+      "decision": {
+        "tick": 126,
+        "clearance_gate_margin_m": 0.035015092531489225,
+        "limiting_body": "left_ankle_roll_link"
+      },
+      "first_measured_gate_open_tick": 119,
+      "fixed_decision_tick": 126,
+      "gate_margin_curve": [
+        {
+          "tick": 110,
+          "clearance_gate_margin_m": -0.27188796152987926,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 111,
+          "clearance_gate_margin_m": -0.24132448228445627,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 112,
+          "clearance_gate_margin_m": -0.20930535424380556,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 113,
+          "clearance_gate_margin_m": -0.1766439588368686,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 114,
+          "clearance_gate_margin_m": -0.14419273973311594,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 115,
+          "clearance_gate_margin_m": -0.11266658027322977,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 116,
+          "clearance_gate_margin_m": -0.08130299872241308,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 117,
+          "clearance_gate_margin_m": -0.04955984556196401,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 118,
+          "clearance_gate_margin_m": -0.01633238172542557,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 119,
+          "clearance_gate_margin_m": 0.0073657092105162865,
+          "limiting_body": "torso_link"
+        },
+        {
+          "tick": 120,
+          "clearance_gate_margin_m": 0.019305334799188657,
+          "limiting_body": "torso_link"
+        },
+        {
+          "tick": 121,
+          "clearance_gate_margin_m": 0.032086620924375156,
+          "limiting_body": "torso_link"
+        },
+        {
+          "tick": 122,
+          "clearance_gate_margin_m": 0.0350280618556245,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 123,
+          "clearance_gate_margin_m": 0.035026543174479466,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 124,
+          "clearance_gate_margin_m": 0.03501992684520493,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 125,
+          "clearance_gate_margin_m": 0.035017880009397415,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 126,
+          "clearance_gate_margin_m": 0.035015092531489225,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 127,
+          "clearance_gate_margin_m": 0.035023544372409274,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 128,
+          "clearance_gate_margin_m": 0.03503180556791381,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 129,
+          "clearance_gate_margin_m": 0.03503472604471326,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 130,
+          "clearance_gate_margin_m": 0.03504479154318678,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 131,
+          "clearance_gate_margin_m": 0.03504643488403912,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 132,
+          "clearance_gate_margin_m": 0.035196511398709815,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 133,
+          "clearance_gate_margin_m": 0.035953809606688106,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 134,
+          "clearance_gate_margin_m": 0.037946686979033736,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 135,
+          "clearance_gate_margin_m": 0.042392952426433664,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 136,
+          "clearance_gate_margin_m": 0.051604440803484794,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 137,
+          "clearance_gate_margin_m": 0.06752316275666105,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 138,
+          "clearance_gate_margin_m": 0.0904145364357224,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 139,
+          "clearance_gate_margin_m": 0.11831360174719847,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 140,
+          "clearance_gate_margin_m": 0.1492183761961525,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 141,
+          "clearance_gate_margin_m": 0.18227060605079512,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 142,
+          "clearance_gate_margin_m": 0.2164773371736954,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 143,
+          "clearance_gate_margin_m": 0.2505735142297046,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 144,
+          "clearance_gate_margin_m": 0.283719337077776,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 145,
+          "clearance_gate_margin_m": 0.3159465387742016,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 146,
+          "clearance_gate_margin_m": 0.3477642328975838,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 147,
+          "clearance_gate_margin_m": 0.38046177026472566,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 148,
+          "clearance_gate_margin_m": 0.4150710439662337,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 149,
+          "clearance_gate_margin_m": 0.45227951807278194,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 150,
+          "clearance_gate_margin_m": 0.49303734946859556,
+          "limiting_body": "left_ankle_roll_link"
+        }
+      ],
+      "scope": "Measured-state FK gate audit; later opening is not an executed retry or qualified transition"
+    },
+    {
+      "case_id": "farther-beam_linear29",
+      "method": "linear29",
+      "condition": "farther-beam",
+      "decision": {
+        "tick": 126,
+        "clearance_gate_margin_m": -0.0010692763277444055,
+        "limiting_body": "left_ankle_roll_link"
+      },
+      "first_measured_gate_open_tick": 134,
+      "fixed_decision_tick": 126,
+      "gate_margin_curve": [
+        {
+          "tick": 110,
+          "clearance_gate_margin_m": -0.302942416084677,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 111,
+          "clearance_gate_margin_m": -0.27266941693620445,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 112,
+          "clearance_gate_margin_m": -0.24192848996482716,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 113,
+          "clearance_gate_margin_m": -0.2109865666509894,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 114,
+          "clearance_gate_margin_m": -0.17971172607195865,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 115,
+          "clearance_gate_margin_m": -0.14842532126166477,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 116,
+          "clearance_gate_margin_m": -0.11748154954116309,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 117,
+          "clearance_gate_margin_m": -0.08659343665103478,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 118,
+          "clearance_gate_margin_m": -0.05428161746335054,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 119,
+          "clearance_gate_margin_m": -0.01881605155217801,
+          "limiting_body": "right_ankle_roll_link"
+        },
+        {
+          "tick": 120,
+          "clearance_gate_margin_m": -0.004751126796309745,
+          "limiting_body": "torso_link"
+        },
+        {
+          "tick": 121,
+          "clearance_gate_margin_m": -0.0010705367161158268,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 122,
+          "clearance_gate_margin_m": -0.0010687921758918521,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 123,
+          "clearance_gate_margin_m": -0.0010689306491338361,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 124,
+          "clearance_gate_margin_m": -0.0010733082825076894,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 125,
+          "clearance_gate_margin_m": -0.0010714736963134512,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 126,
+          "clearance_gate_margin_m": -0.0010692763277444055,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 127,
+          "clearance_gate_margin_m": -0.0010660972104514048,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 128,
+          "clearance_gate_margin_m": -0.0010640560128695846,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 129,
+          "clearance_gate_margin_m": -0.0010646053427772854,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 130,
+          "clearance_gate_margin_m": -0.0010616538662772228,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 131,
+          "clearance_gate_margin_m": -0.001027995107748935,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 132,
+          "clearance_gate_margin_m": -0.0008743570153464768,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 133,
+          "clearance_gate_margin_m": -0.0001308501881469408,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 134,
+          "clearance_gate_margin_m": 0.002272184249644333,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 135,
+          "clearance_gate_margin_m": 0.00796346479837139,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 136,
+          "clearance_gate_margin_m": 0.01845826856453305,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 137,
+          "clearance_gate_margin_m": 0.034676313012627094,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 138,
+          "clearance_gate_margin_m": 0.0567962779159399,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 139,
+          "clearance_gate_margin_m": 0.08281565803284609,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 140,
+          "clearance_gate_margin_m": 0.11111205123835212,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 141,
+          "clearance_gate_margin_m": 0.14086111970454676,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 142,
+          "clearance_gate_margin_m": 0.17104640216252445,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 143,
+          "clearance_gate_margin_m": 0.20072011571890067,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 144,
+          "clearance_gate_margin_m": 0.23008890757981984,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 145,
+          "clearance_gate_margin_m": 0.25901479876166383,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 146,
+          "clearance_gate_margin_m": 0.28765316444516636,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 147,
+          "clearance_gate_margin_m": 0.31717052452196043,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 148,
+          "clearance_gate_margin_m": 0.34910521787453125,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 149,
+          "clearance_gate_margin_m": 0.3851897393330567,
+          "limiting_body": "left_ankle_roll_link"
+        },
+        {
+          "tick": 150,
+          "clearance_gate_margin_m": 0.4256368059653162,
+          "limiting_body": "left_ankle_roll_link"
+        }
+      ],
+      "scope": "Measured-state FK gate audit; later opening is not an executed retry or qualified transition"
+    }
+  ],
+  "calibrated_choice_shadows": [
+    {
+      "method": "continuous",
+      "goal_offset_mm": 400,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": true,
+      "requested": 0,
+      "chosen": 0,
+      "predicted_terminal_xy_errors": [
+        0.41666319444247796,
+        0.5781589430650357
+      ],
+      "loop_minus_short_predicted_error_m": 0.16149574862255772
+    },
+    {
+      "method": "continuous",
+      "goal_offset_mm": 450,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": true,
+      "requested": 0,
+      "chosen": 0,
+      "predicted_terminal_xy_errors": [
+        0.46663596050459005,
+        0.5286244363708538
+      ],
+      "loop_minus_short_predicted_error_m": 0.061988475866263715
+    },
+    {
+      "method": "continuous",
+      "goal_offset_mm": 500,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": true,
+      "requested": 1,
+      "chosen": 1,
+      "predicted_terminal_xy_errors": [
+        0.5166139967800645,
+        0.4791866296243318
+      ],
+      "loop_minus_short_predicted_error_m": -0.037427367155732694
+    },
+    {
+      "method": "continuous",
+      "goal_offset_mm": 600,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": true,
+      "requested": 1,
+      "chosen": 1,
+      "predicted_terminal_xy_errors": [
+        0.6165807536204283,
+        0.38075174139506374
+      ],
+      "loop_minus_short_predicted_error_m": -0.23582901222536456
+    },
+    {
+      "method": "continuous",
+      "goal_offset_mm": 900,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": true,
+      "requested": 1,
+      "chosen": 1,
+      "predicted_terminal_xy_errors": [
+        0.9165245430065269,
+        0.10501464787978351
+      ],
+      "loop_minus_short_predicted_error_m": -0.8115098951267433
+    },
+    {
+      "method": "continuous",
+      "goal_offset_mm": 1200,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": true,
+      "requested": 1,
+      "chosen": 1,
+      "predicted_terminal_xy_errors": [
+        1.2164960543016614,
+        0.2389231340060154
+      ],
+      "loop_minus_short_predicted_error_m": -0.977572920295646
+    },
+    {
+      "method": "linear29",
+      "goal_offset_mm": 400,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": false,
+      "requested": 0,
+      "chosen": 0,
+      "predicted_terminal_xy_errors": [
+        0.441029515133259,
+        0.5564870700870969
+      ],
+      "loop_minus_short_predicted_error_m": 0.11545755495383786
+    },
+    {
+      "method": "linear29",
+      "goal_offset_mm": 450,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": false,
+      "requested": 0,
+      "chosen": 0,
+      "predicted_terminal_xy_errors": [
+        0.4909428516485916,
+        0.5071792964914751
+      ],
+      "loop_minus_short_predicted_error_m": 0.016236444842883502
+    },
+    {
+      "method": "linear29",
+      "goal_offset_mm": 500,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": false,
+      "requested": 1,
+      "chosen": 0,
+      "predicted_terminal_xy_errors": [
+        0.5408721974283985,
+        0.4580216353023661
+      ],
+      "loop_minus_short_predicted_error_m": -0.08285056212603242
+    },
+    {
+      "method": "linear29",
+      "goal_offset_mm": 600,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": false,
+      "requested": 1,
+      "chosen": 0,
+      "predicted_terminal_xy_errors": [
+        0.6407639461481678,
+        0.36040224421607786
+      ],
+      "loop_minus_short_predicted_error_m": -0.2803617019320899
+    },
+    {
+      "method": "linear29",
+      "goal_offset_mm": 900,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": false,
+      "requested": 1,
+      "chosen": 0,
+      "predicted_terminal_xy_errors": [
+        0.9405772359994761,
+        0.1010329418000937
+      ],
+      "loop_minus_short_predicted_error_m": -0.8395442941993824
+    },
+    {
+      "method": "linear29",
+      "goal_offset_mm": 1200,
+      "history": "imposed original-goal actual history through decision; no new physical continuation",
+      "measured_clear": false,
+      "requested": 1,
+      "chosen": 0,
+      "predicted_terminal_xy_errors": [
+        1.240480809636915,
+        0.2655664380556716
+      ],
+      "loop_minus_short_predicted_error_m": -0.9749143715812435
+    }
+  ],
+  "limitations": "One ancestry/reset/seed. Continuous calibration reuses familiar stopping behavior. Final-window residuals are not final-position errors, uncertainty bounds or independent samples. Shadow requests do not establish complete-task success.",
+  "provenance": [
+    {
+      "path": "scripts/audit_codec_endpoint_transfer.py",
+      "sha256": "feb68c8b994849ed4b29a1a8cc1109513bf24e75218ec09ff43e61e886fedb1d"
+    },
+    {
+      "path": "runs/endpoint_codec_transfer_20260919_v1/source.py",
+      "sha256": "feb68c8b994849ed4b29a1a8cc1109513bf24e75218ec09ff43e61e886fedb1d"
+    },
+    {
+      "path": "runs/endpoint_codec_transfer_20260919_v1/bindings.json",
+      "sha256": "563f6394ea3d1cab4889c9485938d4eafa3e04caabdf93c7b4cd39279b81a86e"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/aggregate.json",
+      "sha256": "455b1cdec75d3a3020e631ee3e7b6cb2ef61f033cd71a2918873f864a12443e9"
+    }
+  ]
+}

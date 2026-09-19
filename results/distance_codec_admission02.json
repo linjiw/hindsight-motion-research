@@ -1,0 +1,772 @@
+{
+  "schema": "hindsight_distance_codec_admission_results_v1",
+  "date": "2026-09-19",
+  "admission": "02",
+  "scope": "Four development native simulation cases on the frozen single-decision distance-exit controller; motor-reference interface intervention",
+  "development_only": true,
+  "heldout": false,
+  "source_ancestries": 1,
+  "seed": 96161,
+  "execution_state": "complete",
+  "scheduled_cases": 4,
+  "native_attempts": 4,
+  "previous_native_attempts": 0,
+  "completed_episodes": 4,
+  "unrun": 0,
+  "infrastructure_failures": 0,
+  "retries": 0,
+  "training_steps": 0,
+  "teacher_action_queries": 0,
+  "control_steps": 1660,
+  "physics_samples": 6640,
+  "native_wall_seconds": 85.73001508100424,
+  "historical_main_attempts_consumed": 0,
+  "rows": [
+    {
+      "case_id": "original-beam_continuous",
+      "condition": "original-beam",
+      "method": "continuous",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 368,
+      "physics_samples": 1472,
+      "elapsed_control_time_s": 7.36,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_3d_m": 0.029952871973491387,
+      "final_goal_error_xy_m": 0.02960832628184925,
+      "final_signed_route_error_m": -0.0276420038610215,
+      "final_goal_margin_xy_m": 0.47039167371815077,
+      "final_speed_mps": 0.05255581811070442,
+      "independent_score_exact": true,
+      "task_components": {
+        "passage_success": true,
+        "duck_observed": true,
+        "recovered": true,
+        "entry_tick": 63,
+        "clear_tick": 118,
+        "recovery_tick": 314,
+        "ordered_hold_ticks": 50,
+        "stable_stop_success": true
+      },
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.021931742720536954,
+          0.9003619937117538
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      },
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "parent_parity": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        },
+        "same_family_and_decision": true
+      }
+    },
+    {
+      "case_id": "original-beam_linear29",
+      "condition": "original-beam",
+      "method": "linear29",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 368,
+      "physics_samples": 1472,
+      "elapsed_control_time_s": 7.36,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_3d_m": 0.09025068182570446,
+      "final_goal_error_xy_m": 0.09016030344718352,
+      "final_signed_route_error_m": -0.08983551991429661,
+      "final_goal_margin_xy_m": 0.4098396965528165,
+      "final_speed_mps": 0.03745545074343681,
+      "independent_score_exact": true,
+      "task_components": {
+        "passage_success": true,
+        "duck_observed": true,
+        "recovered": true,
+        "entry_tick": 64,
+        "clear_tick": 133,
+        "recovery_tick": 314,
+        "ordered_hold_ticks": 50,
+        "stable_stop_success": true
+      },
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": false,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.048623351275781795,
+          0.8769336971818378
+        ],
+        "measured_root": [
+          1.6515346765518188,
+          0.36840707063674927,
+          0.7515503168106079
+        ]
+      },
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "pair_audit": {
+        "max_errors": {
+          "initial-state.npz:root_state_w": 0.0,
+          "initial-state.npz:joint_pos": 0.0,
+          "initial-state.npz:joint_vel": 0.0,
+          "initial-state.npz:current_action": 0.0,
+          "initial-state.npz:previous_action": 0.0,
+          "initial-state.npz:raw_action": 0.0,
+          "initial-state.npz:processed_action": 0.0,
+          "initial-state.npz:proprio": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0
+        },
+        "torch_rng_matched": true,
+        "matched": true,
+        "all_rng_matched": true,
+        "same_initial_choice_and_costs": true
+      }
+    },
+    {
+      "case_id": "farther-beam_continuous",
+      "condition": "farther-beam",
+      "method": "continuous",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 424,
+      "physics_samples": 1696,
+      "elapsed_control_time_s": 8.48,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_3d_m": 0.38486645207882625,
+      "final_goal_error_xy_m": 0.3848151838997737,
+      "final_signed_route_error_m": 0.37786199571780654,
+      "final_goal_margin_xy_m": 0.1151848161002263,
+      "final_speed_mps": 0.024000518023967743,
+      "independent_score_exact": true,
+      "task_components": {
+        "passage_success": true,
+        "duck_observed": true,
+        "recovered": true,
+        "entry_tick": 63,
+        "clear_tick": 118,
+        "recovery_tick": 373,
+        "ordered_hold_ticks": 50,
+        "stable_stop_success": true
+      },
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.6165807536204283,
+          0.30066790198762927
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      },
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "parent_parity": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        },
+        "same_family_and_decision": true
+      }
+    },
+    {
+      "case_id": "farther-beam_linear29",
+      "condition": "farther-beam",
+      "method": "linear29",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": false,
+      "control_steps": 500,
+      "physics_samples": 2000,
+      "elapsed_control_time_s": 10.0,
+      "stop_reason": "deadline",
+      "fell": false,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_3d_m": 0.6743826872567804,
+      "final_goal_error_xy_m": 0.6743645222439448,
+      "final_signed_route_error_m": -0.6743067487690438,
+      "final_goal_margin_xy_m": -0.17436452224394483,
+      "final_speed_mps": 0.04145875945687294,
+      "independent_score_exact": true,
+      "task_components": {
+        "passage_success": true,
+        "duck_observed": true,
+        "recovered": true,
+        "entry_tick": 64,
+        "clear_tick": 133,
+        "recovery_tick": 314,
+        "ordered_hold_ticks": 0,
+        "stable_stop_success": false
+      },
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": false,
+        "requested": 1,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.6407639461481678,
+          0.27800280001423383
+        ],
+        "measured_root": [
+          1.6515346765518188,
+          0.36840707063674927,
+          0.7515503168106079
+        ]
+      },
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "pair_audit": {
+        "max_errors": {
+          "initial-state.npz:root_state_w": 0.0,
+          "initial-state.npz:joint_pos": 0.0,
+          "initial-state.npz:joint_vel": 0.0,
+          "initial-state.npz:current_action": 0.0,
+          "initial-state.npz:previous_action": 0.0,
+          "initial-state.npz:raw_action": 0.0,
+          "initial-state.npz:processed_action": 0.0,
+          "initial-state.npz:proprio": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0
+        },
+        "torch_rng_matched": true,
+        "matched": true,
+        "all_rng_matched": true,
+        "same_initial_choice_and_costs": true
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "condition": "original-beam",
+      "continuous_success": true,
+      "linear29_success": true,
+      "task_gain": 0,
+      "task_regression": 0,
+      "both_reached_decision": true,
+      "same_family": true,
+      "same_chosen_exit": true
+    },
+    {
+      "condition": "farther-beam",
+      "continuous_success": true,
+      "linear29_success": false,
+      "task_gain": 0,
+      "task_regression": 1,
+      "both_reached_decision": true,
+      "same_family": true,
+      "same_chosen_exit": false
+    }
+  ],
+  "reference_replay": [
+    {
+      "case_id": "original-beam_continuous",
+      "states": 368,
+      "issued_reference_exact": true,
+      "composed_indices_exact": true,
+      "family_choice_decision_exact": true,
+      "dense_joint_change_max_rad": 0.0,
+      "dense_velocity_change_max_rad_s": 0.0,
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.021931742720536954,
+          0.9003619937117538
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      }
+    },
+    {
+      "case_id": "original-beam_linear29",
+      "states": 368,
+      "issued_reference_exact": true,
+      "composed_indices_exact": true,
+      "family_choice_decision_exact": true,
+      "dense_joint_change_max_rad": 0.4197772145271301,
+      "dense_velocity_change_max_rad_s": 5.446971893310547,
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": false,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.048623351275781795,
+          0.8769336971818378
+        ],
+        "measured_root": [
+          1.6515346765518188,
+          0.36840707063674927,
+          0.7515503168106079
+        ]
+      }
+    },
+    {
+      "case_id": "farther-beam_continuous",
+      "states": 424,
+      "issued_reference_exact": true,
+      "composed_indices_exact": true,
+      "family_choice_decision_exact": true,
+      "dense_joint_change_max_rad": 0.0,
+      "dense_velocity_change_max_rad_s": 0.0,
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.6165807536204283,
+          0.30066790198762927
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      }
+    },
+    {
+      "case_id": "farther-beam_linear29",
+      "states": 500,
+      "issued_reference_exact": true,
+      "composed_indices_exact": true,
+      "family_choice_decision_exact": true,
+      "dense_joint_change_max_rad": 0.4197772145271301,
+      "dense_velocity_change_max_rad_s": 5.446971893310547,
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": false,
+        "requested": 1,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.6407639461481678,
+          0.27800280001423383
+        ],
+        "measured_root": [
+          1.6515346765518188,
+          0.36840707063674927,
+          0.7515503168106079
+        ]
+      }
+    }
+  ],
+  "free_running_goal_contrasts": [
+    {
+      "method": "continuous",
+      "differences": {
+        "reference": {
+          "common_length": 368,
+          "first_changed_tick": 127,
+          "changed_rows": 241
+        },
+        "tokens": {
+          "common_length": 368,
+          "first_changed_tick": 127,
+          "changed_rows": 241
+        },
+        "actions": {
+          "common_length": 368,
+          "first_changed_tick": 127,
+          "changed_rows": 241
+        },
+        "loop_choice": {
+          "common_length": 368,
+          "first_changed_tick": 126,
+          "changed_rows": 242
+        },
+        "root_xyz": {
+          "common_length": 368,
+          "first_changed_tick": 128,
+          "changed_rows": 240
+        },
+        "joint_pos": {
+          "common_length": 368,
+          "first_changed_tick": 128,
+          "changed_rows": 240
+        }
+      }
+    },
+    {
+      "method": "linear29",
+      "differences": {
+        "reference": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "tokens": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "actions": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "loop_choice": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "root_xyz": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "joint_pos": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        }
+      }
+    }
+  ],
+  "parent_summary": {
+    "path": "runs/distance_codec_20260919_v1/aggregate.json",
+    "sha256": "854bb1c849f1f310915b7361003cd5eb2e2f65057622a059124ced88782272df"
+  },
+  "provenance": [
+    {
+      "path": "runs/distance_codec_20260919_admission02/admission.json",
+      "sha256": "015408382cc9080a8caf098f3a6a1da189502ae87325f5eb2fcd40a100959714"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/registration.json",
+      "sha256": "c41c6b45c74068818d1a5e4546bd6d4fbf7c99790fa5ac01ff351bee760ab091"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/protocol-before-execution.md",
+      "sha256": "59568d1590a03e88af247d6defd85f923ac87b2b9e4427e967b14ba81a775af7"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/plan.json",
+      "sha256": "b84f854588714ca820550a93f03f3c6584160286d640bc4c7a803abb684a3a98"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/execution-start.json",
+      "sha256": "82941e9eb3c8f22d1d1e330fe262514389594910d8133e895c66fd48d5561a0b"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/offline-audit.json",
+      "sha256": "6d91d035186662cb001bba7fa04ab8ad7085aed2806e2cae1b1658645827c2e5"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/launch.json",
+      "sha256": "4bbac4f99bdb2d3e7b5c45c02061a99fa6ffd4618dae670c7bfd3e685bd09231"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/exit.json",
+      "sha256": "3c915a432811b8ef063042f2da480055995590479d94a44a657eb1a8d4905c82"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/resource_admission.json",
+      "sha256": "9020e33e23133860961d30aee7779130b739750c9a9c366d81549e7102f3ab8b"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/resource_wait.jsonl",
+      "sha256": "c315f7990e7badb3fc879289caa7aa5ac2fba90be7dac35404fad83bdba39e06"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/parent-parity.json",
+      "sha256": "0919d6d9af1aecd6487cc536b6eeae4a0f4104f624cb168b5afcd5d515faed5b"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/task/task-result.json",
+      "sha256": "0d533304596f632b7430c4ee3cf5c8831e17b6baf30166ba29b8192af71d3560"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/task/distance-exit.json",
+      "sha256": "d517b0d6bbd2ba27736b181a481de978f1ea2ce86ec5c0d8d2aad3548d72f325"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/task/selection.npz",
+      "sha256": "dbee9ef8153536faed73aa0149205a538d2bc1117bd741ef83b47b9a2e676ef9"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/task/trace.npz",
+      "sha256": "c9e25f1d5425316caf040db06b339da070a7532b20a458ef245d7dafa83b0526"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/task/robot-poses.npz",
+      "sha256": "eb13138090e9525ea3b43cc42a84187f2802c1bd2b15cce4706345c73bde0552"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/task/pre-action-poses.npz",
+      "sha256": "e75bd328d61a264f77bd5ca878e9007be942b92a251671495467db8e45371f85"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_continuous/task/codec-entry.json",
+      "sha256": "82d82d3f49353ce6b3d86c62414f02fb13a1b615dbdaac45cec85dd0abf26afa"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/launch.json",
+      "sha256": "97d92ef44f4058ab37d2abd3ec9bb46e239f695ca8acbc1de3ce27010ba99fdf"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/exit.json",
+      "sha256": "772adf5b9734b76907a58e9cfc448cf6543d78fa86853f3b1adc2abf9c83696a"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/resource_admission.json",
+      "sha256": "c306c474f30c08477c7d07dcbe4837b762e4392b08712febf1e1a320eb8a52da"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/resource_wait.jsonl",
+      "sha256": "516f362e09fd2c483e6c917afbadf0b7c16abaf9a245adf7bca421240a69debe"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/pair-audit.json",
+      "sha256": "b12fa92c42c81a9ec3d19f9185295826da5c5f3b13d72f57c133039975b9a9e4"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/task/task-result.json",
+      "sha256": "22ab5ca259044bfdc4335480e4c1fc1f78d914a695de53a50a6429bf0412e53b"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/task/distance-exit.json",
+      "sha256": "00ecb18242ecf0487d95bae1a4d70e1c1fcd77327d030941ebb065fef3a38381"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/task/selection.npz",
+      "sha256": "b6ad9fdd2f7b0ab996b0ca3f0bd9639f5cb70837341e069de83c65ce8f14d939"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/task/trace.npz",
+      "sha256": "a8b36943ac23c2948c47c831b0f97d4eada25e8b6224d3bacc5abf1235d3c695"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/task/robot-poses.npz",
+      "sha256": "a332caf713a4ab0a20e2a47cdb2c34267410b48319f846e43ba411bc3c16b068"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/task/pre-action-poses.npz",
+      "sha256": "8c8f6f7194f192066d9e9a0f1231bcc4315c00be68e4af6376d41b2abb9c0a16"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/original-beam_linear29/task/codec-entry.json",
+      "sha256": "0f68ddc7b0b569b26e0d8654710a782aca2a54843377e404cfc79c3d536d9d0c"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/launch.json",
+      "sha256": "060279dddeb06685762d5b830be0ba6a1d6a543a7576f6246acafb48597c7b40"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/exit.json",
+      "sha256": "2293e8477e9e828df78b9b6bcd66b7b28ba22abc01af612acf90fa9d39b3d7d8"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/resource_admission.json",
+      "sha256": "246335fa6f65e67c70e693ec1cbb44af6d6f2f7665c689ecc840528e43be61d2"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/resource_wait.jsonl",
+      "sha256": "f99ed823abe2ae782d85edf8c72dbaea8e2b7c774b47be4627b2a1cded799cdb"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/parent-parity.json",
+      "sha256": "0919d6d9af1aecd6487cc536b6eeae4a0f4104f624cb168b5afcd5d515faed5b"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/task/task-result.json",
+      "sha256": "c39729315b5394a84f6c7afd4a1001e60ddb865cf11e97eb3a30674291ca8966"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/task/distance-exit.json",
+      "sha256": "04827b5fb5061b9bd0d17c2190119cf24c842adb1ce25b1ac048e124097c28be"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/task/selection.npz",
+      "sha256": "523c825de0c655146b4e790bb08bd2c59f1c367e4c44aa3b9de2ec89dd704923"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/task/trace.npz",
+      "sha256": "38ee6b668a4129ddcff45466869dad18b46751031b8f6ed4003f6c4347867b64"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/task/robot-poses.npz",
+      "sha256": "54e6fef47bdc9016ce5999f6fe1364114a9c436ac8bb4c578a001154df3dad98"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/task/pre-action-poses.npz",
+      "sha256": "e758162f058bb138ef304874c3eb62712f96c470224d270507cbdd08bbed5428"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_continuous/task/codec-entry.json",
+      "sha256": "8b4b2ff150af2769ce691ad5bf81fe6352d62ce2cb2efc54e8bdd791ff451e2d"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/launch.json",
+      "sha256": "33757a64015eab50bbad0d6b5d888e4e38900c74c8abd241e3e0accac06721db"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/exit.json",
+      "sha256": "75a3fd4d842e698225fff4eb8715374317e8abcb24ca2bc58423cd37bf4c5248"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/resource_admission.json",
+      "sha256": "dbaf526fe8559d20c42dc2e137b045875bc55a0ec0c06e8cda902a719f4a5ecd"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/resource_wait.jsonl",
+      "sha256": "464a1431322a195d582ae76e0f8e84ec66395cab9b78f47bbbbc2b2ddf4326ad"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/pair-audit.json",
+      "sha256": "b12fa92c42c81a9ec3d19f9185295826da5c5f3b13d72f57c133039975b9a9e4"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/task/task-result.json",
+      "sha256": "9e29855adf67c2785fe946af6b0ff741d90bfffd89c465467c78d9732b42ceab"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/task/distance-exit.json",
+      "sha256": "052b3c8a601af8307223062fca8e43d2ee6236cc67bb25227f96c04a36a650b6"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/task/selection.npz",
+      "sha256": "439126faa2d53bcccadf2d30b7d50605221d7f0716e4108ffaf94626876c2db0"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/task/trace.npz",
+      "sha256": "0ac760ad5591fd3b8673bf72ebdbd1b62cafa0b9bc66765a43e0ceb43367b0de"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/task/robot-poses.npz",
+      "sha256": "0f5d1653c0be269f73f5dcdd02908445857d47d843f066d66be45b005c6b180c"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/task/pre-action-poses.npz",
+      "sha256": "4d2cb592bdb97214e79d2c608a700f43dc079d594209e4c5384ce0b2b7dd60e3"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/task/codec-entry.json",
+      "sha256": "45a698012fe00c2f778450cf67eaa25fe752e6580e321674571f1e0bf86e5eca"
+    }
+  ]
+}

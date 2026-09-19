@@ -1,5 +1,7 @@
 # 距离响应表示比较：已登记与预检，资源延期，四格未运行
 
+> 后续更新（2026-09-19）：[新 admission 已完成四格](DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md)，continuous 2/2、Linear29 1/2。相邻 endpoint calibration 也已独立物理执行，12/12 对 11/12。本文保留当时的延期/同步快照，不作为最新状态。goal 距离维度见[文字更正](DISTANCE_METRIC_CORRECTION_20260919.md)。
+
 2026-09-19。用户要求继续主计划后，已实现并冻结 [original/farther beam × continuous/Linear29 四格协议](DISTANCE_CODEC_PROTOCOL.md)，完成 adapter、原始记录重放与配对配置检查。**本轮 native attempts = 0、四格全部 unrun**：串行资源 gate 的 300 s 等待结束，没有进入仿真。这不是任务失败，也没有产生新的 Linear29 完整任务成功率。
 
 | 注册任务 | Continuous | Linear29 |

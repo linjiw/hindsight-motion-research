@@ -12,7 +12,7 @@
 
 | 指导 | 采用与可审查交付物 |
 | --- | --- |
-| 先检验表示瓶颈 | 以下 2×3 执行矩阵成为下一项物理研究的核心；后续第一行 pilot 各 4/4；第二行同相位子面板各 8/8；第三行熟悉 known-map selector 各 2/2；场景变化、扰动及跨族拼接未测 |
+| 先检验表示瓶颈 | 以下 2×3 执行矩阵成为下一项物理研究的核心；后续第一行 pilot 各 4/4；第二行同相位子面板各 8/8；第三行熟悉 known-map selector 各 2/2；场景变化已有开发结果，扰动及跨族拼接未测 |
 | 更强的简单对手 | 全程保守蹲行，目标附近恢复直立并停止；几何规则使用全身包络、障碍后缘与延迟余量 |
 | 明确任务变化 | 开发后冻结横梁位置、高度、沿行进方向长度及初速度的独立变化；不得按某方法成功与否筛选测试集 |
 | 明确终止 | 分开碰撞、全身离开、恢复、目标误差、停止、超时；直立同时约束腿伸展/骨盆高度与躯干姿态 |
@@ -49,7 +49,7 @@ Native 先单独通过同参考、同完整 proprio history 的 encoder→decode
 
 ## 方法选择与停止条件
 
-最新[六格结果](SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md)已补齐四格，两表示保留相同成功/失败类型。旧 controller 的 719-state 无 goal response 诊断保持其范围；相邻新 distance-exit controller 已有连续支持。本仓库[新离线预检](DISTANCE_CODEC_PREFLIGHT_zh.md)测得 Linear29 的预测分支边界与 velocity 语义差异，但尚无该 controller 的 Linear29 物理结果。下一步注册其 original/farther beam 表示比较，暂不扩大 tokenizer 或 LLM。
+最新[距离响应完整任务](DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md)已完成：continuous 2/2、Linear29 1/2，一个 codec-only 配对成功退化。远目标请求正确，但实际身体时序使一次性 clearance gate 拒绝 loop；后续虽开 gate 却不复查。先按[时间准入诊断](CLEARANCE_ADMISSION_DIAGNOSTIC_zh.md)隔离 controller/表示接口，不直接扩大 tokenizer 或 LLM。尚未发出的 loop blend 不能造成决策前失败；limiting ankle 也不能单独证明腿 codec 是原因。
 
 若确认表示瓶颈，首个学习候选为**全身联合、来态条件化的连续 temporal latent**。所有方法共享坐标变换、姿态锚定、速度推导和 committed-prefix 规则；同架构普通重建与执行相关训练对照。再与等总预算的自适应 scalar/spline 比较，允许简单方法胜出。量化放在连续学习表示获得实际收益之后。
 
@@ -64,6 +64,8 @@ Native 先单独通过同参考、同完整 proprio history 的 encoder→decode
 [OAT v2](https://arxiv.org/html/2602.04215v2) 研究压缩、总可解码性及有序前缀。借鉴前缀/成本测试，但可解码不等于能从当前人形支撑状态执行。[PASSAGE v1](https://arxiv.org/html/2609.18732v1) 的连续性与任务训练已有直接重叠；加 loss 或停止 scorer 本身不足以构成贡献。接下来优先做区分实验，暂不扩展泛泛模型清单。
 
 
-### 9 月 19 日继续：保持任务优先，明确资源与预测边界
+### 9 月 19 日继续：从完整任务退化到可检验的时间机制
 
-[距离响应四格比较](DISTANCE_CODEC_RESULTS_zh.md)已注册、实现 adapter、复现 792 个既有 beam state 与原 decoded arrays；300 s 资源门槛超时、零 launch、四格全未运行。继续保持 continuous/Linear29 complete-task 为主优先级，先取得新 admission 与实际闭环结果，不把离线检查当作成功。相邻新距离 envelope 的 9/10 对 5/10 与一个 switching regression 另见[同步](DISTANCE_ENVELOPE_SYNC_20260919_zh.md)：停止预测的误差也是 downstream 问题，字段保真或更复杂 tokenizer 不会自动消除它。
+原零 launch 的[延期记录](DISTANCE_CODEC_RESULTS_zh.md)保留，新 admission 完成四格，零重试/训练。四次均无禁用接触，远目标 Linear29 最终距目标 0.674383 m；完整 scorer 实际使用 **3D** 距离，早期 XY 文字误标另见[更正](DISTANCE_METRIC_CORRECTION_20260919.md)。旧 shadow 的信息响应未能在真实状态资格中保留，说明 request、pending、accepted、expired、complete 要分开记录。下一项在冻结阈值与共同承诺窗口内检验延迟准入，尚未资格验证修复。
+
+相邻 continuous endpoint 校准已独立物理执行，12/12 对 11/12；在本仓库既有 Linear29 历史上的 calibrated shadow 仍被 gate 拒绝。停止预测、状态支持与语言字段保真继续分层，不互相代替。用户指导逐字原件不变。

@@ -25,21 +25,28 @@ at the farther goal. Admission 02 adds four runs / 1,148 control steps; the orig
 two runs are reused, for six total / 1,867 steps, with exact control and reference
 audits. The earlier partial packet remains unchanged.
 
-The sibling project now has a separately qualified distance-responsive exit
-controller. Our [new offline codec preflight](docs/DISTANCE_CODEC_PREFLIGHT_zh.md)
-replays all 1,528 public-history references exactly, while exposing a one-tick
-change in Linear29's goal-response timing and a blend velocity-convention gap.
-The [four-case experiment is now registered and prepared](docs/DISTANCE_CODEC_RESULTS_zh.md):
-792 historical beam states replay exactly, with all decoded arrays unchanged.
-Its 300-second resource gate expired with **zero launches and four unrun cases**;
-Linear29 execution on this controller remains unmeasured. A new admission must
-preserve that receipt and the four-attempt ceiling.
+The [distance-responsive complete-task comparison is now complete](docs/DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md):
+**continuous 2/2, Linear29 1/2**, four new attempts / 1,660 control steps / 6,640
+physics samples. Both pass the original goal; at the farther goal, Linear29 requests
+the loop but misses the fixed clearance decision at tick 126 by 1.07 mm. Clearance
+opens at tick 134, after the controller has stopped checking. It recovers and slows
+outside the goal, with no contact or fall. All four scores and issued references
+replay exactly; controls and paired initial conditions match exactly.
 
-The [latest sibling sync](docs/DISTANCE_ENVELOPE_SYNC_20260919_zh.md) finds public
-exit selection 9/10 versus short-only 5/10, with five gains and one switching-boundary
-regression. Its matched farther-beam baseline and nominal-loop qualification are
-now complete. Endpoint calibration is still an offline hypothesis; these separate
-controller results are not our codec evidence. Generalization and learning remain open.
+The [next proposed diagnostic](docs/CLEARANCE_ADMISSION_DIAGNOSTIC_zh.md) tests a pending
+request that waits for clearance within a proven common commitment window.
+Keep the 2 cm clearance, decoder, motion bank and task thresholds fixed; first
+register this as a separate controller-interface intervention. No repair is yet
+qualified. The original [zero-launch deferral](docs/DISTANCE_CODEC_RESULTS_zh.md)
+remains unchanged, and the four-attempt comparison budget is exhausted.
+
+The sibling's newer continuous endpoint calibration separately passes **12/12
+versus 11/12**, including one repaired selection boundary; it was not adopted in
+our frozen comparison. Our post-result shadow audit still finds the Linear29 gate
+closed. One ancestry, seed and familiar reset do not establish generalization.
+See the [result report and sync](docs/DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md) and
+[metric correction](docs/DISTANCE_METRIC_CORRECTION_20260919.md): the frozen success
+scorer uses **3D** goal distance, whereas endpoint prediction uses XY.
 
 The latest acquisition check found **0/145** admissible portals for the qualified
 CMU/107 original/tuck pair under the fixed three-perturbation geometry gate.
@@ -70,7 +77,7 @@ The historical mechanism study separates temporal smoothing from leg-reconstruct
 - [Matched-state continuation: continuous 8/8, Linear29 8/8](docs/CONTINUATION_ADMISSION02_RESULTS_zh.md) — [protocol](docs/CONTINUATION_PROTOCOL.md) · [admission](docs/CONTINUATION_ADMISSION_02.md)
 - [Selected-reference controller: continuous 2/2, Linear29 2/2](docs/SELECTION_CODEC_RESULTS_zh.md) — [protocol](docs/SELECTION_CODEC_PROTOCOL.md)
 - [Completed scene screen: same pass/contact/deadline outcomes](docs/SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md) — [admission 02](docs/SELECTION_BOUNDARY_ADMISSION_02.md) · [original partial receipt](docs/SELECTION_BOUNDARY_RESULTS_zh.md)
-- [Registered distance-codec comparison: zero launches, four unrun](docs/DISTANCE_CODEC_RESULTS_zh.md) — [protocol](docs/DISTANCE_CODEC_PROTOCOL.md) · [sibling envelope sync](docs/DISTANCE_ENVELOPE_SYNC_20260919_zh.md)
+- [Distance-responsive task: continuous 2/2, Linear29 1/2](docs/DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md) — [admission 02](docs/DISTANCE_CODEC_ADMISSION_02.md) · [next timing diagnostic](docs/CLEARANCE_ADMISSION_DIAGNOSTIC_zh.md) · [original deferral](docs/DISTANCE_CODEC_RESULTS_zh.md)
 - [New distance-exit controller: offline codec preflight](docs/DISTANCE_CODEC_PREFLIGHT_zh.md) — [next gate](docs/DISTANCE_RESPONSE_GATE_zh.md)
 - [Earlier composer interface sync](docs/COMPOSER_SYNC_20260918.md)
 - [Adopted research guidance (中文)](docs/RESEARCH_GUIDANCE_20260918_zh.md)

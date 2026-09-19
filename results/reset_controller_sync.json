@@ -1,0 +1,555 @@
+{
+  "schema": "hindsight_reset_controller_sync_v1",
+  "date": "2026-09-19",
+  "scope": "Separate sibling calibrated continuous-controller physical reset screen; not codec outcomes",
+  "source_status": "Captured working-tree evidence at HEAD eb8f1f8c; reset screen not committed at capture",
+  "summary": {
+    "beam_successes": 5,
+    "clear_successes": 6,
+    "contexts_per_scene": 6,
+    "coverage_gate_passes": true,
+    "fragile_primary_successes": 2
+  },
+  "costs": {
+    "new_native_attempts": 14,
+    "process_failures": 0,
+    "new_control_steps": 5619,
+    "new_contact_frames": 22476,
+    "native_wall_seconds": 578.3159310678602,
+    "zero_control_steps": 792,
+    "primary_control_steps": 4827,
+    "teacher_queries": 0,
+    "optimizer_updates": 0,
+    "learning_rows_admitted": 0
+  },
+  "rows": [
+    {
+      "case": "zero-beam",
+      "scene": "beam",
+      "variant": "zero",
+      "role": "zero_control",
+      "success": true,
+      "steps": 424,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.38486645207882625,
+      "goal_radius_margin_m": 0.11513354792117375,
+      "fragile_success": false,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.6165807536204283,
+          0.38075174139506374
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      },
+      "family": "local_duck",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "zero-clear",
+      "scene": "clear",
+      "variant": "zero",
+      "role": "zero_control",
+      "success": true,
+      "steps": 368,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.38676453661344956,
+      "goal_radius_margin_m": 0.11323546338655044,
+      "fragile_success": false,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.37928494221084696,
+          0.5858781848509838
+        ],
+        "measured_root": [
+          1.8103857040405273,
+          0.4308120012283325,
+          0.7715368866920471
+        ]
+      },
+      "family": "nominal",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "forward-minus-beam",
+      "scene": "beam",
+      "variant": "forward-minus",
+      "role": "comparison",
+      "success": false,
+      "steps": 500,
+      "reason": "deadline",
+      "passage": true,
+      "recovered": true,
+      "hold": 0,
+      "final_goal_distance_m": 0.6999892762317946,
+      "goal_radius_margin_m": -0.19998927623179463,
+      "fragile_success": false,
+      "deadline_censored": true,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": false,
+        "requested": 1,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.7011287748183179,
+          0.2984877635948383
+        ],
+        "measured_root": [
+          1.5895321369171143,
+          0.3683055341243744,
+          0.7523358464241028
+        ]
+      },
+      "family": "local_duck",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "forward-minus-clear",
+      "scene": "clear",
+      "variant": "forward-minus",
+      "role": "comparison",
+      "success": true,
+      "steps": 367,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.49613198256748714,
+      "goal_radius_margin_m": 0.0038680174325128602,
+      "fragile_success": true,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.47714286063680406,
+          0.4892214845131854
+        ],
+        "measured_root": [
+          1.7142168283462524,
+          0.4115973114967346,
+          0.7703336477279663
+        ]
+      },
+      "family": "nominal",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "forward-plus-beam",
+      "scene": "beam",
+      "variant": "forward-plus",
+      "role": "comparison",
+      "success": true,
+      "steps": 424,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.49427303077655704,
+      "goal_radius_margin_m": 0.005726969223442957,
+      "fragile_success": true,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.4986559879676203,
+          0.4970928408854901
+        ],
+        "measured_root": [
+          1.788088321685791,
+          0.4083147644996643,
+          0.7520814538002014
+        ]
+      },
+      "family": "local_duck",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "forward-plus-clear",
+      "scene": "clear",
+      "variant": "forward-plus",
+      "role": "comparison",
+      "success": true,
+      "steps": 368,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.3004849729631858,
+      "goal_radius_margin_m": 0.19951502703681417,
+      "fragile_success": false,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.27978974821584995,
+          0.6838924881427908
+        ],
+        "measured_root": [
+          1.907248616218567,
+          0.4539385437965393,
+          0.770505428314209
+        ]
+      },
+      "family": "nominal",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "lateral-minus-beam",
+      "scene": "beam",
+      "variant": "lateral-minus",
+      "role": "comparison",
+      "success": true,
+      "steps": 424,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.39018630680478317,
+      "goal_radius_margin_m": 0.10981369319521683,
+      "fragile_success": false,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.608192993002968,
+          0.38901798081994365
+        ],
+        "measured_root": [
+          1.6874778270721436,
+          0.3497526943683624,
+          0.7519643902778625
+        ]
+      },
+      "family": "local_duck",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "lateral-minus-clear",
+      "scene": "clear",
+      "variant": "lateral-minus",
+      "role": "comparison",
+      "success": true,
+      "steps": 368,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.40817394587876443,
+      "goal_radius_margin_m": 0.09182605412123557,
+      "fragile_success": false,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.3824036079122196,
+          0.5825094121886717
+        ],
+        "measured_root": [
+          1.8128130435943604,
+          0.3970089554786682,
+          0.7704446315765381
+        ]
+      },
+      "family": "nominal",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "lateral-plus-beam",
+      "scene": "beam",
+      "variant": "lateral-plus",
+      "role": "comparison",
+      "success": true,
+      "steps": 424,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.37817022104138553,
+      "goal_radius_margin_m": 0.12182977895861447,
+      "fragile_success": false,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.6163846077021685,
+          0.38023744585887814
+        ],
+        "measured_root": [
+          1.6657702922821045,
+          0.42679163813591003,
+          0.7514552474021912
+        ]
+      },
+      "family": "local_duck",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "lateral-plus-clear",
+      "scene": "clear",
+      "variant": "lateral-plus",
+      "role": "comparison",
+      "success": true,
+      "steps": 368,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.4048055581775969,
+      "goal_radius_margin_m": 0.09519444182240311,
+      "fragile_success": false,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.3855383185273631,
+          0.5800973451759734
+        ],
+        "measured_root": [
+          1.7996456623077393,
+          0.46243929862976074,
+          0.7706248164176941
+        ]
+      },
+      "family": "nominal",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "yaw-minus-beam",
+      "scene": "beam",
+      "variant": "yaw-minus",
+      "role": "comparison",
+      "success": true,
+      "steps": 424,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.3906310968478948,
+      "goal_radius_margin_m": 0.10936890315210518,
+      "fragile_success": false,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.616425068149332,
+          0.38311761939665995
+        ],
+        "measured_root": [
+          1.6745505332946777,
+          0.376740038394928,
+          0.751345694065094
+        ]
+      },
+      "family": "local_duck",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "yaw-minus-clear",
+      "scene": "clear",
+      "variant": "yaw-minus",
+      "role": "comparison",
+      "success": true,
+      "steps": 368,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.3909525224277489,
+      "goal_radius_margin_m": 0.10904747757225108,
+      "fragile_success": false,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.37161505571080855,
+          0.6011206213440081
+        ],
+        "measured_root": [
+          1.8261457681655884,
+          0.40656158328056335,
+          0.7708733081817627
+        ]
+      },
+      "family": "nominal",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "yaw-plus-beam",
+      "scene": "beam",
+      "variant": "yaw-plus",
+      "role": "comparison",
+      "success": true,
+      "steps": 424,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.3809968795116961,
+      "goal_radius_margin_m": 0.11900312048830392,
+      "fragile_success": false,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.6180754982000877,
+          0.3797006093846768
+        ],
+        "measured_root": [
+          1.6712254285812378,
+          0.3836166560649872,
+          0.7521044611930847
+        ]
+      },
+      "family": "local_duck",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "yaw-plus-clear",
+      "scene": "clear",
+      "variant": "yaw-plus",
+      "role": "comparison",
+      "success": true,
+      "steps": 368,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "final_goal_distance_m": 0.41427626919716737,
+      "goal_radius_margin_m": 0.08572373080283263,
+      "fragile_success": false,
+      "deadline_censored": false,
+      "max_force_n": 0.0,
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.39296880633368103,
+          0.5725613103862294
+        ],
+        "measured_root": [
+          1.7972029447555542,
+          0.42714279890060425,
+          0.7707915306091309
+        ]
+      },
+      "family": "nominal",
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    }
+  ],
+  "failure_gate": {
+    "case": "forward-minus-beam",
+    "first_measured_pre_action_clear_tick": 138,
+    "pre_action_clearance_margin_at_126_m": -0.059874593503373194,
+    "clearance_rejected_requested_loop": true,
+    "decision": {
+      "tick": 126,
+      "measured_clear": false,
+      "requested": 1,
+      "chosen": 0,
+      "predicted_terminal_xy_errors": [
+        0.7011287748183179,
+        0.2984877635948383
+      ],
+      "measured_root": [
+        1.5895321369171143,
+        0.3683055341243744,
+        0.7523358464241028
+      ]
+    }
+  },
+  "provenance": [
+    {
+      "path": "runs/endpoint_codec_transfer_20260919_v1/reset-sync/report.md",
+      "sha256": "2cf2ab525b0eb862ddd2cace08a1cae90160e0b8ead1954f2d3a670dd59875b1",
+      "original_path": "/home/linjiw/groot-wbc-sonic-sim-trackb/docs/motion2scene/DUCK_RESET_APPROACH_20260919.md"
+    },
+    {
+      "path": "runs/endpoint_codec_transfer_20260919_v1/reset-sync/analysis.json",
+      "sha256": "16c9b90694b50d57401e74b37efcf004cd4fa5db0fbaebde9d9d6b2816ec01af",
+      "original_path": "/home/linjiw/groot-wbc-sonic-sim-trackb/docs/motion2scene/evidence/duck-reset-approach-20260919/analysis.json"
+    },
+    {
+      "path": "runs/endpoint_codec_transfer_20260919_v1/reset-sync/diagnosis.json",
+      "sha256": "d38fc45ecf193b71fb2ad4c010b842f0d179f716d4938863009d974ac2a9a569",
+      "original_path": "/home/linjiw/groot-wbc-sonic-sim-trackb/docs/motion2scene/evidence/duck-reset-approach-20260919/diagnosis.json"
+    }
+  ]
+}

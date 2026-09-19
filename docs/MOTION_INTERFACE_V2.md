@@ -142,13 +142,19 @@ composed indices, donor ancestry and synthetic support masks distinct. A valid
 ID or intact language sidecar does not establish free-running goal response.
 
 
-The [distance-codec native comparison](DISTANCE_CODEC_PROTOCOL.md) now implements
-that declared adapter and exact 792-state beam replay. Its [resource admission
-expired with zero launches](DISTANCE_CODEC_RESULTS_zh.md); four unrun cases are not
-physical qualification. Preserve this receipt before a new admission.
+The [distance-codec comparison](DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md) now passes continuous 2/2 and Linear29 1/2. The farther-goal Linear29 request correctly prefers loop, but actual clearance misses the fixed decision at tick 126; clearance opens at 134 without a second query. The two Linear29 goal runs have identical references/actions/states throughout their shared 368 ticks. Continuous-history shadows therefore overstate the free-running response. The original zero-launch deferral remains immutable.
 
-The sibling's [distance-envelope evidence](DISTANCE_ENVELOPE_SYNC_20260919_zh.md)
-now includes a matched farther-goal gain and a nearby switching regression.
-Endpoint estimates must declare the reference/controller and execution provenance
-they describe. Reusing continuous stopping calibration after decoding is a
-compatibility hypothesis, even with intact fields and valid motion IDs.
+## Request lifetime and state-dependent admission — proposed diagnostic
+
+Record `requested_at`, requested route, measured clearance and its units, `pending_reason`, `accepted_at`, commitment deadline, selected route and actual completion separately. A valid request or motion ID is not an accepted physical transition. Preserve the five committed frames and an explicit expiration rule; do not reset the composed clock or falsify history to accept a late request. Missing a window should be reported as unsupported, not as successful execution or a qualified safe stop.
+
+The [next temporal-admission proposal](CLEARANCE_ADMISSION_DIAGNOSTIC_zh.md) latches the old request at 126 and rechecks the unchanged clearance gate only within a proved common-prefix window. It does not reuse displacement calibrated for tick 126 at arbitrary later ticks. This is an unexecuted controller-interface intervention. Keep these lifecycle fields explicit when a future BFM/VLA/LLM submits a request, and check their preservation in the separate language probe.
+
+The sibling's executed-endpoint model now has separate continuous-controller evidence, 12/12 versus 11/12. Endpoint estimates must declare controller, reference/codec, state and execution provenance. Our exploratory shadows still find the Linear29 gate closed; continuous calibration after decoding remains a compatibility hypothesis. Prediction errors use XY, whereas the frozen task scorer uses 3D goal distance; see the [metric correction](DISTANCE_METRIC_CORRECTION_20260919.md). Neither field fidelity nor a continuous calibration fit qualifies a decoded loop or broader reset support.
+
+A subsequent sibling actual-reset screen also loses the loop with continuous
+references after moving the start backward 10 cm. The proposed timing profile
+must distinguish five committed control ticks from revisable later forecasts;
+it does not preserve every future sample previously visible to the motor.
+Identical current frames can yield different actions when forecasts change.
+See the [separate reset snapshot](../results/reset_controller_sync.json).

@@ -2,13 +2,15 @@
 
 2026-09-19。沿[主计划](RESEARCH_PLAN_zh.md)的 complete-task 优先级推进。这是下一阶段设计，**不是已完成的 composer，也不自动启动新 native sweep 或训练**。本轮六格表示诊断另见[登记协议](SELECTION_BOUNDARY_PROTOCOL.md)。
 
-## 同日进展更新：已有窄连续支持，接下来测表示
+## 同日进展更新：表示比较完成，下一步测时间准入
 
 原先四个未运行 codec case 已在[admission 02](SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md)补齐，两表示均保留低梁接触与远 goal 超时。相邻 `8b90ccaa` 也已独立实现一次 blended exit：raw seams 0/4,961 合格，另构造 0.40 s bridge 并以八次新 execution 资格验证，public/support 各 4/4。它替换了 retiming，使用 fixed composed clock 与一次距离选择；不是本仓库的新实现，也不是通用距离控制。
 
-本仓库已完成[离线 codec 预检](DISTANCE_CODEC_PREFLIGHT_zh.md)，继而[登记并准备四格 native 比较](DISTANCE_CODEC_RESULTS_zh.md)。新 792-state beam replay 和 decoded commitment 检查通过；但 300 s 资源等待结束、零 launch、四格未运行。下一步只为这四格新 admission，保留延期记录和总预算；物理表示保持仍未知。
+本仓库[四格 native 比较已完成](DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md)：continuous 2/2，Linear29 1/2。新 admission 四次 / 1,660 steps / 6,640 physics samples，原零启动延期保留。远目标 Linear29 请求 loop，但 tick 126 clearance 差规定余量 1.069 mm；gate 于 134 打开却未复查，保持 short 并在目标外超时，无接触或跌倒。旧 continuous-history shadow 的响应不等于自由闭环能力。
 
-相邻随后 `7b416f76` 的[距离 envelope](DISTANCE_ENVELOPE_SYNC_20260919_zh.md)已有 9/10 public 对 5/10 short-only、五 gains 和一个 +0.45 m regression，补齐 matched farther-beam baseline 与 nominal-loop 资格。更广范围仍有 endpoint prediction boundary；其新 calibration 尚为离线假设。我们保持本四格 frozen predictor，不把 controller 修复与 codec loss 混在一起。更低梁、来态覆盖与自由 goal 更新仍未建立；下列 A/B 是原始设计及更强能力约束。
+下一门槛是[有截止时间的 clearance 准入](CLEARANCE_ADMISSION_DIAGNOSTIC_zh.md)：固定原 predictor、codec、threshold 和动作库，在证明过的共同承诺窗口内等待 gate。四格新干预须另登记，现有四格作精确 incumbent 控制。未来尚未发出的 loop blend 不能解释决策前 gate 失败；先测试时间机制，再隔离解码组成因素。原 2 cm clearance 不放宽。goal scorer 实际用 0.50 m **3D** 距离，旧 XY 文字误标见[更正](DISTANCE_METRIC_CORRECTION_20260919.md)。
+
+相邻最新 `eb8f1f8c` 的独立 endpoint calibration 已物理执行，calibrated 12/12 对 incumbent 11/12；不是离线假设了。它不改本比较旧 predictor，且在实际 Linear29 历史上的 calibrated shadow 仍受 false gate 阻止，详情及独立成本见[本次报告](DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md)。相邻真实 reset screen 也已完成，continuous backward-start 出现相同 gate 错过；更广来态覆盖、更低梁与自由 goal 更新仍未建立。下列 A/B 是原始设计及更强能力约束。
 
 ## 原始缺口与问题（旧 selector）
 

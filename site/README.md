@@ -96,6 +96,25 @@ The September 19 distance-codec registration adds `distance_codec.json`,
 `distance_followup.json` and `distance_codec.png`. The first is the closed
 zero-launch experiment receipt with a 792-state historical replay; the second
 separately attributes resource samples and the sibling's 9/10 versus 5/10
-continuous-controller result. All four codec cases remain unrun. The figure
+continuous-controller result. That historical packet has four unrun cases. Its figure
 shows resource admission, not task outcomes. Build guards preserve these
 boundaries and retain the prior six-case and offline-preflight records.
+
+Distance-codec admission 02 adds `distance_codec_admission02.json` and
+`distance_codec_admission02.png`: all four new cases complete, continuous 2/2 and
+Linear29 1/2, 1,660 control steps / 6,640 physics samples. The farther-goal failure
+and the original zero-launch receipt remain visible. `endpoint_codec_transfer.json`
+is a separate post-result offline audit of measured clearance and endpoint
+compatibility, with zero native/motor queries; its shadows are not execution.
+`endpoint_controller_sync.json` records the neighboring continuous-controller
+calibration (12/12 versus 11/12), outside our budget. Keep all three scopes distinct.
+The proposed pending-request diagnostic has not run. The success scorer uses 3D
+goal distance; endpoint prediction uses XY. The build guards both historical and
+new outcome counts and critical gate timings. No raw histories or licensed arrays
+are added to the release allowlist.
+
+A final read-only sibling sync adds `reset_controller_sync.json`: 14 separate
+continuous-controller runs, with 5/6 beam and 6/6 clear changed starts and two exact
+zero controls. The backward-start failure and two fragile successes remain
+visible. This is a captured working-tree snapshot, with copied scalar-report
+sources retained locally by hash; no reset implementation or raw data is published.
