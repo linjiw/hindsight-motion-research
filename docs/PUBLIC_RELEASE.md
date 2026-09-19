@@ -29,3 +29,9 @@ Set `HINDSIGHT_RUNTIME` and `HINDSIGHT_TEACHER` for a different installation. `H
 Links in historical reports to `runs/` or excluded viewers are local evidence pointers and will not resolve in a public clone. `results/` contains selected summary JSON snapshots with machine-specific home paths replaced by `<LOCAL_HOME>`. It contains no source motion arrays or checkpoint weights.
 
 All current results are development studies. Simulation repetition and decoded descendants do not increase independent source coverage. No BFM or text-to-navigation student performance is claimed.
+
+The September 18 small-LLM study publishes project-authored synthetic fixture
+code and aggregate/per-case interface scores in `results/llm_interface.json`.
+Its invented coordinate samples are not licensed motions or qualified robot
+trajectories. Raw model responses, downloaded weights and the verbatim user
+guidance remain local. This probe is not a language-controlled robot result.

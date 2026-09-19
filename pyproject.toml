@@ -10,6 +10,7 @@ dependencies = ["numpy", "scipy", "mujoco>=3.0", "matplotlib", "joblib"]
 
 [project.optional-dependencies]
 learning = ["torch"]
+llm = ["torch", "transformers==4.57.6", "huggingface-hub==0.36.2", "tokenizers==0.22.2", "safetensors==0.7.0"]
 dev = ["pytest"]
 
 [tool.setuptools.packages.find]

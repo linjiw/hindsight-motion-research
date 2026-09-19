@@ -12,7 +12,7 @@ for(const match of html.matchAll(/id="([^"]+)"/g))nodes.set(`#${match[1]}`,node(
 nodes.get('#method').value='body9_leg12'; nodes.get('#scrub').value='5';
 nodes.get('#metric').value='passes'; nodes.get('#family').value='arm03';
 const buttons={};
-for(const key of ['condition','interface','decision'])buttons[`[data-${key}]`]=[...html.matchAll(new RegExp(`data-${key}="([^"]+)"`,'g'))].map(m=>Object.assign(node(),{dataset:{[key]:m[1]}}));
+for(const key of ['condition','interface','decision','probe'])buttons[`[data-${key}]`]=[...html.matchAll(new RegExp(`data-${key}="([^"]+)"`,'g'))].map(m=>Object.assign(node(),{dataset:{[key]:m[1]}}));
 const errors=[];
 const context=vm.createContext({console:{error:(...args)=>errors.push(args)},document:{
  querySelector(selector){assert(nodes.has(selector),`Unknown selector ${selector}`);return nodes.get(selector);},
@@ -44,9 +44,11 @@ for(const button of buttons['[data-decision]']){button.handlers.click();assert.e
 assert.equal(run("valueFor('body9_leg12','total_rate')"),13860);
 assert.equal(run("valueFor('linear29','total_rate')"),14680);
 assert.equal(run("valueFor('body9_leg12','total_rate') - valueFor('body9_leg12','rate')"),11200);
+for(const button of buttons['[data-probe]']){button.handlers.click();assert.equal(button.attributes['aria-pressed'],'true');const detail=nodes.get('#probe-detail').innerHTML;assert(detail.includes(button.dataset.probe==='relay'?'0 / 12':'2 / 12'));assert(detail.includes('Correct choices: 2/12'));}
 // Missing evidence must show an explicit error, never an empty success chart.
 context.fetch=async()=>({ok:false,status:503});
 await run('loadEvidence()');
 assert(nodes.get('#comparison').innerHTML.includes('could not load'));
 assert(nodes.get('#scene-scores').textContent.includes('unavailable'));
-console.log('Passed: 8 methods, 5 metrics, 8 intervention states, 6 interfaces, 4 research decisions, total-rate accounting, scrub endpoints and data-load failure.');
+assert(nodes.get('#probe-detail').textContent.includes('unavailable'));
+console.log('Passed: 8 methods, 5 metrics, 8 intervention states, 6 interfaces, 4 research decisions, 2 LLM probe routes, total-rate accounting, scrub endpoints and data-load failure.');

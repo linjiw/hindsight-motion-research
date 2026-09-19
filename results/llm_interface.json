@@ -1,0 +1,525 @@
+{
+  "study": "llm_interface_v1",
+  "date": "2026-09-18",
+  "scope": "Synthetic development interface probe; no robot execution or learned motion codec",
+  "model": "Qwen/Qwen3-0.6B",
+  "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "dtype": "float32",
+    "device": "cpu"
+  },
+  "status": "completed",
+  "training_steps": 0,
+  "native_attempts": 0,
+  "independent_synthetic_states": 6,
+  "variants_per_state": 2,
+  "generations": 24,
+  "model_summary": {
+    "relay": {
+      "planned": 12,
+      "completed": 12,
+      "unrun": 0,
+      "json_valid": 12,
+      "id_valid": 12,
+      "choice_correct": 2,
+      "task_preserved": 0,
+      "selected_payload_preserved": 0,
+      "interface_success": 0,
+      "errors": {
+        "motion": 6,
+        "task": 12,
+        "motion.committed_prefix_samples": 6,
+        "motion.decoder": 6,
+        "motion.desired_support": 6,
+        "motion.dt_s": 6,
+        "motion.frame": 6,
+        "motion.motion_id": 6
+      }
+    },
+    "sidecar": {
+      "planned": 12,
+      "completed": 12,
+      "unrun": 0,
+      "json_valid": 12,
+      "id_valid": 12,
+      "choice_correct": 2,
+      "task_preserved": 12,
+      "selected_payload_preserved": 12,
+      "interface_success": 2,
+      "errors": {}
+    }
+  },
+  "rule_summary": {
+    "relay": {
+      "planned": 12,
+      "completed": 12,
+      "unrun": 0,
+      "json_valid": 12,
+      "id_valid": 12,
+      "choice_correct": 12,
+      "task_preserved": 12,
+      "selected_payload_preserved": 12,
+      "interface_success": 12,
+      "errors": {}
+    },
+    "sidecar": {
+      "planned": 12,
+      "completed": 12,
+      "unrun": 0,
+      "json_valid": 12,
+      "id_valid": 12,
+      "choice_correct": 12,
+      "task_preserved": 12,
+      "selected_payload_preserved": 12,
+      "interface_success": 12,
+      "errors": {}
+    }
+  },
+  "plan_sha256": "3259733401726416f0e7e600ef2374ebc23a692cfa2591f1c9efe8cc50f704d2",
+  "source_sha256": "eaeed9ac965c82188347cb9e400f776e8c1989eae27cc6655361bf6269017bff",
+  "fixture_sha256": "80d3babdb5da9d5265241c4233f6b51aef7c0b5e993dd25245b02656dd839167",
+  "provenance": [
+    {
+      "path": "runs/llm_interface_20260918_v1_qwen06/receipt.json",
+      "sha256": "c1cd89a80dbfa29dcae1b58eda98b02a57dd60e5d9fec36e1d781372aab2ef0c"
+    },
+    {
+      "path": "runs/llm_interface_20260918_v1_qwen06/responses.jsonl",
+      "sha256": "04076d084cbd267bd6877dfc047016ea5520e103385c3d56f93181a9fca6aff3"
+    },
+    {
+      "path": "runs/llm_interface_20260918_v1_rule/receipt.json",
+      "sha256": "e42750d6537471cf7efff773475d8cb4a89f0508ae9c902a7d846c6cb418052e"
+    },
+    {
+      "path": "runs/llm_interface_20260918_v1_rule/responses.jsonl",
+      "sha256": "6b35bc6df671ae496b6ed706dedc6fa14bc5cb83295855f6d64279bb0d4d9a02"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "body_not_clear_v0",
+      "route": "relay",
+      "selected_behavior": "crouch",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": true,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "body_not_clear_v0",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": false,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "body_not_clear_v1",
+      "route": "relay",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion.committed_prefix_samples",
+          "motion.decoder",
+          "motion.desired_support",
+          "motion.dt_s",
+          "motion.frame",
+          "motion.motion_id",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "body_not_clear_v1",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": false,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "body_clear_v0",
+      "route": "relay",
+      "selected_behavior": "crouch",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "body_clear_v0",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": false,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "body_clear_v1",
+      "route": "relay",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion.committed_prefix_samples",
+          "motion.decoder",
+          "motion.desired_support",
+          "motion.dt_s",
+          "motion.frame",
+          "motion.motion_id",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "body_clear_v1",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": false,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "moving_at_goal_v0",
+      "route": "relay",
+      "selected_behavior": "crouch",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "moving_at_goal_v0",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": false,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "moving_at_goal_v1",
+      "route": "relay",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion.committed_prefix_samples",
+          "motion.decoder",
+          "motion.desired_support",
+          "motion.dt_s",
+          "motion.frame",
+          "motion.motion_id",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "moving_at_goal_v1",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": false,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "stationary_at_goal_v0",
+      "route": "relay",
+      "selected_behavior": "crouch",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "stationary_at_goal_v0",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": true,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": true,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "stationary_at_goal_v1",
+      "route": "relay",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": true,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion.committed_prefix_samples",
+          "motion.decoder",
+          "motion.desired_support",
+          "motion.dt_s",
+          "motion.frame",
+          "motion.motion_id",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "stationary_at_goal_v1",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": true,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": true,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "unknown_geometry_v0",
+      "route": "relay",
+      "selected_behavior": "crouch",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "unknown_geometry_v0",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": false,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "unknown_geometry_v1",
+      "route": "relay",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion.committed_prefix_samples",
+          "motion.decoder",
+          "motion.desired_support",
+          "motion.dt_s",
+          "motion.frame",
+          "motion.motion_id",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "unknown_geometry_v1",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": false,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "unsupported_entry_v0",
+      "route": "relay",
+      "selected_behavior": "crouch",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "unsupported_entry_v0",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": false,
+        "errors": []
+      }
+    },
+    {
+      "case_id": "unsupported_entry_v1",
+      "route": "relay",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": false,
+        "selected_payload_preserved": false,
+        "interface_success": false,
+        "errors": [
+          "motion.committed_prefix_samples",
+          "motion.decoder",
+          "motion.desired_support",
+          "motion.dt_s",
+          "motion.frame",
+          "motion.motion_id",
+          "task"
+        ]
+      }
+    },
+    {
+      "case_id": "unsupported_entry_v1",
+      "route": "sidecar",
+      "selected_behavior": "hold",
+      "score": {
+        "json_valid": true,
+        "id_valid": true,
+        "choice_correct": false,
+        "task_preserved": true,
+        "selected_payload_preserved": true,
+        "interface_success": false,
+        "errors": []
+      }
+    }
+  ],
+  "cost": {
+    "relay": {
+      "generation_seconds_sum": 76.16858824202791,
+      "latency_median_s": 6.309401078993687,
+      "latency_max_s": 8.977451729995664,
+      "input_tokens_sum": 8800,
+      "output_tokens_sum": 611,
+      "token_limit_reached": 0,
+      "eos_observed": 12
+    },
+    "sidecar": {
+      "generation_seconds_sum": 42.64808838698082,
+      "latency_median_s": 3.551797694497509,
+      "latency_max_s": 3.5751205540145747,
+      "input_tokens_sum": 8740,
+      "output_tokens_sum": 240,
+      "token_limit_reached": 0,
+      "eos_observed": 12
+    }
+  }
+}

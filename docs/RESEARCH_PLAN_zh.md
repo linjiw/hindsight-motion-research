@@ -1,12 +1,14 @@
 # 面向可泛化人形穿越的动作表示：重新确定研究问题
 
-修订：2026-09-18。依据全部阶段结果报告、公开汇总与关键 run 汇总、相关本地 traversal 项目及本次[文献复核](LITERATURE_REASSESSMENT_20260918_zh.md)。这是新研究方向，**没有执行新仿真、训练或改变既有注册**。[旧计划](https://github.com/linjiw/hindsight-motion-research/blob/fc85b01082c703fa31b3c7776152677adbee7c3b/docs/RESEARCH_PLAN_zh.md)保留历史语境。
+修订：2026-09-18。依据全部阶段结果报告、公开汇总与关键 run 汇总、相关本地 traversal 项目及本次[文献复核](LITERATURE_REASSESSMENT_20260918_zh.md)。这是新研究方向，**没有执行新仿真、训练或改变既有 native 注册**。本次补入[用户指导采用记录](RESEARCH_GUIDANCE_20260918_zh.md)及[小 LLM 离线协议](LLM_INTERFACE_PROTOCOL_zh.md)；合成接口推理单独登记，不属于物理证据。[旧计划](https://github.com/linjiw/hindsight-motion-research/blob/fc85b01082c703fa31b3c7776152677adbee7c3b/docs/RESEARCH_PLAN_zh.md)保留历史语境。
 
 ## 1. 判断：目标保留，研究重心需要移动
 
 目标仍然值得做：让人形机器人根据目标、当前场景观测和自身状态，自主协调身体穿越杂乱环境；动作表示应支持未来 BFM、VLA 或语言任务接口。现在没有证据证明某一种 tokenizer 是最有希望的最终答案。
 
-**建议将中心问题改为：在固定数据、控制器和学习预算下，怎样表示一段短时全身行为，才能同时保留支撑/步态、空间约束和可切换性，并提高未见场景中的完整任务成功率？**
+**中心问题：在固定控制器、因果观测、训练数据和学习预算下，保留支撑转换与避障时序的短时动作表示，能否比简单连续表示更好地保留从当前实际状态出发仍有效的选择，并改善未见场景中的完整任务成功率？**
+
+明确反假设：简单连续/native 接口已足够，主要瓶颈在 supervisor、root 规划、切换支持或闭环决策。先识别瓶颈，再投入新 codec。
 
 “好的 tokenizer”首先是有用的动作接口，可以是连续、离散或混合表示。新颖性不能仅来自 motion→scene、身体分流、加 contact loss、接入 LLM 或规划器+tracker。近期工作已有直接先例。候选贡献是：**用执行后的决策保持、过渡恢复和闭环效用选择表示，并证明相对简单表示的收益及成本**。这个贡献尚待验证。
 
@@ -36,7 +38,7 @@
 
 旧 scorer 只要求移动到达；新任务另行版本化停止时间、速度、姿态及 deadline。任务成功要求从 reset 开始的因果闭环，不能靠隐藏 clip、phase 或 teacher prefix。Reference fidelity 适合 codec 诊断；自主任务可以采用不同的成功动作，不能用隐藏示范误差惩罚正确的新解。
 
-必要基线：普通走路、固定持续收臂/蹲身、简单几何规则和合格参考 composer。旧面板证明调整有用，**未证明必须学习选择**：若一直收臂在所有条件都成功，场景策略只能通过预先定义的时间/能耗/自然性等成本赚取优势。不能事后修改成功定义让常量策略失败。
+必要基线：普通走路、**保守蹲行并在目标附近恢复直立/停止**、使用全身包络/障碍后缘/延迟余量的几何规则，以及合格参考 composer。不能只与注定无法满足直立终止的“永远蹲着”比较。旧面板证明调整有用，**未证明必须学习选择**：若一直收臂在所有条件都成功，场景策略只能通过预先定义的时间/能耗/自然性等成本赚取优势。不能事后修改成功定义让常量策略失败。
 
 ## 4. 共享接口，而不是万能整数词表
 
@@ -76,7 +78,9 @@ LLM / VLM：目标、对象指代、约束、终止要求
 
 ### P1：完整任务的可执行基线
 
-对齐相邻项目的 task-aware composer：按当前位姿和场景选取并衔接 approach/duck/exit/stop。先比较连续参考、Linear29、原生 token 路径；来源不足时扩展过渡与初态资格。
+对齐相邻项目的 task-aware composer：按当前位姿和场景选取并衔接 approach/duck/exit/stop。先用 continuous 与 Linear29 做[两种表示×三种执行条件](RESEARCH_GUIDANCE_20260918_zh.md)矩阵：完整正确参考、真实相同来态的合格后续 chunk、因果 composer 从 reset 闭环。Native 先做同参考/同历史接口 parity，后作独立路线对照。
+
+横梁位置、高度、长度与初速度独立变化；新 task profile 分开全身离开、恢复、目标误差、持续停止和超时。姿态含骨盆高度/腿伸展，不能只看躯干角度。第三行共享因果生成的 root，计入成本；不提供隐藏未来或原始进入段。真实 snapshot 包含速度、支撑、控制器与已执行动作历史。共同来态比较机制；各自访问状态衡量实际效用。
 
 - Continuous 也失败：查任务、teacher、过渡支持。
 - Continuous 成功而 codec 失败：表示损失值得研究。
@@ -84,15 +88,21 @@ LLM / VLM：目标、对象指代、约束、终止要求
 
 CMU 固定 wide/tuck 后续仍是独立 acquisition 分支：原登记最多六个预检，合格后才几何/干预，资源等待已经结束。它不再阻挡整个表示研究；本次改计划不自动恢复执行。
 
+### P0-L：小型 LLM 的信息保持分支
+
+先执行不需要 native 的 L0 合成接口测试：Qwen3-0.6B、无 LLM 规则基线、完整记录 relay 与 ID+保真 sidecar。测任务/动作字段保持、错误选择、未知/不支持请求与成本；[首轮报告](LLM_INTERFACE_RESULTS_zh.md)与真实 motion/物理结果严格分开。Qwen3-1.7B 是后续容量对照，尚未运行。
+
+随后 L1 才用本地真实动作比较原始→codec→LLM→解码，区分正确选择下的信息传递与模型自己的选择；L2 在完整任务门槛通过后固定 controller/history/scorer 执行。不把语法正确、复制 ID 或 sidecar 的保真当作 LLM 掌握运动语义。[完整协议与复现](LLM_INTERFACE_PROTOCOL_zh.md)。
+
 ### P2：控制器感知的表示比较
 
-冻结支持任务、完整过渡和 source split。先选一个新 temporal encoder，配必要基线：continuous、Linear29/率匹配 scalar 或 spline、body9+leg12、原生 motor。连续 latent 区分“学习压缩”与“离散化”的作用；确需离散序列时加入 DCT/FAST-style 简单候选，不一次铺开全部架构。
+冻结支持任务、完整过渡和 source split。首个学习候选为全身联合、来态条件化的连续 temporal latent；先证明学习压缩的效用，再加量化。保留 continuous、Linear29/等总预算自适应 scalar 或 spline、body9+leg12 与 native 路线。同架构普通重建/执行相关训练对照；坐标、锚定、速度与 prefix 处理对所有方法相同。ActionPiece 式几何关系保持是必要邻近基线；确需离散时再加入 FAST/OAT 式候选。
 
 候选损失：位置/速度、支撑脚误差、身体表面/间隙、chunk 接缝、受支持 native action 一致性；接触/关系各有 mask。身体分流只是消融假设，必须保留跨部位同步，独立 limb 码流拼接可能不受支持。
 
 分开三个问题：**固定 source 重建回放；实际 incoming state 下切换/恢复；因果策略预测表示的完整任务**。未来可作为离线编码/训练 target；actor 只能看过去，预测未来不等于读取未来。
 
-主要报告未见来源/场景的完整任务差异、对照退化、执行后决策保持、命令响应、延迟与全信息成本。离线误差和支持范围分开。若只赢 MPJPE 而输任务，或节省很小且无学习收益，保留简单方案。更换 decoder 后需要 adapter 再训练，不称 zero-shot。
+优先报告固定合格动作库/控制器下独立未见场景的完整任务差异；未见动作 ancestry 是另一个更强结论。报告对照退化、执行后决策保持、命令响应、延迟与全信息成本。离线误差和支持范围分开。若只赢 MPJPE 而输任务，或节省很小且无学习收益，保留简单方案。更换 decoder 后需要 adapter 再训练，不称 zero-shot。
 
 ### P3：小型 downstream 效用研究
 
@@ -100,7 +110,7 @@ CMU 固定 wide/tuck 后续仍是独立 acquisition 分支：原登记最多六�
 
 另做数据实验：简单可行配景、root hindsight、full-body verified contrast、scene-first Plan–Edit–Track-style expert。共享 motion bank、查询预算和 learner；报告等样本与等总获取成本，包含失败、过滤及回放。旧结果不回填新 held-out 集。
 
-独立场景先于 motion 采样，分别定义 ancestry、障碍位置/尺寸/组合、初态/速度 holdout。Optimizer seeds 与 scene/source clusters 分开，报告配对收益及退化；pilot 估计方差后注册主实验规模。当前三源 development 不支持泛化置信区间。
+同时报告预定全任务分布的成功/支持覆盖/未运行，以及 continuous 合格子集的 codec 保持率。独立场景先于 motion 采样，分别定义 ancestry、障碍位置/尺寸/组合、初态/速度 holdout。Optimizer seeds 与 scene/source clusters 分开，报告配对收益及退化；pilot 估计方差后注册主实验规模。当前三源 development 不支持泛化置信区间。
 
 ### P4：感知、语言与更大范围
 
@@ -115,4 +125,4 @@ CMU 固定 wide/tuck 后续仍是独立 acquisition 分支：原登记最多六�
 
 保留 tokenizer 作为研究主题，但允许实验回答“不需要新离散 codec”“native token 更合适”或“瓶颈在 controller/观测”。若无法超过简单 composer/持续蹲身，只报告机制和接口；获取比较为 null，则保留系统与负结果，不用更大模型替代问题定位。
 
-下一份值得投入的成果，是在同一个完整、可观察任务上说明：**保留哪些信息，才让 robot 更容易学会正确且可执行的选择。**
+下一份主要物理交付是“完整任务支持与表示瓶颈报告”，含冻结 task profile、因果 composer 和 2×3 矩阵。小 LLM 报告作为独立接口附件，不替代该交付。在同一个完整、可观察任务上说明：**保留哪些信息，才让 robot 更容易学会正确且可执行的选择。**

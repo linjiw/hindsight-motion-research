@@ -10,9 +10,11 @@ are explanatory diagrams, not licensed motion or simulated rollout visualization
 The September 18 research revision puts a complete traversal task and competing
 motion interfaces first. The decision explorer separates current evidence from
 proposed tests; the roadmap and typed-interface document are design proposals.
-The literature section points to 18 primary papers with explicit reading scope.
-Measured evidence remains dated September 15–16, with no new episodes from this
-review. Keep the review date separate from the evidence date in provenance.
+The literature section points to 20 primary papers with explicit reading scope.
+Physical evidence remains dated September 15–16, with no new episodes from this
+review. A separate September 18 CPU-only Qwen3-0.6B probe has 24 synthetic
+interface responses, 0/12 relay and 2/12 sidecar successes. Its two-route
+explorer and JSON summary are explicitly separate from physical evidence. Keep the review date separate from the evidence date in provenance.
 
 Build and check from the repository root:
 

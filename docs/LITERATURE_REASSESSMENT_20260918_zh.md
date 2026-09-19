@@ -53,3 +53,9 @@ AMASS/BABEL/HumanML3D 与 retargeted collections 有来源联系；不能按数�
 停止阅读并进入实验的条件：能写出主要 rival explanation、一个强简单比较和各结果如何改变路线。继续增加论文数量无法替代执行证据。
 
 本次定位不依赖某篇摘要的“first”措辞，也不跨论文比较不同 task、预算和成功定义的百分数。未阅读到的附录、未复现的实现与新颖性覆盖仍然是限制；目前不主张 exhaustive novelty。
+
+## 5. 用户指导后的定向补充
+
+- [ActionPiece v1](https://arxiv.org/html/2609.18487v1)：复核 §3–5.1。解码动作空间的物理距离排序 PRC 与受控 VLA 比较已有直接证据；“超越 MSE”不够新。加入几何关系保持基线，检验它与相同来态/场景下可执行选择是否分离。
+- [OAT v2](https://arxiv.org/html/2602.04215v2)：复核摘要、§III–IV。压缩、总可解码性与顺序/prefix 设计值得借鉴；能解码不能替代当前支撑状态下的物理资格。
+- 小模型的许可与使用模式直接核对官方 [Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B)、[Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) 和 [SmolLM3-3B](https://huggingface.co/HuggingFaceTB/SmolLM3-3B) 模型卡；选择及推理范围见[协议](LLM_INTERFACE_PROTOCOL_zh.md)。本次只有 0.6B 进行了合成接口推理，无模型训练。

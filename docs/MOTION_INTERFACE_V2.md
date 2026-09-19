@@ -97,3 +97,7 @@ First implement obstacle-avoiding whole-body motion with ordinary foot support. 
 Start scene conditioning with metric object sets and a complete-map flag. A sensed successor needs 3D or layered support/side/ceiling geometry, visibility and unknown state, and memory while overhead obstacles leave view. A floor-only heightmap cannot express general overhead free space. Rich 3D geometry also needs a bounded computational budget; benchmark the simplest representation adequate for the task.
 
 Required feedback for future agents is functional: goal progress, blocked route, replan reason, request completion and observation validity. Raw training identifiers and implementation diagnostics are not mission-level commands.
+
+## Small-LLM validation attachment
+
+The separately versioned [L0 probe](LLM_INTERFACE_PROTOCOL_zh.md) implements a synthetic subset of these semantics. It does not implement this runtime API or qualify robot trajectories. Compare full record relay with ID selection plus immutable sidecar. Bind IDs to the current observation/catalog and reject invented IDs or altered frames, clocks, support and terminal fields. Sidecar integrity and semantic choice are separate gates. Null means a declared unsupported/unknown request, not a physically qualified emergency stop. See the [measured CPU probe](LLM_INTERFACE_RESULTS_zh.md).
