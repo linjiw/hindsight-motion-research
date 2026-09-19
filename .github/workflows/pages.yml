@@ -12,6 +12,7 @@ on:
       - 'artifacts/carrier_scene_geometry.png'
       - 'artifacts/complete_task.png'
       - 'artifacts/continuation.png'
+      - 'artifacts/continuation_admission02.png'
       - '.github/workflows/pages.yml'
   pull_request:
     paths:

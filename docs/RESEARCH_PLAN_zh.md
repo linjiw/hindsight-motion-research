@@ -80,7 +80,9 @@ LLM / VLM：目标、对象指代、约束、终止要求
 
 **已完成第一行 pilot：continuous 4/4，Linear29+两帧 reset anchor 4/4，四个配对初态/历史/动力学完全匹配。** 使用两个既有 clip、clear/beam、冻结 goal050/recovery/stop profile；有完整未来参考和 root 辅助，不是自主任务。详细范围、wrist clipping、成本与下一步见[结果](COMPLETE_TASK_RESULTS_zh.md)及[协议](COMPLETE_TASK_PROTOCOL.md)。当前主优先级移到第二行的实际来态 continuation/switching，暂不启动新 codec 训练。
 
-**第二行首个子面板已实现并登记，但未获得物理证据。** 两个 beam task × pre-entry/entry/exit/pre-hold × continuous/Linear29，共 16 格；共同 prefix、history/RNG 与 native adapter 的审计已实现。300 s 资源等待超时，0 attempts、16 unrun；不是 16 次行为失败。离线发现某些 handoff 的膝参考变化也明显，不能把未来退化全归为 wrist clipping。见[执行状态与诊断](CONTINUATION_RESULTS_zh.md)。下一项仍是资源可用后新建关联的 admission packet 执行这八个配对；同相位无扰动成功也不替代新 chunk 选择、扰动恢复和 composer。
+**第二行同相位子面板已完成：continuous 8/8，Linear29 8/8，八个配对的初态/prefix/来态与历史最大误差为 0。** 两个 beam task × pre-entry/entry/exit/pre-hold × 两种表示，16 次 native attempts、4,136 control steps、16,544 physics contact frames，零训练。全任务通过独立终止/接触审计，native adapter 重建误差为 0；约 0.14 rad 膝参考变化也未破坏该格成功。见[admission 02 结果](CONTINUATION_ADMISSION02_RESULTS_zh.md)。最初 300 s 资源延期的 0-launch packet 保留，没有重写。
+
+**研究决定：当前没有 complete-task 成功上的 codec 瓶颈，下一步转向真实新后续的选择与执行。** 仍保留 supplied prefix、phase、root 和 future；这些成功不等于任意状态恢复或 composer。先建立有双时基、q/qdot/root 与 support validity 的小型 primitive bank，复用相邻项目已资格验证的 measured-state/native 接口，再登记基于实际状态/场景选中 transition 的 continuous/Linear29 对照。扰动恢复另作条件，之后才去掉隐藏未来做因果 reset episode；暂不训练新 codec。具体输入限制与下一工作包见[同步记录](COMPOSER_SYNC_20260918.md)。
 
 对齐相邻项目的 task-aware composer：按当前位姿和场景选取并衔接 approach/duck/exit/stop。先用 continuous 与 Linear29 做[两种表示×三种执行条件](RESEARCH_GUIDANCE_20260918_zh.md)矩阵：完整正确参考、真实相同来态的合格后续 chunk、因果 composer 从 reset 闭环。Native 先做同参考/同历史接口 parity，后作独立路线对照。
 

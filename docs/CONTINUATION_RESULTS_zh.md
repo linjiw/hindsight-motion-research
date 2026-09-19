@@ -1,5 +1,7 @@
 # 实际来态 continuation：实现、离线诊断与资源延期
 
+后续：[关联 admission 02 已完成，continuous/Linear29 各 8/8](CONTINUATION_ADMISSION02_RESULTS_zh.md)。本报告保留首次 0-launch 资源延期的历史状态；下文不回填后续结果。
+
 2026-09-18。依据执行前冻结的[协议](CONTINUATION_PROTOCOL.md)和[注册](../configs/continuation_v1.plan.json)，推进完整任务矩阵第二行的第一部分：**共同 continuous prefix 后的同相位参考切换**。
 
 **本轮没有新的物理结果：0 native attempts、0 episodes、0 control/physics steps，16 个预定格全部 unrun。** 串行资源门槛等待 300 s 后退出，未重试，也未修改阈值。不能把 unrun 写成 0/16 物理失败。此前完整参考任务的 continuous 4/4、Linear29 4/4 仍是有效的独立记录。

@@ -1,0 +1,16 @@
+{
+  "schema": "hindsight_continuation_admission_v1",
+  "authorization": "User explicitly requested continuing the registered research plan after the resource deferral",
+  "parent_packet": "runs/continuation_20260918_v1",
+  "successor_packet": "runs/continuation_20260918_admission02",
+  "scientific_registration": "configs/continuation_v1.plan.json",
+  "require_parent_native_attempts": 0,
+  "require_parent_execution_state": "resource_deferred",
+  "require_all_frozen_inputs_unchanged": true,
+  "maximum_native_attempts_across_admissions": 16,
+  "resource_wait_seconds_per_attempt": 300,
+  "retries": 0,
+  "training_steps": 0,
+  "change": "New admission only; same sixteen ordered cells, handoff indices, controller, references, seed, thresholds and stopping rules",
+  "stopping_rule": "Respect the original runner; no relaunch after failure, mismatch or resource timeout"
+}

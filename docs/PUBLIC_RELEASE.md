@@ -43,5 +43,12 @@ remain local; they are not additional canonical source pairs or student training
 
 The continuation registration publishes its unrun/attempt ledger and eight scalar
 input-reference difference diagnostics, plus `artifacts/continuation.png`. No native
-episode was launched after its resource timeout. These offline summaries are not
+episode was launched in that closed packet. These offline summaries are not
 motion trajectories, trained-model evidence, or physical switching qualifications.
+
+The linked admission 02 publishes `results/continuation_admission02.json` and
+`artifacts/continuation_admission02.png`: sixteen physical outcomes, eight
+matched-state audits, scalar reference differences and source hashes. Both
+methods pass 8/8 under supplied, same-phase references. Raw physical arrays and
+licensed descendants remain local. This does not qualify an autonomous composer
+or replace the historical zero-launch packet.

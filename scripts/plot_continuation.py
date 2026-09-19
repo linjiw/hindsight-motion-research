@@ -1,4 +1,5 @@
 """Aggregate execution status and offline reference jumps; no motion trajectories."""
+import argparse
 import json
 from pathlib import Path
 
@@ -8,7 +9,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
-data=json.loads((ROOT/'results/continuation.json').read_text())
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--summary',default='results/continuation.json')
+parser.add_argument('--output',default='artifacts/continuation.png')
+args=parser.parse_args()
+data=json.loads((ROOT/args.summary).read_text())
 offline=data['offline_input_diagnostics']['rows']
 plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False})
 fig,axes=plt.subplots(1,2,figsize=(13,5.7),gridspec_kw={'width_ratios':[1,1.4]})
@@ -19,11 +24,13 @@ for i,row in enumerate(offline):
         outcome=next(r for r in data['rows'] if r['source_clip']==row['source_clip'] and r['state']==row['state'] and r['method']==method)
         status=('pass' if outcome['success'] else 'fail') if outcome['status']=='completed' else ('unrun' if outcome['status']=='unrun' else 'invalid')
         axes[0].add_patch(plt.Rectangle((j-.42,i-.38),.84,.76,color=colors[status]))
-        axes[0].text(j,i,status.upper(),ha='center',va='center',fontsize=9,color='white' if status in ['pass','fail'] else '#263f38')
+        label=status.upper()
+        if outcome['status']=='completed':label+=f"\n{outcome['completion_time_s']:.2f} s"
+        axes[0].text(j,i,label,ha='center',va='center',fontsize=9,color='white' if status in ['pass','fail'] else '#263f38')
 axes[0].set(xlim=(-.6,1.6),ylim=(len(offline)-.5,-.5))
 axes[0].set_xticks([0,1],['Continuous','Linear29'])
 axes[0].set_yticks(np.arange(len(offline)),labels)
-axes[0].set_title('Registered native task outcomes',loc='left',pad=16)
+axes[0].set_title('Task outcomes · time from reset',loc='left',pad=16)
 for spine in axes[0].spines.values():spine.set_visible(False)
 axes[0].tick_params(length=0)
 y=np.arange(len(offline))
@@ -39,5 +46,5 @@ fig.suptitle(status+' · two development clips',x=.025,ha='left',fontsize=16,fon
 fig.text(.025,.025,f"{data['native_attempts']} native attempts / {data['scheduled_cases']} planned cells · {data['qualified_pairs']} qualified pairs · {data['unrun']} unrun\n"
          'Offline differences are not task failures. Supplied prefix, phase, root and future remain; no perturbation or generalization claim.',fontsize=9,color='#4a5651')
 fig.subplots_adjust(left=.18,right=.98,top=.84,bottom=.18,wspace=.35)
-fig.savefig(ROOT/'artifacts/continuation.png',dpi=180)
+fig.savefig(ROOT/args.output,dpi=180)
 plt.close(fig)

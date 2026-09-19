@@ -58,10 +58,12 @@ A separate September 18 complete-reference native pilot adds eight episodes,
 with reset anchors pass 4/4 under the existing goal050/recovery/stop profile.
 The new task matrix/table and aggregate figure are separate from the historical
 440-preflight / 312-main ledger and from the synthetic LLM probe. The remaining
-matched-state and causal-composer matrix rows stay proposed.
+new-selection, perturbation and causal-composer conditions stay proposed.
 
-The matched-state continuation subset is now implemented and registered. Its
-300-second resource gate expired: 16 planned cells, 0 native attempts, all unrun.
-`continuation.json` and the aggregate figure separate offline input-reference
-differences from physical outcomes. Do not turn an unrun cell into a failed task
-or merge it into the prior eight-episode complete-reference ledger.
+The same-phase continuation subset now adds a separate 16-attempt ledger:
+continuous 8/8, Linear29 8/8, eight exactly matched handoff pairs, 4,136 control
+steps and 16,544 physics frames. `continuation_admission02.json` and its figure
+contain the physical results. Supplied prefix, phase, root and future remain.
+The next work is selected new transitions; no autonomous composer is qualified.
+The original `continuation.json` and figure retain the earlier resource deferral
+with zero launches and sixteen unrun cases; those are not extra attempts or failures.

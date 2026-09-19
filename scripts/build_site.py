@@ -17,9 +17,9 @@ SOURCES = ["site/index.html", "site/style.css", "site/app.js", "site/favicon.svg
 RESULTS = [
     "token_mechanism", "decoder_execution", "mechanism_geometry",
     "foot_reconstruction", "critical_dataset", "mechanism_effects",
-    "carrier_scene", "llm_interface", "complete_task", "continuation",
+    "carrier_scene", "llm_interface", "complete_task", "continuation", "continuation_admission02",
 ]
-FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png"]
+FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png"]
 
 
 class PageLinks(HTMLParser):
@@ -77,6 +77,20 @@ def main():
             or continuation["qualified_pairs"] != 0
             or len(continuation["offline_input_diagnostics"]["rows"]) != 8):
         raise ValueError("Continuation status changed: review the planned/offline/physical distinction")
+    admitted = json.loads((ROOT / "results/continuation_admission02.json").read_text())
+    if (admitted["execution_state"] != "complete" or admitted["native_attempts"] != 16
+            or admitted["qualified_pairs"] != 8 or admitted["control_steps"] != 4136
+            or admitted["physics_samples"] != 16544 or admitted["unrun"] != 0
+            or any(admitted["method_summary"][m]["success"] != 8 for m in ("continuous", "linear29"))
+            or not all(p["audit"]["matched"] for p in admitted["pairs"])
+            or any(max(errors.values()) != 0 for p in admitted["pairs"]
+                   for errors in (p["audit"]["incoming_max_errors"],
+                                  p["audit"]["initial"]["max_errors"],
+                                  p["audit"]["prefix"]["max_errors"]))
+            or any(max(r["adapter"]["continuous_rebuild_max_errors"].values()) != 0
+                   or r["max_obstacle_force_n"] != 0 or r["max_nonfoot_floor_force_n"] != 0
+                   for r in admitted["rows"])):
+        raise ValueError("Continuation admission 02 changed: review the physical result narrative")
     if OUTPUT.is_symlink():
         raise ValueError("Refusing a symlinked build directory")
     if OUTPUT.exists():
@@ -98,7 +112,9 @@ def main():
     (OUTPUT / "data/provenance.json").write_text(json.dumps({
         "evidence_date": "2026-09-16", "mechanism_evidence_date": "2026-09-15",
         "complete_task_evidence_date": "2026-09-18", "llm_interface_evidence_date": "2026-09-18", "page_date": "2026-09-18", "research_review_date": "2026-09-18",
-        "continuation_registration_date": "2026-09-18", "continuation_native_attempts": 0,
+        "continuation_registration_date": "2026-09-18", "continuation_native_attempts": 16,
+        "continuation_evidence_date": "2026-09-18", "continuation_admission": "02",
+        "continuation_original_deferred_attempts": 0, "continuation_qualified_pairs": 8,
         "scope": "Development-only aggregate evidence; no raw motion or controller assets.",
         "files": provenance,
     }, indent=2) + "\n")
