@@ -15,6 +15,7 @@ artifacts/*
 !artifacts/token_mechanism_offline.png
 !artifacts/carrier_scene_geometry.png
 !artifacts/complete_task.png
+!artifacts/continuation.png
 .env
 .env.*
 !.env.example

@@ -80,6 +80,8 @@ LLM / VLM：目标、对象指代、约束、终止要求
 
 **已完成第一行 pilot：continuous 4/4，Linear29+两帧 reset anchor 4/4，四个配对初态/历史/动力学完全匹配。** 使用两个既有 clip、clear/beam、冻结 goal050/recovery/stop profile；有完整未来参考和 root 辅助，不是自主任务。详细范围、wrist clipping、成本与下一步见[结果](COMPLETE_TASK_RESULTS_zh.md)及[协议](COMPLETE_TASK_PROTOCOL.md)。当前主优先级移到第二行的实际来态 continuation/switching，暂不启动新 codec 训练。
 
+**第二行首个子面板已实现并登记，但未获得物理证据。** 两个 beam task × pre-entry/entry/exit/pre-hold × continuous/Linear29，共 16 格；共同 prefix、history/RNG 与 native adapter 的审计已实现。300 s 资源等待超时，0 attempts、16 unrun；不是 16 次行为失败。离线发现某些 handoff 的膝参考变化也明显，不能把未来退化全归为 wrist clipping。见[执行状态与诊断](CONTINUATION_RESULTS_zh.md)。下一项仍是资源可用后新建关联的 admission packet 执行这八个配对；同相位无扰动成功也不替代新 chunk 选择、扰动恢复和 composer。
+
 对齐相邻项目的 task-aware composer：按当前位姿和场景选取并衔接 approach/duck/exit/stop。先用 continuous 与 Linear29 做[两种表示×三种执行条件](RESEARCH_GUIDANCE_20260918_zh.md)矩阵：完整正确参考、真实相同来态的合格后续 chunk、因果 composer 从 reset 闭环。Native 先做同参考/同历史接口 parity，后作独立路线对照。
 
 横梁位置、高度、长度与初速度独立变化；新 task profile 分开全身离开、恢复、目标误差、持续停止和超时。姿态含骨盆高度/腿伸展，不能只看躯干角度。第三行共享因果生成的 root，计入成本；不提供隐藏未来或原始进入段。真实 snapshot 包含速度、支撑、控制器与已执行动作历史。共同来态比较机制；各自访问状态衡量实际效用。

@@ -17,9 +17,9 @@ SOURCES = ["site/index.html", "site/style.css", "site/app.js", "site/favicon.svg
 RESULTS = [
     "token_mechanism", "decoder_execution", "mechanism_geometry",
     "foot_reconstruction", "critical_dataset", "mechanism_effects",
-    "carrier_scene", "llm_interface", "complete_task",
+    "carrier_scene", "llm_interface", "complete_task", "continuation",
 ]
-FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png"]
+FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png"]
 
 
 class PageLinks(HTMLParser):
@@ -71,6 +71,12 @@ def main():
             or sum(r.get("success", False) for r in complete["rows"]) != 8
             or not all(p["entry"]["matched"] for p in complete["pairs"])):
         raise ValueError("Complete-task pilot changed: review the scoped page narrative")
+    continuation = json.loads((ROOT / "results/continuation.json").read_text())
+    if (continuation["execution_state"] != "resource_deferred"
+            or continuation["native_attempts"] != 0 or continuation["unrun"] != 16
+            or continuation["qualified_pairs"] != 0
+            or len(continuation["offline_input_diagnostics"]["rows"]) != 8):
+        raise ValueError("Continuation status changed: review the planned/offline/physical distinction")
     if OUTPUT.is_symlink():
         raise ValueError("Refusing a symlinked build directory")
     if OUTPUT.exists():
@@ -92,6 +98,7 @@ def main():
     (OUTPUT / "data/provenance.json").write_text(json.dumps({
         "evidence_date": "2026-09-16", "mechanism_evidence_date": "2026-09-15",
         "complete_task_evidence_date": "2026-09-18", "llm_interface_evidence_date": "2026-09-18", "page_date": "2026-09-18", "research_review_date": "2026-09-18",
+        "continuation_registration_date": "2026-09-18", "continuation_native_attempts": 0,
         "scope": "Development-only aggregate evidence; no raw motion or controller assets.",
         "files": provenance,
     }, indent=2) + "\n")

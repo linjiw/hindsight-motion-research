@@ -11,6 +11,7 @@ on:
       - 'artifacts/token_mechanism.png'
       - 'artifacts/carrier_scene_geometry.png'
       - 'artifacts/complete_task.png'
+      - 'artifacts/continuation.png'
       - '.github/workflows/pages.yml'
   pull_request:
     paths:

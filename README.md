@@ -12,7 +12,10 @@ native SONIC tokens and learned codecs. A new discrete tokenizer must earn its
 place through execution, switching or downstream learning value. See the rewritten
 [research plan](docs/RESEARCH_PLAN_zh.md), [literature review](docs/LITERATURE_REASSESSMENT_20260918_zh.md),
 [proposed interface](docs/MOTION_INTERFACE_V2.md) and [repository sync](docs/REVIEW_SYNC_20260918.md).
-This review ran no new experiments; the measured status below remains unchanged.
+The review itself ran no experiments. Its subsequent complete-reference pilot
+passed 4/4 per method. The next [matched-state continuation study](docs/CONTINUATION_RESULTS_zh.md)
+is implemented and registered, but its 300-second resource wait expired: all 16
+cases remain unrun, with no new native attempts or training.
 
 The latest acquisition check found **0/145** admissible portals for the qualified
 CMU/107 original/tuck pair under the fixed three-perturbation geometry gate.
@@ -22,7 +25,7 @@ the ten-minute resource gate expired without a launch; see the
 [acquisition report](docs/CARRIER_SCENE_RESULTS_zh.md) and
 [current execution status](results/carrier_scene.json).
 
-The latest completed study separates temporal smoothing from leg-reconstruction accuracy:
+The historical mechanism study separates temporal smoothing from leg-reconstruction accuracy:
 
 - RVQ + anatomy residuals: **0/18** qualified preflights; smoothing alone: **0/18**.
 - Adding 10 Hz leg reconstruction: **15/18**, with all six selected arm/beam intervention panels preserved. Fresh continuous controls also preserve all six.
@@ -40,6 +43,7 @@ The latest completed study separates temporal smoothing from leg-reconstruction 
 - [Proposed motion / BFM / VLA / agent interface](docs/MOTION_INTERFACE_V2.md)
 - [Critical scenes → BFM → text-to-navigation roadmap](docs/ROADMAP_SCENE_BFM_TEXT2NAV.md)
 - [Complete-task reference pilot: continuous 4/4, Linear29 4/4](docs/COMPLETE_TASK_RESULTS_zh.md) — [protocol](docs/COMPLETE_TASK_PROTOCOL.md)
+- [Matched-state continuation: implemented, physical execution deferred](docs/CONTINUATION_RESULTS_zh.md) — [protocol](docs/CONTINUATION_PROTOCOL.md)
 - [Adopted research guidance (中文)](docs/RESEARCH_GUIDANCE_20260918_zh.md)
 - [Small-LLM interface protocol](docs/LLM_INTERFACE_PROTOCOL_zh.md) and [first CPU probe results](docs/LLM_INTERFACE_RESULTS_zh.md)
 - [Latest mechanism results (中文)](docs/TOKEN_MECHANISM_RESULTS_zh.md) and [protocol](docs/TOKEN_MECHANISM_PROTOCOL.md)

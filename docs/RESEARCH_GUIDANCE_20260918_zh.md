@@ -28,10 +28,12 @@
 | 执行条件 | Continuous | Linear29 | 区分的问题 |
 | --- | --- | --- | --- |
 | 正确完整参考，从 reset 执行 | 后续 pilot 4/4 | 同任务配对 4/4；两帧 reset anchor | 任务本身是否受支持，codec 是否损害执行 |
-| 相同真实来态/历史，提供合格后续 chunk | 待登记/未运行 | 同 snapshot 配对；未运行 | 降低、切换、恢复、停止的可继续执行范围 |
+| 相同真实来态/历史，提供合格后续 chunk | 同相位子面板已登记，资源延期，未运行 | 同真实 prefix 配对；资源延期，未运行 | 降低、切换、恢复、停止的可继续执行范围 |
 | reset 开始，因果 composer 选择并重规划 | 待登记/未运行 | 同 composer；未运行 | 选择和规划能否实现完整任务 |
 
 后续执行见[完整任务报告](COMPLETE_TASK_RESULTS_zh.md)：既有 goal050 profile、两 clip/clear+beam、有完整参考辅助。原始用户指导逐字副本未改动。
+
+第二行首个子面板见[continuation 状态](CONTINUATION_RESULTS_zh.md)：实现 16 格、离线检查及完整历史配对审计，300 s 资源等待后 0 launch、16 unrun。它只测无扰动同相位切换；不能据准备完成或离线 reference 差值宣称物理支持。
 
 横向比较主要隔离表示；纵向信息条件与状态分布不同，只用于定位系统缺口。前两行不是自主导航。第三行共享因果 composer 的 root 目标，计入 root 成本；不可读取隐藏未来 root、进入段或示范 phase。由观测和已执行动作更新的内部进度允许使用。
 

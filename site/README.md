@@ -59,3 +59,9 @@ with reset anchors pass 4/4 under the existing goal050/recovery/stop profile.
 The new task matrix/table and aggregate figure are separate from the historical
 440-preflight / 312-main ledger and from the synthetic LLM probe. The remaining
 matched-state and causal-composer matrix rows stay proposed.
+
+The matched-state continuation subset is now implemented and registered. Its
+300-second resource gate expired: 16 planned cells, 0 native attempts, all unrun.
+`continuation.json` and the aggregate figure separate offline input-reference
+differences from physical outcomes. Do not turn an unrun cell into a failed task
+or merge it into the prior eight-episode complete-reference ledger.

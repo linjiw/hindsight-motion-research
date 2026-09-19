@@ -40,3 +40,8 @@ The complete-task pilot additionally publishes aggregate counts, paired initial-
 differences and task durations, plus `artifacts/complete_task.png`. The figure
 contains no motion trajectory. All eight native raw runs and source descendants
 remain local; they are not additional canonical source pairs or student training.
+
+The continuation registration publishes its unrun/attempt ledger and eight scalar
+input-reference difference diagnostics, plus `artifacts/continuation.png`. No native
+episode was launched after its resource timeout. These offline summaries are not
+motion trajectories, trained-model evidence, or physical switching qualifications.

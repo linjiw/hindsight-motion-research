@@ -105,3 +105,5 @@ The separately versioned [L0 probe](LLM_INTERFACE_PROTOCOL_zh.md) implements a s
 ## Complete-reference support attachment
 
 The [registered reference pilot](COMPLETE_TASK_PROTOCOL.md) implements a narrow adapter comparison under the existing goal050 complete-task profile. [Both routes pass 4/4](COMPLETE_TASK_RESULTS_zh.md) with exact matched reset/history/dynamics; Linear29 includes two charged reset-anchor frames and the original root. This establishes no general v2 API, arbitrary-state switching or causal-composer qualification.
+
+The subsequent [continuation adapter](CONTINUATION_PROTOCOL.md) implements actual-prefix replay, coherent native-reference replacement and history/RNG audits for eight paired incoming states. Its resource wait expired with **zero native launches**. The CPU conversion/input diagnostics in the [status report](CONTINUATION_RESULTS_zh.md) do not physically qualify the handoff hook or establish the general v2 API.

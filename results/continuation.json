@@ -1,0 +1,379 @@
+{
+  "schema": "hindsight_continuation_results_v1",
+  "date": "2026-09-18",
+  "execution_state": "resource_deferred",
+  "scope": "Development-only unperturbed same-phase reference handoff; first subset of matrix row 2",
+  "autonomous": false,
+  "perturbed": false,
+  "reference_assisted": true,
+  "independent_ancestry_established": false,
+  "source_clips": 2,
+  "scheduled_cases": 16,
+  "native_attempts": 0,
+  "completed_episodes": 0,
+  "infrastructure_failures": 0,
+  "unrun": 16,
+  "control_steps": 0,
+  "physics_samples": 0,
+  "training_steps": 0,
+  "historical_main_attempts_consumed": 0,
+  "method_summary": {
+    "continuous": {
+      "scheduled": 8,
+      "completed": 0,
+      "success": 0,
+      "unrun": 8
+    },
+    "linear29": {
+      "scheduled": 8,
+      "completed": 0,
+      "success": 0,
+      "unrun": 8
+    }
+  },
+  "rows": [
+    {
+      "case_id": "00976_pre_entry_continuous",
+      "source_clip": "00976",
+      "method": "continuous",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "pre_entry",
+      "handoff_tick": 26,
+      "handoff_time_s": 0.52
+    },
+    {
+      "case_id": "00976_pre_entry_linear29",
+      "source_clip": "00976",
+      "method": "linear29",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "pre_entry",
+      "handoff_tick": 26,
+      "handoff_time_s": 0.52
+    },
+    {
+      "case_id": "00976_entry_continuous",
+      "source_clip": "00976",
+      "method": "continuous",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "entry",
+      "handoff_tick": 42,
+      "handoff_time_s": 0.84
+    },
+    {
+      "case_id": "00976_entry_linear29",
+      "source_clip": "00976",
+      "method": "linear29",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "entry",
+      "handoff_tick": 42,
+      "handoff_time_s": 0.84
+    },
+    {
+      "case_id": "00976_exit_continuous",
+      "source_clip": "00976",
+      "method": "continuous",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "exit",
+      "handoff_tick": 79,
+      "handoff_time_s": 1.58
+    },
+    {
+      "case_id": "00976_exit_linear29",
+      "source_clip": "00976",
+      "method": "linear29",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "exit",
+      "handoff_tick": 79,
+      "handoff_time_s": 1.58
+    },
+    {
+      "case_id": "00976_pre_hold_continuous",
+      "source_clip": "00976",
+      "method": "continuous",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "pre_hold",
+      "handoff_tick": 186,
+      "handoff_time_s": 3.72
+    },
+    {
+      "case_id": "00976_pre_hold_linear29",
+      "source_clip": "00976",
+      "method": "linear29",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "pre_hold",
+      "handoff_tick": 186,
+      "handoff_time_s": 3.72
+    },
+    {
+      "case_id": "00265_pre_entry_continuous",
+      "source_clip": "00265",
+      "method": "continuous",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "pre_entry",
+      "handoff_tick": 53,
+      "handoff_time_s": 1.06
+    },
+    {
+      "case_id": "00265_pre_entry_linear29",
+      "source_clip": "00265",
+      "method": "linear29",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "pre_entry",
+      "handoff_tick": 53,
+      "handoff_time_s": 1.06
+    },
+    {
+      "case_id": "00265_entry_continuous",
+      "source_clip": "00265",
+      "method": "continuous",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "entry",
+      "handoff_tick": 69,
+      "handoff_time_s": 1.3800000000000001
+    },
+    {
+      "case_id": "00265_entry_linear29",
+      "source_clip": "00265",
+      "method": "linear29",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "entry",
+      "handoff_tick": 69,
+      "handoff_time_s": 1.3800000000000001
+    },
+    {
+      "case_id": "00265_exit_continuous",
+      "source_clip": "00265",
+      "method": "continuous",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "exit",
+      "handoff_tick": 149,
+      "handoff_time_s": 2.98
+    },
+    {
+      "case_id": "00265_exit_linear29",
+      "source_clip": "00265",
+      "method": "linear29",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "exit",
+      "handoff_tick": 149,
+      "handoff_time_s": 2.98
+    },
+    {
+      "case_id": "00265_pre_hold_continuous",
+      "source_clip": "00265",
+      "method": "continuous",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "pre_hold",
+      "handoff_tick": 207,
+      "handoff_time_s": 4.14
+    },
+    {
+      "case_id": "00265_pre_hold_linear29",
+      "source_clip": "00265",
+      "method": "linear29",
+      "condition": "beam",
+      "status": "unrun",
+      "reason": "resource_gate_timeout; remaining queue deferred without native launch",
+      "state": "pre_hold",
+      "handoff_tick": 207,
+      "handoff_time_s": 4.14
+    }
+  ],
+  "pairs": [
+    {
+      "source_clip": "00976",
+      "state": "pre_entry",
+      "handoff_tick": 26,
+      "compared": false
+    },
+    {
+      "source_clip": "00976",
+      "state": "entry",
+      "handoff_tick": 42,
+      "compared": false
+    },
+    {
+      "source_clip": "00976",
+      "state": "exit",
+      "handoff_tick": 79,
+      "compared": false
+    },
+    {
+      "source_clip": "00976",
+      "state": "pre_hold",
+      "handoff_tick": 186,
+      "compared": false
+    },
+    {
+      "source_clip": "00265",
+      "state": "pre_entry",
+      "handoff_tick": 53,
+      "compared": false
+    },
+    {
+      "source_clip": "00265",
+      "state": "entry",
+      "handoff_tick": 69,
+      "compared": false
+    },
+    {
+      "source_clip": "00265",
+      "state": "exit",
+      "handoff_tick": 149,
+      "compared": false
+    },
+    {
+      "source_clip": "00265",
+      "state": "pre_hold",
+      "handoff_tick": 207,
+      "compared": false
+    }
+  ],
+  "offline_input_diagnostics": {
+    "schema": "hindsight_continuation_offline_input_v1",
+    "physics_steps": 0,
+    "scope": "Input-qpos reference differences, not native action effects or executed outcomes",
+    "source_sha256": "6b6b3282c026e01314febe405a40047360e7c4c8833c135086d5e8845a7970e8",
+    "rows": [
+      {
+        "source_clip": "00976",
+        "state": "pre_entry",
+        "handoff_tick": 26,
+        "handoff_time_s": 0.52,
+        "input_joint_max_rad": 0.08290650654957243,
+        "max_joint": "right_knee_joint",
+        "nonwrist_input_joint_max_rad": 0.08290650654957243,
+        "input_forward_difference_velocity_max_rad_s": 4.146635067363919
+      },
+      {
+        "source_clip": "00976",
+        "state": "entry",
+        "handoff_tick": 42,
+        "handoff_time_s": 0.84,
+        "input_joint_max_rad": 0.0636935146355629,
+        "max_joint": "right_wrist_pitch_joint",
+        "nonwrist_input_joint_max_rad": 0.000609770551738803,
+        "input_forward_difference_velocity_max_rad_s": 3.220709406995581
+      },
+      {
+        "source_clip": "00976",
+        "state": "exit",
+        "handoff_tick": 79,
+        "handoff_time_s": 1.58,
+        "input_joint_max_rad": 0.13984796535194244,
+        "max_joint": "left_knee_joint",
+        "nonwrist_input_joint_max_rad": 0.13984796535194244,
+        "input_forward_difference_velocity_max_rad_s": 1.8508895559024352
+      },
+      {
+        "source_clip": "00976",
+        "state": "pre_hold",
+        "handoff_tick": 186,
+        "handoff_time_s": 3.72,
+        "input_joint_max_rad": 0.08397910611867905,
+        "max_joint": "right_wrist_pitch_joint",
+        "nonwrist_input_joint_max_rad": 0.006369372769571446,
+        "input_forward_difference_velocity_max_rad_s": 0.3255842935008191
+      },
+      {
+        "source_clip": "00265",
+        "state": "pre_entry",
+        "handoff_tick": 53,
+        "handoff_time_s": 1.06,
+        "input_joint_max_rad": 0.09728530662298203,
+        "max_joint": "right_wrist_yaw_joint",
+        "nonwrist_input_joint_max_rad": 0.020601260640415064,
+        "input_forward_difference_velocity_max_rad_s": 0.7608392429281907
+      },
+      {
+        "source_clip": "00265",
+        "state": "entry",
+        "handoff_tick": 69,
+        "handoff_time_s": 1.3800000000000001,
+        "input_joint_max_rad": 0.12091947959899903,
+        "max_joint": "left_wrist_yaw_joint",
+        "nonwrist_input_joint_max_rad": 0.08514809826074132,
+        "input_forward_difference_velocity_max_rad_s": 0.4652630537748337
+      },
+      {
+        "source_clip": "00265",
+        "state": "exit",
+        "handoff_tick": 149,
+        "handoff_time_s": 2.98,
+        "input_joint_max_rad": 0.1119674803519249,
+        "max_joint": "right_wrist_yaw_joint",
+        "nonwrist_input_joint_max_rad": 0.06518112714960655,
+        "input_forward_difference_velocity_max_rad_s": 0.32369010150432587
+      },
+      {
+        "source_clip": "00265",
+        "state": "pre_hold",
+        "handoff_tick": 207,
+        "handoff_time_s": 4.14,
+        "input_joint_max_rad": 0.15845076607704162,
+        "max_joint": "right_wrist_yaw_joint",
+        "nonwrist_input_joint_max_rad": 0.0005056916974379155,
+        "input_forward_difference_velocity_max_rad_s": 0.6555240601301187
+      }
+    ]
+  },
+  "qualified_pairs": 0,
+  "stopping_receipt": null,
+  "provenance": [
+    {
+      "path": "runs/continuation_20260918_v1/registration.json",
+      "sha256": "9c0d7be102dad91effb05e2f5f2989fd22e50cb7af5bc051087bdf333e456524"
+    },
+    {
+      "path": "runs/continuation_20260918_v1/plan.json",
+      "sha256": "005b6576ab0a47c95f2b26b51452e0f960b08aa52fca63ed9c4b8026d31abeea"
+    },
+    {
+      "path": "runs/continuation_20260918_v1/execution-start.json",
+      "sha256": "41552b75a9bf7498e1fb5718e06fee4c2d08936c22e6678e4fe14c7b687f5ca8"
+    },
+    {
+      "path": "runs/continuation_20260918_v1/episodes/00976_pre_entry_continuous/resource_wait.jsonl",
+      "sha256": "21d55149341a8ec148e28f738b4a53ba78ba83803be53e49deebe0a5316a46ba"
+    },
+    {
+      "path": "runs/continuation_20260918_v1/episodes/00976_pre_entry_continuous/resource_deferred.json",
+      "sha256": "f761f2ef140db79eafe88501e9355c0c9ea616bae6002d27927916d606bb9323"
+    },
+    {
+      "path": "runs/continuation_20260918_v1/offline-input-diagnostics.json",
+      "sha256": "600b42f38590f5abbdc046960259c6d32bcf3b03e320f538527ff95624936fc5"
+    }
+  ],
+  "analysis_source_sha256": "88fd2e3af4fccc9b5cfd37fc28632bb164574c3f9eeb0421f0ca2b42711608df"
+}
