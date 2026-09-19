@@ -7,6 +7,13 @@ representation and experimental evidence, then labels proposed navigation, BFM,
 language and scene-model extensions. The synthetic trace and obstacle envelopes
 are explanatory diagrams, not licensed motion or simulated rollout visualizations.
 
+The September 18 research revision puts a complete traversal task and competing
+motion interfaces first. The decision explorer separates current evidence from
+proposed tests; the roadmap and typed-interface document are design proposals.
+The literature section points to 18 primary papers with explicit reading scope.
+Measured evidence remains dated September 15–16, with no new episodes from this
+review. Keep the review date separate from the evidence date in provenance.
+
 Build and check from the repository root:
 
 ```bash
@@ -32,6 +39,10 @@ the distinction between canonical acquisition pairs and representation repeats,
 between the decoder and mechanism studies, and between results and proposals.
 The source summaries remain the authority; hard-coded tokenizer payload rates
 are defined in `clearance_tokens.py` and the mechanism report.
+The total-rate view adds the common 11,200 bit/s root stream and still excludes
+entry/model/container costs. The build guards acquisition and canonical coverage
+as well as mechanism totals. Run the smoke check for all metrics, decisions,
+interfaces and the unavailable-evidence state after editing the app.
 
 The Pages workflow builds and checks on matching pull requests, and deploys on
 matching pushes to `main` or manual dispatch. GitHub repository Pages settings

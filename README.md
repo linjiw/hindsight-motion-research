@@ -1,10 +1,18 @@
 # Hindsight Motion Research
 
-Whole-body motion representations and hindsight scene proposals for humanoid traversal: place obstacles where a measured body adjustment becomes useful, then validate that relationship through matched simulation interventions.
+Motion representations for robust humanoid traversal: preserve executable body choices, test them through matched scene interventions, and measure their value to a future causal goal/scene controller.
 
 **Local research workspace:** `/home/linjiw/hindsight-motion-research`.
 
 ## Research status
+
+**Research reassessment — September 18:** keep the traversal goal; prioritize a
+complete approach–duck–recover–stop baseline and compare simple continuous chunks,
+native SONIC tokens and learned codecs. A new discrete tokenizer must earn its
+place through execution, switching or downstream learning value. See the rewritten
+[research plan](docs/RESEARCH_PLAN_zh.md), [literature review](docs/LITERATURE_REASSESSMENT_20260918_zh.md),
+[proposed interface](docs/MOTION_INTERFACE_V2.md) and [repository sync](docs/REVIEW_SYNC_20260918.md).
+This review ran no new experiments; the measured status below remains unchanged.
 
 The latest acquisition check found **0/145** admissible portals for the qualified
 CMU/107 original/tuck pair under the fixed three-perturbation geometry gate.
@@ -28,6 +36,8 @@ The latest completed study separates temporal smoothing from leg-reconstruction 
 
 - [Interactive research atlas](https://linjiw.github.io/hindsight-motion-research/): tokenizer, measured results, intervention explorer, and the path to BFM/navigation. [Website maintenance](site/README.md).
 - [Research plan (中文)](docs/RESEARCH_PLAN_zh.md)
+- [Literature reassessment (中文)](docs/LITERATURE_REASSESSMENT_20260918_zh.md)
+- [Proposed motion / BFM / VLA / agent interface](docs/MOTION_INTERFACE_V2.md)
 - [Critical scenes → BFM → text-to-navigation roadmap](docs/ROADMAP_SCENE_BFM_TEXT2NAV.md)
 - [Latest mechanism results (中文)](docs/TOKEN_MECHANISM_RESULTS_zh.md) and [protocol](docs/TOKEN_MECHANISM_PROTOCOL.md)
 - [Carrier-to-scene acquisition (中文)](docs/CARRIER_SCENE_RESULTS_zh.md) and [protocol](docs/CARRIER_SCENE_PROTOCOL.md)

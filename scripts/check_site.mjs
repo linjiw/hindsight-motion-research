@@ -12,7 +12,7 @@ for(const match of html.matchAll(/id="([^"]+)"/g))nodes.set(`#${match[1]}`,node(
 nodes.get('#method').value='body9_leg12'; nodes.get('#scrub').value='5';
 nodes.get('#metric').value='passes'; nodes.get('#family').value='arm03';
 const buttons={};
-for(const key of ['condition','interface'])buttons[`[data-${key}]`]=[...html.matchAll(new RegExp(`data-${key}="([^"]+)"`,'g'))].map(m=>Object.assign(node(),{dataset:{[key]:m[1]}}));
+for(const key of ['condition','interface','decision'])buttons[`[data-${key}]`]=[...html.matchAll(new RegExp(`data-${key}="([^"]+)"`,'g'))].map(m=>Object.assign(node(),{dataset:{[key]:m[1]}}));
 const errors=[];
 const context=vm.createContext({console:{error:(...args)=>errors.push(args)},document:{
  querySelector(selector){assert(nodes.has(selector),`Unknown selector ${selector}`);return nodes.get(selector);},
@@ -29,7 +29,7 @@ for(const method of evidence.methods){
  assert(!nodes.get('#signal').innerHTML.includes('NaN'));
 }
 for(const patch of [0,19]){nodes.get('#scrub').value=String(patch);nodes.get('#scrub').handlers.input();assert.equal(nodes.get('#patch-output').textContent,`Patch ${patch+1} / 20`);}
-for(const metric of ['passes','foot','clearance','rate']){nodes.get('#metric').value=metric;nodes.get('#metric').handlers.change();const chart=nodes.get('#comparison').innerHTML;assert.equal((chart.match(/class="bar-row/g)||[]).length,6);assert(!chart.includes('NaN'));}
+for(const metric of ['passes','foot','clearance','rate','total_rate']){nodes.get('#metric').value=metric;nodes.get('#metric').handlers.change();const chart=nodes.get('#comparison').innerHTML;assert.equal((chart.match(/class="bar-row/g)||[]).length,6);assert(!chart.includes('NaN'));}
 for(const family of ['arm03','hybrid205']){
  nodes.get('#family').value=family;nodes.get('#family').handlers.change();
  for(const button of buttons['[data-condition]']){
@@ -40,9 +40,13 @@ for(const family of ['arm03','hybrid205']){
  }
 }
 for(const button of buttons['[data-interface]']){button.handlers.click();assert.equal(button.attributes['aria-pressed'],'true');assert(nodes.get('#interface-detail').innerHTML.length>300);}
+for(const button of buttons['[data-decision]']){button.handlers.click();assert.equal(button.attributes['aria-pressed'],'true');assert(nodes.get('#decision-detail').innerHTML.includes('PROPOSED DISCRIMINATING TEST'));assert(nodes.get('#decision-detail').innerHTML.includes('CURRENT EVIDENCE'));}
+assert.equal(run("valueFor('body9_leg12','total_rate')"),13860);
+assert.equal(run("valueFor('linear29','total_rate')"),14680);
+assert.equal(run("valueFor('body9_leg12','total_rate') - valueFor('body9_leg12','rate')"),11200);
 // Missing evidence must show an explicit error, never an empty success chart.
 context.fetch=async()=>({ok:false,status:503});
 await run('loadEvidence()');
 assert(nodes.get('#comparison').innerHTML.includes('could not load'));
 assert(nodes.get('#scene-scores').textContent.includes('unavailable'));
-console.log('Passed: 8 methods, 4 metrics, 8 intervention states, 5 interfaces, scrub endpoints and data-load failure.');
+console.log('Passed: 8 methods, 5 metrics, 8 intervention states, 6 interfaces, 4 research decisions, total-rate accounting, scrub endpoints and data-load failure.');

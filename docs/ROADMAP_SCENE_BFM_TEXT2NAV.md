@@ -1,273 +1,103 @@
-# Research roadmap: critical scenes → motion/scene representations → BFM → text-to-navigation
+# Research roadmap: motion interfaces for complete humanoid traversal
 
-> Acquisition update (2026-09-16): the qualified CMU/107 original/tuck pair yields **0/145** admitted portals under the registered worst-of-three geometry gate. No main episodes were launched from that comparison. A separately registered fixed wide/tuck contrast is prepared for six preflights; teacher qualification must precede any new scene search. See [results and execution status](CARRIER_SCENE_RESULTS_zh.md). Teacher support alone does not establish a scene-relevant contrast.
+Revised September 18, 2026. This replaces the ordering of proposed work in the [earlier roadmap](https://github.com/linjiw/hindsight-motion-research/blob/fc85b01082c703fa31b3c7776152677adbee7c3b/docs/ROADMAP_SCENE_BFM_TEXT2NAV.md). Completed protocols, thresholds and receipts are unchanged. This review launched no training or native experiments.
 
-> Latest mechanism evidence: [leg reconstruction versus smoothing](TOKEN_MECHANISM_RESULTS_zh.md). body9 and smoothing alone qualify 0/18 preflights; leg12 qualifies 15/18 and preserves all six selected arm/beam panels. Fresh continuous controls preserve all six. One of eight screened carrier groups qualifies both original and arm-tuck motion but still needs obstacle validation. Cumulative: 440 recorded preflights and 312 main episodes, plus 144 scheduled preflight slots lost to an infrastructure failure with no recorded episodes. Canonical coverage remains five edited pairs across three source groups; all development, no navigation student trained. See the [interactive research atlas](https://linjiw.github.io/hindsight-motion-research/) for the current evidence and proposed interfaces. Updates below retain their historical stage context.
+[Research plan (中文)](RESEARCH_PLAN_zh.md) · [Literature reassessment](LITERATURE_REASSESSMENT_20260918_zh.md) · [Proposed interface](MOTION_INTERFACE_V2.md) · [Repository/evidence sync](REVIEW_SYNC_20260918.md) · [Interactive atlas](https://linjiw.github.io/hindsight-motion-research/)
 
-> Latest execution: [decoded-motion physics and source acquisition](DECODER_EXECUTION_zh.md). Linear29 preserves all six frozen arm/beam intervention panels on two existing KIT/205 pairs; continuous controls preserve all six. RVQ variants fail 54/54 preflights; three additional source groups fail 24/24. Cumulative 248 preflight and 216 main episodes. Keep the 96 representation descendants separate from the 120-episode acquisition dataset. Next priorities: isolate temporal discontinuities versus leg reconstruction, establish more teacher-supported carriers, then evaluate proposer and student utility on independent scenes.
+## Decision and research question
 
-> Follow-up completed: a second traversal family now passes all three intervention panels. Cumulative main episodes: 120. See [new results and token comparison](SECOND_FAMILY_AND_TOKENS_zh.md). The earlier counts below describe their original experiment stage.
+Keep the goal: robust, generalizable whole-body traversal from a destination, causal observations and robot feedback, with an interface that can later serve BFM, VLA and language agents. Change the order: establish a complete task and a strong executable interface before scaling a scene proposer or a new discrete tokenizer.
 
-> Latest execution: 96 main scene episodes across four edited pairs and three source groups; two arm pairs fully replicate, one is partial, and ducking has no qualified full panel. See [expanded results](EXPANSION_RESULTS_zh.md). Prior milestones below retain their original planning context.
+**Which short-horizon motion representation preserves support, clearance and transitions well enough to improve held-out task learning at a fixed data, controller and compute budget?**
 
-> Execution update (2026-09-15): the first arm-tuck stage is complete—48 teacher preflight episodes, 24 physical interventions, and three verified matched panels from one motion pair. The tokenizer diagnostic loses critical clearance margins. See [results](CRITICAL_RESULTS_zh.md) and [native protocol](CRITICAL_EXPERIMENT.md). The full multi-family study and BFM/text2nav stages remain open.
+A continuous chunk, a controller-native latent and a discrete code with residuals are competing answers. A new codebook is not the goal itself. The strongest current asset is the diagnostic evidence showing that geometric fidelity and executable gait can disagree. A task-relevant learned representation and downstream benefit remain hypotheses.
 
+Recent PASSAGE, TANGO, SceneBot and SONIC work substantially overlaps the broad pipeline. Our potential contribution must be demonstrated decision preservation, robust interface behavior or acquisition/learning efficiency relative to strong alternatives. The literature review distinguishes paper observations from our design inferences; it does not establish an uncontested novelty gap.
 
-Prepared 2026-09-15 in response to the clarified project goal. This document is a proposed next-stage plan; no new physics, tokenizer training, or policy training was performed while writing it. Completed measurements remain in `RESULTS_zh.md`.
+## Current evidence, with its scope
 
-## 1. The research objective
+| Evidence | What it warrants |
+| --- | --- |
+| Five edited acquisition pairs, three source groups; three pairs pass every panel | Local arm and duck/bend intervention evidence; only two groups support fully replicated pairs |
+| Latest body9 and smoothing: 0/18; leg12: 15/18; Linear29: 16/18; continuous: 18/18 | A tested leg-reconstruction intervention improves this assisted reference path |
+| Leg12 and fresh continuous each preserve six selected arm/beam panels | Representation retention on two existing KIT/205 pairs, not new independent acquisition |
+| CMU/107 original/tuck: 0/145 admitted portals | No scene meets the fixed geometry gate; no new obstacle execution |
+| 440 recorded preflights, 312 main episodes, 144 additional infrastructure slots without episodes | Development evidence; main = 120 acquisition + 192 representation repeats |
+| No navigation student trained in this repository | No local downstream tokenizer, BFM, sensor or language improvement claim |
 
-Build a scene proposer that identifies **where an obstacle makes a particular motion adjustment useful**, preserves the executable motion, and produces motion–scene pairs that improve subsequent humanoid navigation/traversal learning. Develop representations of these pairs that support a behavior foundation model and, later, grounded language instructions.
+Full evidence: [mechanism](TOKEN_MECHANISM_RESULTS_zh.md), [acquisition](CARRIER_SCENE_RESULTS_zh.md), [decoder](DECODER_EXECUTION_zh.md), [canonical pairs](SECOND_FAMILY_AND_TOKENS_zh.md). Do not combine sibling-project controller results with these counts.
 
-The central object is a **decision episode**, not an isolated obstacle or a motion caption:
+## One downstream task, two useful execution routes
 
-> From this measured entry state, toward this goal, the obstacle makes this body adjustment useful; when the constraint changes, another executable adjustment becomes appropriate.
-
-The first publishable contribution can be the critical-scene data engine and its measured utility to a fixed downstream learner. A larger BFM and text-to-navigation are compatible extensions, but their success is not a prerequisite for testing whether the scene engine supplies useful information.
-
-## 2. What the pilot tells us to change
-
-- The 26 → 3 reduction in rigid-posture collision witnesses means proxy penetration cannot be the positive functional label. Use bounding geometry to reject unsafe candidates cheaply; use model collision geometry and achieved executions for the final label.
-- The current small model learns geometric admissibility. Admissibility alone rewards irrelevant obstacles that happen to be out of the way. Add a separately measured **behavioral relevance** target.
-- Current VQ/RVQ codes compress joint-angle blocks and leave the root uncompressed. They are useful baselines, but not language-aligned motion representations or motor-controller latents.
-- Root+token did not outperform root consistently in a two-seed ranking pilot. The next test must contain real behavior choices where the extra body information can matter; increasing model size on the same weak labels is not yet motivated.
-- Movement screening admitted sports/jumping clips. Introduce locomotion/traversal eligibility and teacher execution coverage before expanding the generated dataset.
-
-## 3. The full loop
+First task: approach, duck under a beam, clear the entire body, recover upright, reach the goal and sustain a stop. A narrow arm passage adds a diagnostic where root information cannot explain all body clearance. Register the terminal requirements separately: historical scores measure moving arrival and do not already include this task.
 
 ```mermaid
 flowchart TD
-  M[Source motions and lineage] --> E[Motion and event encoders]
-  M --> A[Matched executable alternatives]
-  E --> P[Critical-scene proposer]
-  A --> P
-  P --> G[Whole-body geometry refinement]
-  G --> T[Tracking teacher executes alternatives in each scene]
-  T --> D[Decision episodes with outcomes, observations and teacher actions]
-  D --> P
-  D --> R[Motion / scene / relation representation learning]
-  D --> B[BFM-style student distillation]
-  R --> B
-  L[Text: goal and behavior constraints] --> B
-  B --> U[Independent scene-first task evaluation]
+  Mission[Goal and terminal intent / optional grounded language] --> Planner
+  Obs[Causal robot history and scene observations] --> Memory[Metric scene memory: floor / sides / ceiling / unknown]
+  Memory --> Planner[Local motion composer or learned planner]
+  Planner --> Chunk[Versioned short motion chunk]
+  Chunk --> Ref[Reference codec + compatible tracker]
+  Planner --> Native[Checkpoint-specific motor token adapter]
+  Ref --> Action[Joint target execution]
+  Native --> Action
+  Action --> Feedback[Measured state / progress / blocked / complete]
+  Feedback --> Obs
+  Data[Training only: human priors + hindsight or scene-first tasks] -.-> Planner
+  Outcomes[Executed alternatives and supported teacher targets] -.-> Planner
 ```
 
-The feedback to the proposer uses measured execution evidence. The tracking teacher supplies motor expertise. A qualified continuation selector or planner supplies task-level choices; a tracker alone does not supply both.
+Start with the inspectable reference route, retaining Linear29 and continuous controls. Compare the native 64D SONIC motor path; it may avoid an unnecessary second codec. A later direct action policy or adapted perceptive tracker remains possible if the frozen motor's supported envelope limits the task. Freezing is an experimental control, not a permanent rule for the final robot.
 
-## 4. Milestone A — a small dataset of verified behavior choices
+These routes do not assume a shared vocabulary. Compatibility requires an explicit contract for frames, joints, rates, history, decoder identity, contact intent, masks and measured completion. See [MOTION_INTERFACE_V2.md](MOTION_INTERFACE_V2.md).
 
-### A1. Freeze the teacher contract and establish its envelope
+## Why the current data engine needs a narrower role
 
-Assume a promising tracking teacher is available. Pin the checkpoint, decoder, robot collision assets, joint order, action scale, PD gains, physics/control timesteps, history layout and normalization. First test selected nominal motions in an empty environment and selected transitions from a common entry state.
+The four-condition panel proves a local relationship between an obstacle and two executable alternatives. It does not prove a scene-conditioned learner is necessary: an always-tuck or always-duck baseline might solve every available scene. Retain those controls and measure meaningful, predeclared cost differences where both succeed.
 
-Measure root/body tracking errors, foot sliding, support contacts, falls and stopping/terminal behavior. Calibrate placement margins to the **achieved** motion distribution and model discrepancy; an arbitrary 3 cm reference margin is not sufficient. A teacher can be excellent on walking and still lack ducking or narrow-passage capability. Family-specific coverage determines which families enter the first study.
+Human motion supplies useful coordination priors, not unique original scenes or intentions. Hindsight scenes supply hypotheses and interventions. Scene-first tasks supply an independent test distribution. All three are useful; no single generator should define both training success and the evaluation universe.
 
-First consider arm tuck, side-facing passage, ducking and low-step traversal; use only two families that the teacher can execute reliably for the first packet. Avoid hand support, climbing, object manipulation or intentional obstacle contact in this initial task definition.
+The fixed-wide CMU follow-up remains a bounded, separately registered acquisition branch. Its resource wait expired without a launch. It is neither automatically resumed by this review nor a prerequisite for all representation work.
 
-### A2. Retrieve or construct executable alternatives
+## Work packages and decisions
 
-For each target behavior, retrieve a plausible simpler alternative, or create it with constrained editing/optimization and requalify it in empty space. Neither fixed joints nor an unvalidated straight-line shortcut is an admissible physical alternative.
-
-Match start, goal, progression and nuisance factors. **Do not match away the mechanism:**
-
-| Behavior tested | Match as closely as possible | Allow to differ |
+| Package | Deliverable and minimal comparison | Decision gate |
 | --- | --- | --- |
-| Arm tuck | Root xyz/orientation, leg progression, speed | Arm configuration and reach |
-| Side-facing passage | Root xy progression, start/goal, speed | Pelvis/torso heading needed to reduce width |
-| Ducking | Root xy, progression and goal | Pelvis/head height and relevant joint motion |
-| Step-over | Start/goal, forward progress, appropriate support phase | Swing-foot clearance and associated leg motion |
-| Route detour, later | Start/goal and task constraints | Root path and resulting timing |
+| P0 — interface audit | Inventory existing root/reference/motor contracts, ancestry and actual supported commands; distinguish codec bits from decoder floats | Lossless serialization/frame/history parity before physical adapter qualification; no assumed checkpoint portability |
+| P1 — complete task baseline | Task-aware motion composition from current state; continuous, Linear29 and native-token execution routes; ordinary walking, sustained posture and simple geometric rules | Complete from-reset outcomes including exit/stop, not supplied-prefix successes or low fitting error |
+| P2 — representation test | One temporal learned candidate versus continuous/low-rate scalar or spline/native controls; continuous-latent control for the discretization claim | Preserve execution, switching and decision outcomes at disclosed total information and latency cost |
+| P3 — fixed learner utility | Compare the two strongest output representations with the same learner/data/backend; separately compare acquisition methods | Held-out scene gains, retained clear-task behavior and uncertainty across scene groups and training seeds |
+| P4 — sensed context | Replace known map with causal depth/LiDAR and memory while retaining action semantics | Sensor-only complete rollouts, including ceiling occlusion, latency and localization error |
+| P5 — language, routes, contact | Ground language into the same goal/constraint API; route/subgoal memory; later intentional support contacts | New instruction/layout combinations, blocked-route response and separately qualified contact capabilities |
 
-This corrects an over-restrictive interpretation of the previous plan: matching root height for all ducking pairs or root orientation for all side-turn pairs would remove the behavior under investigation. Use a stronger root baseline to measure how much of each family's result root information already explains. Arm pairs with matched root are especially valuable for isolating extra body information.
+No new native budget is granted here. The historical ceiling has 168/480 main attempts remaining. Reusing any of it requires an applicable registration and serial resource gate; a new training campaign requires a new budget. Do not turn a remaining ceiling into a target sample count.
 
-Use a shared entry state and an executable common approach where possible. If two motions begin in different poses, qualify entry transitions; do not attribute an initial-state difference to the obstacle intervention. Preserve several acceptable alternatives where available rather than selecting one artificially weak comparator.
+## Representation experiment contract
 
-### A3. Generate and intervene on scenes
+Distinguish three evaluations:
 
-Initialize candidates in the region occupied by an executable alternative but avoided by the target. Search supported primitive shapes with continuous position/orientation/size refinement. Check the entire passage, approach, exit and required stopping interval, not only the event's peak frame.
+1. **Reconstruction replay:** same original root/entry assistance, same tracker and probes. This isolates a codec comparison within its stated information budget.
+2. **Switching and recovery:** replan or change chunks from measured incoming state/history, including altered speed and body phase. Smooth joint interpolation alone does not establish valid support transfer.
+3. **Predicted control:** a causal learner generates the representation and completes the task from reset. There is no future-reference input to the actor.
 
-Each paired decision gets four scene conditions:
+Report total rate, rate per stream, model size, token count, horizon and inference latency. Current body9+leg12 saves 820 bit/s versus Linear29: 23.6% of joint payload, but only 5.6% including the common root channel. Original entry/model/container costs remain additional. A codec need not win every metric, but the tradeoff must be useful downstream.
 
-1. **Critical:** proposed obstacle constrains the alternative while the target remains usable.
-2. **Relaxed:** widen/lift/reduce the relevant obstacle enough to change the choice, when the geometry permits it.
-3. **Removed:** remove the constraining obstacle; both motions should remain executable.
-4. **Displaced:** move a comparable obstacle away from the decisive region, then verify the claimed irrelevance rather than assuming it.
+Learning objectives may include joint velocity, support-foot reconstruction, body clearance, temporal boundaries, supported native-action consistency and verified decision labels. These are hypotheses. Factorized body codes need synchronized coordination; part-wise reconstruction can hide incompatible combinations. Oracle original legs and future-derived labels retain their privileged status.
 
-Execute both motion continuations under the same task scorer and paired initial perturbations. Store failures and uncertainty. For the first bounded packet, target 20 motion pairs across two supported families, up to 4 scene conditions × 2 continuations × 3 paired perturbation seeds = **480 rollout attempts**. This is an engineering pilot budget, not an assertion of statistical power or 20 guaranteed qualified pairs. Empty-scene trials are part of the removed condition; failed qualification trials still count in the attempt ledger. Stop after the declared attempts and assess coverage before a larger study.
+Do not call a float-vector motor interface an unquantized model without checking its encoder/quantizer. The current recorder captures 64 floating-point decoder inputs; SONIC's published design uses FSQ. Dimensional agreement alone does not establish identical normalization, levels or checkpoint semantics.
 
-The target need not be the unique globally optimal behavior. It should have a demonstrable advantage over relevant feasible alternatives under the scene condition. If an equally simple alternative succeeds, retain that as a multiple-solution scene or lower the strength of the criticality label.
+## Acquisition and evaluation contract
 
-### A4. Define “critical” using intervention outcomes
+The data comparison should include simple feasible placement, root-conditioned hindsight, full-body executed contrast and a scene-first plan/edit/track-style expert. Use the same source bank and fixed learner for a controlled study; charge all geometry, simulation and filtering costs. An operational comparison with larger pretrained systems has different resources and must be labeled separately.
 
-Let `J(behavior, scene)` be a registered traversal cost evaluated on the achieved rollout. Treat safety/goal failures explicitly; analyze successful traversal cost separately or declare any failure penalty before fitting. A useful difference-in-differences diagnostic is:
+Split before deriving mirrored clips, retargets, scene variants or captions. Current directory grouping needs ancestry validation. Existing inspected pairs remain development. Hold out whole scene layouts and, when claimed, source performances, incoming states, obstacle combinations and sensor conditions. Fit preprocessing and rate calibration on training only.
 
-`U(S) = [J(alternative,S) − J(target,S)] − [J(alternative,removed) − J(target,removed)]`.
+Primary metric: complete task success under the versioned contact/recovery/terminal contract. Report contacts by body, falls, timeouts, blocked/rejected requests, clearance, successful-task time and paired regressions. Do not force autonomous behavior to match a hidden reference. Confidence intervals must reflect independent scene/source clusters; optimizer variation is separate. Size a main study after a feasibility/variance pilot rather than treating any universal trial count as adequate.
 
-Report its underlying success/contact outcomes, not only the scalar. Positive U indicates that this constructed obstacle increases the target's relative usefulness under the tested alternatives. It does not identify the original human's motivation.
+Teacher labels must be queried at the actual learner state with consistent history and compatible execution. Keep supported imitation, relation evidence and negative task outcomes separate. If multiple continuations work, preserve modes; averaging conflicting motor targets may invent an invalid action.
 
-Per obstacle, record the body part, candidate contact interval, decision lead time, successful/failing dimension range, and the effect of removing that obstacle. Fit a range of valid placements instead of one knife-edge coordinate. For multi-object scenes, measure leave-one-out and selected joint removals because two obstacles can be redundant or jointly necessary.
+## When to change direction
 
-**Milestone output:** a source-grouped set of decision episodes, an outcome matrix for every attempted pair, robust parameter intervals and genuine null/multiple-solution cases. Progress is measured by qualified choices and coverage, not total obstacle count.
+If continuous references fail, improve task support or the tracker before a codec search. If execution works but selection fails, inspect observability, memory and planner coverage. If a learned codec only improves offline metrics, keep Linear29/native tokens. If verified hindsight offers no fixed-budget gain, keep the simpler acquisition method. If the fixed motor cannot execute a qualified task-aware reference, compare a separately adapted executor.
 
-## 5. Milestone B — train a critical-scene generator/proposer
-
-### Model interface
-
-`p_theta(S, event, body_part | motion, goal, robot_geometry)`.
-
-The first useful model can be a temporal event encoder and an autoregressive head that emits:
-
-`[event index, obstacle type, relative position, orientation, dimensions, stop/no-scene]`.
-
-Keep metric values continuous initially. Use a mixture density or several proposals when one motion admits multiple placements. Sample in an event-relative frame, retain the transform to world coordinates, and preserve a route/global context stream. A local model must not block another part of the motion later.
-
-Use a shared encoder with task-family heads as an initial implementation. A small Transformer is a reasonable candidate once temporally aligned labels exist; compare it with a tuned temporal MLP/CNN and a nonlearned geometric optimizer. The architectural choice is secondary to whether the candidate support and supervision include useful scenes.
-
-### Training signals and sampling
-
-Separate heads/targets for:
-
-- reference and achieved-motion admissibility;
-- intervention-based behavioral relevance;
-- execution robustness over perturbations;
-- sparse, supported, plausible scene structure;
-- uncertainty and no-scene/reject decisions.
-
-A proposal score can combine these targets, but physical and geometry validity remain explicit checks. Do not fit a single “good scene” label that hides different failure reasons. More diverse negative data include reference collision, executable but irrelevant obstacles, proxy-only relevance, invalid physical alternatives, and unseen/out-of-support inputs. Unmeasured outcomes remain unknown rather than negative.
-
-Report raw proposal distributions before filtering and accepted distributions after filtering. Use active acquisition to choose candidates near uncertain decision boundaries and candidates that distinguish models; retain a randomized acquisition branch with a logged sampling law to audit selection bias.
-
-### Decisive evaluation
-
-Compare random placement + common filtering, root-conditioned generation, full-body geometry optimization, full continuous motion input, and token/event-conditioned proposal. Match geometry-query and execution budgets. Report verified critical pairs per 100 proposals, queries per accepted pair, source coverage, diversity, abstention and failure modes.
-
-Test source-motion groups and separately authored scene families that did not participate in fitting or repeated pilot inspection. Include shuffled event order/body-part inputs and an oracle-label bound. Improvements only on the generator's own ranking labels do not establish dataset utility.
-
-## 6. Milestone C — representations useful to both scene generation and BFM
-
-Use three connected representations and a separate motor interface. “Token” need not mean an integer at every layer.
-
-| Representation | Content | Primary use |
-| --- | --- | --- |
-| Motion tokens | Temporally ordered reconstructable body/trajectory features | Motion compression, event understanding, proposer conditioning, future-behavior targets |
-| Scene tokens | Metric geometry, object type/pose/size, observation state | Current scene conditioning and scene generation |
-| Motion–scene relation tokens/labels | Body part, critical interval, clearance/obstruction change, supported behavior alternatives | Training supervision, retrieval and behavior-choice alignment |
-| Motor latent/action targets | Tokens consumed by the frozen controller decoder, or correctly scaled teacher actions | Actual student control |
-
-**Mocap VQ IDs are not SONIC motor tokens.** Learn a verified adapter through teacher execution or predict the native motor latent directly. Pin the decoder and token schema; changing the teacher can invalidate latent targets even when dimensions match.
-
-### C1. Improve the motion tokenizer
-
-Preserve temporal order; the pilot's four-bin code histograms lose within-bin sequence order. Compare learned temporal VQ/RVQ with continuous embeddings at matched rate/capacity. Factorization into root, torso/pelvis, arms and legs is a hypothesis to test, not a required shared vocabulary.
-
-Train reconstruction of motion and velocity, key body surfaces, foot-contact estimates and clearance against independently sampled **training** probes. Test on frozen probe sets and qualified action-choice pairs. Measure false-safe/false-blocked decisions, surface clearance errors, action-choice separability, code rate and continuous-sidecar cost. Body-link MPJPE alone is insufficient.
-
-### C2. Represent scenes in 3D
-
-Start with object/set tokens containing shape, position, orientation and dimensions, plus exact collision geometry for verification. A single-valued heightmap cannot encode both floor and overhead clearance at the same xy location. Add sparse 3D occupancy/depth or point tokens for sensor students later.
-
-Distinguish padding, known empty space and unobserved space. Scene tokens at deployment derive from the available map or causal sensor history; they do not contain the generator's hidden target-motion ID, critical event annotation or future collision time.
-
-### C3. Learn useful relations, not source fingerprints
-
-Use geometry reconstruction, motion–scene compatibility and verified behavior-choice ranking before language alignment. Train with multiple scenes per motion, multiple valid motions per scene, and obstacle interventions that reverse behavior preference. Randomize irrelevant background independently.
-
-Relation labels from future reference motion belong in the training target/posterior view. If the deployed student predicts relations from current observations, those predictions must be generated causally and tested under their own errors.
-
-MotionGPT supports motion-language discrete-token modeling, but does not establish that our codes preserve traversal geometry or can drive a robot. The proposed token/geometry/control interfaces are new engineering choices for this project. [MotionGPT](https://arxiv.org/abs/2306.14795).
-
-## 7. Milestone D — BFM-style student with a ready tracking teacher
-
-### D1. Expert = continuation selection + tracking
-
-The tracking teacher receives a reference and produces motor actions. Initially, the task expert can be a registry of **qualified continuations for exact bound scene/goal requests**. This is sufficient for a finite training dataset. A planner/retrieval system with validated transitions expands that coverage later.
-
-At student-visited states, the task expert must choose a compatible continuation and query the tracker from that actual state with consistent history and reference alignment. An open-loop label from the original demonstration is not a same-state teacher label. If recovery cannot be supported, exclude the query from positive recovery imitation and retain its coverage/failure record.
-
-### D2. A direct context-conditioned student is the primary branch
-
-Public inputs: measured robot history, scene observations, goal/terminal requirements, and explicitly available optional controls or text.
-
-`z_t ~ p_phi(z | history, scene, goal, optional controls, availability masks)`
-
-`motor_token_t = A_phi(z_t, history)`
-
-`action_t = frozen_decoder(motor_token_t, history)`.
-
-A training-only posterior may additionally observe future reference and privileged simulator state. It guides learning but is absent from the exported policy. Keep a hierarchical variant—context predicts short motion tokens/references, tracker executes them—as a diagnostic comparator, not a prerequisite that forces every design through an extra planner.
-
-The BFM paper motivates masked online distillation and a conditional variational model; our known-map navigation interface and frozen-SONIC motor path are local adaptations. A deterministic masked imitation model is an essential simpler baseline. [BFM](https://arxiv.org/abs/2509.13780), [HOVER](https://arxiv.org/abs/2410.21229).
-
-### D3. Training order
-
-1. **Motor retention:** verify full/partial command behavior using actual teacher actions and a fixed decoder.
-2. **Scene/goal behavior:** introduce executed decision episodes and a deployment-matched goal+scene profile with no future reference. Retain motor rehearsal data and report retention separately.
-3. **Same-state online distillation:** acquire teacher actions and, when valid, recoveries at student-visited states. Record actual executed action, teacher query state and transition separately.
-4. **Task refinement:** after the interface and imitation baseline work, consider bounded RL or residual adaptation for genuine task failures.
-
-Availability masks should reflect meaningful control profiles. Hiding an instruction is not the same as instructing zero velocity; hiding obstacles changes observability and cannot be treated as known empty space. When public inputs allow several valid behaviors, use coherent behavior modes, sequence likelihood or task objectives rather than forcing one arbitrary reference via squared action error.
-
-A useful starting loss has admitted-target action imitation, compatible motor-token imitation, posterior/prior regularization and motor-retention terms, plus optional verified relation/future targets. Each loss needs its own evidence mask and denominator. Geometric examples can train representations; they do not acquire executed-action supervision by being placed beside a scene.
-
-### D4. Reuse existing local interfaces
-
-Under `/home/linjiw/motion2scene-training/vendor/sonic/gear_sonic/research/scene_distillation/`:
-
-| Existing module inspected | Reuse and required extension |
-| --- | --- |
-| `context_token.py` / `ContextTokenFoundation` | Existing context-conditioned prior/posterior and frozen decoder path; add tested representation adapters and supported episode views |
-| `observations.py` | Known-map primitive scene encoding; enforce full-dimension conversion from our half-extent boxes and the registered robot/world frame conventions |
-| `scene_teacher.py` / `QualifiedSceneRegistry` | Explicitly binds teacher, task and executed continuation; use for the first finite task expert |
-| `scene_qualification.py` | Existing achieved-motion/contact/goal scoring interface; version and calibrate thresholds rather than assuming old values fit new motions |
-| `collect.py`, `online_motor.py`, navigation query modules | Candidate same-state label/rollout integration points; verify history, clocks and runtime behavior before claiming compatibility |
-
-Code presence is not proof that these modules have already been integrated with the new mocap bank or that any current checkpoint is ready for the selected tasks. The bridge requires an explicit model/joint/frame/action contract and native runtime tests.
-
-Store canonical chronological episodes with separate `actor_view`, `teacher_view` and `target_view`. Preserve all attempts and independent support fields for geometry, motor execution, scene compatibility, task success and recovery. Derive training masks instead of deleting failed time steps and accidentally joining nonadjacent frames.
-
-## 8. Milestone E — text-to-navigation
-
-First show reliable goal+scene traversal with the student. Then add language as a grounded task interface: goal identification, behavior constraints and optional route preferences. For the first language study, object identifiers and goals can come from a known semantic map; unknown-object visual grounding is a separate extension.
-
-Example:
-
-> “Go to the doorway, pass under the beam, and stop beyond it.”
-
-The text encoder provides intent/constraints; current scene and robot state determine the beam position, actual clearance and motor behavior. The student replans from observations as it moves. A prerecorded text-generated motion played through a tracker is not sufficient evidence for text-to-navigation.
-
-Pair several paraphrases with the same task, the same instruction with different layouts, and different instructions with the same layout. Do not train a mapping where each sentence uniquely identifies one source clip. Begin with grounded templates; add richer text only when the schema and task outcomes are stable.
-
-Evaluate unseen paraphrases, novel instruction compositions, altered layouts, removed/relocated obstacles, and changing goals. Measure goal/instruction completion, prohibited contacts, falls, timeouts, path/effort cost and motor retention. Evaluate arbitrary acceptable task solutions rather than requiring exact reproduction of a hidden mocap reference.
-
-## 9. Final utility experiment: does the data engine help?
-
-Freeze the downstream learner, teacher/backend, training steps, sensor contract and primary success scorer. Compare:
-
-1. Motion with goal relabeling only.
-2. Random geometrically admissible scenes.
-3. Root-conditioned hindsight scenes.
-4. Verified full-body critical scenes.
-5. A scene-first expert-data baseline.
-
-Report both matched-example and matched-acquisition-cost comparisons where possible. Gains may come from more teacher computation, more useful decision diversity, or a changed curriculum; disclose those resources.
-
-Primary tests sample scene/start/goal **before** choosing any motion. Include task families and dimensions not tuned during proposal fitting, as well as environment interventions. Bootstrap at scene/source-group level and separate training-seed variability. Count collisions, falls, timeouts and rejected/unsupported tasks with explicit denominators.
-
-Supportable success statement:
-
-> Under a fixed learner and teacher budget, the verified critical-scene dataset produces more useful behavior choices and improves whole-body task completion on independently constructed scenes.
-
-Whether this statement is true remains to be measured.
-
-## 10. The immediate next packet
-
-**Next deliverable: `critical_decisions_v1`, plus the BFM episode/token interface.**
-
-1. Inventory teacher checkpoints and choose one fixed backend for qualification; verify its runtime contract with the new G1 bank.
-2. Audit source ancestry and retrieve candidate pairs in two teacher-supported families.
-3. Export common-entry motion pairs, primitive-scene sweeps and the four-condition intervention tasks.
-4. Execute the bounded 20-pair/480-attempt maximum pilot with all failures retained; inspect true behavior-relevance support.
-5. Freeze actor/teacher/target schemas, scene/motion/motor token identities and training masks.
-6. Train a criticality-aware proposer only on supported targets; use geometric/unknown examples for their appropriate auxiliary objectives.
-
-The representation and dataset interfaces can be developed while execution qualification proceeds. Scaling the generator, BFM navigation training and text grounding depend on the evidence they require; they need not be collapsed into one monolithic experiment.
+The practical next result should connect a representation choice to a complete, observable traversal decision. Vision and language remain extensions of that contract, rather than reasons to enlarge an unvalidated tokenizer.

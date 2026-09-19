@@ -54,6 +54,12 @@ def main():
     for key, value in expected.items():
         if mechanism[key] != value:
             raise ValueError(f"Evidence snapshot changed: review page prose for {key}")
+    acquisition = json.loads((ROOT / "results/carrier_scene.json").read_text())
+    canonical = json.loads((ROOT / "results/critical_dataset.json").read_text())
+    if acquisition["original_tuck_geometry"]["admitted"] != 0 or acquisition["original_tuck_geometry"]["candidates"] != 145:
+        raise ValueError("Acquisition evidence changed: review the research narrative")
+    if canonical["pairs_verified_all_three_panels"] != 3 or canonical["source_groups"] != 3:
+        raise ValueError("Canonical coverage changed: review the research narrative")
     if OUTPUT.is_symlink():
         raise ValueError("Refusing a symlinked build directory")
     if OUTPUT.exists():
@@ -74,7 +80,7 @@ def main():
                            "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
     (OUTPUT / "data/provenance.json").write_text(json.dumps({
         "evidence_date": "2026-09-16", "mechanism_evidence_date": "2026-09-15",
-        "page_date": "2026-09-16",
+        "page_date": "2026-09-18", "research_review_date": "2026-09-18",
         "scope": "Development-only aggregate evidence; no raw motion or controller assets.",
         "files": provenance,
     }, indent=2) + "\n")
