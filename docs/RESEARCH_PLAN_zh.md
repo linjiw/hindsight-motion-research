@@ -84,7 +84,11 @@ LLM / VLM：目标、对象指代、约束、终止要求
 
 **第三行熟悉 known-map selector 子面板也已完成：continuous 2/2，Linear29 2/2。** 相邻项目已提供 nominal/duck 两候选库和 public-state selector，本轮复用它们，固定 continuous planner bank，只改变发给 motor 的 q/qdot。新 continuous controls 与相邻原结果完全一致，两对 reset/history/dynamics/RNG 完全一致；全部物理 scorer 与 1,451 个实测状态上的 reference/index replay 审计通过。四次 native attempts、1,451 control steps、5,804 physics frames，零训练。见[9 月 19 日结果与同步](SELECTION_CODEC_RESULTS_zh.md)。
 
-**研究决定：下一步冻结 controller/codec 做场景变化，尚无依据转向更大 tokenizer。** 第三行不再给 selector 正确 clip/phase/在线 teacher future，但只有一个熟悉 ancestry、两个已知场景及示范初始化；它选择完整候选并重定时，不是在线跨动作族拼接。首先拟议相对当前 beam 的前/后各 5 cm 与一个共同 clear control，共六个 primary cases，须单独登记。完整 continuous planner bank 的成本保留，不能把本轮成功说成系统压缩收益。之后分别扩展来态/速度、梁尺寸、扰动和感知，保留 continuous 失败以定位支持问题。
+**场景变化已经推进，但只完成六格中的两格。** 相邻项目 `5184085c` 的新 screen 已证实中等位移/转角可执行，而低梁与加远 goal 失败；据此在新 outcome 前把原拟 ±5 cm/shared-clear 六格改为 earlier200/lower100/farther600 × 两种表示。[新登记结果](SELECTION_BOUNDARY_RESULTS_zh.md)：前移 20 cm 的 beam，两表示均成功，359 / 360 control steps、零禁止接触；第三格 300 s 资源等待到期，另外四格未执行，queue 已关闭。全部 719 新状态的 reference/index 与两次物理 scorer 精确复现。不能把相邻的失败复制为本轮 Linear29 结果。
+
+**下一优先项仍是补齐 continuous-versus-Linear29：另存 admission，继承四个未运行格，不重跑已完成格。** 同时按[距离响应门槛](DISTANCE_RESPONSE_GATE_zh.md)准备 exit/stop segment 与接缝支持，暂不扩大 tokenizer。事后离线诊断在这 719 个共同历史 state 上，把 goal 加远 60 cm 后两种表示都没有任何 reference、候选或 source-index 改变；这定位了当前接口的距离响应缺口，未完成 farther-goal 物理验证。更低梁需要新 motion coverage/替代路线及单独的 blocked-state 资格。
+
+第三行不再给 selector 正确 clip/phase/在线 teacher future，但仍只有一个熟悉 ancestry 与示范初始化；它选择完整候选并重定时，不是在线跨动作族拼接。完整 continuous planner bank 的成本保留，不能把成功说成系统压缩收益。后续来态/速度、梁尺寸、扰动和感知继续分轴；当前选择过的 screen 只属 development，不升格 held-out。
 
 对齐相邻项目的 task-aware composer：按当前位姿和场景选取并衔接 approach/duck/exit/stop。先用 continuous 与 Linear29 做[两种表示×三种执行条件](RESEARCH_GUIDANCE_20260918_zh.md)矩阵：完整正确参考、真实相同来态的合格后续 chunk、因果 composer 从 reset 闭环。Native 先做同参考/同历史接口 parity，后作独立路线对照。
 

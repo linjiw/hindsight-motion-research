@@ -49,6 +49,8 @@ Linear29 采用冻结 12-bit scale，通过 joint name 转到 native 顺序，�
 
 ## 下一项研究
 
+**同日后续更新：以下为当时暂拟计划，已由[场景变化登记与结果](SELECTION_BOUNDARY_RESULTS_zh.md)替代。** 相邻项目新的 ±20 cm / 低梁 / 远 goal screen 改变了最有信息量的条件选择。新六格中 shifted-beam 两格均通过，另外四格资源延期；完成比较及距离响应机制的优先级见新报告。
+
 先冻结当前 controller 和 codec，测试场景变化，暂不训练更复杂 tokenizer。第一轴建议仅改变横梁沿行进方向的位置：相对本轮 beam 的前/后各 5 cm，另保留一个共同 clear control；两表示合计六个 primary cases，须新登记后执行。保留全部固定场景，不按某方法结果筛掉失败；共用 clear 不能计成两项独立任务。先完整公开已知地图，新的 incoming distance/速度、梁高度/长度、扰动和感知延迟另作后续条件。
 
 若两种表示一起失效，先定位完整库动作与障碍的相对时序、支持覆盖或 blocked/replan fallback；若 continuous 成功而 Linear29 失败，再区分 clipping 与低频重建。新放置的开发场景也不自动构成 held-out 泛化。在 varied complete-task support 建立前，不做学生拟合、LLM 物理扩展或跨族拼接 sweep。

@@ -19,8 +19,9 @@ RESULTS = [
     "foot_reconstruction", "critical_dataset", "mechanism_effects",
     "carrier_scene", "llm_interface", "complete_task", "continuation", "continuation_admission02",
     "selection_codec", "selection_codec_replay",
+    "selection_boundary", "selection_boundary_goal",
 ]
-FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png"]
+FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png", "selection_boundary.png"]
 
 
 class PageLinks(HTMLParser):
@@ -100,6 +101,17 @@ def main():
             or sum(r["states"] for r in replay["rows"]) != 1451
             or not all(r["issued_reference_exact"] and r["source_indices_exact"] for r in replay["rows"])):
         raise ValueError("Selection-codec evidence changed: review the familiar-controller narrative")
+    boundary = json.loads((ROOT / "results/selection_boundary.json").read_text())
+    goal = json.loads((ROOT / "results/selection_boundary_goal.json").read_text())
+    if (boundary["execution_state"] != "resource_deferred" or boundary["scheduled_cases"] != 6
+            or boundary["native_attempts"] != 2 or boundary["unrun"] != 4
+            or boundary["control_steps"] != 719 or boundary["physics_samples"] != 2876
+            or sum(r.get("success", False) for r in boundary["rows"]) != 2
+            or sum(r["states"] for r in boundary["reference_replay"]) != 719
+            or sum(r["recorded_states"] for r in goal["rows"]) != 719
+            or any(r["changed_candidate_rows"] or r["changed_index_rows"]
+                   or any(r["changed_reference_rows"].values()) for r in goal["rows"])):
+        raise ValueError("Boundary evidence changed: review completed/unrun/offline distinctions")
     if OUTPUT.is_symlink():
         raise ValueError("Refusing a symlinked build directory")
     if OUTPUT.exists():
@@ -122,6 +134,8 @@ def main():
         "evidence_date": "2026-09-16", "mechanism_evidence_date": "2026-09-15",
         "complete_task_evidence_date": "2026-09-18", "llm_interface_evidence_date": "2026-09-18", "page_date": "2026-09-19", "research_review_date": "2026-09-18",
         "selection_codec_evidence_date": "2026-09-19", "selection_codec_native_attempts": 4,
+        "selection_boundary_evidence_date": "2026-09-19",
+        "selection_boundary_native_attempts": 2, "selection_boundary_unrun": 4,
         "continuation_registration_date": "2026-09-18", "continuation_native_attempts": 16,
         "continuation_evidence_date": "2026-09-18", "continuation_admission": "02",
         "continuation_original_deferred_attempts": 0, "continuation_qualified_pairs": 8,

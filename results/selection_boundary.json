@@ -1,0 +1,331 @@
+{
+  "schema": "hindsight_selection_boundary_results_v1",
+  "date": "2026-09-19",
+  "scope": "Development comparison of continuous and frozen Linear29 motor references on one supported shift and two known controller failures",
+  "development_only": true,
+  "heldout": false,
+  "source_ancestries": 1,
+  "seed": 96161,
+  "scheduled_cases": 6,
+  "native_attempts": 2,
+  "completed_episodes": 2,
+  "infrastructure_failures": 0,
+  "unrun": 4,
+  "execution_state": "resource_deferred",
+  "control_steps": 719,
+  "physics_samples": 2876,
+  "native_wall_seconds": 66.62144605099456,
+  "retries": 0,
+  "training_steps": 0,
+  "historical_main_attempts_consumed": 0,
+  "rows": [
+    {
+      "case_id": "earlier200-beam_continuous",
+      "condition": "earlier200-beam",
+      "method": "continuous",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 359,
+      "physics_samples": 1436,
+      "completion_time_s": 7.18,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "recovered": true,
+      "ordered_hold_ticks": 50,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_m": 0.01254167547593726,
+      "final_speed_mps": 0.04423133283853531,
+      "independent_score_exact": true,
+      "selected_candidate": "local_duck",
+      "replans": 71,
+      "retimed": 21,
+      "support_rejections": 18,
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "parent_parity": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "earlier200-beam_linear29",
+      "condition": "earlier200-beam",
+      "method": "linear29",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 360,
+      "physics_samples": 1440,
+      "completion_time_s": 7.2,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "recovered": true,
+      "ordered_hold_ticks": 50,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_m": 0.06845237406206722,
+      "final_speed_mps": 0.020040517672896385,
+      "independent_score_exact": true,
+      "selected_candidate": "local_duck",
+      "replans": 71,
+      "retimed": 25,
+      "support_rejections": 19,
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "pair_audit": {
+        "max_errors": {
+          "initial-state.npz:root_state_w": 0.0,
+          "initial-state.npz:joint_pos": 0.0,
+          "initial-state.npz:joint_vel": 0.0,
+          "initial-state.npz:current_action": 0.0,
+          "initial-state.npz:previous_action": 0.0,
+          "initial-state.npz:raw_action": 0.0,
+          "initial-state.npz:processed_action": 0.0,
+          "initial-state.npz:proprio": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0
+        },
+        "torch_rng_matched": true,
+        "matched": true,
+        "all_rng_matched": true,
+        "same_initial_choice": true
+      }
+    },
+    {
+      "case_id": "lower100-beam_continuous",
+      "condition": "lower100-beam",
+      "method": "continuous",
+      "source_clip": "00976",
+      "status": "unrun"
+    },
+    {
+      "case_id": "lower100-beam_linear29",
+      "condition": "lower100-beam",
+      "method": "linear29",
+      "source_clip": "00976",
+      "status": "unrun"
+    },
+    {
+      "case_id": "farther600-beam_continuous",
+      "condition": "farther600-beam",
+      "method": "continuous",
+      "source_clip": "00976",
+      "status": "unrun"
+    },
+    {
+      "case_id": "farther600-beam_linear29",
+      "condition": "farther600-beam",
+      "method": "linear29",
+      "source_clip": "00976",
+      "status": "unrun"
+    }
+  ],
+  "reference_replay": [
+    {
+      "case_id": "earlier200-beam_continuous",
+      "states": 359,
+      "issued_reference_exact": true,
+      "source_indices_exact": true,
+      "selector_counters_exact": true,
+      "dense_planned_joint_change_max_rad": 0.0,
+      "dense_planned_velocity_change_max_rad_s": 0.0
+    },
+    {
+      "case_id": "earlier200-beam_linear29",
+      "states": 360,
+      "issued_reference_exact": true,
+      "source_indices_exact": true,
+      "selector_counters_exact": true,
+      "dense_planned_joint_change_max_rad": 0.4197772145271301,
+      "dense_planned_velocity_change_max_rad_s": 5.446971893310547
+    }
+  ],
+  "offline_parent_replay": {
+    "rows": [
+      {
+        "condition": "earlier200-beam",
+        "states": 359,
+        "issued_reference_exact": true,
+        "source_indices_exact": true,
+        "selector_counters_exact": true,
+        "dense_planned_joint_change_max_rad": 0.0,
+        "dense_planned_velocity_change_max_rad_s": 0.0
+      },
+      {
+        "condition": "lower100-beam",
+        "states": 73,
+        "issued_reference_exact": true,
+        "source_indices_exact": true,
+        "selector_counters_exact": true,
+        "dense_planned_joint_change_max_rad": 0.0,
+        "dense_planned_velocity_change_max_rad_s": 0.0
+      },
+      {
+        "condition": "farther600-beam",
+        "states": 500,
+        "issued_reference_exact": true,
+        "source_indices_exact": true,
+        "selector_counters_exact": true,
+        "dense_planned_joint_change_max_rad": 0.0,
+        "dense_planned_velocity_change_max_rad_s": 0.0
+      }
+    ],
+    "native_attempts": 0
+  },
+  "provenance": [
+    {
+      "path": "runs/selection_boundary_20260919_v1/registration.json",
+      "sha256": "abba499829b35c4f0930827ac3a55127d41f5b75a04431d4153e71f8a1e150f0"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/plan.json",
+      "sha256": "e5c0806bdd9e7a6520828f30b66d77ff5e1fe08200208c4a69c8aa863e9fc79e"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/execution-start.json",
+      "sha256": "8d7d237567ad99f784d88431e81e3b918eb809fc1a74513fd681544ac01a82d0"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/offline-audit.json",
+      "sha256": "e517fcb8511e1ce4eabe293a2e577df5784dee6e95ebe0cc09edb44d20a2a9b4"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/launch.json",
+      "sha256": "c796a9e757c4e0c95bcad857f4cb04637b30b00c913d0932912530cde2968238"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/exit.json",
+      "sha256": "5c81527af920ae537fc6de79cd644ec9ab6a63178d1227f1d6ddf43470dfad9b"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/resource_admission.json",
+      "sha256": "87c78f9f4bd9b870f2fdc9eb3667352928972729c0146d1a1b68c06ae229f08c"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/parent-parity.json",
+      "sha256": "082981e3f2f7555f5ef4a0d5a6f7b09c7b09121b82fc446777edf7271fca4985"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task/task-result.json",
+      "sha256": "b7fd4092fa8e4bf71ae074b70d633e7ca6762571c98d1b06152757e572919177"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task/selection.json",
+      "sha256": "fd8087d709a6efe18969986622a4c93e00ae2e79a4d00ed8d761150c7d68447d"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task/selection.npz",
+      "sha256": "263610c5a431742fd9dd1b378e8c7df3672bc82510e78a10d3f0725fa3d506f5"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task/trace.npz",
+      "sha256": "d3addbe889753f0e005216ea5a33bff4eadec60254a392cbf23fbd6022db0262"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task/robot-poses.npz",
+      "sha256": "6d56d6a5b914fd4485fb0c0a009a654935051947cc30df73eaa62e9e5c658a9a"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task/pre-action-poses.npz",
+      "sha256": "d4e69923c86c5be4fdfe571360a71209bfaa0d980a3329578f20f9dbb7cce4f3"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task/codec-entry.json",
+      "sha256": "8c3c0f6a7ba98af97e4d90aabf9ce8e569b16d5fecc2bcd679adcc25ca75bb12"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/launch.json",
+      "sha256": "f4a4e646d0f627f65ee5f8ccd5ac296dbbb20bedce6533876244064dfb5e905c"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/exit.json",
+      "sha256": "88665091ab5e5f6cb192a663af6c8c26fa04f30ca09eaf94eaf61bd0da090ddb"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/resource_admission.json",
+      "sha256": "d7f47840e065b34d42ef207f33b9554f015935d278b3d2b005d7b5c23c2bf17f"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/pair-audit.json",
+      "sha256": "a67b6b6b70034d9fdc7ff4b309e6ef0a40d7de5e426d4adb44cb5f43acfaace8"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task/task-result.json",
+      "sha256": "87824844b675cbd55bfc8bd43f613a142faf446d6c5ad693fa704a8e1248d3dd"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task/selection.json",
+      "sha256": "5367d77f7dac011e68788570837bcb6039dcbda1a5fea66b89035d9dd455118d"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task/selection.npz",
+      "sha256": "180141c83d0c116fd23a17b0af9e2c9ce8c9928ba69badbd4de7f789c5506dbe"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task/trace.npz",
+      "sha256": "b9edb492e5bf2cf78ca8979f5c1889536dde69a70a78720b69f5233ad893fccf"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task/robot-poses.npz",
+      "sha256": "219e2f704b03ef6290dba1a53f4d7050af7d061605f186945fb4e0207a4ae254"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task/pre-action-poses.npz",
+      "sha256": "fed53b1bda0d359bd0efb645fc1c325d7809c9be1bd585d5e6bb3c1773ff3fc4"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task/codec-entry.json",
+      "sha256": "84030c854067ec66b5585ae9c068246b528ceadadabfa3a8722863f5b8dd18a8"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/lower100-beam_continuous/resource_deferred.json",
+      "sha256": "f761f2ef140db79eafe88501e9355c0c9ea616bae6002d27927916d606bb9323"
+    }
+  ],
+  "analysis_source_sha256": "4eedb2b2b795fef09e74551ad01d53a2c0ee36df1ce6246c77e39e634c67b3d8"
+}

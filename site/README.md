@@ -75,3 +75,10 @@ audit and `selection_codec.png`. Four new physical attempts, 1,451 control steps
 retains its continuous bank and uses a known map and simulator localization.
 This is a motor-reference intervention, not generalization or total compression.
 Keep this four-case ledger separate from the sibling trials and prior pilots.
+
+The subsequent `selection_boundary.json` / `selection_boundary_goal.json` and
+`selection_boundary.png` retain the partial six-case screen explicitly: two
+completed, four unrun after resource deferral, 719 control steps. The goal-only
+reference diagnostic is offline and uses those completed histories; it must not
+be displayed as farther-goal execution. New raw motion and simulation records
+remain excluded from the publication allowlist.

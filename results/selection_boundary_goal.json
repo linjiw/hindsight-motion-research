@@ -1,0 +1,101 @@
+{
+  "schema": "hindsight_boundary_goal_response_v1",
+  "date": "2026-09-19",
+  "analysis": "Exploratory after the registered native results; original and farther goal on identical actual histories and map",
+  "scope": "Reference response only. Alternate-goal physics and alternate-method physics on these same states were not executed.",
+  "native_attempts": 0,
+  "teacher_action_queries": 0,
+  "training_steps": 0,
+  "rows": [
+    {
+      "history": "earlier200-beam_continuous",
+      "recorded_states": 359,
+      "methods_tested": [
+        "continuous",
+        "linear29"
+      ],
+      "changed_candidate_rows": 0,
+      "changed_index_rows": 0,
+      "changed_reference_rows": {
+        "continuous": 0,
+        "linear29": 0
+      },
+      "reference_max_abs_difference": {
+        "continuous": 0.0,
+        "linear29": 0.0
+      },
+      "actual_method_actual_goal_reference_exact": true,
+      "goal_displacement_m": 0.6000000000000001
+    },
+    {
+      "history": "earlier200-beam_linear29",
+      "recorded_states": 360,
+      "methods_tested": [
+        "continuous",
+        "linear29"
+      ],
+      "changed_candidate_rows": 0,
+      "changed_index_rows": 0,
+      "changed_reference_rows": {
+        "continuous": 0,
+        "linear29": 0
+      },
+      "reference_max_abs_difference": {
+        "continuous": 0.0,
+        "linear29": 0.0
+      },
+      "actual_method_actual_goal_reference_exact": true,
+      "goal_displacement_m": 0.6000000000000001
+    }
+  ],
+  "provenance": [
+    {
+      "path": "runs/selection_boundary_20260919_v1/aggregate.json",
+      "sha256": "82d8a2dab04cefb7e3aeca86b6c2ae0d2e46f372ae6f806d40df6b44017febf6"
+    },
+    {
+      "path": "scripts/audit_boundary_goal_response.py",
+      "sha256": "165535f927c5e773a11571252dfa399945616efd253bae09cd39cbb35efa1fae"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task.json",
+      "sha256": "fa584319bcf5369e03d54ad4917fc75eb01c83099cf73c4be24da8bb30f7f66b"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/farther600-beam_continuous/task.json",
+      "sha256": "addc1f9fd4fce1a4e456a33efd52eb09c71c64fd581db952ae5b8901a8b241fb"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/config.json",
+      "sha256": "48204e9a35f84172bcacb47094be1a74cf314b87d9e85ea56e57044e547699e8"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task.json",
+      "sha256": "5c0e3ef49d593408caea99d527798f2f74741343de33592e1b7a6a41b58aa2c0"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task/selection.npz",
+      "sha256": "263610c5a431742fd9dd1b378e8c7df3672bc82510e78a10d3f0725fa3d506f5"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_continuous/task/pre-action-poses.npz",
+      "sha256": "d4e69923c86c5be4fdfe571360a71209bfaa0d980a3329578f20f9dbb7cce4f3"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/config.json",
+      "sha256": "1156db2ba66e326ceecf7ded79b1773cd62fe8bbe20c138c2b0d9d136ca79e37"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task.json",
+      "sha256": "625012a3df8065973200f027c73edd253f714e5f8369526838330eedb20ad2b9"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task/selection.npz",
+      "sha256": "180141c83d0c116fd23a17b0af9e2c9ce8c9928ba69badbd4de7f789c5506dbe"
+    },
+    {
+      "path": "runs/selection_boundary_20260919_v1/episodes/earlier200-beam_linear29/task/pre-action-poses.npz",
+      "sha256": "fed53b1bda0d359bd0efb645fc1c325d7809c9be1bd585d5e6bb3c1773ff3fc4"
+    }
+  ]
+}

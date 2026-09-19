@@ -29,7 +29,7 @@
 | --- | --- | --- | --- |
 | 正确完整参考，从 reset 执行 | 后续 pilot 4/4 | 同任务配对 4/4；两帧 reset anchor | 任务本身是否受支持，codec 是否损害执行 |
 | 相同真实来态/历史，提供合格后续 chunk | 同相位、无扰动子面板 8/8 | 同真实 prefix 配对 8/8 | 当前只资格验证同相位 continuation；新选择与恢复待测 |
-| reset 开始，因果 composer 选择并重规划 | 熟悉 known-map selector 子面板 2/2 | 同 continuous planner bank 的 motor-reference 处理 2/2 | 完整候选选择/重定时已测；新场景与跨族拼接待测 |
+| reset 开始，因果 composer 选择并重规划 | 熟悉 known-map selector 2/2；新 shift 1/1 | 同 continuous planner bank：熟悉 2/2；新 shift 1/1 | 新六格只完成两格，四格资源延期；跨族拼接待测 |
 
 后续执行见[完整任务报告](COMPLETE_TASK_RESULTS_zh.md)：既有 goal050 profile、两 clip/clear+beam、有完整参考辅助。原始用户指导逐字副本未改动。
 
@@ -48,6 +48,8 @@ Native 先单独通过同参考、同完整 proprio history 的 encoder→decode
 场景配对退化优先于孤立均值；训练 seed、场景簇和来源簇分别处理。先用 pilot 估计方差，再登记主实验量。未显著改善不证明等价；简单方法足够的判断需要预先定义可接受差距与成本。
 
 ## 方法选择与停止条件
+
+最新[场景变化报告](SELECTION_BOUNDARY_RESULTS_zh.md)保留两格成功与四格 unrun，不用相邻失败替代未测 codec outcome。719 个新共同历史 state 的 goal-only replay 在两种表示下均没有距离响应；这是离线诊断。先以独立 admission 完成剩余四格，再按[exit/stop 门槛](DISTANCE_RESPONSE_GATE_zh.md)补完整控制支持，暂不把这项缺口交给更大 tokenizer 或 LLM。
 
 若确认表示瓶颈，首个学习候选为**全身联合、来态条件化的连续 temporal latent**。所有方法共享坐标变换、姿态锚定、速度推导和 committed-prefix 规则；同架构普通重建与执行相关训练对照。再与等总预算的自适应 scalar/spline 比较，允许简单方法胜出。量化放在连续学习表示获得实际收益之后。
 

@@ -124,3 +124,13 @@ Retain dense source indices through commitments: a new-tail scalar cursor can
 mislabel the current committed frame. The planner still stores full continuous
 motions, root, collision and support metadata, and the motor receives decoded
 float references. This is no measured system-memory or wire-rate reduction.
+
+The [scene-variation follow-up](SELECTION_BOUNDARY_RESULTS_zh.md) adds one successful
+20 cm shifted-beam pair, with four other registered cases unrun after resource
+deferral. On its 719 actual states, changing only requested goal distance by
+60 cm leaves both continuous and Linear29 references unchanged. That offline
+result makes distance response an explicit interface obligation: a farther
+request must produce a coherent supported continuation when needed, and actual
+completion must be measured against that request. A valid ID or intact sidecar
+does not supply missing exit/stop behavior. The [next gate](DISTANCE_RESPONSE_GATE_zh.md)
+separates reference responsiveness, transition support and complete execution.
