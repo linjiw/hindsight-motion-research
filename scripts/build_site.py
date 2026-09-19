@@ -18,8 +18,9 @@ RESULTS = [
     "token_mechanism", "decoder_execution", "mechanism_geometry",
     "foot_reconstruction", "critical_dataset", "mechanism_effects",
     "carrier_scene", "llm_interface", "complete_task", "continuation", "continuation_admission02",
+    "selection_codec", "selection_codec_replay",
 ]
-FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png"]
+FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png"]
 
 
 class PageLinks(HTMLParser):
@@ -91,6 +92,14 @@ def main():
                    or r["max_obstacle_force_n"] != 0 or r["max_nonfoot_floor_force_n"] != 0
                    for r in admitted["rows"])):
         raise ValueError("Continuation admission 02 changed: review the physical result narrative")
+    selection = json.loads((ROOT / "results/selection_codec.json").read_text())
+    replay = json.loads((ROOT / "results/selection_codec_replay.json").read_text())
+    if (selection["native_attempts"] != 4 or selection["control_steps"] != 1451
+            or selection["physics_samples"] != 5804 or selection["unrun"] != 0
+            or not all(r["success"] and r["independent_score_exact"] for r in selection["rows"])
+            or sum(r["states"] for r in replay["rows"]) != 1451
+            or not all(r["issued_reference_exact"] and r["source_indices_exact"] for r in replay["rows"])):
+        raise ValueError("Selection-codec evidence changed: review the familiar-controller narrative")
     if OUTPUT.is_symlink():
         raise ValueError("Refusing a symlinked build directory")
     if OUTPUT.exists():
@@ -111,7 +120,8 @@ def main():
                            "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
     (OUTPUT / "data/provenance.json").write_text(json.dumps({
         "evidence_date": "2026-09-16", "mechanism_evidence_date": "2026-09-15",
-        "complete_task_evidence_date": "2026-09-18", "llm_interface_evidence_date": "2026-09-18", "page_date": "2026-09-18", "research_review_date": "2026-09-18",
+        "complete_task_evidence_date": "2026-09-18", "llm_interface_evidence_date": "2026-09-18", "page_date": "2026-09-19", "research_review_date": "2026-09-18",
+        "selection_codec_evidence_date": "2026-09-19", "selection_codec_native_attempts": 4,
         "continuation_registration_date": "2026-09-18", "continuation_native_attempts": 16,
         "continuation_evidence_date": "2026-09-18", "continuation_admission": "02",
         "continuation_original_deferred_attempts": 0, "continuation_qualified_pairs": 8,

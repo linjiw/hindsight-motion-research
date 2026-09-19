@@ -16,8 +16,11 @@ The review itself ran no experiments. Its subsequent complete-reference pilot
 passed 4/4 per method. The [matched-state continuation study](docs/CONTINUATION_ADMISSION02_RESULTS_zh.md)
 now passes **8/8 per method**, with eight exactly matched handoff pairs: 16 native
 attempts, 4,136 control steps, zero training. This tests supplied, same-phase
-continuations on two development clips. The next step is a measured-state motion
-selector and actual selected transitions; see the [composer sync and work plan](docs/COMPOSER_SYNC_20260918.md).
+continuations on two development clips. The September 19 [selected-reference pilot](docs/SELECTION_CODEC_RESULTS_zh.md)
+now passes **2/2 per method from reset**, using the same measured-state selector
+and continuous planning bank. Four new attempts / 1,451 control steps, one familiar
+ancestry, known map and zero training. The next step is fixed-controller scene
+variation; generalization and cross-family composition remain untested.
 The earlier zero-launch resource deferral remains a separate immutable record.
 
 The latest acquisition check found **0/145** admissible portals for the qualified
@@ -47,7 +50,8 @@ The historical mechanism study separates temporal smoothing from leg-reconstruct
 - [Critical scenes → BFM → text-to-navigation roadmap](docs/ROADMAP_SCENE_BFM_TEXT2NAV.md)
 - [Complete-task reference pilot: continuous 4/4, Linear29 4/4](docs/COMPLETE_TASK_RESULTS_zh.md) — [protocol](docs/COMPLETE_TASK_PROTOCOL.md)
 - [Matched-state continuation: continuous 8/8, Linear29 8/8](docs/CONTINUATION_ADMISSION02_RESULTS_zh.md) — [protocol](docs/CONTINUATION_PROTOCOL.md) · [admission](docs/CONTINUATION_ADMISSION_02.md)
-- [Composer interface sync and next transition work](docs/COMPOSER_SYNC_20260918.md)
+- [Selected-reference controller: continuous 2/2, Linear29 2/2](docs/SELECTION_CODEC_RESULTS_zh.md) — [protocol](docs/SELECTION_CODEC_PROTOCOL.md)
+- [Earlier composer interface sync](docs/COMPOSER_SYNC_20260918.md)
 - [Adopted research guidance (中文)](docs/RESEARCH_GUIDANCE_20260918_zh.md)
 - [Small-LLM interface protocol](docs/LLM_INTERFACE_PROTOCOL_zh.md) and [first CPU probe results](docs/LLM_INTERFACE_RESULTS_zh.md)
 - [Latest mechanism results (中文)](docs/TOKEN_MECHANISM_RESULTS_zh.md) and [protocol](docs/TOKEN_MECHANISM_PROTOCOL.md)

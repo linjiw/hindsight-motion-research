@@ -1,5 +1,7 @@
 # Composer interface sync and the next representation question
 
+Follow-up: the sibling built the bank and public selector; our [September 19 comparison](SELECTION_CODEC_RESULTS_zh.md) now passes 2/2 per representation from reset. This dated sync retains the earlier state.
+
 September 18, 2026, local research date. This is a read-only supplement to the
 [initial review](REVIEW_SYNC_20260918.md). The current repository began at
 `e05c011693f5be2d499fb85bd4f0e6d215071a0e`; fetching origin found no incoming

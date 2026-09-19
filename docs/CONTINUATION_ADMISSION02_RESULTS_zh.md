@@ -1,5 +1,7 @@
 # 实际来态 continuation：continuous 与 Linear29 均为 8/8
 
+后续独立结果：[已知地图下 public selector 的 continuous/Linear29 各 2/2](SELECTION_CODEC_RESULTS_zh.md)。下文保留本次 handoff 的原范围与账本。
+
 2026-09-18（本地研究日期）。[原协议](CONTINUATION_PROTOCOL.md)的第二次资源 admission 已完成：**16 次 native attempts、16 个完整 episode、8 个合格配对；continuous 8/8，Linear29 8/8**。零重试、零基础设施失败、零训练。独立账本为 **4,136 control steps / 16,544 physics contact frames**，包含所有共同 prefix；旧 168-attempt 余额不变。
 
 这是 2×3 矩阵第二行的**同相位、无扰动子面板**。实验执行真实 prefix，保留完整历史后替换参考，但仍提供正确 phase、root 和未来。它不是选择新 chunk、扰动恢复或因果 composer 的结果，也不是两种表示等价或已泛化的证明。

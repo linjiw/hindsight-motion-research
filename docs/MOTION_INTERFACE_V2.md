@@ -106,6 +106,21 @@ The separately versioned [L0 probe](LLM_INTERFACE_PROTOCOL_zh.md) implements a s
 
 The [registered reference pilot](COMPLETE_TASK_PROTOCOL.md) implements a narrow adapter comparison under the existing goal050 complete-task profile. [Both routes pass 4/4](COMPLETE_TASK_RESULTS_zh.md) with exact matched reset/history/dynamics; Linear29 includes two charged reset-anchor frames and the original root. This establishes no general v2 API, arbitrary-state switching or causal-composer qualification.
 
-The subsequent [continuation adapter](CONTINUATION_PROTOCOL.md) now has [physical qualification on eight paired incoming states](CONTINUATION_ADMISSION02_RESULTS_zh.md): continuous and Linear29 each pass 8/8; reset, prefix and incoming state/history errors are zero, RNG matches, and native continuous reconstruction is exact. This establishes same-phase, unperturbed supplied-reference handoffs on two development clips. A general v2 API, selected new transitions, disturbance recovery and causal composition remain unqualified. The original zero-launch deferral is retained separately.
+The subsequent [continuation adapter](CONTINUATION_PROTOCOL.md) now has [physical qualification on eight paired incoming states](CONTINUATION_ADMISSION02_RESULTS_zh.md): continuous and Linear29 each pass 8/8; reset, prefix and incoming state/history errors are zero, RNG matches, and native continuous reconstruction is exact. This establishes same-phase, unperturbed supplied-reference handoffs on two development clips. A general v2 API, cross-family transitions and disturbance recovery remain unqualified. The original zero-launch deferral is retained separately.
 
 The [sibling interface sync](COMPOSER_SYNC_20260918.md) adds a compatible measured-state/executor contract to reuse. Its native horizon spans 0.9 s, requiring 46 dense frames at 50 Hz; retain source and execution clocks explicitly. Planned support validity and root translation remain external composition constraints. Preserve the distinction between clean planned orientations and native noisy reference features.
+
+## Public-selector representation attachment — September 19
+
+The [selected-reference pilot](SELECTION_CODEC_RESULTS_zh.md) now completes two
+familiar known-map tasks per method from reset. A fixed continuous planner bank
+chooses nominal or duck and retimes from measured state; Linear29 changes only
+the q/qdot sent to the motor. Both paired entries and historical continuous
+controls match exactly. All 1,451 new issued references and true committed source
+indices replay exactly on actual histories. This qualifies a narrow nonlearned
+controller, not arbitrary-state switching or a general composer.
+
+Retain dense source indices through commitments: a new-tail scalar cursor can
+mislabel the current committed frame. The planner still stores full continuous
+motions, root, collision and support metadata, and the motor receives decoded
+float references. This is no measured system-memory or wire-rate reduction.

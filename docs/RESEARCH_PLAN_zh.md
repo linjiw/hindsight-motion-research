@@ -1,6 +1,6 @@
 # 面向可泛化人形穿越的动作表示：重新确定研究问题
 
-修订：2026-09-18。依据全部阶段结果报告、公开汇总与关键 run 汇总、相关本地 traversal 项目及本次[文献复核](LITERATURE_REASSESSMENT_20260918_zh.md)。初次重审没有执行新仿真或训练。后续用户明确要求推进后，已单独登记并完成 [continuous/Linear29 完整参考任务 pilot](COMPLETE_TASK_RESULTS_zh.md)：各 4/4；没有改变旧 native 注册或启动训练。本次补入[用户指导采用记录](RESEARCH_GUIDANCE_20260918_zh.md)及[小 LLM 离线协议](LLM_INTERFACE_PROTOCOL_zh.md)；合成接口推理单独登记，不属于物理证据。[旧计划](https://github.com/linjiw/hindsight-motion-research/blob/fc85b01082c703fa31b3c7776152677adbee7c3b/docs/RESEARCH_PLAN_zh.md)保留历史语境。
+修订：2026-09-18；实验进展更新：2026-09-19。依据全部阶段结果报告、公开汇总与关键 run 汇总、相关本地 traversal 项目及本次[文献复核](LITERATURE_REASSESSMENT_20260918_zh.md)。初次重审没有执行新仿真或训练。后续用户明确要求推进后，已单独登记并完成 [continuous/Linear29 完整参考任务 pilot](COMPLETE_TASK_RESULTS_zh.md)：各 4/4；没有改变旧 native 注册或启动训练。本次补入[用户指导采用记录](RESEARCH_GUIDANCE_20260918_zh.md)及[小 LLM 离线协议](LLM_INTERFACE_PROTOCOL_zh.md)；合成接口推理单独登记，不属于物理证据。[旧计划](https://github.com/linjiw/hindsight-motion-research/blob/fc85b01082c703fa31b3c7776152677adbee7c3b/docs/RESEARCH_PLAN_zh.md)保留历史语境。
 
 ## 1. 判断：目标保留，研究重心需要移动
 
@@ -78,11 +78,13 @@ LLM / VLM：目标、对象指代、约束、终止要求
 
 ### P1：完整任务的可执行基线
 
-**已完成第一行 pilot：continuous 4/4，Linear29+两帧 reset anchor 4/4，四个配对初态/历史/动力学完全匹配。** 使用两个既有 clip、clear/beam、冻结 goal050/recovery/stop profile；有完整未来参考和 root 辅助，不是自主任务。详细范围、wrist clipping、成本与下一步见[结果](COMPLETE_TASK_RESULTS_zh.md)及[协议](COMPLETE_TASK_PROTOCOL.md)。当前主优先级移到第二行的实际来态 continuation/switching，暂不启动新 codec 训练。
+**已完成第一行 pilot：continuous 4/4，Linear29+两帧 reset anchor 4/4，四个配对初态/历史/动力学完全匹配。** 使用两个既有 clip、clear/beam、冻结 goal050/recovery/stop profile；有完整未来参考和 root 辅助，不是自主任务。详细范围、wrist clipping、成本与下一步见[结果](COMPLETE_TASK_RESULTS_zh.md)及[协议](COMPLETE_TASK_PROTOCOL.md)。其后第二行及第三行的首个子面板已完成，见下；暂不启动新 codec 训练。
 
 **第二行同相位子面板已完成：continuous 8/8，Linear29 8/8，八个配对的初态/prefix/来态与历史最大误差为 0。** 两个 beam task × pre-entry/entry/exit/pre-hold × 两种表示，16 次 native attempts、4,136 control steps、16,544 physics contact frames，零训练。全任务通过独立终止/接触审计，native adapter 重建误差为 0；约 0.14 rad 膝参考变化也未破坏该格成功。见[admission 02 结果](CONTINUATION_ADMISSION02_RESULTS_zh.md)。最初 300 s 资源延期的 0-launch packet 保留，没有重写。
 
-**研究决定：当前没有 complete-task 成功上的 codec 瓶颈，下一步转向真实新后续的选择与执行。** 仍保留 supplied prefix、phase、root 和 future；这些成功不等于任意状态恢复或 composer。先建立有双时基、q/qdot/root 与 support validity 的小型 primitive bank，复用相邻项目已资格验证的 measured-state/native 接口，再登记基于实际状态/场景选中 transition 的 continuous/Linear29 对照。扰动恢复另作条件，之后才去掉隐藏未来做因果 reset episode；暂不训练新 codec。具体输入限制与下一工作包见[同步记录](COMPOSER_SYNC_20260918.md)。
+**第三行熟悉 known-map selector 子面板也已完成：continuous 2/2，Linear29 2/2。** 相邻项目已提供 nominal/duck 两候选库和 public-state selector，本轮复用它们，固定 continuous planner bank，只改变发给 motor 的 q/qdot。新 continuous controls 与相邻原结果完全一致，两对 reset/history/dynamics/RNG 完全一致；全部物理 scorer 与 1,451 个实测状态上的 reference/index replay 审计通过。四次 native attempts、1,451 control steps、5,804 physics frames，零训练。见[9 月 19 日结果与同步](SELECTION_CODEC_RESULTS_zh.md)。
+
+**研究决定：下一步冻结 controller/codec 做场景变化，尚无依据转向更大 tokenizer。** 第三行不再给 selector 正确 clip/phase/在线 teacher future，但只有一个熟悉 ancestry、两个已知场景及示范初始化；它选择完整候选并重定时，不是在线跨动作族拼接。首先拟议相对当前 beam 的前/后各 5 cm 与一个共同 clear control，共六个 primary cases，须单独登记。完整 continuous planner bank 的成本保留，不能把本轮成功说成系统压缩收益。之后分别扩展来态/速度、梁尺寸、扰动和感知，保留 continuous 失败以定位支持问题。
 
 对齐相邻项目的 task-aware composer：按当前位姿和场景选取并衔接 approach/duck/exit/stop。先用 continuous 与 Linear29 做[两种表示×三种执行条件](RESEARCH_GUIDANCE_20260918_zh.md)矩阵：完整正确参考、真实相同来态的合格后续 chunk、因果 composer 从 reset 闭环。Native 先做同参考/同历史接口 parity，后作独立路线对照。
 

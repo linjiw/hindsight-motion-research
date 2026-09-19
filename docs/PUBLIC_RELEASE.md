@@ -52,3 +52,10 @@ matched-state audits, scalar reference differences and source hashes. Both
 methods pass 8/8 under supplied, same-phase references. Raw physical arrays and
 licensed descendants remain local. This does not qualify an autonomous composer
 or replace the historical zero-launch packet.
+
+The September 19 selected-reference comparison publishes four aggregate task
+outcomes, matched-entry/historical-control errors and a separate reference-replay
+audit over 1,451 recorded states, plus `artifacts/selection_codec.png`. These are
+scalar summaries and provenance hashes. The reused motion bank, both decoded
+candidates and new per-frame records remain local. The sibling repository was
+read-only; its bank and licensed descendants are not copied into this release.

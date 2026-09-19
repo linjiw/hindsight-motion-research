@@ -12,7 +12,7 @@
 
 | 指导 | 采用与可审查交付物 |
 | --- | --- |
-| 先检验表示瓶颈 | 以下 2×3 执行矩阵成为下一项物理研究的核心；后续第一行 pilot 各 4/4；第二行同相位子面板各 8/8；新选择、扰动及第三行未运行 |
+| 先检验表示瓶颈 | 以下 2×3 执行矩阵成为下一项物理研究的核心；后续第一行 pilot 各 4/4；第二行同相位子面板各 8/8；第三行熟悉 known-map selector 各 2/2；场景变化、扰动及跨族拼接未测 |
 | 更强的简单对手 | 全程保守蹲行，目标附近恢复直立并停止；几何规则使用全身包络、障碍后缘与延迟余量 |
 | 明确任务变化 | 开发后冻结横梁位置、高度、沿行进方向长度及初速度的独立变化；不得按某方法成功与否筛选测试集 |
 | 明确终止 | 分开碰撞、全身离开、恢复、目标误差、停止、超时；直立同时约束腿伸展/骨盆高度与躯干姿态 |
@@ -29,11 +29,11 @@
 | --- | --- | --- | --- |
 | 正确完整参考，从 reset 执行 | 后续 pilot 4/4 | 同任务配对 4/4；两帧 reset anchor | 任务本身是否受支持，codec 是否损害执行 |
 | 相同真实来态/历史，提供合格后续 chunk | 同相位、无扰动子面板 8/8 | 同真实 prefix 配对 8/8 | 当前只资格验证同相位 continuation；新选择与恢复待测 |
-| reset 开始，因果 composer 选择并重规划 | 待登记/未运行 | 同 composer；未运行 | 选择和规划能否实现完整任务 |
+| reset 开始，因果 composer 选择并重规划 | 熟悉 known-map selector 子面板 2/2 | 同 continuous planner bank 的 motor-reference 处理 2/2 | 完整候选选择/重定时已测；新场景与跨族拼接待测 |
 
 后续执行见[完整任务报告](COMPLETE_TASK_RESULTS_zh.md)：既有 goal050 profile、两 clip/clear+beam、有完整参考辅助。原始用户指导逐字副本未改动。
 
-第二行首个子面板见[continuation 物理结果](CONTINUATION_ADMISSION02_RESULTS_zh.md)：新 admission 执行 16 格、八个配对来态/历史误差为 0，两种表示各 8/8，4,136 control steps，零训练。原 0-launch 资源延期另存。它只测无扰动同相位切换；后续推进[真实选中 transition](COMPOSER_SYNC_20260918.md)，不能把它升级为因果 composer。
+第二行首个子面板见[continuation 物理结果](CONTINUATION_ADMISSION02_RESULTS_zh.md)：新 admission 执行 16 格、八个配对来态/历史误差为 0，两种表示各 8/8，4,136 control steps，零训练。原 0-launch 资源延期另存。它只测无扰动同相位切换；这项 handoff 本身不能升级为因果 composer。随后独立登记的[known-map selector 结果](SELECTION_CODEC_RESULTS_zh.md)已取得两表示各 2/2，从 reset 闭环选择；它的熟悉来源和 continuous planner bank 限制单独保留。
 
 横向比较主要隔离表示；纵向信息条件与状态分布不同，只用于定位系统缺口。前两行不是自主导航。第三行共享因果 composer 的 root 目标，计入 root 成本；不可读取隐藏未来 root、进入段或示范 phase。由观测和已执行动作更新的内部进度允许使用。
 

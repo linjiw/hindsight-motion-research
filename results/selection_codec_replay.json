@@ -1,0 +1,87 @@
+{
+  "schema": "hindsight_selection_codec_replay_audit_v1",
+  "date": "2026-09-19",
+  "rows": [
+    {
+      "case_id": "clear_continuous",
+      "states": 366,
+      "issued_reference_exact": true,
+      "source_indices_exact": true,
+      "selector_counters_exact": true,
+      "dense_planned_joint_change_max_rad": 0.0,
+      "dense_planned_velocity_change_max_rad_s": 0.0
+    },
+    {
+      "case_id": "clear_linear29",
+      "states": 367,
+      "issued_reference_exact": true,
+      "source_indices_exact": true,
+      "selector_counters_exact": true,
+      "dense_planned_joint_change_max_rad": 0.4197772145271301,
+      "dense_planned_velocity_change_max_rad_s": 5.446971893310547
+    },
+    {
+      "case_id": "shift_earlier_100mm_continuous",
+      "states": 359,
+      "issued_reference_exact": true,
+      "source_indices_exact": true,
+      "selector_counters_exact": true,
+      "dense_planned_joint_change_max_rad": 0.0,
+      "dense_planned_velocity_change_max_rad_s": 0.0
+    },
+    {
+      "case_id": "shift_earlier_100mm_linear29",
+      "states": 359,
+      "issued_reference_exact": true,
+      "source_indices_exact": true,
+      "selector_counters_exact": true,
+      "dense_planned_joint_change_max_rad": 0.4197772145271301,
+      "dense_planned_velocity_change_max_rad_s": 5.446971893310547
+    }
+  ],
+  "native_attempts": 0,
+  "training_steps": 0,
+  "scope": "Exact reference/choice/index replay on actual histories; no new motor-action or physics evaluation",
+  "provenance": [
+    {
+      "path": "runs/selection_codec_20260919_v1/aggregate.json",
+      "sha256": "0f19d3c9f233173b4c81a591500af6192d1de9529cb19181173a8177ba501d5f"
+    },
+    {
+      "path": "scripts/audit_selection_codec_replay.py",
+      "sha256": "9b948c9193ff6f98471cb253d972495e770a2513e46cebc28598eb47ea55793d"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/task/selection.npz",
+      "sha256": "0c9a582b18fca3654cd0825a7b3cddb82b904b0659fb23a13fc8b3f6e0bb52f1"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/task/pre-action-poses.npz",
+      "sha256": "b4c6f9cfd0edb814687836d626277f129bbdfb9f241b57cfd86f3a07c62c7e30"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/task/selection.npz",
+      "sha256": "f3606dd2a3b0e70f37af74ed2f78560e431e522b506f36f1aa01ad194cc06c43"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/task/pre-action-poses.npz",
+      "sha256": "5b31c58524e1d93e17c58b397e7e15ea7802fe521a1254a7c85cf6a75c4adb34"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task/selection.npz",
+      "sha256": "263610c5a431742fd9dd1b378e8c7df3672bc82510e78a10d3f0725fa3d506f5"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task/pre-action-poses.npz",
+      "sha256": "d4e69923c86c5be4fdfe571360a71209bfaa0d980a3329578f20f9dbb7cce4f3"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/task/selection.npz",
+      "sha256": "70c019bbc70e41f88ffcfed867fb7db34d2c1daf15ed56d0f32ed85fdb27f2cf"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/task/pre-action-poses.npz",
+      "sha256": "400a77de25d930bfbf8cea54fc0cd239bdca11353630eef87263f9083d386986"
+    }
+  ]
+}

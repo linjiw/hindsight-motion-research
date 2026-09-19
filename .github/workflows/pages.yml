@@ -13,6 +13,7 @@ on:
       - 'artifacts/complete_task.png'
       - 'artifacts/continuation.png'
       - 'artifacts/continuation_admission02.png'
+      - 'artifacts/selection_codec.png'
       - '.github/workflows/pages.yml'
   pull_request:
     paths:

@@ -17,6 +17,7 @@ artifacts/*
 !artifacts/complete_task.png
 !artifacts/continuation.png
 !artifacts/continuation_admission02.png
+!artifacts/selection_codec.png
 .env
 .env.*
 !.env.example

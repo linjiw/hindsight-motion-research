@@ -58,12 +58,20 @@ A separate September 18 complete-reference native pilot adds eight episodes,
 with reset anchors pass 4/4 under the existing goal050/recovery/stop profile.
 The new task matrix/table and aggregate figure are separate from the historical
 440-preflight / 312-main ledger and from the synthetic LLM probe. The remaining
-new-selection, perturbation and causal-composer conditions stay proposed.
+perturbation and cross-family composition conditions stay proposed.
 
 The same-phase continuation subset now adds a separate 16-attempt ledger:
 continuous 8/8, Linear29 8/8, eight exactly matched handoff pairs, 4,136 control
 steps and 16,544 physics frames. `continuation_admission02.json` and its figure
 contain the physical results. Supplied prefix, phase, root and future remain.
-The next work is selected new transitions; no autonomous composer is qualified.
+These handoffs do not themselves qualify a causal composer; the later known-map
+selector has a separate ledger below.
 The original `continuation.json` and figure retain the earlier resource deferral
 with zero launches and sixteen unrun cases; those are not extra attempts or failures.
+
+September 19 adds `selection_codec.json`, its separate exact reference-replay
+audit and `selection_codec.png`. Four new physical attempts, 1,451 control steps,
+5,804 contact frames; two familiar tasks pass per method from reset. The selector
+retains its continuous bank and uses a known map and simulator localization.
+This is a motor-reference intervention, not generalization or total compression.
+Keep this four-case ledger separate from the sibling trials and prior pilots.

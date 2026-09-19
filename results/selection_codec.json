@@ -1,0 +1,501 @@
+{
+  "schema": "hindsight_selection_codec_results_v1",
+  "date": "2026-09-19",
+  "scope": "Familiar known-map from-reset controller; fixed continuous planner, continuous versus Linear29 motor reference",
+  "source_ancestries": 1,
+  "known_map": true,
+  "development_only": true,
+  "autonomous_from_reset": true,
+  "heldout": false,
+  "planner_uses_continuous_bank": true,
+  "execution_state": "complete",
+  "scheduled_cases": 4,
+  "native_attempts": 4,
+  "completed_episodes": 4,
+  "infrastructure_failures": 0,
+  "unrun": 0,
+  "control_steps": 1451,
+  "physics_samples": 5804,
+  "training_steps": 0,
+  "historical_main_attempts_consumed": 0,
+  "rows": [
+    {
+      "case_id": "clear_continuous",
+      "condition": "clear",
+      "method": "continuous",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 366,
+      "physics_samples": 1464,
+      "completion_time_s": 7.32,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "recovered": true,
+      "ordered_hold_ticks": 50,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_m": 0.21302063487922587,
+      "final_speed_mps": 0.07418210059404373,
+      "independent_score_exact": true,
+      "selected_candidate": "nominal",
+      "replans": 73,
+      "retimed": 23,
+      "support_rejections": 15,
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "parent_parity": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "clear_linear29",
+      "condition": "clear",
+      "method": "linear29",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 367,
+      "physics_samples": 1468,
+      "completion_time_s": 7.34,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "recovered": true,
+      "ordered_hold_ticks": 50,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_m": 0.14480358252293424,
+      "final_speed_mps": 0.05515636131167412,
+      "independent_score_exact": true,
+      "selected_candidate": "nominal",
+      "replans": 73,
+      "retimed": 25,
+      "support_rejections": 20,
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "pair_audit": {
+        "max_errors": {
+          "initial-state.npz:root_state_w": 0.0,
+          "initial-state.npz:joint_pos": 0.0,
+          "initial-state.npz:joint_vel": 0.0,
+          "initial-state.npz:current_action": 0.0,
+          "initial-state.npz:previous_action": 0.0,
+          "initial-state.npz:raw_action": 0.0,
+          "initial-state.npz:processed_action": 0.0,
+          "initial-state.npz:proprio": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0
+        },
+        "torch_rng_matched": true,
+        "matched": true,
+        "all_rng_matched": true,
+        "same_initial_choice": true
+      }
+    },
+    {
+      "case_id": "shift_earlier_100mm_continuous",
+      "condition": "shift_earlier_100mm",
+      "method": "continuous",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 359,
+      "physics_samples": 1436,
+      "completion_time_s": 7.18,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "recovered": true,
+      "ordered_hold_ticks": 50,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_m": 0.01254167547593726,
+      "final_speed_mps": 0.04423133283853531,
+      "independent_score_exact": true,
+      "selected_candidate": "local_duck",
+      "replans": 71,
+      "retimed": 21,
+      "support_rejections": 18,
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "parent_parity": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        }
+      }
+    },
+    {
+      "case_id": "shift_earlier_100mm_linear29",
+      "condition": "shift_earlier_100mm",
+      "method": "linear29",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 359,
+      "physics_samples": 1436,
+      "completion_time_s": 7.18,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "recovered": true,
+      "ordered_hold_ticks": 50,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_m": 0.06821833841270512,
+      "final_speed_mps": 0.027004670351743698,
+      "independent_score_exact": true,
+      "selected_candidate": "local_duck",
+      "replans": 71,
+      "retimed": 25,
+      "support_rejections": 21,
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "pair_audit": {
+        "max_errors": {
+          "initial-state.npz:root_state_w": 0.0,
+          "initial-state.npz:joint_pos": 0.0,
+          "initial-state.npz:joint_vel": 0.0,
+          "initial-state.npz:current_action": 0.0,
+          "initial-state.npz:previous_action": 0.0,
+          "initial-state.npz:raw_action": 0.0,
+          "initial-state.npz:processed_action": 0.0,
+          "initial-state.npz:proprio": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0
+        },
+        "torch_rng_matched": true,
+        "matched": true,
+        "all_rng_matched": true,
+        "same_initial_choice": true
+      }
+    }
+  ],
+  "offline_reference_audit": {
+    "rows": [
+      {
+        "condition": "clear",
+        "recorded_states": 366,
+        "continuous_reference_exact": true,
+        "committed_indices_exact": true,
+        "linear_reference_changed_states": 366,
+        "selected_candidate": "nominal"
+      },
+      {
+        "condition": "shift_earlier_100mm",
+        "recorded_states": 359,
+        "continuous_reference_exact": true,
+        "committed_indices_exact": true,
+        "linear_reference_changed_states": 359,
+        "selected_candidate": "local_duck"
+      }
+    ],
+    "scope": "Offline reference parity and changes; no new physics or motor-action result"
+  },
+  "codec_audit": [
+    {
+      "candidate": "nominal",
+      "frames": 499,
+      "knots": 100,
+      "clipped_symbols": 400,
+      "symbols": 2900,
+      "joint_payload_bits": 34800,
+      "reset_anchor_bits": 1856,
+      "q_rmse_rad": 0.029718652367591858,
+      "q_max_rad": 0.4197772145271301
+    },
+    {
+      "candidate": "local_duck",
+      "frames": 499,
+      "knots": 100,
+      "clipped_symbols": 400,
+      "symbols": 2900,
+      "joint_payload_bits": 34800,
+      "reset_anchor_bits": 1856,
+      "q_rmse_rad": 0.029720161110162735,
+      "q_max_rad": 0.4197772145271301
+    }
+  ],
+  "provenance": [
+    {
+      "path": "runs/selection_codec_20260919_v1/registration.json",
+      "sha256": "180e585ac664bab400ab17b6197799016206e403e37dfe66d1dc338ce0e7122b"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/plan.json",
+      "sha256": "29150f77f7b1a14790c0696075f31cf8167c2d15f9e192a496dbca6d3194c952"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/execution-start.json",
+      "sha256": "d05f6eabec8a9c426bf250bf04a98a2202d3c82e7b9819c08785d4f79445458a"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/offline-audit.json",
+      "sha256": "dea52137c0f5ad184f8f3322b0c8ee9a4944e6e4c864e211b52423ed3625ae76"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/codec-audit.json",
+      "sha256": "b8e20a8a5166b5ab488a63f8380b19c41d0390d679361d396628a93b95ab695b"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/launch.json",
+      "sha256": "a63c972781f7275df0c03764760a387dc2c715e4f127a9e02b30c68872901808"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/exit.json",
+      "sha256": "cab28584cfbea65710aab03847613940e24b5f52e23488245756d677385efad0"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/resource_admission.json",
+      "sha256": "5b139e1787ad95c173fc0349fbbd8930577667b4fc898ab37d871bf9cae0b598"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/parent-parity.json",
+      "sha256": "082981e3f2f7555f5ef4a0d5a6f7b09c7b09121b82fc446777edf7271fca4985"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/task/task-result.json",
+      "sha256": "1b931e2c2fd7ff938f101d5809247380a0654e2099f6285a3e27107e1a11fa7f"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/task/selection.json",
+      "sha256": "2e77b60a100f2c3fa028d9e72f5f553172a7ba2b53fe1e39dbdca9ad043586bb"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/task/selection.npz",
+      "sha256": "0c9a582b18fca3654cd0825a7b3cddb82b904b0659fb23a13fc8b3f6e0bb52f1"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/task/trace.npz",
+      "sha256": "d22a1ca94ea8583339c42db1ae26a7747a1f4736807643ce04063aa29cf3a980"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/task/robot-poses.npz",
+      "sha256": "7cf665a8b8ea875bb79f59c223f843a8b4082a2f8fe33405b919b8a016618372"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/task/pre-action-poses.npz",
+      "sha256": "b4c6f9cfd0edb814687836d626277f129bbdfb9f241b57cfd86f3a07c62c7e30"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_continuous/task/codec-entry.json",
+      "sha256": "8c3c0f6a7ba98af97e4d90aabf9ce8e569b16d5fecc2bcd679adcc25ca75bb12"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/launch.json",
+      "sha256": "3b7f9f523210e5da601cfece9c9c6d5932ade7366af8f7d220bc678b2a60edf2"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/exit.json",
+      "sha256": "76ecbb6b4d1816b912d0d98e5ec37722a5cdcb4fb7fce3e5ec5629150acb2ebc"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/resource_admission.json",
+      "sha256": "d8d9d2676cbdc46daf53d0d57e6b649c62dc0d200bd07ff607ffded15c428937"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/pair-audit.json",
+      "sha256": "a67b6b6b70034d9fdc7ff4b309e6ef0a40d7de5e426d4adb44cb5f43acfaace8"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/task/task-result.json",
+      "sha256": "95c6543adaefb666e7155fc80ad5efdaf6bee4f02374d74ec7ee31abbf291d26"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/task/selection.json",
+      "sha256": "5071a5d7812451e5fe675dd429b9be2ab2a8a3fbb5a1c55ba51a0bfe55b72870"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/task/selection.npz",
+      "sha256": "f3606dd2a3b0e70f37af74ed2f78560e431e522b506f36f1aa01ad194cc06c43"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/task/trace.npz",
+      "sha256": "5bc7505f2018a33e457810f61557d6664b9e75836e0cc1df7acc1f52be3debdc"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/task/robot-poses.npz",
+      "sha256": "bff5f1870ac279958f0b482089c0546cf959360216b5990f3d8570098c8f5e0e"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/task/pre-action-poses.npz",
+      "sha256": "5b31c58524e1d93e17c58b397e7e15ea7802fe521a1254a7c85cf6a75c4adb34"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/clear_linear29/task/codec-entry.json",
+      "sha256": "84030c854067ec66b5585ae9c068246b528ceadadabfa3a8722863f5b8dd18a8"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/launch.json",
+      "sha256": "64cc3b2515ac0fc27375f8ac3d065ee173ef70bcc236e9313391e9fd57ed4c20"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/exit.json",
+      "sha256": "127dab2f8da5d1b3193b148ecf120b23210d43a0a4a496b44deea43b61298a64"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/resource_admission.json",
+      "sha256": "16da23f72e92148a1df3032f8f120e332bcd3ba982bb71782c78a54cf5bdbfcb"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/parent-parity.json",
+      "sha256": "082981e3f2f7555f5ef4a0d5a6f7b09c7b09121b82fc446777edf7271fca4985"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task/task-result.json",
+      "sha256": "ab1f86234c98fefb7d62a0cfad445c2d25ed7b5d2291bdd4a523d9617a9c41b9"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task/selection.json",
+      "sha256": "7c884a861e3efcfc8eca08c2c77882db9a6f6253cd867747c123bde3121e8f6b"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task/selection.npz",
+      "sha256": "263610c5a431742fd9dd1b378e8c7df3672bc82510e78a10d3f0725fa3d506f5"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task/trace.npz",
+      "sha256": "474eda188c36bce4a94ff1b5ed475f78c41be4311bba29934b8ad53fdb68ec4d"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task/robot-poses.npz",
+      "sha256": "6d56d6a5b914fd4485fb0c0a009a654935051947cc30df73eaa62e9e5c658a9a"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task/pre-action-poses.npz",
+      "sha256": "d4e69923c86c5be4fdfe571360a71209bfaa0d980a3329578f20f9dbb7cce4f3"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_continuous/task/codec-entry.json",
+      "sha256": "8c3c0f6a7ba98af97e4d90aabf9ce8e569b16d5fecc2bcd679adcc25ca75bb12"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/launch.json",
+      "sha256": "e3896edaa74e7618eb060b088edccda2626080cd36f43cef29b10500948cceae"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/exit.json",
+      "sha256": "7c6006952950652445e178464e32c749ebb4acc3696d8a65088aa74ded794907"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/resource_admission.json",
+      "sha256": "a262020f558bc3ec05067ecf6905552ef210148a86832f1d83dc6d77dfea41f1"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/pair-audit.json",
+      "sha256": "a67b6b6b70034d9fdc7ff4b309e6ef0a40d7de5e426d4adb44cb5f43acfaace8"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/task/task-result.json",
+      "sha256": "43f8d85c5308deaf0a82d5799af3cb22368a9844966e7b1305fa3f1e01644c46"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/task/selection.json",
+      "sha256": "ef255a7f6d05de71c28a523e2a9f069bf44de7f3a145275ee138ca2ca200b4c6"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/task/selection.npz",
+      "sha256": "70c019bbc70e41f88ffcfed867fb7db34d2c1daf15ed56d0f32ed85fdb27f2cf"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/task/trace.npz",
+      "sha256": "ce56df7a7deaacc28648c4e5f91085d7df8b3a224d357475801109d1257d7f7e"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/task/robot-poses.npz",
+      "sha256": "919ca1abb3300c4af592f4f457b893e5bb37a03558145171a5da85b39e3eb4ad"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/task/pre-action-poses.npz",
+      "sha256": "400a77de25d930bfbf8cea54fc0cd239bdca11353630eef87263f9083d386986"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/selection_codec_20260919_v1/episodes/shift_earlier_100mm_linear29/task/codec-entry.json",
+      "sha256": "84030c854067ec66b5585ae9c068246b528ceadadabfa3a8722863f5b8dd18a8"
+    }
+  ],
+  "analysis_source_sha256": "99ebc3b645ba512e075ecfaa64d2bb3e8186511f656fe1ed662e4888b4f5f4ea"
+}
