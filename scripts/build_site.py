@@ -21,9 +21,9 @@ RESULTS = [
     "selection_codec", "selection_codec_replay",
     "selection_boundary", "selection_boundary_goal",
     "selection_boundary_admission02", "distance_codec_preflight", "distance_codec", "distance_followup",
-    "distance_codec_admission02", "endpoint_codec_transfer", "endpoint_controller_sync", "reset_controller_sync",
+    "distance_codec_admission02", "endpoint_codec_transfer", "endpoint_controller_sync", "reset_controller_sync", "pending_exit", "pending_exit_queue",
 ]
-FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png", "selection_boundary.png", "selection_boundary_admission02.png", "distance_codec.png", "distance_codec_admission02.png"]
+FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png", "selection_boundary.png", "selection_boundary_admission02.png", "distance_codec.png", "distance_codec_admission02.png", "pending_exit.png"]
 
 
 class PageLinks(HTMLParser):
@@ -180,6 +180,26 @@ def main():
             or reset_sync["costs"]["new_control_steps"] != 5619
             or reset_sync["failure_gate"]["first_measured_pre_action_clear_tick"] != 138):
         raise ValueError("Sibling reset screen changed: review separate outcomes and timing diagnosis")
+    pending = json.loads((ROOT / "results/pending_exit.json").read_text())
+    queue = json.loads((ROOT / "results/pending_exit_queue.json").read_text())
+    if (pending["execution_state"] != "stopped" or pending["native_attempts"] != 3
+            or pending["unrun"] != 1 or pending["control_steps"] != 1160 or pending["physics_samples"] != 4640
+            or pending["infrastructure_failures"] != 0
+            or sum(r.get("success", False) for r in pending["rows"]) != 3
+            or pending["rows"][-1]["status"] != "unrun"
+            or not all(c["unchanged_path_audit"]["matched"] for c in pending["incumbent_comparisons"])
+            or sum(r["states"] for r in pending["reference_replay"]) != 1160
+            or not all(r["issued_reference_exact"] and r["independent_schedule_exact"]
+                       and r["composed_indices_exact"] for r in pending["reference_replay"])
+            or pending["commitment"]["latest_accept_tick"] != 162):
+        raise ValueError("Pending-exit partial results changed: preserve the unrun decisive case")
+    interruption = queue["queue_interruption"]
+    if (interruption["supervisor_exit_code"] != 143 or interruption["final_gate_samples"] != 15
+            or interruption["ready_samples"] != 1 or interruption["consecutive_ready_max"] != 1
+            or queue["shadow"]["actual_pending_case_launched"]
+            or queue["shadow"]["accepted_tick"] != 134 or queue["new_native_attempts"] != 0
+            or queue["shadow"]["revised_physical_forecast_samples"]["joint_position"]["changed_physical_sample_indices"] != [7,8,9]):
+        raise ValueError("Pending-exit interruption/shadow changed: review the evidence distinction")
     if OUTPUT.is_symlink():
         raise ValueError("Refusing a symlinked build directory")
     if OUTPUT.exists():
@@ -200,7 +220,7 @@ def main():
                            "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
     (OUTPUT / "data/provenance.json").write_text(json.dumps({
         "evidence_date": "2026-09-16", "mechanism_evidence_date": "2026-09-15",
-        "complete_task_evidence_date": "2026-09-18", "llm_interface_evidence_date": "2026-09-18", "page_date": "2026-09-19", "research_review_date": "2026-09-18",
+        "complete_task_evidence_date": "2026-09-18", "llm_interface_evidence_date": "2026-09-18", "page_date": "2026-09-20", "research_review_date": "2026-09-18",
         "selection_codec_evidence_date": "2026-09-19", "selection_codec_native_attempts": 4,
         "selection_boundary_evidence_date": "2026-09-19",
         "selection_boundary_native_attempts": 2, "selection_boundary_unrun": 4,
@@ -215,6 +235,9 @@ def main():
         "distance_codec_continuous_successes": 2, "distance_codec_linear29_successes": 1,
         "endpoint_transfer_audit_native_attempts": 0,
         "endpoint_controller_sync_scope": "Separate sibling continuous-controller calibration",
+        "pending_exit_evidence_date": "2026-09-20", "pending_exit_native_attempts": 3,
+        "pending_exit_unrun": 1, "pending_exit_execution_state": "stopped",
+        "pending_exit_queue_signal": "SIGTERM", "pending_exit_shadow_native_attempts": 0,
         "continuation_registration_date": "2026-09-18", "continuation_native_attempts": 16,
         "continuation_evidence_date": "2026-09-18", "continuation_admission": "02",
         "continuation_original_deferred_attempts": 0, "continuation_qualified_pairs": 8,

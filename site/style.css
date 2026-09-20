@@ -11,3 +11,5 @@
 
 .matrix-wrap{overflow-x:auto;margin-top:28px}.research-matrix{width:100%;border-collapse:collapse;background:white;font-size:13px}.research-matrix caption{text-align:left;padding:16px 0;font-weight:600}.research-matrix th,.research-matrix td{padding:16px;text-align:left;border:1px solid var(--line)}.research-matrix thead{background:#e6ecdf}.research-matrix tbody th{font-weight:500}#probe-detail{min-height:320px}@media(max-width:700px){.research-matrix{min-width:620px}#probe-detail{min-height:0}}
 @media(max-width:700px){#distance-codec>.matrix-wrap .research-matrix{min-width:0;table-layout:fixed}#distance-codec>.matrix-wrap th,#distance-codec>.matrix-wrap td{padding:10px 7px;font-size:12px;white-space:normal;overflow-wrap:break-word}#distance-codec>.task-strip{grid-template-columns:1fr;gap:12px}#distance-codec>.task-strip [aria-hidden="true"]{display:none}}
+
+@media(max-width:700px){#pending-exit>.matrix-wrap .research-matrix{min-width:0;table-layout:fixed}#pending-exit>.matrix-wrap th,#pending-exit>.matrix-wrap td{padding:10px 7px;font-size:12px;white-space:normal;overflow-wrap:break-word}}

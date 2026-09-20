@@ -1,6 +1,6 @@
 # 面向可泛化人形穿越的动作表示：重新确定研究问题
 
-修订：2026-09-18；实验进展更新：2026-09-19。依据全部阶段结果报告、公开汇总与关键 run 汇总、相关本地 traversal 项目及本次[文献复核](LITERATURE_REASSESSMENT_20260918_zh.md)。初次重审没有执行新仿真或训练。后续用户明确要求推进后，已单独登记并完成 [continuous/Linear29 完整参考任务 pilot](COMPLETE_TASK_RESULTS_zh.md)：各 4/4；没有改变旧 native 注册或启动训练。本次补入[用户指导采用记录](RESEARCH_GUIDANCE_20260918_zh.md)及[小 LLM 离线协议](LLM_INTERFACE_PROTOCOL_zh.md)；合成接口推理单独登记，不属于物理证据。[旧计划](https://github.com/linjiw/hindsight-motion-research/blob/fc85b01082c703fa31b3c7776152677adbee7c3b/docs/RESEARCH_PLAN_zh.md)保留历史语境。
+修订：2026-09-18；实验进展更新：2026-09-20。依据全部阶段结果报告、公开汇总与关键 run 汇总、相关本地 traversal 项目及本次[文献复核](LITERATURE_REASSESSMENT_20260918_zh.md)。初次重审没有执行新仿真或训练。后续用户明确要求推进后，已单独登记并完成 [continuous/Linear29 完整参考任务 pilot](COMPLETE_TASK_RESULTS_zh.md)：各 4/4；没有改变旧 native 注册或启动训练。本次补入[用户指导采用记录](RESEARCH_GUIDANCE_20260918_zh.md)及[小 LLM 离线协议](LLM_INTERFACE_PROTOCOL_zh.md)；合成接口推理单独登记，不属于物理证据。[旧计划](https://github.com/linjiw/hindsight-motion-research/blob/fc85b01082c703fa31b3c7776152677adbee7c3b/docs/RESEARCH_PLAN_zh.md)保留历史语境。
 
 ## 1. 判断：目标保留，研究重心需要移动
 
@@ -90,7 +90,9 @@ LLM / VLM：目标、对象指代、约束、终止要求
 
 **下一步由“是否保持任务”进入“哪种时间接口丢失选择”。** 真实 Linear29 历史的 gate 在 134 才打开，原 controller 不再复查；两种 goal 的共同 368 ticks 中动作与状态全无差异。旧 continuous-history shadow 曾预测 Linear29 在 126 对 goal 响应，不能代替真实闭环。限制 proxy 在脚踝，尚不能隔离量化、插值、clipping 或速度推导的责任；尚未发出的 loop blend 也不能反向造成决策前的 clearance 失败。
 
-优先实施[有截止时间的 clearance 准入诊断](CLEARANCE_ADMISSION_DIAGNOSTIC_zh.md)：tick 126 锁存原距离请求；若 gate 尚闭，保持 short，只在共同承诺前缀内等待原 gate 打开。先证明全字段兼容及窗口，再独立登记原/远 goal × continuous/Linear29 四个新格、复用四个精确 incumbent 控制。保持 2 cm clearance、0.50 m **3D** goal radius、速度、hold、deadline 和 codec 不变。后开 gate 是离线观察，不是已执行的修复。目标距离维度的早期文字误标见[更正](DISTANCE_METRIC_CORRECTION_20260919.md)。
+**9 月 20 日 pending-exit 已实现、另登记并部分执行。** [新报告](PENDING_EXIT_RESULTS_zh.md)记录逐字段前缀证明（共同最晚准入 162）、disabled 模式 1,660 state 精确回放，以及三个新 native 控制的完整轨迹保留：原 goal continuous/Linear29、远 goal continuous 全部通过，1,160 steps / 4,640 physics samples，零重试/训练。关键远 goal Linear29 尚未启动：最后资源等待 15 次采样仅一次合格，未形成连续两次；queue 收到 SIGTERM（143），sender 未知，没有正常 timeout receipt。它不是第四次物理失败，也没有建立 delayed-loop 成功。
+
+**下一动作缩为唯一 never-launched case 的独立 admission。** 绑定中断收据、三条已完成控制、原 registration 与全部 363 项输入；最多新增一次 / 500 ticks / 2,000 physics samples，总四次 ceiling 不变。复用已合格的 farther continuous，不重复三格。保持 2 cm clearance、0.50 m 3D goal radius、motor/codec/predictor 与 deadline。新 temporal profile 保留五个 control ticks，后续可见 forecast 可修订；shadow 在 134 接受且 +0.70 s 的 q/qdot 预测首次改变，尚无新 motor/物理后续。完成这一个比较前，不训练更大 tokenizer 或把 shadow 宣称 repair。目标维度的早期误标见[更正](DISTANCE_METRIC_CORRECTION_20260919.md)。
 
 相邻 `eb8f1f8c` 已把 executed-endpoint calibration 作为独立 controller 物理测试，12/12 对 incumbent 11/12、1 gain/0 regressions；最小成功余量仅 1.658 cm。它未进入本次冻结比较。我们零 native 的事后 audit 显示 calibrated predictor 在既有 Linear29 历史上仍受 false gate 阻止；成功 short 的 endpoint 均值残差约 4.486 cm，也说明校准的 codec/状态适用范围须声明。具体成本及五条不同 action histories 见[同步和审计](DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md)。相邻后续真实 reset screen 已新增 14 格，changed starts 为 beam 5/6、clear 6/6，continuous backward-start 也在 126 错过 gate、138 才打开；两项成功只有毫米级 goal 余量。这提示共同 controller 时间契约脆弱性，不能把问题泛化为量化特有。本仓库先做独立的时间准入，随后再隔离 decoded loop 支持与 predictor compatibility。更低梁、来态覆盖、感知及 learner 仍是后续，不扩大 tokenizer 或 LLM。
 

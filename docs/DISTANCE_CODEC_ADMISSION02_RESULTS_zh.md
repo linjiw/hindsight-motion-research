@@ -1,5 +1,7 @@
 # 距离响应完整任务：continuous 2/2，Linear29 1/2
 
+> 2026-09-20 更新：[pending-exit 协议已登记并部分执行](PENDING_EXIT_RESULTS_zh.md)。三个原有成功控制完整保留；关键 farther-Linear29 因最后资源等待期间 queue 收到 SIGTERM 而尚未启动。原比较、失败与本设计历史保留，延迟准入修复仍待物理验证。
+
 2026-09-19。[主计划](RESEARCH_PLAN_zh.md)要求先检验完整任务中的表示保持。本次[独立 admission 02](DISTANCE_CODEC_ADMISSION_02.md)完成原先从未启动的四格：**原目标两者成功；远 0.60 m 目标 continuous 成功、Linear29 超时。** 出现一个配对成功退化，没有增益；四次均无跌倒或禁用接触。原始[零启动延期记录](DISTANCE_CODEC_RESULTS_zh.md)及其汇总保持不变。本比较的四次预算已用完。
 
 这给出了一个具体的下游缺口：Linear29 保留了请求 loop 的距离判断，却改变了身体离梁时序，使固定 tick 126 的一次性 clearance gate 拒绝该请求。之后没有复查，机器人沿 short 路线停止在远目标之外。**能跟踪、能正确表达请求、能在实际状态接受请求，是三个不同的资格。** 结果还不能识别哪一个 codec 组成部分导致了时序变化。

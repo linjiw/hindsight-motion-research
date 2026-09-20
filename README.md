@@ -6,6 +6,19 @@ Motion representations for robust humanoid traversal: preserve executable body c
 
 ## Research status
 
+**September 20 — [pending-exit experiment](docs/PENDING_EXIT_RESULTS_zh.md): three
+retention controls pass with exactly unchanged trajectories; the decisive
+farther-goal Linear29 case remains unrun.** The new wrapper preserves five committed
+control frames and waits for clearance only through proven tick 162. Disabled
+replay matches all 1,660 incumbent states; the delayed-choice shadow accepts at
+134, but it is not a physical repair. Three new runs add 1,160 control steps /
+4,640 physics samples, zero retries or training. The queue received SIGTERM while
+waiting for final-case memory; sender unknown. All three native processes exited
+successfully. Preserve this interrupted packet and admit only the one never-launched
+case in a separate directory, within the original four-attempt total ceiling.
+[Protocol](docs/PENDING_EXIT_PROTOCOL.md) · [physical partial results](results/pending_exit.json)
+· [interruption and offline packing audit](results/pending_exit_queue.json).
+
 **Research reassessment — September 18:** keep the traversal goal; prioritize a
 complete approach–duck–recover–stop baseline and compare simple continuous chunks,
 native SONIC tokens and learned codecs. A new discrete tokenizer must earn its
@@ -33,11 +46,10 @@ opens at tick 134, after the controller has stopped checking. It recovers and sl
 outside the goal, with no contact or fall. All four scores and issued references
 replay exactly; controls and paired initial conditions match exactly.
 
-The [next proposed diagnostic](docs/CLEARANCE_ADMISSION_DIAGNOSTIC_zh.md) tests a pending
-request that waits for clearance within a proven common commitment window.
-Keep the 2 cm clearance, decoder, motion bank and task thresholds fixed; first
-register this as a separate controller-interface intervention. No repair is yet
-qualified. The original [zero-launch deferral](docs/DISTANCE_CODEC_RESULTS_zh.md)
+The [pending-request diagnostic](docs/PENDING_EXIT_RESULTS_zh.md) is now separately
+registered and partially executed as described above. It keeps the 2 cm clearance,
+decoder, motion bank and task thresholds fixed. Its decisive delayed case remains
+unrun, so no repair is yet qualified. The original [zero-launch deferral](docs/DISTANCE_CODEC_RESULTS_zh.md)
 remains unchanged, and the four-attempt comparison budget is exhausted.
 
 The sibling's newer continuous endpoint calibration separately passes **12/12
@@ -77,6 +89,7 @@ The historical mechanism study separates temporal smoothing from leg-reconstruct
 - [Matched-state continuation: continuous 8/8, Linear29 8/8](docs/CONTINUATION_ADMISSION02_RESULTS_zh.md) — [protocol](docs/CONTINUATION_PROTOCOL.md) · [admission](docs/CONTINUATION_ADMISSION_02.md)
 - [Selected-reference controller: continuous 2/2, Linear29 2/2](docs/SELECTION_CODEC_RESULTS_zh.md) — [protocol](docs/SELECTION_CODEC_PROTOCOL.md)
 - [Completed scene screen: same pass/contact/deadline outcomes](docs/SELECTION_BOUNDARY_ADMISSION02_RESULTS_zh.md) — [admission 02](docs/SELECTION_BOUNDARY_ADMISSION_02.md) · [original partial receipt](docs/SELECTION_BOUNDARY_RESULTS_zh.md)
+- [Pending-exit interface: three retained controls, one unrun](docs/PENDING_EXIT_RESULTS_zh.md) — [protocol](docs/PENDING_EXIT_PROTOCOL.md) · [original proposal](docs/CLEARANCE_ADMISSION_DIAGNOSTIC_zh.md)
 - [Distance-responsive task: continuous 2/2, Linear29 1/2](docs/DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md) — [admission 02](docs/DISTANCE_CODEC_ADMISSION_02.md) · [next timing diagnostic](docs/CLEARANCE_ADMISSION_DIAGNOSTIC_zh.md) · [original deferral](docs/DISTANCE_CODEC_RESULTS_zh.md)
 - [New distance-exit controller: offline codec preflight](docs/DISTANCE_CODEC_PREFLIGHT_zh.md) — [next gate](docs/DISTANCE_RESPONSE_GATE_zh.md)
 - [Earlier composer interface sync](docs/COMPOSER_SYNC_20260918.md)

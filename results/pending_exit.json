@@ -1,0 +1,1015 @@
+{
+  "schema": "hindsight_pending_exit_results_v1",
+  "date": "2026-09-20",
+  "scope": "Four development native simulations of bounded pending admission; fixed original endpoint predictor and codec",
+  "source_ancestries": 1,
+  "seed": 96161,
+  "development_only": true,
+  "heldout": false,
+  "execution_state": "stopped",
+  "scheduled_cases": 4,
+  "native_attempts": 3,
+  "reused_incumbent_cases": 4,
+  "unrun": 1,
+  "infrastructure_failures": 0,
+  "retries": 0,
+  "training_steps": 0,
+  "teacher_action_queries": 0,
+  "historical_main_attempts_consumed": 0,
+  "control_steps": 1160,
+  "physics_samples": 4640,
+  "native_wall_seconds": 94.62531153397867,
+  "rows": [
+    {
+      "case_id": "original-beam_continuous",
+      "condition": "original-beam",
+      "method": "continuous",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 368,
+      "physics_samples": 1472,
+      "elapsed_control_time_s": 7.36,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_3d_m": 0.029952871973491387,
+      "final_goal_error_xy_m": 0.02960832628184925,
+      "final_signed_route_error_m": -0.0276420038610215,
+      "final_goal_margin_xy_m": 0.47039167371815077,
+      "final_speed_mps": 0.05255581811070442,
+      "independent_score_exact": true,
+      "task_components": {
+        "passage_success": true,
+        "duck_observed": true,
+        "recovered": true,
+        "entry_tick": 63,
+        "clear_tick": 118,
+        "recovery_tick": 314,
+        "ordered_hold_ticks": 50,
+        "stable_stop_success": true
+      },
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.021931742720536954,
+          0.9003619937117538
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      },
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "parent_parity": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        },
+        "same_family_and_decision": true
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "selected_short",
+        "requested": 0,
+        "accepted_tick": null,
+        "expired_tick": null,
+        "choice": 0,
+        "events": [
+          {
+            "tick": 126,
+            "status": "selected_short",
+            "measured_clear": true,
+            "clearance_margin_m": 0.03501509253148924,
+            "chosen": 0
+          }
+        ]
+      },
+      "actual_final_choice": 0,
+      "final_goal_margin_3d_m": 0.4700471280265086
+    },
+    {
+      "case_id": "original-beam_linear29",
+      "condition": "original-beam",
+      "method": "linear29",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 368,
+      "physics_samples": 1472,
+      "elapsed_control_time_s": 7.36,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_3d_m": 0.09025068182570446,
+      "final_goal_error_xy_m": 0.09016030344718352,
+      "final_signed_route_error_m": -0.08983551991429661,
+      "final_goal_margin_xy_m": 0.4098396965528165,
+      "final_speed_mps": 0.03745545074343681,
+      "independent_score_exact": true,
+      "task_components": {
+        "passage_success": true,
+        "duck_observed": true,
+        "recovered": true,
+        "entry_tick": 64,
+        "clear_tick": 133,
+        "recovery_tick": 314,
+        "ordered_hold_ticks": 50,
+        "stable_stop_success": true
+      },
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": false,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.048623351275781795,
+          0.8769336971818378
+        ],
+        "measured_root": [
+          1.6515346765518188,
+          0.36840707063674927,
+          0.7515503168106079
+        ]
+      },
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "pair_audit": {
+        "max_errors": {
+          "initial-state.npz:root_state_w": 0.0,
+          "initial-state.npz:joint_pos": 0.0,
+          "initial-state.npz:joint_vel": 0.0,
+          "initial-state.npz:current_action": 0.0,
+          "initial-state.npz:previous_action": 0.0,
+          "initial-state.npz:raw_action": 0.0,
+          "initial-state.npz:processed_action": 0.0,
+          "initial-state.npz:proprio": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0
+        },
+        "torch_rng_matched": true,
+        "matched": true,
+        "all_rng_matched": true,
+        "same_initial_choice_and_costs": true
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "selected_short",
+        "requested": 0,
+        "accepted_tick": null,
+        "expired_tick": null,
+        "choice": 0,
+        "events": [
+          {
+            "tick": 126,
+            "status": "selected_short",
+            "measured_clear": false,
+            "clearance_margin_m": -0.001069276327744395,
+            "chosen": 0
+          }
+        ]
+      },
+      "actual_final_choice": 0,
+      "final_goal_margin_3d_m": 0.40974931817429555
+    },
+    {
+      "case_id": "farther-beam_continuous",
+      "condition": "farther-beam",
+      "method": "continuous",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 424,
+      "physics_samples": 1696,
+      "elapsed_control_time_s": 8.48,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_3d_m": 0.38486645207882625,
+      "final_goal_error_xy_m": 0.3848151838997737,
+      "final_signed_route_error_m": 0.37786199571780654,
+      "final_goal_margin_xy_m": 0.1151848161002263,
+      "final_speed_mps": 0.024000518023967743,
+      "independent_score_exact": true,
+      "task_components": {
+        "passage_success": true,
+        "duck_observed": true,
+        "recovered": true,
+        "entry_tick": 63,
+        "clear_tick": 118,
+        "recovery_tick": 373,
+        "ordered_hold_ticks": 50,
+        "stable_stop_success": true
+      },
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.6165807536204283,
+          0.30066790198762927
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      },
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "parent_parity": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        },
+        "same_family_and_decision": true
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "accepted",
+        "requested": 1,
+        "accepted_tick": 126,
+        "expired_tick": null,
+        "choice": 1,
+        "events": [
+          {
+            "tick": 126,
+            "status": "accepted",
+            "measured_clear": true,
+            "clearance_margin_m": 0.03501509253148924,
+            "chosen": 1
+          }
+        ]
+      },
+      "actual_final_choice": 1,
+      "final_goal_margin_3d_m": 0.11513354792117375
+    },
+    {
+      "case_id": "farther-beam_linear29",
+      "condition": "farther-beam",
+      "method": "linear29",
+      "source_clip": "00976",
+      "status": "unrun"
+    }
+  ],
+  "incumbent_comparisons": [
+    {
+      "case_id": "original-beam_continuous",
+      "incumbent_success": true,
+      "pending_success": true,
+      "task_gain": 0,
+      "task_regression": 0,
+      "unchanged_path_audit": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        }
+      },
+      "actual_trajectory_contrast": {
+        "reference": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "tokens": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "actions": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "loop_choice": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "root_xyz": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "joint_pos": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        }
+      }
+    },
+    {
+      "case_id": "original-beam_linear29",
+      "incumbent_success": true,
+      "pending_success": true,
+      "task_gain": 0,
+      "task_regression": 0,
+      "unchanged_path_audit": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        }
+      },
+      "actual_trajectory_contrast": {
+        "reference": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "tokens": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "actions": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "loop_choice": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "root_xyz": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "joint_pos": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        }
+      }
+    },
+    {
+      "case_id": "farther-beam_continuous",
+      "incumbent_success": true,
+      "pending_success": true,
+      "task_gain": 0,
+      "task_regression": 0,
+      "unchanged_path_audit": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        }
+      },
+      "actual_trajectory_contrast": {
+        "reference": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "tokens": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "actions": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "loop_choice": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "root_xyz": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "joint_pos": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        }
+      }
+    }
+  ],
+  "reference_replay": [
+    {
+      "case_id": "original-beam_continuous",
+      "states": 368,
+      "issued_reference_exact": true,
+      "first_changed_reference_tick": null,
+      "changed_reference_rows": 0,
+      "family": "local_duck",
+      "original_decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.021931742720536954,
+          0.9003619937117538
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "selected_short",
+        "requested": 0,
+        "accepted_tick": null,
+        "expired_tick": null,
+        "choice": 0,
+        "events": [
+          {
+            "tick": 126,
+            "status": "selected_short",
+            "measured_clear": true,
+            "clearance_margin_m": 0.03501509253148924,
+            "chosen": 0
+          }
+        ]
+      },
+      "actual_final_choice": 0,
+      "independent_schedule_exact": true,
+      "composed_indices_exact": true
+    },
+    {
+      "case_id": "original-beam_linear29",
+      "states": 368,
+      "issued_reference_exact": true,
+      "first_changed_reference_tick": null,
+      "changed_reference_rows": 0,
+      "family": "local_duck",
+      "original_decision": {
+        "tick": 126,
+        "measured_clear": false,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.048623351275781795,
+          0.8769336971818378
+        ],
+        "measured_root": [
+          1.6515346765518188,
+          0.36840707063674927,
+          0.7515503168106079
+        ]
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "selected_short",
+        "requested": 0,
+        "accepted_tick": null,
+        "expired_tick": null,
+        "choice": 0,
+        "events": [
+          {
+            "tick": 126,
+            "status": "selected_short",
+            "measured_clear": false,
+            "clearance_margin_m": -0.001069276327744395,
+            "chosen": 0
+          }
+        ]
+      },
+      "actual_final_choice": 0,
+      "independent_schedule_exact": true,
+      "composed_indices_exact": true
+    },
+    {
+      "case_id": "farther-beam_continuous",
+      "states": 424,
+      "issued_reference_exact": true,
+      "first_changed_reference_tick": null,
+      "changed_reference_rows": 0,
+      "family": "local_duck",
+      "original_decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.6165807536204283,
+          0.30066790198762927
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "accepted",
+        "requested": 1,
+        "accepted_tick": 126,
+        "expired_tick": null,
+        "choice": 1,
+        "events": [
+          {
+            "tick": 126,
+            "status": "accepted",
+            "measured_clear": true,
+            "clearance_margin_m": 0.03501509253148924,
+            "chosen": 1
+          }
+        ]
+      },
+      "actual_final_choice": 1,
+      "independent_schedule_exact": true,
+      "composed_indices_exact": true
+    }
+  ],
+  "free_running_goal_contrasts": [
+    {
+      "method": "continuous",
+      "differences": {
+        "reference": {
+          "common_length": 368,
+          "first_changed_tick": 127,
+          "changed_rows": 241
+        },
+        "tokens": {
+          "common_length": 368,
+          "first_changed_tick": 127,
+          "changed_rows": 241
+        },
+        "actions": {
+          "common_length": 368,
+          "first_changed_tick": 127,
+          "changed_rows": 241
+        },
+        "loop_choice": {
+          "common_length": 368,
+          "first_changed_tick": 126,
+          "changed_rows": 242
+        },
+        "root_xyz": {
+          "common_length": 368,
+          "first_changed_tick": 128,
+          "changed_rows": 240
+        },
+        "joint_pos": {
+          "common_length": 368,
+          "first_changed_tick": 128,
+          "changed_rows": 240
+        }
+      }
+    }
+  ],
+  "commitment": {
+    "schema": "hindsight_pending_exit_commitment_v1",
+    "decision_tick": 126,
+    "committed_control_ticks": 5,
+    "dense_dt_s": 0.02,
+    "native_sample_stride": 5,
+    "native_horizon_samples": 10,
+    "latest_accept_tick": 162,
+    "rows": [
+      {
+        "family": "local_duck",
+        "method": "continuous",
+        "first_difference_by_field": {
+          "joint_position": 172,
+          "joint_velocity": 172,
+          "root_xyz": 172,
+          "root_velocity": 172,
+          "root_rotation_world": 172,
+          "bounds": 172,
+          "support_proposal": 184,
+          "support_observed": 172,
+          "support_observation_valid": 172,
+          "foot_height": 172,
+          "foot_speed": 172,
+          "base_source_index": 172,
+          "base_source_family": 172,
+          "synthetic_bridge": 172
+        },
+        "first_unequal_or_unavailable_frame": 172,
+        "latest_accept_tick": 167
+      },
+      {
+        "family": "local_duck",
+        "method": "linear29",
+        "first_difference_by_field": {
+          "joint_position": 172,
+          "joint_velocity": 172,
+          "root_xyz": 172,
+          "root_velocity": 172,
+          "root_rotation_world": 172,
+          "bounds": 172,
+          "support_proposal": 184,
+          "support_observed": 172,
+          "support_observation_valid": 172,
+          "foot_height": 172,
+          "foot_speed": 172,
+          "base_source_index": 172,
+          "base_source_family": 172,
+          "synthetic_bridge": 172,
+          "decoded_joint_position": 168,
+          "decoded_joint_velocity": 167
+        },
+        "first_unequal_or_unavailable_frame": 167,
+        "latest_accept_tick": 162
+      },
+      {
+        "family": "nominal",
+        "method": "continuous",
+        "first_difference_by_field": {
+          "joint_position": 172,
+          "joint_velocity": 172,
+          "root_xyz": 172,
+          "root_velocity": 172,
+          "root_rotation_world": 172,
+          "bounds": 172,
+          "support_proposal": 184,
+          "support_observed": 172,
+          "support_observation_valid": 172,
+          "foot_height": 172,
+          "foot_speed": 172,
+          "base_source_index": 172,
+          "base_source_family": 499,
+          "synthetic_bridge": 172
+        },
+        "first_unequal_or_unavailable_frame": 172,
+        "latest_accept_tick": 167
+      },
+      {
+        "family": "nominal",
+        "method": "linear29",
+        "first_difference_by_field": {
+          "joint_position": 172,
+          "joint_velocity": 172,
+          "root_xyz": 172,
+          "root_velocity": 172,
+          "root_rotation_world": 172,
+          "bounds": 172,
+          "support_proposal": 184,
+          "support_observed": 172,
+          "support_observation_valid": 172,
+          "foot_height": 172,
+          "foot_speed": 172,
+          "base_source_index": 172,
+          "base_source_family": 499,
+          "synthetic_bridge": 172,
+          "decoded_joint_position": 168,
+          "decoded_joint_velocity": 167
+        },
+        "first_unequal_or_unavailable_frame": 167,
+        "latest_accept_tick": 162
+      }
+    ],
+    "semantics": "Current through current+4 dense frames are committed; later forecasts may be revised. No full-preview equivalence claim."
+  },
+  "provenance": [
+    {
+      "path": "runs/pending_exit_20260920_v1/plan.json",
+      "sha256": "407586d7facdbb9442169a2d773620cb4694846a39e0b840dd399faf93e5adaa"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/registration.json",
+      "sha256": "10798a855aed80d208b256b1d18f4825299d1a0923c17a038f2e2b13329b4fc2"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/protocol-before-execution.md",
+      "sha256": "fdcfc21b37f9e91a3836c76bdbc197c40589b81d7ab137027ad71d7c8ebf30a1"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/commitment.json",
+      "sha256": "7300252fff11e65b411901d76ccaac33549765f833c0fce11748708c827d2dbc"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/offline-audit.json",
+      "sha256": "8a73a0b37f21939e5dcbef7834dca84342e9f47a5125b6a4e7dd6ca423ba778f"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/execution-start.json",
+      "sha256": "f25334462e3489865d63272a0f808552fef0e15a0aa31099d391ac96e4b49731"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/launch.json",
+      "sha256": "a0a06fddf7261fb67bb844fe9e3d804a8ea19b54fa602027b610fbf9dadf1d60"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/exit.json",
+      "sha256": "e94e87f1724f0291ab7200196b918895ed36207573595a02115a8d73071e8ecc"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/resource_admission.json",
+      "sha256": "d029a8b5ef787cf16c26097b5b4acdbdf77371ee1fc3e23ae407289514b3b2f4"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/resource_wait.jsonl",
+      "sha256": "17be0867b14cd7118b463fb52545a3159c8c922638839f7cd2965db3d89e0b3d"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/parent-parity.json",
+      "sha256": "0919d6d9af1aecd6487cc536b6eeae4a0f4104f624cb168b5afcd5d515faed5b"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/task/task-result.json",
+      "sha256": "0d533304596f632b7430c4ee3cf5c8831e17b6baf30166ba29b8192af71d3560"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/task/distance-exit.json",
+      "sha256": "75c468cae1da777274ee67a20b83b97390433634f2e8ec86e3f3c013a25fce5e"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/task/pending-exit.json",
+      "sha256": "d1495f5800b5a786e183c0174afe51693e4432d14e602942d90ae3def5821c66"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/task/codec-entry.json",
+      "sha256": "82d82d3f49353ce6b3d86c62414f02fb13a1b615dbdaac45cec85dd0abf26afa"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/task/selection.npz",
+      "sha256": "dbee9ef8153536faed73aa0149205a538d2bc1117bd741ef83b47b9a2e676ef9"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/task/pre-action-poses.npz",
+      "sha256": "e75bd328d61a264f77bd5ca878e9007be942b92a251671495467db8e45371f85"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/task/trace.npz",
+      "sha256": "c9e25f1d5425316caf040db06b339da070a7532b20a458ef245d7dafa83b0526"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/task/robot-poses.npz",
+      "sha256": "eb13138090e9525ea3b43cc42a84187f2802c1bd2b15cce4706345c73bde0552"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_continuous/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/launch.json",
+      "sha256": "55de6ac979806542ba2f6e1d7e1c809f832193a23bb1175b41c1d2c77e5b74d9"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/exit.json",
+      "sha256": "a8cd44b7312439c57fea9c85e05359ad129a0a2854573f6cf0a79907b52a2eed"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/resource_admission.json",
+      "sha256": "820dc80043b0fc92c73263506f0423d34e345fd0506ce7dcc08ae08805587c4c"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/resource_wait.jsonl",
+      "sha256": "9d879a2d4080d0bc10616dc4308b86696ec181d9f8484e642cadd1a86f309b8d"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/pair-audit.json",
+      "sha256": "b12fa92c42c81a9ec3d19f9185295826da5c5f3b13d72f57c133039975b9a9e4"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/retention-parity.json",
+      "sha256": "082981e3f2f7555f5ef4a0d5a6f7b09c7b09121b82fc446777edf7271fca4985"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/task/task-result.json",
+      "sha256": "22ab5ca259044bfdc4335480e4c1fc1f78d914a695de53a50a6429bf0412e53b"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/task/distance-exit.json",
+      "sha256": "b7785ad816aa56cdf0bde917cd7d3578838a5aa4d8f8403df5ed7f7cff00fd8f"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/task/pending-exit.json",
+      "sha256": "3f5fc41a961b4f7315c5d8408d7fe6b9cd3fccd16e216f28c7d2095b1ae234ba"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/task/codec-entry.json",
+      "sha256": "0f68ddc7b0b569b26e0d8654710a782aca2a54843377e404cfc79c3d536d9d0c"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/task/selection.npz",
+      "sha256": "b6ad9fdd2f7b0ab996b0ca3f0bd9639f5cb70837341e069de83c65ce8f14d939"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/task/pre-action-poses.npz",
+      "sha256": "8c8f6f7194f192066d9e9a0f1231bcc4315c00be68e4af6376d41b2abb9c0a16"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/task/trace.npz",
+      "sha256": "a8b36943ac23c2948c47c831b0f97d4eada25e8b6224d3bacc5abf1235d3c695"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/task/robot-poses.npz",
+      "sha256": "a332caf713a4ab0a20e2a47cdb2c34267410b48319f846e43ba411bc3c16b068"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/original-beam_linear29/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/launch.json",
+      "sha256": "f37daf93f623866b1855c4b95e7ae6bd0a96bf788694c8e4bf74684ee5b78178"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/exit.json",
+      "sha256": "b08cdbcae0d6b4bed3b89f1ad332e02aa393028f408b4adbba05c2bf375f807c"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/resource_admission.json",
+      "sha256": "85fb563b05e2102302b06bb0cda2a81ee9a4ab35cbdbe6019520d927754b76b3"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/resource_wait.jsonl",
+      "sha256": "00831a390e073303250ce71b938686e3e3d90210bab46d5d69eb3316d31f4087"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/parent-parity.json",
+      "sha256": "0919d6d9af1aecd6487cc536b6eeae4a0f4104f624cb168b5afcd5d515faed5b"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/task/task-result.json",
+      "sha256": "c39729315b5394a84f6c7afd4a1001e60ddb865cf11e97eb3a30674291ca8966"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/task/distance-exit.json",
+      "sha256": "a0d9b0a5e3c3a730513874569037ddc53f535014cebe2f8f1c3fe954439fbe5f"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/task/pending-exit.json",
+      "sha256": "fa3635a04acc089198981427b3c892e1c95c53eb43eb5daee76e33c043243bed"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/task/codec-entry.json",
+      "sha256": "8b4b2ff150af2769ce691ad5bf81fe6352d62ce2cb2efc54e8bdd791ff451e2d"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/task/selection.npz",
+      "sha256": "523c825de0c655146b4e790bb08bd2c59f1c367e4c44aa3b9de2ec89dd704923"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/task/pre-action-poses.npz",
+      "sha256": "e758162f058bb138ef304874c3eb62712f96c470224d270507cbdd08bbed5428"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/task/trace.npz",
+      "sha256": "38ee6b668a4129ddcff45466869dad18b46751031b8f6ed4003f6c4347867b64"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/task/robot-poses.npz",
+      "sha256": "54e6fef47bdc9016ce5999f6fe1364114a9c436ac8bb4c578a001154df3dad98"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/task/initial-state.npz",
+      "sha256": "4956084a27889c30df41af5d7525009a0bb68c598236e7cebab18c120c036c04"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_continuous/task/dynamics-entry.npz",
+      "sha256": "77ccb69eaa3324344afc606f68fcd16170ebc3bab4014e358dcb13742e2f5201"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_linear29/resource_wait.jsonl",
+      "sha256": "371eeb02ae3b477e986e51a8dfd0d2036e839f69ee6df70130d5a6d870dc09f7"
+    }
+  ],
+  "incumbent_summary": {
+    "path": "/home/linjiw/hindsight-motion-research/runs/distance_codec_20260919_admission02/aggregate.json",
+    "sha256": "455b1cdec75d3a3020e631ee3e7b6cb2ef61f033cd71a2918873f864a12443e9"
+  }
+}

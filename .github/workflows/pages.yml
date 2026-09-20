@@ -18,6 +18,7 @@ on:
       - 'artifacts/selection_boundary_admission02.png'
       - 'artifacts/distance_codec.png'
       - 'artifacts/distance_codec_admission02.png'
+      - 'artifacts/pending_exit.png'
       - '.github/workflows/pages.yml'
   pull_request:
     paths:

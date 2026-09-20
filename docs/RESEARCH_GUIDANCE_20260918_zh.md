@@ -69,3 +69,7 @@ Native 先单独通过同参考、同完整 proprio history 的 encoder→decode
 原零 launch 的[延期记录](DISTANCE_CODEC_RESULTS_zh.md)保留，新 admission 完成四格，零重试/训练。四次均无禁用接触，远目标 Linear29 最终距目标 0.674383 m；完整 scorer 实际使用 **3D** 距离，早期 XY 文字误标另见[更正](DISTANCE_METRIC_CORRECTION_20260919.md)。旧 shadow 的信息响应未能在真实状态资格中保留，说明 request、pending、accepted、expired、complete 要分开记录。下一项在冻结阈值与共同承诺窗口内检验延迟准入，尚未资格验证修复。
 
 相邻 continuous endpoint 校准已独立物理执行，12/12 对 11/12；在本仓库既有 Linear29 历史上的 calibrated shadow 仍被 gate 拒绝。停止预测、状态支持与语言字段保真继续分层，不互相代替。用户指导逐字原件不变。
+
+### 9 月 20 日继续：先完成决定性一格
+
+[pending-exit 实验](PENDING_EXIT_RESULTS_zh.md)已经实现并预注册，三个新控制精确保留旧成功路径，83 tests 通过；关键远目标 Linear29 未启动，queue 在资源等待中 SIGTERM，sender 未知。只补唯一 never-launched case 的新 admission，不重跑三控制、不放宽 gate、不将 shadow 134 接受或三个无等待成功升级为 repair。总四次 ceiling 剩一，最多 500 control ticks。执行、请求/接受与证据类别继续分开；暂不转向更大 tokenizer 或 LLM。

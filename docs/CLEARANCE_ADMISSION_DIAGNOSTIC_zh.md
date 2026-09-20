@@ -1,5 +1,7 @@
 # 下一项诊断：请求可否等待安全准入，而不改写已承诺动作
 
+> 2026-09-20 更新：[pending-exit 协议已登记并部分执行](PENDING_EXIT_RESULTS_zh.md)。三个原有成功控制完整保留；关键 farther-Linear29 因最后资源等待期间 queue 收到 SIGTERM 而尚未启动。原比较、失败与本设计历史保留，延迟准入修复仍待物理验证。
+
 2026-09-19。**拟议、尚未登记或执行 native。** 本文接续 [continuous 2/2、Linear29 1/2 的完整任务结果](DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md)；现有四次预算已用完。新实验须单独冻结实现、逐字段前缀证明、输入哈希、预算和停止规则，不能恢复旧 queue 或把失败当作需要重试的基础设施问题。
 
 ## 假设及最小干预

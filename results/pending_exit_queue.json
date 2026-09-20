@@ -1,0 +1,220 @@
+{
+  "schema": "hindsight_pending_exit_queue_and_shadow_v1",
+  "date": "2026-09-20",
+  "new_native_attempts": 0,
+  "motor_queries": 0,
+  "training_steps": 0,
+  "queue_interruption": {
+    "reason": "queue_process_sigterm_during_final_resource_wait",
+    "observed_unix_s": 1789886451.1493814,
+    "supervisor_exit_code": 143,
+    "signal": "SIGTERM",
+    "sender": "unknown; no attribution to a native process failure or normal gate timeout",
+    "evidence": "exec session 62783 completed with exit 143; no runner/native process remains; final launch/exit/deferred files absent",
+    "native_attempts": 3,
+    "completed_native_exit_zero": 3,
+    "unrun": 1,
+    "case": "farther-beam_linear29",
+    "final_gate_samples": 15,
+    "ready_samples": 1,
+    "consecutive_ready_max": 1,
+    "recorded_wait_span_s": 280.2030644416809,
+    "no_relaunch": true
+  },
+  "final_case_resource_samples": [
+    {
+      "unix_s": 1789886078.655968,
+      "free_gpu_mib": 11934,
+      "available_host_mib": 20370.44140625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886098.6684308,
+      "free_gpu_mib": 8394,
+      "available_host_mib": 15177.33203125,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886118.6810317,
+      "free_gpu_mib": 7318,
+      "available_host_mib": 15126.96875,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886138.7034848,
+      "free_gpu_mib": 9028,
+      "available_host_mib": 14850.66015625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886158.7167132,
+      "free_gpu_mib": 6644,
+      "available_host_mib": 14786.68359375,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886178.731671,
+      "free_gpu_mib": 10036,
+      "available_host_mib": 18315.61328125,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886198.7449005,
+      "free_gpu_mib": 6014,
+      "available_host_mib": 14905.9140625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886218.7596576,
+      "free_gpu_mib": 5394,
+      "available_host_mib": 13860.65234375,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886238.7732372,
+      "free_gpu_mib": 9210,
+      "available_host_mib": 15782.0703125,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886258.78728,
+      "free_gpu_mib": 5470,
+      "available_host_mib": 15039.71875,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886278.8009195,
+      "free_gpu_mib": 5268,
+      "available_host_mib": 14399.94140625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886298.8141491,
+      "free_gpu_mib": 10354,
+      "available_host_mib": 20438.70703125,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886318.827278,
+      "free_gpu_mib": 10226,
+      "available_host_mib": 20351.75390625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789886338.8458235,
+      "free_gpu_mib": 14113,
+      "available_host_mib": 20899.1484375,
+      "ready": true,
+      "consecutive_ready_samples": 1
+    },
+    {
+      "unix_s": 1789886358.8590324,
+      "free_gpu_mib": 10741,
+      "available_host_mib": 20568.30859375,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    }
+  ],
+  "shadow": {
+    "scope": "Imposed incumbent farther-Linear29 history only; no executed pending continuation",
+    "accepted_tick": 134,
+    "actual_pending_case_launched": false,
+    "five_dense_committed_frames_exact": true,
+    "old_short_reference_exact": true,
+    "revised_physical_forecast_samples": {
+      "joint_position": {
+        "changed_physical_sample_indices": [
+          7,
+          8,
+          9
+        ],
+        "changed_composed_indices": [
+          169,
+          174,
+          179
+        ],
+        "first_offset_s": 0.7000000000000001
+      },
+      "joint_velocity": {
+        "changed_physical_sample_indices": [
+          7,
+          8,
+          9
+        ],
+        "changed_composed_indices": [
+          169,
+          174,
+          179
+        ],
+        "first_offset_s": 0.7000000000000001
+      },
+      "relative_orientation": {
+        "changed_physical_sample_indices": [
+          8,
+          9
+        ],
+        "changed_composed_indices": [
+          174,
+          179
+        ],
+        "first_offset_s": 0.8
+      }
+    },
+    "packing_note": "Native 640D blocks are not physical frames; use official unpack_reference to recover q/qdot and relative orientation. Changed forecast samples do not establish changed actions or success."
+  },
+  "provenance": [
+    {
+      "path": "scripts/audit_pending_shadow.py",
+      "sha256": "8fd048d6b73f0ff02fb1c02fbafff3c94f7b6b9bf38d63c0d5f9befac0b3c5fb"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/aggregate.json",
+      "sha256": "58c7e8470c29ba78d5ac5d1d6288e9908da0b8e48d87bd9b60ef0825c0ccba77"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/offline-audit.json",
+      "sha256": "8a73a0b37f21939e5dcbef7834dca84342e9f47a5125b6a4e7dd6ca423ba778f"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/commitment.json",
+      "sha256": "7300252fff11e65b411901d76ccaac33549765f833c0fce11748708c827d2dbc"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/stopped.json",
+      "sha256": "46ad538f849130a63dd44b7e52ca2d09a97e45f573aace9ef64e40d61e7302d6"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/queue-interruption.json",
+      "sha256": "46ad538f849130a63dd44b7e52ca2d09a97e45f573aace9ef64e40d61e7302d6"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/queue.log",
+      "sha256": "0e27c75f040adda82ca9bf7b69d76953bcb223e8ca91187620d0a4b4fb06c710"
+    },
+    {
+      "path": "runs/pending_exit_20260920_v1/episodes/farther-beam_linear29/resource_wait.jsonl",
+      "sha256": "371eeb02ae3b477e986e51a8dfd0d2036e839f69ee6df70130d5a6d870dc09f7"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/task/pre-action-poses.npz",
+      "sha256": "4d2cb592bdb97214e79d2c608a700f43dc079d594209e4c5384ce0b2b7dd60e3"
+    },
+    {
+      "path": "runs/distance_codec_20260919_admission02/episodes/farther-beam_linear29/task/selection.npz",
+      "sha256": "439126faa2d53bcccadf2d30b7d50605221d7f0716e4108ffaf94626876c2db0"
+    }
+  ]
+}

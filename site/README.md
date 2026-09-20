@@ -118,3 +118,13 @@ continuous-controller runs, with 5/6 beam and 6/6 clear changed starts and two e
 zero controls. The backward-start failure and two fragile successes remain
 visible. This is a captured working-tree snapshot, with copied scalar-report
 sources retained locally by hash; no reset implementation or raw data is published.
+
+September 20 adds `pending_exit.json`, `pending_exit_queue.json` and
+`pending_exit.png`. Only three of four cases launched, adding 1,160 control steps /
+4,640 physics samples; all three exactly retain incumbent histories. The decisive
+farther-Linear29 case is unrun. The queue returned SIGTERM during memory waiting,
+with unknown sender and no normal resource-timeout receipt. Preserve that distinction
+from native process failures (zero). Its 134-acceptance and unpacked forecast
+changes are recorded-history shadows, with no motor queries or physical repair.
+The next admission has only one remaining attempt; never render the three retained
+controls as qualification of delayed switching. Original result files stay unchanged.
