@@ -108,7 +108,7 @@ is a separate post-result offline audit of measured clearance and endpoint
 compatibility, with zero native/motor queries; its shadows are not execution.
 `endpoint_controller_sync.json` records the neighboring continuous-controller
 calibration (12/12 versus 11/12), outside our budget. Keep all three scopes distinct.
-The proposed pending-request diagnostic has not run. The success scorer uses 3D
+At that historical snapshot the pending-request diagnostic had not run; later admissions are recorded below. The success scorer uses 3D
 goal distance; endpoint prediction uses XY. The build guards both historical and
 new outcome counts and critical gate timings. No raw histories or licensed arrays
 are added to the release allowlist.
@@ -128,3 +128,14 @@ from native process failures (zero). Its 134-acceptance and unpacked forecast
 changes are recorded-history shadows, with no motor queries or physical repair.
 The next admission has only one remaining attempt; never render the three retained
 controls as qualification of delayed switching. Original result files stay unchanged.
+
+
+Admission 02 adds `pending_exit_admission02.json`, `pending_exit_admission02_queue.json`
+and `pending_exit_admission02.png`. Its normal 300-second timeout records 15 samples,
+zero qualifying samples and zero new native launches; GPU free peaks at 11,218 MiB
+against 12,000 required. Three controls are reused, and the decisive Linear29 case
+remains unrun. Preserve the original interruption JSON and partial figure. The new
+figure’s physical goal/speed curves show only the old failed incumbent.
+`pending_sibling_sync.json` separately captures committed calibrated continuous
+pending and supplied-loop successes at sibling `2a3cfb47`; those outcomes never fill
+our missing cell. Build guards enforce all three evidence scopes.

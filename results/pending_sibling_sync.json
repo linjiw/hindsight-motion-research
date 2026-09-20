@@ -1,0 +1,294 @@
+{
+  "schema": "hindsight_pending_sibling_sync_v1",
+  "date": "2026-09-20",
+  "source_commit": "2a3cfb476229fd3fd96761b5b9839a835aae1308",
+  "scope": "One familiar failed-reset repair and one supplied-count control; prior-success retention is offline, no learning",
+  "new_native_attempts_in_this_workspace": 0,
+  "rows": [
+    {
+      "case": "pending-backward-beam",
+      "role": "public_repair",
+      "success": true,
+      "autonomous_from_reset": true,
+      "steps": 424,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "entry_tick": 66,
+      "clear_tick": 137,
+      "recovery_tick": 373,
+      "final_goal_distance_m": 0.29088170176600714,
+      "final_xy_error_m": 0.2908174160930502,
+      "final_vertical_error_m": -0.006115138530731201,
+      "goal_radius_margin_m": 0.20911829823399286,
+      "final_speed_mps": 0.02453911118209362,
+      "max_force_n": 0.0,
+      "minimum_measured_proxy_separation_m": -0.004978502521882172,
+      "decision": {
+        "schema": "duck_pending_exit_execution_v1",
+        "commitment_profile": "five_control_ticks_revisable_forecast_v1",
+        "committed_control_ticks": 5,
+        "control_dt_s": 0.02,
+        "native_sample_dt_s": 0.1,
+        "native_samples": 10,
+        "shared_prefix_frames": 172,
+        "last_legal_switch_tick": 167,
+        "initial_decision": {
+          "tick": 126,
+          "measured_clear": false,
+          "requested": 1,
+          "chosen": 0,
+          "predicted_terminal_xy_errors": [
+            0.7011287748183179,
+            0.2984877635948383
+          ],
+          "measured_root": [
+            1.5895321369171143,
+            0.3683055341243744,
+            0.7523358464241028
+          ]
+        },
+        "activation_tick": 138,
+        "final_choice": 1,
+        "expired": false,
+        "pending": false,
+        "clearance_checks": [
+          {
+            "tick": 126,
+            "measured_clear": false
+          },
+          {
+            "tick": 127,
+            "measured_clear": false
+          },
+          {
+            "tick": 128,
+            "measured_clear": false
+          },
+          {
+            "tick": 129,
+            "measured_clear": false
+          },
+          {
+            "tick": 130,
+            "measured_clear": false
+          },
+          {
+            "tick": 131,
+            "measured_clear": false
+          },
+          {
+            "tick": 132,
+            "measured_clear": false
+          },
+          {
+            "tick": 133,
+            "measured_clear": false
+          },
+          {
+            "tick": 134,
+            "measured_clear": false
+          },
+          {
+            "tick": 135,
+            "measured_clear": false
+          },
+          {
+            "tick": 136,
+            "measured_clear": false
+          },
+          {
+            "tick": 137,
+            "measured_clear": false
+          },
+          {
+            "tick": 138,
+            "measured_clear": true
+          }
+        ],
+        "supplied_count": null,
+        "autonomous_from_reset": true
+      },
+      "prefix": {
+        "first_changed_rows": {
+          "selection.npz:proprio": 139,
+          "selection.npz:reference": 138,
+          "selection.npz:tokens": 138,
+          "selection.npz:actions": 138,
+          "selection.npz:candidate": null,
+          "selection.npz:candidate_cursor": null,
+          "selection.npz:reference_source_indices": null,
+          "selection.npz:loop_choice": 138,
+          "selection.npz:measured_joint_position": 139,
+          "selection.npz:measured_joint_velocity": 139,
+          "pre-action-poses.npz:root_xyz": 139,
+          "pre-action-poses.npz:root_wxyz": 139,
+          "pre-action-poses.npz:joint_pos": 139,
+          "pre-action-poses.npz:joint_vel": 139,
+          "pre-action-poses.npz:body_xyz": 139,
+          "pre-action-poses.npz:body_wxyz": 139,
+          "pre-action-poses.npz:time_s": null,
+          "robot-poses.npz:root_xyz": 138,
+          "robot-poses.npz:root_wxyz": 138,
+          "robot-poses.npz:joint_pos": 138,
+          "robot-poses.npz:body_xyz": 138,
+          "robot-poses.npz:body_wxyz": 138,
+          "robot-poses.npz:time_s": null,
+          "trace.npz:root_xyz": 138,
+          "trace.npz:speed": 138,
+          "trace.npz:undesired_force": null,
+          "trace.npz:contact_force_w": 552,
+          "duck-features.npz:lower": 138,
+          "duck-features.npz:upper": 138,
+          "duck-features.npz:torso_tilt": 138
+        },
+        "current_and_incumbent_lengths": [
+          424,
+          500
+        ],
+        "exact_native_and_physical_prefix": true,
+        "contact_row_clock": "200 Hz; other frame arrays use 50 Hz"
+      },
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    },
+    {
+      "case": "supplied-backward-beam",
+      "role": "supplied_control",
+      "success": true,
+      "autonomous_from_reset": false,
+      "steps": 424,
+      "reason": "goal_hold",
+      "passage": true,
+      "recovered": true,
+      "hold": 50,
+      "entry_tick": 66,
+      "clear_tick": 137,
+      "recovery_tick": 373,
+      "final_goal_distance_m": 0.2959513017066293,
+      "final_xy_error_m": 0.29588404415803204,
+      "final_vertical_error_m": -0.006309151649475098,
+      "goal_radius_margin_m": 0.2040486982933707,
+      "final_speed_mps": 0.0247555673122406,
+      "max_force_n": 0.0,
+      "minimum_measured_proxy_separation_m": -0.004978502521882172,
+      "decision": {
+        "schema": "duck_pending_exit_execution_v1",
+        "commitment_profile": "five_control_ticks_revisable_forecast_v1",
+        "committed_control_ticks": 5,
+        "control_dt_s": 0.02,
+        "native_sample_dt_s": 0.1,
+        "native_samples": 10,
+        "shared_prefix_frames": 172,
+        "last_legal_switch_tick": 167,
+        "initial_decision": {
+          "tick": 126,
+          "measured_clear": false,
+          "requested": 1,
+          "chosen": 1,
+          "predicted_terminal_xy_errors": [
+            0.7011287748183179,
+            0.2984877635948383
+          ],
+          "measured_root": [
+            1.5895321369171143,
+            0.3683055341243744,
+            0.7523358464241028
+          ]
+        },
+        "activation_tick": 126,
+        "final_choice": 1,
+        "expired": false,
+        "pending": false,
+        "clearance_checks": [
+          {
+            "tick": 126,
+            "measured_clear": false
+          }
+        ],
+        "supplied_count": 1,
+        "autonomous_from_reset": false
+      },
+      "prefix": {
+        "first_changed_rows": {
+          "selection.npz:proprio": 128,
+          "selection.npz:reference": 127,
+          "selection.npz:tokens": 127,
+          "selection.npz:actions": 127,
+          "selection.npz:candidate": null,
+          "selection.npz:candidate_cursor": null,
+          "selection.npz:reference_source_indices": null,
+          "selection.npz:loop_choice": 126,
+          "selection.npz:measured_joint_position": 128,
+          "selection.npz:measured_joint_velocity": 128,
+          "pre-action-poses.npz:root_xyz": 128,
+          "pre-action-poses.npz:root_wxyz": 128,
+          "pre-action-poses.npz:joint_pos": 128,
+          "pre-action-poses.npz:joint_vel": 128,
+          "pre-action-poses.npz:body_xyz": 128,
+          "pre-action-poses.npz:body_wxyz": 128,
+          "pre-action-poses.npz:time_s": null,
+          "robot-poses.npz:root_xyz": 127,
+          "robot-poses.npz:root_wxyz": 127,
+          "robot-poses.npz:joint_pos": 127,
+          "robot-poses.npz:body_xyz": 127,
+          "robot-poses.npz:body_wxyz": 127,
+          "robot-poses.npz:time_s": null,
+          "trace.npz:root_xyz": 127,
+          "trace.npz:speed": 127,
+          "trace.npz:undesired_force": null,
+          "trace.npz:contact_force_w": 508,
+          "duck-features.npz:lower": 127,
+          "duck-features.npz:upper": 127,
+          "duck-features.npz:torso_tilt": 127
+        },
+        "current_and_incumbent_lengths": [
+          424,
+          500
+        ],
+        "exact_native_and_physical_prefix": true,
+        "contact_row_clock": "200 Hz; other frame arrays use 50 Hz"
+      },
+      "exact_native_rows": true,
+      "independent_physical_score": true
+    }
+  ],
+  "costs": {
+    "new_native_attempts": 2,
+    "process_failures": 0,
+    "new_control_steps": 848,
+    "new_contact_frames": 3392,
+    "native_wall_seconds": 84.78889284102479,
+    "teacher_queries": 0,
+    "optimizer_updates": 0,
+    "learning_rows_admitted": 0
+  },
+  "provenance": [
+    {
+      "path": "/home/linjiw/groot-wbc-sonic-sim-trackb/docs/motion2scene/DUCK_PENDING_EXIT_20260920.md",
+      "snapshot": "runs/pending_sibling_sync_20260920/DUCK_PENDING_EXIT_20260920.md",
+      "sha256": "5b2d968538bccd1fdbd7bfabbc2b3610275cfbbb7578d96b68f68c8512d9dd52",
+      "committed_exact": true
+    },
+    {
+      "path": "/home/linjiw/groot-wbc-sonic-sim-trackb/docs/motion2scene/evidence/duck-pending-exit-20260920/analysis.json",
+      "snapshot": "runs/pending_sibling_sync_20260920/analysis.json",
+      "sha256": "3dec9cf7c48977fb93ea2d656f4b865f3ddac571b6f1361aae2db7dd717c43de",
+      "committed_exact": true
+    },
+    {
+      "path": "/home/linjiw/groot-wbc-sonic-sim-trackb/docs/motion2scene/evidence/duck-pending-exit-20260920/preflight.json",
+      "snapshot": "runs/pending_sibling_sync_20260920/preflight.json",
+      "sha256": "f7d52a2f1f7396017ae160c4f25cfc2af03aa6e4c082e9a60095b5b48e69dca0",
+      "committed_exact": true
+    },
+    {
+      "path": "/home/linjiw/groot-wbc-sonic-sim-trackb/docs/motion2scene/evidence/duck-pending-exit-20260920/validation.json",
+      "snapshot": "runs/pending_sibling_sync_20260920/validation.json",
+      "sha256": "4496e90e284a5a8446615c5b9cd7677e43643ff7000f691479729c64c48f1c71",
+      "committed_exact": true
+    }
+  ],
+  "interpretation": "Separate calibrated continuous controller on backward reset. Neither these successes nor its latest tick 167 substitute for the original-predictor Linear29 comparison and common deadline 162. Its supplied-loop run is a support control, not autonomous public success."
+}

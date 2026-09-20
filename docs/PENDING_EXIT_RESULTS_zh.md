@@ -1,5 +1,7 @@
 # Pending exit：三项控制精确保留，关键一格尚未运行
 
+后续：[admission 02](PENDING_EXIT_ADMISSION02_RESULTS_zh.md)只补一格，300 s 资源门槛正常超时，零新 launch。下文保留 admission 01 的历史部分快照与 SIGTERM 事实。
+
 2026-09-20。接续[主计划](RESEARCH_PLAN_zh.md)的 complete-task 优先级与[9 月 19 日失败诊断](DISTANCE_CODEC_ADMISSION02_RESULTS_zh.md)。本轮依据用户继续指令，单独登记[四格协议](PENDING_EXIT_PROTOCOL.md)，保留旧四格和原远目标 Linear29 的真实失败。**三个已运行控制均成功且完整轨迹精确保留；关键的 farther-beam Linear29 尚未启动。** queue 在最后的资源等待期间收到 SIGTERM（exit 143），sender 未知。没有正常 resource-timeout receipt，不能把它改称正常超时或第四次物理失败。当前尚无延迟准入修复的物理证据。
 
 ## 冻结的问题与接口

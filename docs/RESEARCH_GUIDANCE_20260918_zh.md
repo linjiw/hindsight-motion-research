@@ -73,3 +73,8 @@ Native 先单独通过同参考、同完整 proprio history 的 encoder→decode
 ### 9 月 20 日继续：先完成决定性一格
 
 [pending-exit 实验](PENDING_EXIT_RESULTS_zh.md)已经实现并预注册，三个新控制精确保留旧成功路径，83 tests 通过；关键远目标 Linear29 未启动，queue 在资源等待中 SIGTERM，sender 未知。只补唯一 never-launched case 的新 admission，不重跑三控制、不放宽 gate、不将 shadow 134 接受或三个无等待成功升级为 repair。总四次 ceiling 剩一，最多 500 control ticks。执行、请求/接受与证据类别继续分开；暂不转向更大 tokenizer 或 LLM。
+
+
+### 同日 admission 02：保留资源阻塞，不扩展结论
+
+[独立 admission 02](PENDING_EXIT_ADMISSION02_RESULTS_zh.md)已实现，只补关键一格；428 项绑定及 92 tests 合格。300 s 资源门槛正常超时、15 次采样零合格，GPU free 最高 11,218 MiB < 12,000；零新 native，累计仍三条成功控制。先确认资源可用，再为同一 never-launched case 新 admission，总四次 ceiling 不变。相邻 `2a3cfb47` 的 continuous pending 成功[单独同步](PENDING_CONTROLLER_SYNC_20260920_zh.md)，不计为本仓库 Linear29 结果。任务证据、数据角色与时间接口继续优先于新模型名字。

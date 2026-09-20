@@ -1,0 +1,28 @@
+{
+  "schema": "hindsight_pending_exit_admission_v1",
+  "authorization": "User requested continued execution of the saved one-case admission plan on 2026-09-20",
+  "parent_packet": "runs/pending_exit_20260920_v1",
+  "successor_packet": "runs/pending_exit_20260920_admission02",
+  "scientific_registration": "configs/pending_exit_v1.plan.json",
+  "parent_plan_sha256": "407586d7facdbb9442169a2d773620cb4694846a39e0b840dd399faf93e5adaa",
+  "parent_registration_sha256": "10798a855aed80d208b256b1d18f4825299d1a0923c17a038f2e2b13329b4fc2",
+  "parent_aggregate_sha256": "58c7e8470c29ba78d5ac5d1d6288e9908da0b8e48d87bd9b60ef0825c0ccba77",
+  "parent_stopped_sha256": "46ad538f849130a63dd44b7e52ca2d09a97e45f573aace9ef64e40d61e7302d6",
+  "parent_interruption_sha256": "46ad538f849130a63dd44b7e52ca2d09a97e45f573aace9ef64e40d61e7302d6",
+  "require_parent_native_attempts": 3,
+  "require_parent_execution_state": "stopped",
+  "case_ids": [
+    "farther-beam_linear29"
+  ],
+  "maximum_new_native_attempts": 1,
+  "maximum_native_attempts_across_admissions": 4,
+  "maximum_control_steps_per_attempt": 500,
+  "maximum_new_control_steps": 500,
+  "maximum_new_physics_samples": 2000,
+  "maximum_wall_seconds_per_attempt": 600,
+  "resource_wait_seconds_per_attempt": 300,
+  "retries": 0,
+  "training_steps": 0,
+  "change": "One fresh resource admission for the never-launched fourth case only; reuse three exact-retention controls. Frozen scientific treatment unchanged.",
+  "stopping": "Stop on resource timeout, infrastructure failure or pair qualification mismatch; retain all receipts. No queue relaunch or retry."
+}

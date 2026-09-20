@@ -22,8 +22,9 @@ RESULTS = [
     "selection_boundary", "selection_boundary_goal",
     "selection_boundary_admission02", "distance_codec_preflight", "distance_codec", "distance_followup",
     "distance_codec_admission02", "endpoint_codec_transfer", "endpoint_controller_sync", "reset_controller_sync", "pending_exit", "pending_exit_queue",
+    "pending_exit_admission02", "pending_exit_admission02_queue", "pending_sibling_sync",
 ]
-FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png", "selection_boundary.png", "selection_boundary_admission02.png", "distance_codec.png", "distance_codec_admission02.png", "pending_exit.png"]
+FIGURES = ["token_mechanism.png", "carrier_scene_geometry.png", "complete_task.png", "continuation.png", "continuation_admission02.png", "selection_codec.png", "selection_boundary.png", "selection_boundary_admission02.png", "distance_codec.png", "distance_codec_admission02.png", "pending_exit.png", "pending_exit_admission02.png"]
 
 
 class PageLinks(HTMLParser):
@@ -200,6 +201,24 @@ def main():
             or queue["shadow"]["accepted_tick"] != 134 or queue["new_native_attempts"] != 0
             or queue["shadow"]["revised_physical_forecast_samples"]["joint_position"]["changed_physical_sample_indices"] != [7,8,9]):
         raise ValueError("Pending-exit interruption/shadow changed: review the evidence distinction")
+    pending02 = json.loads((ROOT / "results/pending_exit_admission02.json").read_text())
+    resources02 = json.loads((ROOT / "results/pending_exit_admission02_queue.json").read_text())
+    sibling_pending = json.loads((ROOT / "results/pending_sibling_sync.json").read_text())
+    if (pending02["execution_state"] != "resource_deferred" or pending02["new_native_attempts"] != 0
+            or pending02["native_attempts"] != 3 or pending02["unrun"] != 1
+            or pending02["new_control_steps"] != 0 or pending02["new_physics_samples"] != 0
+            or pending02["control_steps"] != 1160 or pending02["physics_samples"] != 4640
+            or pending02["rows"][-1]["status"] != "unrun"
+            or resources02["sample_count"] != 15 or resources02["ready_samples"] != 0
+            or resources02["gpu_free_max_mib"] != 11218 or resources02["resource_wait_limit_s"] != 300):
+        raise ValueError("Pending admission 02 changed: preserve the zero-launch resource deferral")
+    if (sibling_pending["costs"]["new_native_attempts"] != 2
+            or sibling_pending["costs"]["new_control_steps"] != 848
+            or not all(r["success"] for r in sibling_pending["rows"])
+            or sibling_pending["rows"][0]["decision"]["activation_tick"] != 138
+            or sibling_pending["rows"][0]["decision"]["last_legal_switch_tick"] != 167
+            or sibling_pending["rows"][1]["autonomous_from_reset"]):
+        raise ValueError("Sibling pending evidence changed: keep calibrated public and supplied scopes separate")
     if OUTPUT.is_symlink():
         raise ValueError("Refusing a symlinked build directory")
     if OUTPUT.exists():
@@ -238,6 +257,9 @@ def main():
         "pending_exit_evidence_date": "2026-09-20", "pending_exit_native_attempts": 3,
         "pending_exit_unrun": 1, "pending_exit_execution_state": "stopped",
         "pending_exit_queue_signal": "SIGTERM", "pending_exit_shadow_native_attempts": 0,
+        "pending_exit_admission02_execution_state": "resource_deferred", "pending_exit_admission02_new_attempts": 0,
+        "pending_exit_admission02_unrun": 1, "pending_exit_admission02_resource_samples": 15,
+        "pending_exit_admission02_ready_samples": 0, "pending_sibling_new_attempts_separate": 2,
         "continuation_registration_date": "2026-09-18", "continuation_native_attempts": 16,
         "continuation_evidence_date": "2026-09-18", "continuation_admission": "02",
         "continuation_original_deferred_attempts": 0, "continuation_qualified_pairs": 8,

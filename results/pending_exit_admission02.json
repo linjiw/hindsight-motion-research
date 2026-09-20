@@ -1,0 +1,860 @@
+{
+  "schema": "hindsight_pending_exit_admission_results_v1",
+  "date": "2026-09-20",
+  "admission": "02",
+  "scope": "Same four-case pending study across two admissions; three completed controls reused without execution",
+  "development_only": true,
+  "heldout": false,
+  "source_ancestries": 1,
+  "seed": 96161,
+  "execution_state": "resource_deferred",
+  "scheduled_cases": 4,
+  "native_attempts": 3,
+  "new_native_attempts": 0,
+  "reused_native_attempts": 3,
+  "reused_incumbent_cases": 4,
+  "unrun": 1,
+  "completed_episodes": 3,
+  "infrastructure_failures": 0,
+  "previous_queue_interruptions": 1,
+  "retries": 0,
+  "training_steps": 0,
+  "teacher_action_queries": 0,
+  "historical_main_attempts_consumed": 0,
+  "control_steps": 1160,
+  "new_control_steps": 0,
+  "physics_samples": 4640,
+  "new_physics_samples": 0,
+  "native_wall_seconds": 94.62531153397867,
+  "new_native_wall_seconds": 0,
+  "rows": [
+    {
+      "case_id": "original-beam_continuous",
+      "condition": "original-beam",
+      "method": "continuous",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 368,
+      "physics_samples": 1472,
+      "elapsed_control_time_s": 7.36,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_3d_m": 0.029952871973491387,
+      "final_goal_error_xy_m": 0.02960832628184925,
+      "final_signed_route_error_m": -0.0276420038610215,
+      "final_goal_margin_xy_m": 0.47039167371815077,
+      "final_speed_mps": 0.05255581811070442,
+      "independent_score_exact": true,
+      "task_components": {
+        "passage_success": true,
+        "duck_observed": true,
+        "recovered": true,
+        "entry_tick": 63,
+        "clear_tick": 118,
+        "recovery_tick": 314,
+        "ordered_hold_ticks": 50,
+        "stable_stop_success": true
+      },
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.021931742720536954,
+          0.9003619937117538
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      },
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "parent_parity": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        },
+        "same_family_and_decision": true
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "selected_short",
+        "requested": 0,
+        "accepted_tick": null,
+        "expired_tick": null,
+        "choice": 0,
+        "events": [
+          {
+            "tick": 126,
+            "status": "selected_short",
+            "measured_clear": true,
+            "clearance_margin_m": 0.03501509253148924,
+            "chosen": 0
+          }
+        ]
+      },
+      "actual_final_choice": 0,
+      "final_goal_margin_3d_m": 0.4700471280265086,
+      "admission": "01"
+    },
+    {
+      "case_id": "original-beam_linear29",
+      "condition": "original-beam",
+      "method": "linear29",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 368,
+      "physics_samples": 1472,
+      "elapsed_control_time_s": 7.36,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_3d_m": 0.09025068182570446,
+      "final_goal_error_xy_m": 0.09016030344718352,
+      "final_signed_route_error_m": -0.08983551991429661,
+      "final_goal_margin_xy_m": 0.4098396965528165,
+      "final_speed_mps": 0.03745545074343681,
+      "independent_score_exact": true,
+      "task_components": {
+        "passage_success": true,
+        "duck_observed": true,
+        "recovered": true,
+        "entry_tick": 64,
+        "clear_tick": 133,
+        "recovery_tick": 314,
+        "ordered_hold_ticks": 50,
+        "stable_stop_success": true
+      },
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": false,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.048623351275781795,
+          0.8769336971818378
+        ],
+        "measured_root": [
+          1.6515346765518188,
+          0.36840707063674927,
+          0.7515503168106079
+        ]
+      },
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "pair_audit": {
+        "max_errors": {
+          "initial-state.npz:root_state_w": 0.0,
+          "initial-state.npz:joint_pos": 0.0,
+          "initial-state.npz:joint_vel": 0.0,
+          "initial-state.npz:current_action": 0.0,
+          "initial-state.npz:previous_action": 0.0,
+          "initial-state.npz:raw_action": 0.0,
+          "initial-state.npz:processed_action": 0.0,
+          "initial-state.npz:proprio": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0
+        },
+        "torch_rng_matched": true,
+        "matched": true,
+        "all_rng_matched": true,
+        "same_initial_choice_and_costs": true
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "selected_short",
+        "requested": 0,
+        "accepted_tick": null,
+        "expired_tick": null,
+        "choice": 0,
+        "events": [
+          {
+            "tick": 126,
+            "status": "selected_short",
+            "measured_clear": false,
+            "clearance_margin_m": -0.001069276327744395,
+            "chosen": 0
+          }
+        ]
+      },
+      "actual_final_choice": 0,
+      "final_goal_margin_3d_m": 0.40974931817429555,
+      "admission": "01"
+    },
+    {
+      "case_id": "farther-beam_continuous",
+      "condition": "farther-beam",
+      "method": "continuous",
+      "source_clip": "00976",
+      "status": "completed",
+      "success": true,
+      "control_steps": 424,
+      "physics_samples": 1696,
+      "elapsed_control_time_s": 8.48,
+      "stop_reason": "goal_hold",
+      "fell": false,
+      "max_obstacle_force_n": 0.0,
+      "max_nonfoot_floor_force_n": 0.0,
+      "final_goal_distance_3d_m": 0.38486645207882625,
+      "final_goal_error_xy_m": 0.3848151838997737,
+      "final_signed_route_error_m": 0.37786199571780654,
+      "final_goal_margin_xy_m": 0.1151848161002263,
+      "final_speed_mps": 0.024000518023967743,
+      "independent_score_exact": true,
+      "task_components": {
+        "passage_success": true,
+        "duck_observed": true,
+        "recovered": true,
+        "entry_tick": 63,
+        "clear_tick": 118,
+        "recovery_tick": 373,
+        "ordered_hold_ticks": 50,
+        "stable_stop_success": true
+      },
+      "family": "local_duck",
+      "decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.6165807536204283,
+          0.30066790198762927
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      },
+      "teacher_queries": 0,
+      "optimizer_updates": 0,
+      "parent_parity": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        },
+        "same_family_and_decision": true
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "accepted",
+        "requested": 1,
+        "accepted_tick": 126,
+        "expired_tick": null,
+        "choice": 1,
+        "events": [
+          {
+            "tick": 126,
+            "status": "accepted",
+            "measured_clear": true,
+            "clearance_margin_m": 0.03501509253148924,
+            "chosen": 1
+          }
+        ]
+      },
+      "actual_final_choice": 1,
+      "final_goal_margin_3d_m": 0.11513354792117375,
+      "admission": "01"
+    },
+    {
+      "case_id": "farther-beam_linear29",
+      "condition": "farther-beam",
+      "method": "linear29",
+      "source_clip": "00976",
+      "status": "unrun",
+      "admission": "02"
+    }
+  ],
+  "incumbent_comparisons": [
+    {
+      "case_id": "original-beam_continuous",
+      "incumbent_success": true,
+      "pending_success": true,
+      "task_gain": 0,
+      "task_regression": 0,
+      "unchanged_path_audit": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        }
+      },
+      "actual_trajectory_contrast": {
+        "reference": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "tokens": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "actions": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "loop_choice": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "root_xyz": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "joint_pos": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        }
+      }
+    },
+    {
+      "case_id": "original-beam_linear29",
+      "incumbent_success": true,
+      "pending_success": true,
+      "task_gain": 0,
+      "task_regression": 0,
+      "unchanged_path_audit": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        }
+      },
+      "actual_trajectory_contrast": {
+        "reference": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "tokens": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "actions": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "loop_choice": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "root_xyz": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "joint_pos": {
+          "common_length": 368,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        }
+      }
+    },
+    {
+      "case_id": "farther-beam_continuous",
+      "incumbent_success": true,
+      "pending_success": true,
+      "task_gain": 0,
+      "task_regression": 0,
+      "unchanged_path_audit": {
+        "matched": true,
+        "max_errors": {
+          "selection.npz:reference": 0.0,
+          "selection.npz:proprio": 0.0,
+          "selection.npz:tokens": 0.0,
+          "selection.npz:actions": 0.0,
+          "pre-action-poses.npz:root_xyz": 0.0,
+          "pre-action-poses.npz:root_wxyz": 0.0,
+          "pre-action-poses.npz:joint_pos": 0.0,
+          "pre-action-poses.npz:joint_vel": 0.0,
+          "pre-action-poses.npz:body_xyz": 0.0,
+          "pre-action-poses.npz:body_wxyz": 0.0,
+          "trace.npz:root_xyz": 0.0,
+          "trace.npz:speed": 0.0,
+          "trace.npz:contact_force_w": 0.0,
+          "dynamics-entry.npz:masses": 0.0,
+          "dynamics-entry.npz:centers_of_mass": 0.0,
+          "dynamics-entry.npz:material_properties": 0.0,
+          "dynamics-entry.npz:default_joint_pos": 0.0,
+          "dynamics-entry.npz:action_offset": 0.0,
+          "dynamics-entry.npz:action_scale": 0.0,
+          "duck-features.npz:lower": 0.0,
+          "duck-features.npz:upper": 0.0,
+          "duck-features.npz:torso_tilt": 0.0
+        }
+      },
+      "actual_trajectory_contrast": {
+        "reference": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "tokens": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "actions": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "loop_choice": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "root_xyz": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        },
+        "joint_pos": {
+          "common_length": 424,
+          "first_changed_tick": null,
+          "changed_rows": 0
+        }
+      }
+    }
+  ],
+  "reference_replay": [
+    {
+      "case_id": "original-beam_continuous",
+      "states": 368,
+      "issued_reference_exact": true,
+      "first_changed_reference_tick": null,
+      "changed_reference_rows": 0,
+      "family": "local_duck",
+      "original_decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.021931742720536954,
+          0.9003619937117538
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "selected_short",
+        "requested": 0,
+        "accepted_tick": null,
+        "expired_tick": null,
+        "choice": 0,
+        "events": [
+          {
+            "tick": 126,
+            "status": "selected_short",
+            "measured_clear": true,
+            "clearance_margin_m": 0.03501509253148924,
+            "chosen": 0
+          }
+        ]
+      },
+      "actual_final_choice": 0,
+      "independent_schedule_exact": true,
+      "composed_indices_exact": true
+    },
+    {
+      "case_id": "original-beam_linear29",
+      "states": 368,
+      "issued_reference_exact": true,
+      "first_changed_reference_tick": null,
+      "changed_reference_rows": 0,
+      "family": "local_duck",
+      "original_decision": {
+        "tick": 126,
+        "measured_clear": false,
+        "requested": 0,
+        "chosen": 0,
+        "predicted_terminal_xy_errors": [
+          0.048623351275781795,
+          0.8769336971818378
+        ],
+        "measured_root": [
+          1.6515346765518188,
+          0.36840707063674927,
+          0.7515503168106079
+        ]
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "selected_short",
+        "requested": 0,
+        "accepted_tick": null,
+        "expired_tick": null,
+        "choice": 0,
+        "events": [
+          {
+            "tick": 126,
+            "status": "selected_short",
+            "measured_clear": false,
+            "clearance_margin_m": -0.001069276327744395,
+            "chosen": 0
+          }
+        ]
+      },
+      "actual_final_choice": 0,
+      "independent_schedule_exact": true,
+      "composed_indices_exact": true
+    },
+    {
+      "case_id": "farther-beam_continuous",
+      "states": 424,
+      "issued_reference_exact": true,
+      "first_changed_reference_tick": null,
+      "changed_reference_rows": 0,
+      "family": "local_duck",
+      "original_decision": {
+        "tick": 126,
+        "measured_clear": true,
+        "requested": 1,
+        "chosen": 1,
+        "predicted_terminal_xy_errors": [
+          0.6165807536204283,
+          0.30066790198762927
+        ],
+        "measured_root": [
+          1.6722800731658936,
+          0.3857075572013855,
+          0.7510737776756287
+        ]
+      },
+      "request_lifecycle": {
+        "decision_tick": 126,
+        "latest_accept_tick": 162,
+        "enabled": true,
+        "status": "accepted",
+        "requested": 1,
+        "accepted_tick": 126,
+        "expired_tick": null,
+        "choice": 1,
+        "events": [
+          {
+            "tick": 126,
+            "status": "accepted",
+            "measured_clear": true,
+            "clearance_margin_m": 0.03501509253148924,
+            "chosen": 1
+          }
+        ]
+      },
+      "actual_final_choice": 1,
+      "independent_schedule_exact": true,
+      "composed_indices_exact": true
+    }
+  ],
+  "new_reference_replay": [],
+  "free_running_goal_contrasts": [
+    {
+      "method": "continuous",
+      "differences": {
+        "reference": {
+          "common_length": 368,
+          "first_changed_tick": 127,
+          "changed_rows": 241
+        },
+        "tokens": {
+          "common_length": 368,
+          "first_changed_tick": 127,
+          "changed_rows": 241
+        },
+        "actions": {
+          "common_length": 368,
+          "first_changed_tick": 127,
+          "changed_rows": 241
+        },
+        "loop_choice": {
+          "common_length": 368,
+          "first_changed_tick": 126,
+          "changed_rows": 242
+        },
+        "root_xyz": {
+          "common_length": 368,
+          "first_changed_tick": 128,
+          "changed_rows": 240
+        },
+        "joint_pos": {
+          "common_length": 368,
+          "first_changed_tick": 128,
+          "changed_rows": 240
+        }
+      }
+    }
+  ],
+  "commitment": {
+    "schema": "hindsight_pending_exit_commitment_v1",
+    "decision_tick": 126,
+    "committed_control_ticks": 5,
+    "dense_dt_s": 0.02,
+    "native_sample_stride": 5,
+    "native_horizon_samples": 10,
+    "latest_accept_tick": 162,
+    "rows": [
+      {
+        "family": "local_duck",
+        "method": "continuous",
+        "first_difference_by_field": {
+          "joint_position": 172,
+          "joint_velocity": 172,
+          "root_xyz": 172,
+          "root_velocity": 172,
+          "root_rotation_world": 172,
+          "bounds": 172,
+          "support_proposal": 184,
+          "support_observed": 172,
+          "support_observation_valid": 172,
+          "foot_height": 172,
+          "foot_speed": 172,
+          "base_source_index": 172,
+          "base_source_family": 172,
+          "synthetic_bridge": 172
+        },
+        "first_unequal_or_unavailable_frame": 172,
+        "latest_accept_tick": 167
+      },
+      {
+        "family": "local_duck",
+        "method": "linear29",
+        "first_difference_by_field": {
+          "joint_position": 172,
+          "joint_velocity": 172,
+          "root_xyz": 172,
+          "root_velocity": 172,
+          "root_rotation_world": 172,
+          "bounds": 172,
+          "support_proposal": 184,
+          "support_observed": 172,
+          "support_observation_valid": 172,
+          "foot_height": 172,
+          "foot_speed": 172,
+          "base_source_index": 172,
+          "base_source_family": 172,
+          "synthetic_bridge": 172,
+          "decoded_joint_position": 168,
+          "decoded_joint_velocity": 167
+        },
+        "first_unequal_or_unavailable_frame": 167,
+        "latest_accept_tick": 162
+      },
+      {
+        "family": "nominal",
+        "method": "continuous",
+        "first_difference_by_field": {
+          "joint_position": 172,
+          "joint_velocity": 172,
+          "root_xyz": 172,
+          "root_velocity": 172,
+          "root_rotation_world": 172,
+          "bounds": 172,
+          "support_proposal": 184,
+          "support_observed": 172,
+          "support_observation_valid": 172,
+          "foot_height": 172,
+          "foot_speed": 172,
+          "base_source_index": 172,
+          "base_source_family": 499,
+          "synthetic_bridge": 172
+        },
+        "first_unequal_or_unavailable_frame": 172,
+        "latest_accept_tick": 167
+      },
+      {
+        "family": "nominal",
+        "method": "linear29",
+        "first_difference_by_field": {
+          "joint_position": 172,
+          "joint_velocity": 172,
+          "root_xyz": 172,
+          "root_velocity": 172,
+          "root_rotation_world": 172,
+          "bounds": 172,
+          "support_proposal": 184,
+          "support_observed": 172,
+          "support_observation_valid": 172,
+          "foot_height": 172,
+          "foot_speed": 172,
+          "base_source_index": 172,
+          "base_source_family": 499,
+          "synthetic_bridge": 172,
+          "decoded_joint_position": 168,
+          "decoded_joint_velocity": 167
+        },
+        "first_unequal_or_unavailable_frame": 167,
+        "latest_accept_tick": 162
+      }
+    ],
+    "semantics": "Current through current+4 dense frames are committed; later forecasts may be revised. No full-preview equivalence claim."
+  },
+  "parent_summary": {
+    "path": "/home/linjiw/hindsight-motion-research/runs/pending_exit_20260920_v1/aggregate.json",
+    "sha256": "58c7e8470c29ba78d5ac5d1d6288e9908da0b8e48d87bd9b60ef0825c0ccba77"
+  },
+  "incumbent_summary": {
+    "path": "/home/linjiw/hindsight-motion-research/runs/distance_codec_20260919_admission02/aggregate.json",
+    "sha256": "455b1cdec75d3a3020e631ee3e7b6cb2ef61f033cd71a2918873f864a12443e9"
+  },
+  "provenance": [
+    {
+      "path": "runs/pending_exit_20260920_admission02/plan.json",
+      "sha256": "844af94eb14e6aeeeb06f0fa7b5c992f537068a6ffe92bfccfaac15cd8452996"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/admission.json",
+      "sha256": "42d816d55eae7cbb22c9331fbff5faebd9f0c4270a3ee974f79a639607fbbec6"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/registration.json",
+      "sha256": "e2fbe1326746927b3b51e58fd564681d6edbe19c7fe174cd27f87224689de55b"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/protocol-before-execution.md",
+      "sha256": "0cb2d5a6ac8deee5a0f5864c95a0affa7b66013eab84a66e420aa5da126edc5a"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/admission-source.py",
+      "sha256": "5057ebcb780ceb02729811789816c7c9f2614e10a451feca6a7e0dfc05516b2b"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/commitment.json",
+      "sha256": "7300252fff11e65b411901d76ccaac33549765f833c0fce11748708c827d2dbc"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/offline-audit.json",
+      "sha256": "8a73a0b37f21939e5dcbef7834dca84342e9f47a5125b6a4e7dd6ca423ba778f"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/execution-start.json",
+      "sha256": "986a5afb5c6778167d5e5cc79202ecd6aebfb413cdff6ba41d49b3611a61cb15"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/episodes/farther-beam_linear29/resource_deferred.json",
+      "sha256": "f761f2ef140db79eafe88501e9355c0c9ea616bae6002d27927916d606bb9323"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/episodes/farther-beam_linear29/resource_wait.jsonl",
+      "sha256": "28de72b67e695e49f7a982ed8cc3244a699f86e313550834e9d22179e77d13e0"
+    }
+  ]
+}

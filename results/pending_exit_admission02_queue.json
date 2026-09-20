@@ -1,0 +1,160 @@
+{
+  "schema": "hindsight_pending_exit_admission02_resources_v1",
+  "date": "2026-09-20",
+  "scope": "Closed resource admission, no new physical execution",
+  "new_native_attempts": 0,
+  "new_control_steps": 0,
+  "new_physics_samples": 0,
+  "training_steps": 0,
+  "retries": 0,
+  "resource_wait_limit_s": 300,
+  "gpu_threshold_mib": 12000,
+  "host_threshold_mib": 16384,
+  "required_consecutive_samples": 2,
+  "sample_count": 15,
+  "ready_samples": 0,
+  "maximum_consecutive_ready": 0,
+  "recorded_sample_span_s": 280.1832323074341,
+  "gpu_free_min_mib": 5892,
+  "gpu_free_max_mib": 11218,
+  "host_available_min_mib": 13701.0,
+  "host_available_max_mib": 20250.51171875,
+  "deferral": {
+    "reason": "Resource gate timeout; no native launch",
+    "timeout_s": 300
+  },
+  "samples": [
+    {
+      "unix_s": 1789889481.4752629,
+      "free_gpu_mib": 5956,
+      "available_host_mib": 13749.62890625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889501.4887233,
+      "free_gpu_mib": 5988,
+      "available_host_mib": 13846.22265625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889521.5019972,
+      "free_gpu_mib": 5892,
+      "available_host_mib": 13701.0,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889541.515077,
+      "free_gpu_mib": 10085,
+      "available_host_mib": 20023.67578125,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889561.5284288,
+      "free_gpu_mib": 9915,
+      "available_host_mib": 19818.9375,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889581.541261,
+      "free_gpu_mib": 9851,
+      "available_host_mib": 19689.54296875,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889601.5533323,
+      "free_gpu_mib": 11218,
+      "available_host_mib": 16448.7890625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889621.566471,
+      "free_gpu_mib": 10065,
+      "available_host_mib": 19319.37890625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889641.579622,
+      "free_gpu_mib": 8988,
+      "available_host_mib": 16194.53515625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889661.592869,
+      "free_gpu_mib": 10248,
+      "available_host_mib": 20250.51171875,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889681.6056645,
+      "free_gpu_mib": 10182,
+      "available_host_mib": 20077.359375,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889701.619382,
+      "free_gpu_mib": 10152,
+      "available_host_mib": 19958.7734375,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889721.632398,
+      "free_gpu_mib": 9602,
+      "available_host_mib": 18696.5390625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889741.6456947,
+      "free_gpu_mib": 8668,
+      "available_host_mib": 15974.82421875,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    },
+    {
+      "unix_s": 1789889761.6584952,
+      "free_gpu_mib": 9090,
+      "available_host_mib": 16982.6015625,
+      "ready": false,
+      "consecutive_ready_samples": 0
+    }
+  ],
+  "distinction": "Admission 02 closed normally on its registered resource timeout. Admission 01 retains its separate 143/SIGTERM receipt with unknown sender.",
+  "provenance": [
+    {
+      "path": "scripts/audit_pending_admission02_resources.py",
+      "sha256": "36c6bc4ed9da8e0b0e38884a0710eac5575fb120724789d0ae0b2a5ff84aecb5"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/aggregate.json",
+      "sha256": "3503378351a179b1cd9e2dbf7a8e75f8477447a5fb2f73e543cf7f417e7cdd93"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/plan.json",
+      "sha256": "844af94eb14e6aeeeb06f0fa7b5c992f537068a6ffe92bfccfaac15cd8452996"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/queue.log",
+      "sha256": "3beb12de3211f6ae6448b261c353ac6b739cacfa5aa0c68b93391e9b51dcc428"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/episodes/farther-beam_linear29/resource_wait.jsonl",
+      "sha256": "28de72b67e695e49f7a982ed8cc3244a699f86e313550834e9d22179e77d13e0"
+    },
+    {
+      "path": "runs/pending_exit_20260920_admission02/episodes/farther-beam_linear29/resource_deferred.json",
+      "sha256": "f761f2ef140db79eafe88501e9355c0c9ea616bae6002d27927916d606bb9323"
+    }
+  ]
+}
